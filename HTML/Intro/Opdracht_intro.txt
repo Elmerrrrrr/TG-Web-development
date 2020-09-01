@@ -49,7 +49,18 @@ Leg uit.
 
 7. Wat is het verschil tussen inline en block elementen?
 - inline elementen komen op dezelfde regel als eventuele andere content.
-Block elementen creeeren altijd een nieuwe regel na de closing tags
+Block elementen creeeren altijd een nieuwe regel na de closing tags.
+Voorbeeld van standaard inline elementen zijn: <IMG> <SPAN>
+Voorbeeld van standaard block elementen zijn: <DIV> <P> <UL>
 
 
 8. Wat betekent nesting? Codeer een voorbeeld met nesting erin.
+
+Met nesting geef je de verhoudingen weer van de elementen onderling. Dit is goed om te doen aangezien hier
+bugs mee kunnen voorkomen worden en de code makkelijker gelezen kunnen worden (door mensen).
+
+<div>
+    <h1>Header text</h1>
+    <p>Example</p>
+    <p></p>
+</div>

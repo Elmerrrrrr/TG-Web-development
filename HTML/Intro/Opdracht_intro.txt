@@ -1,20 +1,55 @@
 1. Wat is het verschil tussen het internet en het world wide web?
-
-Het internet is de infrastructuur en het web (www) maakt daarvan gebruik.
+- Het internet is de infrastructuur en het web (www) maakt daarvan gebruik.
 
 2. Wat is het verschil tussen HTML, CSS en JavaScript?
-Met HTML wordt de structuur van de pagina gemaakt. CSS styled dit en JavaScript maakt de pagina
+- Met HTML wordt de structuur van de pagina gemaakt. CSS styled dit en JavaScript maakt de pagina
 interactief.
+Daarnaast is HTML een markup language wat de stuctuur van de pagina opbouwd aan de hand van tags 
+die de verschillende elementen beschrijven. 
 
-3. Wat is een HTML tag en een HTML element? Hoe open je een HTML tag en hoe sluit
-je een HTML tag. Maak hiervoor voorbeelden en leg uit.
+3. Wat is een HTML tag en een HTML element? Hoe open je een HTML tag en hoe sluitje een HTML tag.
+Maak hiervoor voorbeelden en leg uit.
+- Een HTML tag is het onderdeel waar de structuur van de pagina mee wordt beschreven door
+middel van de de diverse afgesproken elementnamen. 
+openenings tags: <html><head></head><body> 
+closing tags: </body><footer></footer></html>
+    
+
 4. HTML gebruikt basis tags om structuur op te bouwen. De <html>, <head> en <body>.
 Geef voor elke element aan waarvoor het dient.
+
+<html>:de opening van een html bestand. Hiermee wordt de structuur soort (html) ook aangeduid.
+<head>: hierin wordt de title, metadata en koppelde bestanden gedefinieerd.
+Dit alles is niet zichtbaar op de pagina zelf.
+<body>: hierin wordt alles wat op de pagina moet worden getoon in weergegeven. 
+De footer kan onder het body element maar kan ook in de body worden gestructueerd.
+
 5. Op HTML elementen kun je attributen gebruiken. Wat zijn HTML attributen ? Geef
 minimaal 5 attributen en maak voorbeelden waar je de attributen in toepast.
+- Een arrtibuut geeft een element extra informatie mee wat ook gebruikt kan worden
+voor CSS of JavaScript.
+Bijvoorbeeld voor het <img> element zijn er een aantal attributen:
+    src="" Hier geef je de locatie weer van het bestand, in dit geval het plaatje in de img tag.
+    width="" / height"" Dit zijn attributen om de grootte van het plaatje in dit geval te bepalen.
+    alt="" Hier wordt de beschrijving van het plaatje gegeven, die kan worden weergegeven door de
+    browser als het plaatje niet kan worden geladen.
+
+    <img src="mijn_plaatje.jpg" alt="mijn_plaatje" width="500" height="500">
+    *Het img element heeft geen closing tag.
+    style="" Dit kan worden gebruikt bij inline styling van bijvoorbeeld een <p> element.
+    <p style= color:"grey">Voorbeeld tekst</p>
+
+
+
 6. Waarom is een goede HTML Structuur belangrijk? Is deze code een goede structuur?
 Leg uit.
-7. Wat is het verschil tussen inline en block elementen?
-8. Wat betekent nesting? Codeer een voorbeeld met nesting erin.
+- De globale opset is goed. Alleen is de tekst in de body niet verder onderverdeeld. Daar kunnen nog
+ header <h> en <p> tags worden toegepast.
 
-sdfsdf
+
+7. Wat is het verschil tussen inline en block elementen?
+- inline elementen komen op dezelfde regel als eventuele andere content.
+Block elementen creeeren altijd een nieuwe regel na de closing tags
+
+
+8. Wat betekent nesting? Codeer een voorbeeld met nesting erin.

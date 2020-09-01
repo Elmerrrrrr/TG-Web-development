@@ -58,9 +58,12 @@ Voorbeeld van standaard block elementen zijn: <DIV> <P> <UL>
 
 Met nesting geef je de verhoudingen weer van de elementen onderling. Dit is goed om te doen aangezien hier
 bugs mee kunnen voorkomen worden en de code makkelijker gelezen kunnen worden (door mensen).
-
-<div>
-    <h1>Header text</h1>
-    <p>Example</p>
-    <p></p>
-</div>
+<html>
+  <body>
+    <div>
+        <h1>Header tekst</h1>
+        <p>Tekst/p>
+        <p></p>
+    </div>
+  </body>
+</html>

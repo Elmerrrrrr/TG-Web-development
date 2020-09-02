@@ -1,36 +1,67 @@
-Sinds de komst van HTML5 zijn er elementen die betekenissen hebben. Wat
+9. Sinds de komst van HTML5 zijn er elementen die betekenissen hebben. Wat
 wordt er bedoeld met HTML semantics? Waarom is het gebruik van
 semantics belangrijk?
 
+- HTML semantics zijn belangrijk aangezien met betekenis van de elementen over de inhoud de browser maar
+ook search- enigines weten over de inhoud. Als er bijvoorbeeld het element <code></code> code wordt
+geplaatst op de website wordt de code weeergegeven en niet gerenderd door de browser.
 
 Lees meer over semantics markup
+
+
+
+
 10.Wat voor content zou je in de volgende elementen gebruiken?
 Geef in je antwoord voor elk element een toelichting.
-● <header>
-● <footer>
-● <main>
-● <nav>
-● <section>
-3
-● <aside>
-● <article>
+
+● <header> - Tegenwoordig wordt dit element meer gebruikt voor belangrijke pagina informatie die
+            niet wordt weergegeven maar wel wordt gebruikt door de browser en search enigines.
+● <footer> - Hierin kun je informatie weergeven zoals copyrights en bijvoorbeeld een link naar de website ontwikkelaar onder aan de pagina.
+● <main> - Hierin wordt meestal de content van de pagina in weergegeven. Meestal centraal in de pagina.
+● <nav> - Een HTML element met na mijn idee sterke semantics. Dit wordt namelijk gebruikt voor het navigatie onderdeel op de pagina.
+● <section> - Dit is bij  goed gebruik een thematisch gedeelte van een stuk tekst met meestal een header.
+● <aside> - Dit wordt meestal gebruikt als een sidebar. De inhoud is bij goed gebruik gerelateerd aan de rest van de content op de website.
+● <article> - Bij juist gebruik van dit element zou je dit toepassen bij een opzichzelf staand stuk tekst wat
+            verder geen verband hoeft te hebben met de rest van de website. Denk aan een blog of nieuwsartikel.
+
+- Kortom deze voorbeelden zijn eigenlijk een soort <div> elementen met semantics. Zij geven bij juist gebruik de betekenis van de inhoud weer.
 
 
 Headers
 Het gebruik van headers is belangrijk voor zoekmachines en de gebruikers van je website.
 11. Onderzoek en leg uit waarom headers zowel belangrijk zijn voor zoekmachines als
 voor de gebruikers.
+- Voor een goede website is het gebruik van een header tag element cruciaal. Hierin geef je namelijk tegenwoordig belangrijke informatie over de website
+wat voor de zoekmachines goede informatie is en zo de juiste bezoekers aantrekt. Verder kunnen hierin o.a de css styling worden genoteerd, direct in style
+element of een link naar een aparte stylesheet. 
+
+
+
 Voor het aanmaken van een text-header, in het Nederlands een subkop of kop, kan je gebruik
 maken van een Header tag. Je kunt verschillende grootte koppen creëren.
-
 12. Onderzoek hoe je een text-header aanmaakt en reproduceer het volgende resultaat:
+- Een kop tekst kun je aanmaken doormiddel van gebruik van een <h> tag. Er zijn standaard zes verschillende grootes, <h1> t/m <h6>
+
+<h1>Headings Opdrachten</h1>
+
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+
+
+
 Paragrafen
 13.Onderzoek wat een paragraaf tag is en hoe hij gebruikt wordt.
 Geef hier een voorbeeld bij.
 
+
+
 14.Onderzoek en leg het verschil tussen het stoppen van alle tekst in één
 paragraaf tag, en het opsplitsen van de tekst in meerdere tags uit.
-4
+
 
 15.Reproduceer het volgende resultaat door gebruik te maken van text-headers
 en de paragraaf tags.

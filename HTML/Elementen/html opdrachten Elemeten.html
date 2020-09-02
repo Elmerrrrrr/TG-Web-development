@@ -3,17 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Elementen</title>
+    <style>
+       nav ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333333;
+        }
+        
+       nav li {
+          float: left;
+        }
+        
+       nav li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 16px;
+          text-decoration: none;
+        }
+        
+       nav li a:hover {
+          background-color: #111111;
+        }
+        </style>
 </head>
 <body>
 
-    <nav>
-    <a href="/html/"> HTML </a>
-    <a href="/css/"> CSS </a>
-    <a href="/js/"> JavaScript </a>
-    <a href="/python/"> Python </a>
-    </nav>
-
+    <img src="https://techgrounds.nl/static/media/TG_Logo.d5934b2d.png" alt="Techgrounds logo" height="50px">
+    <br>
+    <br>    
+  
 
     <iframe src="https://www.w3schools.com" name ="iframe_a" title ="Iframe Example" width="75%" height="75%"></iframe>
         
@@ -34,8 +56,118 @@
     <h3>Een overzicht van de browsers met daarbij de ondersteunde image file support</h3>
 <iframe src="https://en.wikipedia.org/wiki/Comparison_of_web_browsers#Image_format_support" frameborder="0"width="75%" height="900px"></iframe>
 
+<br>
+<hr>
+<br>
+
+<div style="text-align: center">
+    <audio src="./explosie.mp3" controls autoplay loop ></audio>
+</div>
+
+<br>
+<hr>
+<br>
+
+<div style="text-align: center">
+    <video width="320" height="240" controls autoplay>
+        <source src="./mov_bbb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<br>
+<hr>
+<br>
+
+<p><strong>Organized lists</strong></p>
+
+<ol>
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+</ol>
+
+<ol>
+    <li>item 1</li>
+    <li>item 2
+        <ol>
+            <li>sub item 1</li>
+            <li>sub item 2</li>
+        </ol>
+    </li>
+    <li>item 3</li>
+</ol>
+
+<p><strong>Un-organized lists</strong></p>
+
+<ul>
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+</ul>
+
+<ul>
+    <li>item 1</li>
+    <li>item 2
+        <ul>
+            <li>sub item 1</li>
+            <li>sub item 2</li>
+        </ul>
+    <li>item 3</li>
+</ul>
+
+
+<ul>
+    <li>item 1</li>
+    <li>item 2
+        <ol>
+            <li>sub item 1</li>
+            <li>sub item 2</li>
+        </ol>
+    <li>item 3</li>
+</ul>
+
+<br>
+<hr>
+<br>
+
+
+<nav>
+    <ul >
+        <li><a href="#tijgers">Tigers</a></li>
+        <li><a href="#lions">Lions</a></li>
+        <li><a href="#monkeys">Monkeys</a></li>
+        <li><a href="#hippopotaumus">Hippopotaumuss</a></li>
+    </ul>
+</nav>
+<br>
+<br>
+<article id="tigers">
+<h1>Tigers</h1>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, quisquam repellat, et suscipit quis harum vel quos ut possimus optio nihil pariatur provident, inventore ipsa dolor assumenda! Laborum, molestiae molestias.
+</article>
+
+<article id="lions">
+    <h1>Lions</h1>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, quisquam repellat, et suscipit quis harum vel quos ut possimus optio nihil pariatur provident, inventore ipsa dolor assumenda! Laborum, molestiae molestias.
+</article>
+
+<article id="monkeys">
+    <h1>Monkeys</h1>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, quisquam repellat, et suscipit quis harum vel quos ut possimus optio nihil pariatur provident, inventore ipsa dolor assumenda! Laborum, molestiae molestias.
+</article>
+
+<article id="hippopotaumuss">
+    <h1>Hippopotaumuss</h1>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, quisquam repellat, et suscipit quis harum vel quos ut possimus optio nihil pariatur provident, inventore ipsa dolor assumenda! Laborum, molestiae molestias.
+</article>
+<br><br>
+
+<br>
+<hr>
+<br>
+
 
 
 </body>
 </html>
-

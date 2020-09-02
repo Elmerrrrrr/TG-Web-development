@@ -28,9 +28,85 @@ Er zijn er heel veel maar de meest gebruikte zijn:
 en onderaan je website door zowel gebruik te maken van de absolute path en
 relative path.
 Aan de img element kan je ook de alt attribute gebruiken.
+Zie: TG-Web-development/HTML/Elementen/html opdrachten Elementen.html
+
 
 5. Wat houdt de alt attribute in? En waarom is het handig om de alt attribuut te
 gebruiken
 -Dit wordt gebruikt om de afbeelding meer informatie mee te geven, namelijk een beschrijving van de afbeelding
 voor als de afbeelding niet kan worden geladen. Tevens kan dit voor slechtzienden of blinden worden voorgelezen
-door de speciale browsers voor deze doelgroep.
+door de speciale browsers (screen readers) voor deze doelgroep.
+
+
+In de sound folder staat een explosion.mp3 bestand.
+6. Laadt dit bestand in als een audio op het scherm.
+Extra: Maak het leuker door de audio op repeat te zetten.
+Tip: gebruik controls attribute om audio af te spelen.
+- <audio src="./explosie.mp3" controls autoplay loop></audio>
+  Zie: TG-Web-development/HTML/Elementen/html opdrachten Elementen.html
+
+
+Een audio bestand heeft verschillende formaten. Niet alle formaten worden
+ondersteund door de browser. Hiervoor is een oplossing voor.
+7. Speel een audio bestand af met <source> tag. Leg uit wat hier het voordeel
+van is.
+- het voordeel hiervan is dat je een selectie van meedere formaten kan geven waar de verschillende browsers
+uit kunnen kiezen.
+Zie: TG-Web-development/HTML/Elementen/html opdrachten Elementen.html
+    <audio controls>
+        <source src="horse.ogg" type="audio/ogg">
+        <source src="horse.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+
+
+8. Zoek een willekeurig video en sla dit op in je computer. Laadt dit bestand in
+als een video op het scherm.
+Tip: De video is veel groter dan het scherm. Zoek uit welke attribuut je voor de
+video element kan gebruiken om de grootte van de video aan te passen.
+Een video bestand heeft verschillende formaten. Niet alle formaten worden
+ondersteund door de browser. Hiervoor is een oplossing voor.
+Speel een video bestand af met <source> tag. Leg uit wat hier het voordeel van is.
+
+- Zie: TG-Web-development/HTML/Elementen/html opdrachten Elementen.html
+    <video width="320" height="240" controls autoplay>
+        <source src="./mov_bbb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+
+
+
+
+Lijsten
+Door gebruik te maken van lijsten in HTML kan je opsommingen eenvoudig
+weergeven. Onderzoek de verschillende soorten lijsten en op welke wijze je deze
+kunt toepassen.
+9. Maak gebruik van de verschillende soorten lijsten om het volgende resultaat
+op je webpagina weer te geven.
+- Zie: TG-Web-development/HTML/Elementen/html opdrachten Elementen.html
+
+
+
+
+
+10. Bouw een navigatiebalk door gebruik te maken uit een lijst dat bestaat uit de
+volgende onderdelen:
+○ Tigers
+○ Lions
+○ Monkeys
+○ Hippopotaumus
+
+*snelkoppeling in visual code: nav>ul>li*4>a
+
+- Zie: TG-Web-development/HTML/Elementen/html opdrachten Elementen.html
+
+
+
+
+11. Creëer nu voor elk onderdeel een header en een bijbehorende stuk tekst en
+zorg ervoor dat door te klikken op de links in de navigatiebalk je gerefereerd
+wordt naar het bijbehorende onderdeel. Zie hieronder een voorbeeld:
+
+- Zie: TG-Web-development/HTML/Elementen/html opdrachten Elementen.html

@@ -56,7 +56,7 @@ maken van een Header tag. Je kunt verschillende grootte koppen creëren.
 Paragrafen
 13.Onderzoek wat een paragraaf tag is en hoe hij gebruikt wordt.
 Geef hier een voorbeeld bij.
-- Een paragraaf tag wordt gebruikt voor paragraven. Er wordt standaard een lege regel voor de opening
+- Een paragraaf tag wordt gebruikt voor paragrafen. Er wordt standaard een lege regel voor de opening
  en na de closing tag </p> geplaatst.
 
 

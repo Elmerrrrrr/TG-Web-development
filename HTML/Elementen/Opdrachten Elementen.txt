@@ -1,0 +1,36 @@
+1. Bij het inladen van een bestand is het noodzakelijk om de locatie van het
+bestand aan te geven. Dit kan op 2 manieren:
+● Absolute path - Dit is de gehele link naar het item toe. Wordt meestal gebruikt om te linken naar items buiten de pagina('s)
+● Relative path - Dit is het path relatief aan waar de pagina staat. Dus verplaats je alle files blijven deze links
+goed. Wordt meestal gebruikt voor interne links op de pagina.
+
+
+
+Een image element is voor het inladen van een afbeelding. Afbeeldingen kunnen van
+verschillende formaat zijn. Bijvoorbeeld, een afbeelding kan een JPG formaat zijn.
+2. Zoek uit welke formaat afbeeldingen er nog meer kan zijn.
+Een afbeelding tonen is afhankelijk van of de browser het ondersteunt.
+- Er zijn er velen maar de meest gebruikte zijn welke ook door de meeste gebruikers 
+worden ondersteunt:.jpg .png .gif .svg
+
+
+
+3. Zoek uit welke browsers er zijn en maak een lijst van je antwoord.
+Er zijn er heel veel maar de meest gebruikte zijn:
+-Google Chrome
+-Mozilla Firefox
+-Opera Web Browser
+-Safari Web Browser
+-Internet Explorer/Microsoft Edge
+
+
+4. Onderzoek hoe het plaatsen van een foto gedaan wordt en plaats deze boven
+en onderaan je website door zowel gebruik te maken van de absolute path en
+relative path.
+Aan de img element kan je ook de alt attribute gebruiken.
+
+5. Wat houdt de alt attribute in? En waarom is het handig om de alt attribuut te
+gebruiken
+-Dit wordt gebruikt om de afbeelding meer informatie mee te geven, namelijk een beschrijving van de afbeelding
+voor als de afbeelding niet kan worden geladen. Tevens kan dit voor slechtzienden of blinden worden voorgelezen
+door de speciale browsers voor deze doelgroep.

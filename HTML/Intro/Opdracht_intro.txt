@@ -58,14 +58,21 @@ Voorbeeld van standaard block elementen zijn: <DIV> <P> <UL>
 
 8. Wat betekent nesting? Codeer een voorbeeld met nesting erin.
 
-Met nesting geef je de verhoudingen weer van de elementen onderling. Dit is goed om te doen aangezien hier
-bugs mee kunnen voorkomen worden en de code makkelijker gelezen kunnen worden (door mensen).
+Met nesting geef je de verhoudingen weer van de elementen onderling. Het plaatsen van elementen binnen andere
+elementen noem je nesting. Een goed voorbeeld hiervan is ook de list items <li> binnen een <ul> of <ol>.
+
 <html>
   <body>
     <div>
         <h1>Header tekst</h1>
         <p>Tekst/p>
-        <p></p>
+        <p>
+          <ol>
+          <li>item1</li>
+          <li>item2</li>
+          <li>item3</li>
+            </ol>
+        </p>
     </div>
   </body>
 </html>

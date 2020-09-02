@@ -56,29 +56,72 @@ maken van een Header tag. Je kunt verschillende grootte koppen creëren.
 Paragrafen
 13.Onderzoek wat een paragraaf tag is en hoe hij gebruikt wordt.
 Geef hier een voorbeeld bij.
-
+- Een paragraaf tag wordt gebruikt voor paragraven. Er wordt standaard een lege regel voor de opening
+ en na de closing tag </p> geplaatst.
 
 
 14.Onderzoek en leg het verschil tussen het stoppen van alle tekst in één
 paragraaf tag, en het opsplitsen van de tekst in meerdere tags uit.
+- Er wordt een lege regel voor en na deze tag elementen geplaatst. Hiermee kun je meer overzicht creeeren met een tekst.
 
 
 15.Reproduceer het volgende resultaat door gebruik te maken van text-headers
 en de paragraaf tags.
 Horizontal rule
 We willen nu een footer toevoegen onderaan onze pagina. Onderzoek hoe een
-horizontal rule werkt en start aan de onderstaande opdracht.\
+horizontal rule werkt en start aan de onderstaande opdracht.
+
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mijn eerste website</title>
+</head>
+<body>
+    
+    <h1>Mijn eerste website</h1>
+
+        <h3>Mijn eerste sub-kop</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta optio cupiditate ipsam necessitatibus tenetur? Dolor ratione asperiores dolorem ad provident? Iure laudantium quod nihil
+            ullam exercitationem tenetur dolorem voluptatibus. Veritatis.</p>
+        <h3>Mijn tweede sub-kop</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni ducimus officiis aliquam consequatur eum tenetur explicabo distinctio tempora provident
+                nemo quam quaerat blanditiis molestias ullam magnam quibusdam voluptatum, dolores incidunt.</p>
+
+    <hr>
+
+<footer>
+    <h3>Footer</h3>
+    <p>Deze website is gebouwd door <a href="https://techgrounds.nl/" target="_blank" type="text/html" lang="nl" >Techgrounds Academy</a></p> 
+
+</footer>
+</body>
+</html>
+
 
 16.Voeg een Horizontal rule toe en reproduceer het volgende resultaat.
 Link tags
 In onze footer willen we graag linken naar de TechGrounds website. Onderzoek hoe
 een link tag werkt.
+- Dit is een <hr> tag element. Deze heeft geen closing tag en maakt een horizontale lijn met een lege
+regel boven en onder de tag.
+
+
 
 17.Voeg een link tag toe en reproduceer het volgende resultaat in de footer.
 Zodra een gebruiker op de link klikt wordt de pagina weergegeven in de huidige
 browser window. Door gebruik te maken van attributen kan de link geopend worden
 in bijvoorbeeld een nieuw tabblad. Voorbeelden van HTML attributen zijn
 bijvoorbeeld een image tag die een “alt” attribuut heeft.
+- Zie antwoord vraag 15
+
 
 18. Onderzoek welke 4 attributen een link tag kan hebben, leg uit wat deze doen
 en voeg deze als voorbeeld toe op je website. 
+
+-   href="https://techgrounds.nl" - Dit attribuut geeft de verwijzing naar het linkadres
+    target="_blank"               - Dit attribuut geeft aan hoe de link geopend moet worden
+    type="text/html"              - Dit attribuut geeft aan wat voor soort document naar verwezen wordt.
+    lang="nl"                     - Dit attribuut geeft aan wat welke taal in het gelinkte document wordt gebruikt.
+    id/classname                  - Hiermee kun je sp
+Er zijn nog meer <a> attributen maar worden na mijn idee niet veel gebruikt.

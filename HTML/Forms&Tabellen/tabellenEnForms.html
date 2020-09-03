@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabellen</title>
+</head>
+<body>
+    
+<table>
+    <caption>Info avond data</caption>
+    <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Age</th>
+    </tr>
+    <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+    </tr>
+    <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+    </tr>
+</table>
+
+<br><br><hr><br><br>
+
+<h3>Opdracht 1</h3> 
+
+<form action="GET">
+    <fieldset style="background-color: cadetblue;">
+        Achternaam: <input type="text" id="achternaam_id" name="achternaam">
+        <label for="achternaam_id"></label><br>
+        Voornaam: <input type="text" id="voornaam_id" name="voornaam">
+        <label for="voornaam_id"></label>
+        <input type ="submit" value ="Submit">
+    </fieldset>
+</form>
+
+
+
+
+<br><br><hr><br><br>
+
+<h3>Opdracht 2</h3> 
+
+<form action="POST">
+    <input type="text">
+
+    <input type="button"> type="button"<br><br>
+    <input type="checkbox"> type="checkbox"br><br><br>
+    <input type="color"> type="color"<br><br>
+    <input placeholder="dd-mm-yyyy" type="date"> type="date"<br><br>
+    <input type="datetime-local"> type="datetime-local"<br><br>
+    <input type="date" name="begin"  placeholder="dd-mm-yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}" value="" min="1997-01-01" max="2030-12-31"> <br><br>
+    <input type="email"> type="email"<br><br>
+    <input type="file"> type="file"<br><br>
+    <input type="hidden"> type="hidden"<br><br>
+<blockquote>The input type="hidden"> defines a hidden input field.
+    A hidden field let web developers include data that cannot be seen or modified by users when a form is submitted.
+    A hidden field often stores what database record that needs to be updated when the form is submitted.
+    Note: While the value is not displayed to the user in the page's content, it is visible (and can be edited) 
+    using any browser's developer tools or "View Source" functionality. Do not use hidden inputs as a form of security!</blockquote>
+
+
+    <input type="image"> type="image"<br><br>
+    <input type="month"> type="month"<br><br>
+    <input type="number"> type="number"<br><br>
+    <input type="password"> type="password"<br><br>
+    <input type="radio"> type="radio"<br><br>
+    <input type="range"> type="range"<br><br>
+    <input type="reset"> type="reset"<br><br>
+    <input type="search"> type="search"<br><br>
+    <input type="submit"> type="submit"<br><br>
+    <input type="tel"> type="tel"<br><br>
+    <input type="text"> type="text"<br><br>
+    <input type="time"> type="time"<br><br>
+    <input type="url"> type="url"<br><br> 
+    <input type="week"> type="week"<br><br>
+
+</form>
+
+<br><br><hr><br><br>
+
+<h3>Opdracht 3</h3> 
+
+<form action="GET">
+    <caption>Voer uw email adres in:</caption><br>
+    <input type="email" id="eamill" name="email">
+    <label for="emaill"></label>
+    <input type ="submit" value ="Verstuur">
+</form>
+
+
+<br><br><hr><br><br>
+
+<h3>Opdracht 4</h3> 
+
+<form action="GET">
+    <fieldset style="background-color:lightblue;">
+        <legend>Persoonsgegevens</legend><br>
+        <label for="achternaam" >Achternaam: </label> <input type="text" id="achternaam" name="Achternaam" required><br><br>
+        <label for="voornaam">Voornaam: </label> <input type="text" id="voornaam" name="Voornaam" required><br><br>
+        <label for="geboortenm">Geboortedatum: </label> <input type="date" id="geboortenm" name="geb.datum" required><br><br>
+        <label for="man">M</label> <input type="radio" name="geslacht" id="man"> 
+        <label for="vrouw">V</label> <input type="radio" name="geslacht" id="vrouw"><br><br>
+        <label for="adres">Adres:</label> <input type="text" id="adres" name="Adres" required><br><br>
+        <label for="potcode">Postcode: </label><input type="text" id="postcode" name="postcode" pattern="[A-Za-z0-9]{6}" title="Zes cijferige postcode (1111AA)" required/><br><br>
+        <label for="plaats">Plaats: </label> <input type="text" id="plaats" name="Plaats" required><br><br><br>
+    
+         <input type="submit" value="Submit">  <input type="reset" value="Reset"><br>
+    </fieldset>
+</form>
+
+   <br><br><hr><br><br>
+
+   <h3>Opdracht 5</h3> 
+
+
+   <label for="optgroupies">Het optgroup element:</label>
+   <select  name="optgroupies" id="optgroupies">
+     <optgroup label="optgroup 1">
+       <option value="optie 1">optie 1</option>
+       <option value="optie 2">optie 2</option>
+     </optgroup>
+     <optgroup label="optgroup 2">
+       <option value="optie 1">optie 1</option>
+       <option value="optie 2">optie 2</option>
+     </optgroup>
+   </select>
+
+   <br><br><hr><br><br>
+
+   <h3>Opdracht 7</h3>
+
+<form action="GET">
+    <fieldset>
+        <legend>Reserverings formulier</legend><br>
+        <label for="naam" >Naam: </label> <input type="text" id="naam" name="Naam" required><br><br>
+        <label for="lid">Ik ben lid, Ja:</label>  <input type="radio" name="lid" id="lid">
+        <label for="geenLid">Nee: </label> <input type="radio" name="lid" id="geenLid"><br><br>
+        <label for="email">Email: </label><input type="email" id="email" name="EmailAdres" required><br><br>
+        <label for="sportOpties">Selecteer sport: </label>
+        <select name="sportopties" id="sportOpties" required>
+              <option value="tafeltennis">tafeltennis</option>
+              <option value="badminton">badminton</option>
+              <option value="squash">squash</option>             
+        </select><br><br>
+        <label for="datumT">Gewenste datum en tijd: </label> <input type="datetime-local" name="Datum-Tijd" id="datumT"><br><br>
+        <label for="alEenLid" >Akkoord met de <a href="#">reserverings voorwaarden</a> </label> <input type="checkbox" name="lid" id="alEenLid" required><br><br>
+        <input type="submit" value="Submit">
+    </fieldset>
+
+
+</form>
+
+
+   <br><br><hr><br><br>
+
+
+   <h3>Opdracht 8</h3>
+
+   <!--
+   Naam van dat persoon
+   Telefoonnummer
+   E-mail van dat persoon
+   Naam van dat boek
+   Aantal boeken om te reserveren. Het aantal moet minimaal 1 en maximaal 5
+   zijn.
+   Een submit knop -->
+
+<form action="GET">
+    <fieldset>
+        <legend>Reservering Boeken</legend><br>
+        <label for="naam" >Uw naam: </label> <input type="text" id="naam" name="Naam" required><br><br>
+        <label for="tel" >Telefoonnr: </label> <input type="tel" name="telefoon" id="tel" required><br><br>
+        <label for="email">Email: </label><input type="email" id="email" name="EmailAdres" required><br><br>
+        <label for="titel" >Titel van het boek: </label> <input type="text" id="titel" name="Titel" required><br><br>
+        
+        <label for="aantalDagen">Selecteer aantal dagen: </label>
+        <select name="aantalDagen" id="aantalDagen" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="3">4</option>
+            <option value="3">5</option>             
+      </select><br><br>
+      <input type="submit" value="Submit">
+    </fieldset>
+</form>
+
+
+<br><br><hr><br><br>
+
+
+<h3>Opdracht 9</h3>
+
+
+
+<form action="GET">
+    <fieldset>
+        <legend>Reservering Restaurant</legend><br>
+        <label for="naam" >Uw naam: </label> <input type="text" id="naam" name="Naam" required><br><br>
+        <label for="tel" >Telefoonnr: </label> <input type="tel" name="telefoon" id="tel" required><br><br>
+        <label for="email">Email: </label><input type="email" id="email" name="EmailAdres" required><br><br>
+            
+        <label for="menu">Selecteer menu: </label>
+        <select name="menu" id="menu" required>
+            <option value="1">Optie 1</option>
+            <option value="2">Optie 2</option>
+            <option value="3">Optie 3</option>
+            <option value="3">Optie 4</option>
+            <option value="3">Optie 5</option>             
+      </select><br><br>
+      <label for="datumT">Gewenste datum en tijd: </label> <input type="datetime-local" name="Datum-Tijd" id="datumT"><br><br>
+      <label for="alEenLid" >Akkoord met de <a href="#">voorwaarden</a> </label> <input type="checkbox" name="lid" id="alEenLid" required><br><br>
+      <label for="check">Corona check ingevuld Ja:</label>  <input type="radio" name="check" id="check">
+      <label for="checkN">Nee: </label> <input type="radio" name="check" id="checkN"><br><br>
+      <input type="submit" value="Submit">
+    </fieldset>
+</form>
+
+
+
+
+
+<br><br><hr><br><br>
+
+
+
+</body>
+</html>

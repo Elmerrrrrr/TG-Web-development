@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+
+        body{
+            padding: 100px;
+        }
+        
+        input{
+            margin-top:2em;
+        }
+        hr{
+            border: 2px solid black;
+        }
+
+    </style>
+</head>
+<body>
+
+    <form>
+        <input type="text">
+    </form>
+
+
+    <form>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+    </form>
+
+
+
+
+<br><br><hr><br><br>
+
+
+<form action ="/contact" method ="POST">  <!--Definieren van de form handler, methode GET zet de info in een url dus zeker geen veilige oplossing.POST is een betere keuze hierin oor niet gevoelige data
+                                             is het gebruiken van een GET method wel handig.-->
+<input type ="radio" id ="male" name ="gender" value ="male">
+<label for ="male"> Male </label ><br >
+<input type ="radio" id ="female" name ="gender" value ="female">
+<label for ="female"> Female </label ><br >
+<input type ="radio" id ="other" name ="gender" value ="other">
+<label for ="other"> Other </label >
+<input type ="submit" value ="Submit">
+</form >
+
+<!-- NOTE: Als een name attribuut niet wordt meegegeven, wordt de
+data van het input veld niet opgestuurd! -->
+
+<br><br><hr><br><br>
+
+
+
+
+ <h4>HTML Form elementen</h4> 
+
+<form action="">
+
+
+        <label>label</label><br><br> 
+
+        <blockquote>" Labels zijn erg handig voor gebruikers die gebruik maken van screenreaders. Door de
+            labels zullen de labels hardop voorgelezen worden wanneer de gebruiker een input
+            element highlight. Ook wordt door het klikken op een label de bijbehorende radio
+            button/check-box geactiveerd. Het for attribuut van de label tag moet gelijk zijn aan
+            het id attribuut van het input element zodat deze aan elkaar verbonden zijn en op een
+            juiste wijze werken. "</blockquote>
+
+
+            &lt;label for=&quot;id attribuut naam van het input element&quot; &gt;label&lt;/label&gt;
+            
+           <p>How to display html on a page without being rendered: <a href="https://www.plus2net.com/html_tutorial/tags-page.php">Link</a></p> 
+            <br><br>
+
+
+        <!-- Dit LABEL ELEMENT is een belangrijk form element want dit maakt de koppeling tussen
+        de verschillende form elementen. Daarnaast kun je er acties via JavaScript of
+        PHP mee uitvoeren om iets met de ingevoerde data te doen. -->
+
+        
+        <input> input(heeft geen closing tag)<br><br>
+
+        <select>
+            <label for="id attribuut naam van het input element" >label</label>
+            <option>option 1</option>
+            <option>option 2</option>
+        <select> select element, hier kan het option element gebruikt worden<br><br>
+
+        
+        <textarea>Dit is een tekst veld, waar je veel tekst in kunt geven. textarea heeft een aantal 
+            attributen waar je het element mee kunt instellen. https://www.w3schools.com/tags/tag_textarea.asp
+        </textarea><br><br>
+
+        <button>button</button><br><br><br>
+
+
+
+        <fieldset>Met het fieldset element kun je een (afgebakend) veld maken om verschillende
+          elementen in te groeperen.</fieldset>
+          <br>
+        <h1>The fieldset element</h1>
+
+        <form action="/action_page.php">
+         <fieldset>
+          <legend>Personalia:(<---=legend element)</legend>
+          <label for="fname">First name:</label>
+          <input type="text" id="fname" name="fname"><br><br>
+          <label for="lname">Last name:</label>
+          <input type="text" id="lname" name="lname"><br><br>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email"><br><br>
+          <label for="birthday">Birthday:</label>
+          <input type="date" id="birthday" name="birthday"><br><br>
+          <input type="submit" value="Submit">
+         </fieldset>
+        </form>
+
+        <br><br>
+
+
+        <legend> Het <strong>legend element</strong> wordt gebruikt als caption (beschijving) van het fieldset element.</legend><br><br>
+        
+        <datalist>datalist</datalist><br><br>
+
+        
+            
+            <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+                <input type="range" id="a" value="50">
+                +<input type="number" id="b" value="25">
+                =<output name="x" for="a b"></output>
+            </form>
+            <br>
+
+            <output>Het output element wordt gebruikt voor berekeningen in combinatie met input elementen.
+                 The 'output' value, name, and contents are NOT submitted during form submission.</output><br><br>
+
+                 <label for="optgroupies">Het optgroup element:</label>
+                 <select  name="optgroupies" id="optgroupies">
+                   <optgroup label="optgroup 1">
+                     <option value="optie 1">optie 1</option>
+                     <option value="optie 2">optie 2</option>
+                   </optgroup>
+                   <optgroup label="optgroup 2">
+                     <option value="optie 1">optie 1</option>
+                     <option value="optie 2">optie 2</option>
+                   </optgroup>
+                 </select>
+
+        <blockquote>" The optgroup tag is used to group related options in a select element (drop-down list).
+            If you have a long list of options, groups of related options are easier to handle for a user." </blockquote> <br><br>
+
+</form>
+
+<br><br><hr><br><br>
+
+
+
+<h4>HTML Form Input types</h4>
+
+<form action="">
+        <input type="button"> type="button"<br><br>
+        <input type="checkbox"> type="checkbox"br><br><br>
+        <input type="color"> type="color"<br><br>
+
+        <input placeholder="dd-mm-yyyy" type="date"> type="date"<br><br>
+        <input type="datetime-local"> type="datetime-local"<br><br>
+
+        <input type="date" name="begin"  placeholder="dd-mm-yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}" value="" min="1997-01-01" max="2030-12-31"> <br><br>
+
+        
+        <input type="email"> type="email"<br><br>
+        <input type="file"> type="file"<br><br>
+        <input type="hidden"> type="hidden"<br><br>
+        <input type="image"> type="image"<br><br>
+        <input type="month"> type="month"<br><br>
+        <input type="number"> type="number"<br><br>
+        <input type="password"> type="password"<br><br>
+        <input type="radio"> type="radio"<br><br>
+        <input type="range"> type="range"<br><br>
+        <input type="reset"> type="reset"<br><br>
+        <input type="search"> type="search"<br><br>
+        <input type="submit"> type="submit"<br><br>
+        <input type="tel"> type="tel"<br><br>
+        <input type="text"> type="text"<br><br>
+        <input type="time"> type="time"<br><br>
+        <input type="url"> type="url"<br><br> 
+        <input type="week"> type="week"<br><br>
+    
+</form>
+
+<br><br><hr><br><br>
+
+
+</body>
+</html>
+
+
+

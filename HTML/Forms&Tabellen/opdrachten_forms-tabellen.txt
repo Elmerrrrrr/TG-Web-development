@@ -1,0 +1,53 @@
+Voor de opdrachten zie ook:
+
+ - forms.html
+ - tabellenEnForms.html
+
+--Opdracht 1--
+
+Zie tabellenEnForms.html
+
+
+--Opdracht 2--
+
+Zie tabellenEnForms.html
+
+--Opdracht 3--
+
+Er wordt een foutmelding gegeven als je het input veld niet invuld
+na gelang de voorwaarden van het type input veld.
+
+
+--Opdracht 4, 5--
+
+Zie tabellenEnForms.html
+
+
+--Opdracht 6--
+
+Dit kan in een webshop bijvoorbeeld waarbij je meedere opties hebt bij het desbetreffende product of dienst.
+- kleuren, maten, hoeveelheden, datums voor afspraken enz.
+
+--Opdracht 7, 8, 9--
+
+Zie tabellenEnForms.html
+
+
+--Opdracht 10--
+
+Om een tabel te maken heb je volgende elementen nodig.
+Geef voor elke element een definitie.
+
+<table>
+<thead> - Dit element wordt samengebruikt met de tbody en de tfoot. Browsers kunnen
+        dit element samen met de footer laten een soort van sticky maken om de tbody
+        door te laten scrollen.
+<tbody> -
+<tfoot> - Zie antwoord thead
+<th>  - Dit is een table header, komt bovenaan met tekst vet gedrukt en gecentered
+<tr>  - Dit is een table row
+<td>  - Dit is een table cell
+
+
+
+

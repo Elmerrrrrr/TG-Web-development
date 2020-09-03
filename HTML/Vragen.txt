@@ -1,0 +1,17 @@
+In onderdeel 3 -Forms en Tabellen
+
+Verschil tussen GET en POST
+Het verschil tussen de GET en POST methods is dat bij het gebruiken van de GET
+method de resultaten zichtbaar worden in de pagina’s url. Dit is dus niet handig voor
+gevoelige data en verder heeft het ook een limiet in grootte. 
+
+
+---??? Voor niet gevoelige data is het gebruiken van een GET method wel handig. Op deze wijze wordt de input in
+een google search-bar meegestuurd.???---
+
+
+Als je een input hebt die erg groot kan zijn of
+gevoelige data kan bevatten maken we gebruik van de POST method.
+
+
+- Date format change met input forms

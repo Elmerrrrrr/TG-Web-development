@@ -49,5 +49,13 @@ Geef voor elke element een definitie.
 <td>  - Dit is een table cell
 
 
+--Opdracht 11, 12, 13, 14--
+
+Zie tabellenEnForms.html
+
+
+
+
+
 
 

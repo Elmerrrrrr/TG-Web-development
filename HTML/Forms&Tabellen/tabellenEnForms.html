@@ -4,9 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabellen</title>
+<style>
+li{
+list-style-type: none;
+padding: 1em;
+
+}
+
+</style>
+
+
 </head>
 <body>
     
+
+<nav>
+    <ul style="display:flex;">
+        <li><a href="#opdr1">OPDR1</a></li>
+        <li><a href="#opdr2">OPDR2</a></li>
+        <li><a href="#opdr3">OPDR3</a></li>
+        <li><a href="#opdr4">OPDR4</a></li>
+        <li><a href="#opdr5">OPDR5</a></li>
+        <li><a href="#opdr6">OPDR6</a></li>
+        <li><a href="#opdr7">OPDR7</a></li>
+        <li><a href="#opdr8">OPDR8</a></li>
+        <li><a href="#opdr9">OPDR9</a></li>
+        <li><a href="#opdr10">OPDR10</a></li>
+        <li><a href="#opdr11">OPDR11</a></li>
+        <li><a href="#opdr12">OPDR12</a></li>
+        <li><a href="#opdr13">OPDR13</a></li>
+        <li><a href="#opdr14">OPDR14</a></li>
+    </ul>
+</nav>
+
+<br><br><hr><br><br>
+
 <table>
     <caption>Info avond data</caption>
     <tr>
@@ -28,7 +60,7 @@
 
 <br><br><hr><br><br>
 
-<h3>Opdracht 1</h3> 
+<h3 id="opdr1">Opdracht 1</h3> 
 
 <form action="GET">
     <fieldset style="background-color: cadetblue;">
@@ -45,7 +77,7 @@
 
 <br><br><hr><br><br>
 
-<h3>Opdracht 2</h3> 
+<h3 id="opdr2">Opdracht 2</h3> 
 
 <form action="POST">
     <input type="text">
@@ -83,9 +115,9 @@
 
 </form>
 
-<br><br><hr><br><br>
+<br><a href="#top">Back to top</a><br><hr><br><br>
 
-<h3>Opdracht 3</h3> 
+<h3 id="opdr3">Opdracht 3</h3> 
 
 <form action="GET">
     <caption>Voer uw email adres in:</caption><br>
@@ -95,9 +127,9 @@
 </form>
 
 
-<br><br><hr><br><br>
+<br><a href="#top">Back to top</a><br><hr><br><br>
 
-<h3>Opdracht 4</h3> 
+<h3 id="opdr4">Opdracht 4</h3> 
 
 <form action="GET">
     <fieldset style="background-color:lightblue;">
@@ -115,9 +147,9 @@
     </fieldset>
 </form>
 
-   <br><br><hr><br><br>
+<br><a href="#top">Back to top</a><br><hr><br><br>
 
-   <h3>Opdracht 5</h3> 
+   <h3 id="opdr5">Opdracht 5</h3> 
 
 
    <label for="optgroupies">Het optgroup element:</label>
@@ -132,9 +164,9 @@
      </optgroup>
    </select>
 
-   <br><br><hr><br><br>
+   <br><a href="#top">Back to top</a><br><hr><br><br>
 
-   <h3>Opdracht 7</h3>
+   <h3 id="opdr7">Opdracht 7</h3>
 
 <form action="GET">
     <fieldset>
@@ -158,10 +190,10 @@
 </form>
 
 
-   <br><br><hr><br><br>
+<br><a href="#top">Back to top</a><br><hr><br><br>
 
 
-   <h3>Opdracht 8</h3>
+   <h3 id="opdr8">Opdracht 8</h3>
 
    <!--
    Naam van dat persoon
@@ -193,10 +225,10 @@
 </form>
 
 
-<br><br><hr><br><br>
+<br><a href="#top">Back to top</a><br><hr><br><br>
 
 
-<h3>Opdracht 9</h3>
+<h3 id="opdr9">Opdracht 9</h3>
 
 
 
@@ -223,13 +255,195 @@
     </fieldset>
 </form>
 
+<br><a href="#top">Back to top</a><br><hr><br><br>
+
+<h3 id="opdr11">Opdracht 11</h3>
+
+<table>
+    <caption>Tabel met table headers</caption>
+    <tr>
+        <th>Voornaam</th>
+        <th>Achternaam</th>
+        <th>Leeftijd</th>
+        <th>Telefoonnummer</th>
+    </tr>
+    <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>41</td>
+        <td>+31 123456789</td>
+        
+    </tr>
+    <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+        <td>+31 123456789</td>
+    </tr>
+    <tr>
+        <td>Alexander</td>
+        <td>Beave</td>
+        <td>16</td>
+        <td>+31 123456789</td>
+    </tr>
+</table>
+
+<br><a href="#top">Back to top</a><br><hr><br><br>
+
+
+
+<h3 id="opdr12">Opdracht 12</h3>
+
+<table>
+    <caption>Agenda Tabel</caption>
+    <col span="1" style="background-color:lightgrey;">
+    <col span="1" style="background-color:lightblue">
+    <col span="1" style="background-color:lightgrey;">
+    <col span="1" style="background-color:lightblue">
+    <col span="1" style="background-color:lightgrey;">
+    <tr>
+        <th>MA</th>
+        <th>DI</th>
+        <th>WO</th>
+        <th>DO</th>
+        <th>VR</th>
+    </tr>
+
+    <tr>
+        <td>Afspraak met tandarts</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Sporten</td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td>Huiswerk maken</td>
+        <td>Werken</td>
+        <td></td>
+        <td>Afspraak met tandarts</td>
+    </tr>
+
+    <tr>
+        <td>Afspraak met tandarts</td>
+        <td></td>
+        <td></td>
+        <td>Werken</td>
+        <td>Bij vrienden</td>
+    </tr>
+
+
+</table>
+
+<br><a href="#top">Back to top</a><br><hr><br><br>
+
+
+<h3 id="opdr13">Opdracht 13</h3>
+
+<table>
+    <caption>Agenda Tabel</caption>
+    <colgroup>
+        <col span="1" style="background-color:lightgrey;">
+        <col span="4" style="background-color:lightblue;">
+    </colgroup>
+
+    <tr>
+        <th></th>
+        <th>Sport</th>
+        <th>Aantal recreanten</th>
+        <th>Aantal competitie spelers</th>
+        <th>Totaal deelnemere</th>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td>Badminton</td>
+        <td>10</td>
+        <td>30</td>
+        <td>40</td>
+    </tr>
+
+    <tr>
+        <td>Racket sport</td>
+        <td>Tafeltennis</td>
+        <td>59</td>
+        <td>30</td>
+        <td>89</td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td>Tennis</td>
+        <td>159</td>
+        <td>130</td>
+        <td>189</td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td>Voetbal</td>
+        <td>88</td>
+        <td>40</td>
+        <td>128</td>
+    </tr>
+
+    <tr>
+        <td>Balsport</td>
+        <td>Basketbal</td>
+        <td>60</td>
+        <td>40</td>
+        <td rowspan="2">100</td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td colspan="2">Volleybal</td>
+        <td rowspan="2">35</td>
+        <td>20</td>
+        <td>55</td>
+    </tr>
+
+
+
+</table>
+
+
+<br><a href="#top">Back to top</a><br><hr><br><br>
+
+
+<h3 id="opdr14">Opdracht 14</h3>
+
+<table>
+    <caption>Caption</caption>
+    <thead style="position: sticky;">
+      <tr>
+        <th>Header 1</th>
+        <th>Header 2</th>
+        <th>Header 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Body 1</td>
+        <td>Body 2</td>
+        <td>Body 3</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>Footer 1</td>
+        <td>Footer 2</td>
+        <td>Footer 3</td>
+      </tr>
+    </tfoot>
+  </table>
 
 
 
 
-<br><br><hr><br><br>
 
-
+<br><a href="#top">Back to top</a><br><hr><br><br>
 
 </body>
 </html>

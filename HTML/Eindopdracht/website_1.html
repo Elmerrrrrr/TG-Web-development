@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Menus</title>
+
+    <style>
+
+
+        html body{
+            width: 100%;
+            margin:0px;
+            background-color: lightgray;
+
+        }
+
+        #header_text{
+
+            width: 100%
+
+        }
+
+
+        .header{
+            display: flex;
+            text-align: center;
+            flex-wrap: wrap;
+            justify-content: center;
+           margin-left: 25%;
+           margin-right:25%;
+        }
+
+
+        .container{
+
+            display:grid;
+            grid-template-columns: 35% 35%;
+            /* grid-template-rows: 50% 50%; */
+            grid-template-rows: 1fr ;
+            gap: 3em;
+            justify-content: center;
+            margin-top: 2em;
+            padding: 5em;
+        }
+        img{
+
+            height:150px;
+            float:left; /*makes the text come next to the image */
+            margin-right: 2em;
+        }
+
+        .item{
+            
+            padding: 1em;
+            justify-items: right;
+            background-color: white;
+        }
+
+        .price{
+            font-weight: bold;
+            font-size: 16px;
+            color: red;
+            
+        }
+
+
+    </style>
+
+
+
+</head>
+<body>
+
+    <div class="header">
+        <h1 id="header_text">Menu</h1>
+        <p><i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae sit temporibus non placeat sequi enim soluta architecto magnam vitae fugit. 
+            Rerum corrupti, quas asperiores eveniet veritatis tempore fuga placeat dignissimos!</i></p>
+    </div>
+
+
+ <div class="container">
+        <div class="item">
+            <div><img src="./img/_Prosciutto_e_Funghi_Pizza-914.png" alt="pizza 1">
+                <h3>Prosciutto</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, ea blanditiis aliquam</p>
+                <p class="price">$18</p>
+                <button name="Prosciutto"" type="submit" value="Prosciutto">ADD TO CART</button>
+            </div>
+        </div>
+
+        <div class="item">
+           <div> 
+            <img src="./img/Brooklyn_Style_Pizza_-932.png" alt="pizza 2">
+            <h3>Brooklyn Style</h3>
+            <p class="price">$33</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, ea blanditiis aliquam</p>
+            <button name="Brooklyn_Style"" type="submit" value="Brooklyn_Style">ADD TO CART</button>
+          </div>
+        </div>
+
+        <div class="item">
+          <div> 
+            <img src="./img/Butcher's_Choice-6016.png" alt="pizza 3">
+            <h3>Butcher's Choice</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, ea blanditiis aliquam</p>
+            <p class="price">$25</p>
+            <button name="Butcher's_Choice"" type="submit" value="Butcher's_Choice>ADD TO CART">ADD TO CART</button>
+          </div>
+        </div>
+
+        <div class="item">
+          <div> 
+            <img src="./img/Four_Tasty_XXL-5850.png" alt="pizza 4">
+            <h3>Four Tasty XXL</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, ea blanditiis aliquam</p>
+            <p class="price">$21</p>
+            <button name="Four_Tasty_XXL"" type="submit" value="Four_Tasty_XXL">ADD TO CART</button>
+          </div>
+        </div>
+
+    </div>
+
+
+    
+
+
+
+
+
+
+
+    
+</body>
+</html>

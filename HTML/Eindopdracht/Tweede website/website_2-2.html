@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members</title>
+
+<style>    
+
+body {  
+
+        background-color: #fbf8f3;
+
+    }
+
+
+table{
+
+    border: 1px solid lightgrey;
+    width: 50%;
+    margin-left:auto; 
+    margin-right:auto;
+}
+
+.rowC{
+
+    background-color:lightblue;
+}
+
+h1, h2{
+    text-align: center;
+    width: 100%;
+    color: cornflowerblue;
+}
+
+th{
+
+    text-align: left;
+}
+ 
+/* 2de deel van de opdracht */
+
+
+.container{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left:50px; 
+    margin-right:auto;
+
+    
+}
+
+input, label {
+    /* display:block; */
+}
+
+input{
+    background-color:lightblue;
+    margin: 0 10px 10px 0;
+    border-radius: 5px;
+    border-color: lightblue;
+
+
+}
+
+.input_div{
+    /* display:block; */
+    /* display: flex; */
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+</style>
+
+</head>
+<body>
+    <div>
+        <h1>Members</h1>
+        <table>
+            <tr>
+                <th>Firstname</th>
+                <th>Surname</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>Klaas</td>
+                <td>Jan</td>
+                <td>34</td>
+            </tr>
+
+            <tr class="rowC">
+                <td>Jennis</td>
+                <td>Lee</td>
+                <td>25</td>
+            </tr>
+
+            <tr >
+                <td>Cameron</td>
+                <td>Lion</td>
+                <td>16</td>
+            </tr>
+
+            <tr class="rowC">
+                <td>Anothony</td>
+                <td>Bos</td>
+                <td>66</td>
+            </tr>
+
+            <tr>
+                <td>Frits</td>
+                <td>Kosnovia</td>
+                <td>33</td>
+            </tr>
+
+            <tr class="rowC">
+                <td>Venzuela</td>
+                <td>Maduro</td>
+                <td>57</td>
+            </tr>
+
+            <tr>
+                <td>Bosnia</td>
+                <td>Kovic</td>
+                <td>43</td>
+            </tr>
+
+        </table>
+     </div>
+
+     <br><br><hr><br><br>
+
+<!-- Formulier -->
+
+
+        
+    <div class="container">
+
+        <h2>Addition information</h2>
+
+        <form action="GET">
+            <div class="input_div"> <label for="frstname">First name:</label> </div>
+             <input type="text" name="First_Name">
+              <label for="frstname">Surname:</label>
+           <span><input type="text" name=""></span> 
+            
+            
+            <div class="input_div"></div>
+            
+            <label for="frstname">Age: </label>
+            <input type="text" name="">
+            <label for="frstname">Company: </label>
+            <input type="text" name="">
+            <label for="frstname">Username:</label>
+            <input type="text" name="">
+            <label for="frstname">Username: </label>
+            <input type="text" name="">
+            <label for="frstname">Email: </label>
+            <input type="text" name="">
+            <label for="frstname">Adress: </label>
+            <input type="text" name="">
+            <label for="frstname">Postal code: </label>
+            <input type="text" name="">
+            <label for="frstname">City: </label>
+            <input type="text" name="">
+            <label for="frstname">Country: </label>
+            <input type="text" name="">
+
+
+
+
+
+        </form>
+    </div>
+
+
+
+
+
+
+
+</body>
+</html>

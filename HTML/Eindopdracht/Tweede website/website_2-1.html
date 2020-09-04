@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profiel Pagina</title>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <style>
+
+        body{
+
+            /* width: 100%; */
+            background-color: #fbf8f3;
+
+        }
+
+        ul{
+            /* width: 500px; */
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+
+        ul li {
+            background-color: cornflowerblue;
+            color: white;
+
+            border-radius: 10px;
+            padding: 0.8em;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        ul li:hover {
+            background-color: cornflowerblue;
+            color: rgb(235, 229, 229);
+
+            border-radius: 10px;
+            padding: 0.8em;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+
+
+        .container{
+
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 500px);
+            gap: 3em;
+            justify-content: center;
+            align-items: center;
+
+        }
+        #banner{
+           
+            border-top-left-radius: 10%;
+            border-top-right-radius: 10%;
+            border-bottom: 8px solid cornflowerblue;
+
+        }
+        .profiel{
+            text-align: center;
+            justify-self: center;
+            align-self: center;
+        }
+
+        #profiel-foto{
+            border-radius: 50%;
+            border-bottom: 8px solid cornflowerblue;
+            margin-top: -95px;
+        }
+
+        .profiel-foto{
+            justify-self: center;
+            align-self: center;
+            
+
+        }
+        a{
+
+        text-decoration: none;
+        }
+
+        .social-bar i{
+
+            padding-right: 3rem;
+            /* margin: 10px; */
+            }
+
+
+        .yls{
+            color: rgb(238, 203, 46);
+
+        }
+
+
+
+        table{
+            table-layout: auto;
+            /* table-layout:fixed; */
+            width: 100%;  
+        }
+
+        th{
+
+            background-color: cornflowerblue;
+            color: white;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            /* column-span: all; */
+            
+        }
+
+        td{
+        
+           padding:2px;        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#"></a>Home</li>
+            <li><a href="#"></a>Members</li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <div class="profiel">
+            <div class="banner">
+                <img id="banner" src="./img/banner.jpg" alt="banner" width="500px" height="200px">
+            </div>
+            <div class="profiel-foto">
+                <img id="profiel-foto" src="./img/elmer.jpeg" alt="elmer" height="150">
+                <h3>Elmer Volgers</h3>
+                <p style="line-height: 1px;"><a href="#">@Elmerrrrrr</a></p>
+                <p><blockquote>"Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quam nam, minima porro similique quibusdam tempora ipsa cupiditate"</blockquote></p>
+                <hr>
+               <p class="social-bar"><i class="far fa-thumbs-up"> +1000</i><i class="far fa-heart"> +999</i><i class="far fa-thumbs-down"> 0</i></p> 
+
+                <!-- <a href="#"></a> add in social bar to make icons a link-->
+            </div>
+
+            <div class="stats">
+                <img src="./img/data.png" alt="data" height="300px">
+            </div>
+
+        </div>
+
+
+        
+
+
+        <div class="data">
+
+            <table>           
+                <tr>
+                    <th colspan="5">Personal Information</th>
+                </tr>
+            
+                <tr>
+                    <td>Name: Elmer</td>
+                    <td></td>
+                    <td>Surname: Volgers</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            
+                <tr>
+                    <td>Age: 40</td>
+                    <td></td>
+                    <td>Sex: M</td>
+                    <td>Birth of date: 11-11-1900</td>
+                    <td></td>
+                    
+                    
+                </tr>
+
+                <tr>
+                    <td>Adress: Osdorpplein 16</td>
+                    <td></td>
+                    <td>Postal code: 1234AB</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+
+                <tr>
+                    <td>City: Amsterdam</td>
+                    <td></td>
+                    <td>Country: NL</td>
+                    <td>Profession: Web Developer</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Hobbies: Table tennis</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        <br>
+            <table>    
+                <tr>
+                  <th colspan="5">Languages</th>
+                </tr>
+
+                <tr>
+                    <td>HTML</td>
+                    <td><i class="yls far fa-star"></i><i class="yls far fa-star"></i><i class="yls far fa-star"></i><i class="yls far fa-star"></i><i class=" yls far fa-star"></i></td>
+                </tr>
+
+                <tr>
+                    <td>CSS</td>
+                    <td><i class="yls far fa-star"></i><i class="yls far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></td>
+                </tr>
+
+                <tr>
+                    <td>JavaScript</td>
+                    <td><i class="yls far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></td>
+                </tr>
+
+                <tr>
+                    <td>Java</td>
+                    <td><i class="yls far fa-star"></i><i class="far fa-star"></i><i class=" far fa-star"></i><i class="far fa-star"></i><i class=" far fa-star"></i></td>
+                </tr>
+                <tr></tr>
+            </table>
+        <br>
+            <table>
+               <tr>
+                  <th colspan="5">Framework and Tools</th>
+               </tr>
+            </table>
+
+        </div>
+
+        
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>

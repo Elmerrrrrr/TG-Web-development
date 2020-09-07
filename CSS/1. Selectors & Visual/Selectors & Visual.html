@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors & Visual rules</title>
+   
+   
+<style>
+
+       nav li{
+        list-style-type: none;
+        padding: 1em;
+        }
+
+        div {
+            color: green;
+        }
+
+        div > p{
+            color: darkblue;
+
+        }
+
+        div > p:last-child{
+            /* color: black; */
+        }
+        
+</style>
+        
+
+
+
+</head>
+<body>
+    
+
+    <h1>Selectors & Visual rules</h1>
+
+    <!-- Leren over het opmaken van individuele elementen en groepselementen met behulp van 
+         verschillende visuele CSS-regels. -->
+
+    <nav>
+        <ul style="display:flex;">
+            <li><a href="#opdr1">OPDR1</a></li>
+            <li><a href="#opdr2">OPDR2</a></li>
+            <li><a href="#opdr3">OPDR3</a></li>
+            <li><a href="#opdr4">OPDR4</a></li>
+            <li><a href="#opdr5">OPDR5</a></li>
+            <li><a href="#opdr6">OPDR6</a></li>
+            <li><a href="#opdr7">OPDR7</a></li>
+            <li><a href="#opdr8">OPDR8</a></li>
+        </ul>
+    </nav>
+
+    <br><hr><br><br>
+
+    
+
+    
+
+
+    <h3 id="opdr1">Opdracht 1</h3>
+
+
+    <p>Je kunt op 3 verschillende manieren CSS in je HTML inladen. 
+        Op welke 3 manieren kun je dat doen? Leg ook voor elke wijze uit wat het precies inhoud.</p>
+
+        <ol>
+            <li>inline styling; je voegt de styling code direct toe bij het html element. body style="background-color= red;" ></li>
+            <li>in page styling; je kan in de header tussen de style tags de css code noteren. </li>
+            <li>in separate document styling; je kan de css in een apart .css bestand en in de header hier naar linken met een link element.</li>
+        </ol>
+
+
+
+
+
+    <br><br><hr><br><br>
+
+
+
+
+    <h3 id="opdr2">Opdracht 2</h3>
+
+    <p>CSS pas je toe met een bepaalde syntax. Hoe ziet zo'n syntax eruit?
+        Kun je ook uitleggen wat elk element uit de syntax betekent? </p>
+
+    <ul><li>de juiste syntax voor de css notatie is: selector { property:property value;}. Tussen de accolades wordt de declaratie genoteerd.</li></ul>
+
+
+
+    <br><br><hr><br><br>
+
+
+
+
+    <h3 id="opdr3">Opdracht 3</h3>
+
+    <p>Er zijn verschillende selectors, geef in je antwoord ook aan wat de voordelen zijn van elke selector:</p> 
+
+    <p>- type selectors: Dit is een type selector om alle html selectors te selecteren en te kunnen stylen. Snelle manier om (grote) groepen elementen te kunnen stylen.</p> 
+    <p>- descendant selectors: Dit type selector kan handig zijn om alle elementen binnen een bepaald element te kunnen stylen. Je kunt zo grotere groepen selecteren en toch wat specifieker zijn.</p> 
+    <p>- class selectors: Hiermee kun je heel precies bepaalde elementen selecteren en stylen.</p> 
+
+
+
+        
+
+    <br><br><hr><br><br>
+
+
+
+    <h3 id="opdr4">Opdracht 4</h3>
+
+    <div>
+        <h2>Title</h2>
+        <p>paragraph text</p>
+        tekst zonder tag    
+    </div>
+    <br>
+
+    <code>div {color: green;} div > p{color: darkblue;} </code>
+
+
+    <br><br><hr><br><br>
+
+
+
+    <h3 id="opdr5">Opdracht 5</h3>
+
+
+    <div>
+        <h2>Class selector</h2>
+        <p>paragraph tekst 1</p>
+        <p>paragraph tekst 2</p>
+    </div>
+    <br>
+
+    <code>div p{color: green;} div > p:last-child{ color: black;}</code>
+
+
+
+
+    <br><br><hr><br><br>
+
+
+    <h3 id="opdr6">Opdracht 6</h3>
+
+
+    Verder heb je ook nog de volgende selectors, geef voorbeelden hiervan:
+
+    <p>- Child selectors (> en spatie): om bepaalde elementen binnen andere elementen goed en direct
+         te kunnen selecteren bestaan er een aantal child selectors
+        Een aantal voorbeelden hiervan zijn:</p>
+
+    <p>Selects the elements which are direct child of a specified element: Not the ones that are nested futher in other (child) elements.
+       <code>element > element { // CSS Property;}</code></p> 
+
+    <p>Selects all the elements which are child of the element. So also the ones that are nested in other (child) elements after the specific element.
+       <code>element element { // CSS Property;}</code></p>
+        
+
+    <p>- Adjacent selectors (+): om bepaalde elementen die direct na een ander element zijn geplaatst.
+        Dit zijn dus geen nested child elements maar na elkaar geplaatste elementen.
+        <code>element + element { // CSS Property;}</code>
+
+    </p>
+
+    
+
+
+
+
+
+
+
+
+
+
+       
+
+    
+
+
+
+    ● adjacent selectors
+    ● general selectors
+
+
+
+
+
+    <br><br><hr><br><br>
+
+
+
+    <h3 id="opdr7">Opdracht 7</h3>
+
+
+    <br><br><hr><br><br>
+
+
+
+    <h3 id="opdr8">Opdracht 8</h3>
+
+
+    <br><br><hr><br><br>
+
+
+
+</body>
+</html>

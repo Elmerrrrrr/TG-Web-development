@@ -8,24 +8,41 @@
    
 <style>
 
+
+        body{
+            margin-left: 5em;
+
+        }
+
+
        nav li{
         list-style-type: none;
         padding: 1em;
         }
 
-        div {
+        .opdracht5 {
             color: green;
         }
 
-        div > p{
+        .opdracht5 > p{
             color: darkblue;
 
         }
 
-        div > p:last-child{
-            /* color: black; */
+        .opdracht5  > p:last-child{
+            color: black;
         }
         
+        .opdracht6-1  > p { color:yellow;}
+
+        .opdracht6-2  p { color:green;}
+
+        .opdracht6-3  h2 + p { color:blue;}
+
+        .opdracht6-4 h2 ~ p { color:red;}
+
+
+
 </style>
         
 
@@ -88,9 +105,7 @@
 
     <ul><li>de juiste syntax voor de css notatie is: selector { property:property value;}. Tussen de accolades wordt de declaratie genoteerd.</li></ul>
 
-
-
-    <br><br><hr><br><br>
+    Leg in eigen woorden uit wat met cascade en inheritance wordt bedoeld. Maak voorbeelden om je antwoord uit te leggen.
 
 
 
@@ -113,7 +128,7 @@
 
     <h3 id="opdr4">Opdracht 4</h3>
 
-    <div>
+    <div class="opdracht5">
         <h2>Title</h2>
         <p>paragraph text</p>
         tekst zonder tag    
@@ -130,19 +145,15 @@
     <h3 id="opdr5">Opdracht 5</h3>
 
 
-    <div>
+    <div class=opdracht5>
         <h2>Class selector</h2>
         <p>paragraph tekst 1</p>
         <p>paragraph tekst 2</p>
     </div>
-    <br>
+    <br><br><br>
 
     <code>div p{color: green;} div > p:last-child{ color: black;}</code>
-
-
-
-
-    <br><br><hr><br><br>
+    .
 
 
     <h3 id="opdr6">Opdracht 6</h3>
@@ -152,41 +163,57 @@
 
     <p>- Child selectors (> en spatie): om bepaalde elementen binnen andere elementen goed en direct
          te kunnen selecteren bestaan er een aantal child selectors
-        Een aantal voorbeelden hiervan zijn:</p>
+         Een aantal voorbeelden hiervan zijn:</p>
 
     <p>Selects the elements which are direct child of a specified element: Not the ones that are nested futher in other (child) elements.
        <code>element > element { // CSS Property;}</code></p> 
+       <div class="opdracht6-1">
+            <h2>Class selector ></h2>
+            <p>paragraph tekst 1</p>
+            <span>paragraph tekst 2</span>
+            <p>paragraph tekst 3</p>
+       </div>
+       <code> div > p { color:yellow;}</code>
+       <br><br><br>
 
     <p>Selects all the elements which are child of the element. So also the ones that are nested in other (child) elements after the specific element.
        <code>element element { // CSS Property;}</code></p>
+       <div class="opdracht6-2">
+            <h2>Class selector </h2>
+            <p>paragraph tekst 1</span>
+            <span>paragraph tekst 2</h4>
+            <p>paragraph tekst 3</p>
+       </div>
+       <code> div p { color:green;}</code>
+       <br><br><br>
         
 
     <p>- Adjacent selectors (+): om bepaalde elementen die direct na een ander element zijn geplaatst.
-        Dit zijn dus geen nested child elements maar na elkaar geplaatste elementen.
-        <code>element + element { // CSS Property;}</code>
-
-    </p>
-
-    
-
-
-
-
-
-
-
-
-
-
-       
+         Dit zijn dus geen nested child elements maar na elkaar geplaatste elementen.
+        <code>element + element { // CSS Property;}</code></p>
+        <div class="opdracht6-3">
+            <h2>Class selector +</h2>
+            <p>paragraph tekst 1</p>
+            <span>spann tekst 2</span>
+            <p>paragraph tekst 3</p>
+       </div>
+       <code> h2 + p { color:blue;}</code>
+       <br><br><br>
 
     
 
-
-
-    ● adjacent selectors
-    ● general selectors
-
+    <p>General selectors (~): deze selector lijkt op adjacent selector alleen hierbij hoeft het element niet direct opvolgend te zijn maar
+       er kunnen ook een aantal andere elementen tussen zitten.</p> 
+       <code>element ~ element { // CSS Property;}</code>
+        <br>
+       <div class="opdracht6-4">
+            <h2>Class selector ~</h2>
+            <p>paragraph tekst 1</p>
+            <span>span tekst 2</span>
+            <p>paragraph tekst 3</p>
+       </div>
+       <code> h2 ~ p { color:red;}</code>
+       <br><br><br>
 
 
 
@@ -197,13 +224,35 @@
 
     <h3 id="opdr7">Opdracht 7</h3>
 
+    <div class="opdracht7">
+
+        <p>Zie opdrachten hierboven</p>
+
+    </div>
+
 
     <br><br><hr><br><br>
 
 
 
     <h3 id="opdr8">Opdracht 8</h3>
+<dl>
+    <dt>Leg in eigen woorden uit wat met cascade en inheritance in CSS wordt bedoeld. Maak voorbeelden om je antwoord uit te leggen.</dt>
+    <br>
+    <dd>- Met de <b>cascade</b> in de style sheets wordt bedoelt dat de browser de code regel voor regel, van boven naar onder leest
+        en dat de onderste regel bij een dubbele toewijzing geldt. Verder is hier de 'specificity' van belang.
+        Bij conflicterende toewijzing van code is de meest specifieke geldend, de relevantste die het dichtbij staat en zo een soort score
+        krijgt toegewezen die uiteindelijk bepaalt wat aan wie wordt toegewezen.
+    </dd>
+    <dd>- Met de <b>inheritance</b> (wat overerving betekend) word bedoelt dat indien een element wordt gestyled dat <b>sommige</b> styling worden
+        meegenomen, waaronder de background-color en font-styling. Maar bijvoorbeeld 'width' wordt niet meegenomen.
+    </dd>
+</dl>
 
+
+<!-- <h1>The dl, dd, and dt HTML elements</h1>
+
+<p>These three elements are used to create a description list:</p> -->
 
     <br><br><hr><br><br>
 

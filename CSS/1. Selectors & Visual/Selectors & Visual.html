@@ -8,11 +8,14 @@
    
 <style>
 
-
-        body{
-            margin-left: 5em;
-
+        html, body {
+        background:linen;
+        margin: 5em;    
+        scroll-behavior: smooth;
+       
         }
+
+        
 
 
        nav li{
@@ -41,6 +44,8 @@
 
         .opdracht6-4 h2 ~ p { color:red;}
 
+        .opdracht7 table td, th { border: 1px solid black;}
+
 
 
 </style>
@@ -58,7 +63,7 @@
          verschillende visuele CSS-regels. -->
 
     <nav>
-        <ul style="display:flex;">
+        <ul style="display:flex; flex-wrap: wrap;">
             <li><a href="#opdr1">OPDR1</a></li>
             <li><a href="#opdr2">OPDR2</a></li>
             <li><a href="#opdr3">OPDR3</a></li>
@@ -105,9 +110,9 @@
 
     <ul><li>de juiste syntax voor de css notatie is: selector { property:property value;}. Tussen de accolades wordt de declaratie genoteerd.</li></ul>
 
-    Leg in eigen woorden uit wat met cascade en inheritance wordt bedoeld. Maak voorbeelden om je antwoord uit te leggen.
 
 
+    <br><br><hr><br><br>
 
 
     <h3 id="opdr3">Opdracht 3</h3>
@@ -226,7 +231,314 @@
 
     <div class="opdracht7">
 
-        <p>Zie opdrachten hierboven</p>
+        <p>Zie opdrachten hierboven en het bestand opdracht 7 - selectors.txt</p>
+
+
+        <h2>CSS Selectors</h2>
+        <p>In CSS, selectors are patterns used to select the element(s) you want to style.</p>
+        <p>Use our <a target="_blank" href="https://www.w3schools.com/cssref/trysel.asp">CSS Selector Tester</a> to demonstrate the different selectors.</p>
+        <div class="opdracht7">
+        <table class="w3-table-all notranslate">
+          <tr>
+            <th style="width:20%">Selector</th>
+            <th style="width:20%">Example</th>
+            <th>Example description</th>
+          </tr>
+          <tr>
+            <td><a href="sel_class.asp">.<i>class</i></a></td>
+            <td class="notranslate">.intro</td>
+            <td>Selects all elements with class=&quot;intro&quot;</td>
+          </tr>
+          <tr>
+            <td><em>.class1.class2</em></td>
+            <td class="notranslate">.name1.name2</td>
+            <td>Selects all elements with both <em>name1</em> and <em>name2</em> set 
+            within its class attribute</td>
+          </tr>  
+          <tr>
+            <td><em>.class1 .class2</em></td>
+            <td class="notranslate">.name1 .name2</td>
+            <td>Selects all elements with <em>name2</em> that is a descendant of an 
+            element with <em>name1</em></td>
+          </tr>  
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_id.asp">#<i>id</i></a></td>
+            <td class="notranslate">#firstname</td>
+            <td>Selects the element with id=&quot;firstname&quot;</td>
+          </tr>  <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_all.asp">*</a></td>
+            <td class="notranslate">*</td>
+            <td>Selects all elements</td>
+          </tr>
+          <tr>
+            <td><i><a href="https://www.w3schools.com/cssref/sel_element.asp">element</a></i></td>
+            <td class="notranslate">p</td>
+            <td>Selects all &lt;p&gt; elements</td>
+          </tr>
+          <tr>
+            <td><i><a href="https://www.w3schools.com/cssref/sel_element_class.asp">element.class</a></i></td>
+            <td class="notranslate">p.intro</td>
+            <td>Selects all &lt;p&gt; elements with class=&quot;intro&quot;</td>
+          </tr>
+          <tr>
+            <td><i><a href="https://www.w3schools.com/cssref/sel_element_comma.asp">element,element</a></i></td>
+            <td class="notranslate">div, p</td>
+            <td>Selects all &lt;div&gt; elements and all &lt;p&gt; elements</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_element_element.asp"><i>element</i> <i>element</i></a></td>
+            <td class="notranslate">div p</td>
+            <td>Selects all &lt;p&gt; elements inside &lt;div&gt; elements</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_element_gt.asp"><i>element</i>&gt;<i>element</i></a></td>
+            <td class="notranslate">div &gt; p</td>
+            <td>Selects all &lt;p&gt; elements where the parent is a &lt;div&gt; element</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_element_pluss.asp"><i>element</i>+<i>element</i></a></td>
+            <td class="notranslate">div + p</td>
+            <td>Selects all &lt;p&gt; elements that are placed immediately after &lt;div&gt; elements</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_gen_sibling.asp"><i>element1</i>~<i>element2</i></a></td>
+            <td>p ~ ul</td>
+            <td>Selects every &lt;ul&gt; element that are preceded by a &lt;p&gt; element</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_attribute.asp">[<i>attribute</i>]</a></td>
+            <td class="notranslate">[target]</td>
+            <td>Selects all elements with a target attribute</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_attribute_value.asp">[<i>attribute</i>=<i>value</i>]</a></td>
+            <td class="notranslate">[target=_blank]</td>
+            <td>Selects all elements with target=&quot;_blank&quot;</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_attribute_value_contains.asp">[<i>attribute</i>~=<i>value</i>]</a></td>
+            <td class="notranslate">[title~=flower]</td>
+            <td>Selects all elements with a title attribute containing the word &quot;flower&quot;</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_attribute_value_lang.asp">[<i>attribute</i>|=<i>value</i>]</a></td>
+            <td class="notranslate">[lang|=en]</td>
+            <td>Selects all elements with a lang attribute value starting with &quot;en&quot;</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_attr_begin.asp">[<i>attribute</i>^=<i>value</i>]</a></td>
+            <td>a[href^=&quot;https&quot;]</td>
+            <td>Selects every &lt;a&gt; element whose href attribute value begins with &quot;https&quot;</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_attr_end.asp">[<i>attribute</i>$=<i>value</i>]</a></td>
+            <td>a[href$=&quot;.pdf&quot;]</td>
+            <td>Selects every &lt;a&gt; element whose href attribute value ends with &quot;.pdf&quot;</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_attr_contain.asp">[<i>attribute</i>*=<i>value</i>]</a></td>
+            <td>a[href*=&quot;w3schools&quot;]</td>
+            <td>Selects every &lt;a&gt; element whose href attribute value contains the substring &quot;w3schools&quot;</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_active.asp">:active</a></td>
+            <td class="notranslate">a:active</td>
+            <td>Selects the active link</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_after.asp">::after</a></td>
+            <td class="notranslate">p::after</td>
+            <td>Insert something after the content of each &lt;p&gt; element</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_before.asp">::before</a></td>
+            <td class="notranslate">p::before</td>
+            <td>Insert something before&nbsp;the content of each &lt;p&gt; element</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_checked.asp">:checked</a></td>
+            <td>input:checked</td>
+            <td>Selects every checked &lt;input&gt; element</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_default.asp">:default</a></td>
+            <td>input:default</td>
+            <td>Selects the default &lt;input&gt; element</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_disabled.asp">:disabled</a></td>
+            <td>input:disabled</td>
+            <td>Selects every disabled &lt;input&gt; element</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_empty.asp">:empty</a></td>
+            <td>p:empty</td>
+            <td>Selects every &lt;p&gt; element that has no children (including text nodes)</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_enabled.asp">:enabled</a></td>
+            <td>input:enabled</td>
+            <td>Selects every enabled &lt;input&gt; element</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_firstchild.asp">:first-child</a></td>
+            <td class="notranslate">p:first-child</td>
+            <td>Selects every &lt;p&gt; element that is the first child of its parent</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_firstletter.asp">::first-letter</a></td>
+            <td class="notranslate">p::first-letter</td>
+            <td>Selects the first letter of every &lt;p&gt; element</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_firstline.asp">::first-line</a></td>
+            <td class="notranslate">p::first-line</td>
+            <td>Selects the first line of every &lt;p&gt; element</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_first-of-type.asp">:first-of-type</a></td>
+            <td>p:first-of-type</td>
+            <td>Selects every &lt;p&gt; element that is the first &lt;p&gt; element of its parent</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_focus.asp">:focus</a></td>
+            <td class="notranslate">input:focus</td>
+            <td>Selects the input element which has focus</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_hover.asp">:hover</a></td>
+            <td class="notranslate">a:hover</td>
+            <td>Selects links on mouse over</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_in-range.asp">:in-range</a></td>
+            <td class="notranslate">input:in-range</td>
+            <td>Selects input elements with a value within a specified range</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_indeterminate.asp">:indeterminate</a></td>
+            <td class="notranslate">input:indeterminate</td>
+            <td>Selects input elements that are in an indeterminate state</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_invalid.asp">:invalid</a></td>
+            <td class="notranslate">input:invalid</td>
+            <td>Selects all input elements with an invalid value</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_lang.asp">:lang(<i>language</i>)</a></td>
+            <td class="notranslate">p:lang(it)</td>
+            <td>Selects every &lt;p&gt; element with a lang attribute equal to &quot;it&quot; (Italian)</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_last-child.asp">:last-child</a></td>
+            <td>p:last-child</td>
+            <td>Selects every &lt;p&gt; element that is the last child of its parent</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_last-of-type.asp">:last-of-type</a></td>
+            <td>p:last-of-type</td>
+            <td>Selects every &lt;p&gt; element that is the last &lt;p&gt; element of its parent</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_link.asp">:link</a></td>
+            <td class="notranslate">a:link</td>
+            <td>Selects all unvisited links</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_not.asp">:not(<i>selector</i>)</a></td>
+            <td>:not(p)</td>
+            <td>Selects every element that is not a &lt;p&gt; element</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_nth-child.asp">:nth-child(<i>n</i>)</a></td>
+            <td>p:nth-child(2)</td>
+            <td>Selects every &lt;p&gt; element that is the second child of its parent</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_nth-last-child.asp">:nth-last-child(<i>n</i>)</a></td>
+            <td>p:nth-last-child(2)</td>
+            <td>Selects every &lt;p&gt; element that is the second child of its parent, counting from the last child</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_nth-last-of-type.asp">:nth-last-of-type(<i>n</i>)</a></td>
+            <td>p:nth-last-of-type(2)</td>
+            <td>Selects every &lt;p&gt; element that is the second &lt;p&gt; element of its parent, counting from the last child</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_nth-of-type.asp">:nth-of-type(<i>n</i>)</a></td>
+            <td>p:nth-of-type(2)</td>
+            <td>Selects every &lt;p&gt; element that is the second &lt;p&gt; element of its parent</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_only-of-type.asp">:only-of-type</a></td>
+            <td>p:only-of-type</td>
+            <td>Selects every &lt;p&gt; element that is the only &lt;p&gt; element of its parent</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_only-child.asp">:only-child</a></td>
+            <td>p:only-child</td>
+            <td>Selects every &lt;p&gt; element that is the only child of its parent</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_optional.asp">:optional</a></td>
+            <td class="notranslate">input:optional</td>
+            <td>Selects input elements with no "required" attribute</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_out-of-range.asp">:out-of-range</a></td>
+            <td class="notranslate">input:out-of-range</td>
+            <td>Selects input elements with a value outside a specified range</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_placeholder.asp">::placeholder</a></td>
+            <td class="notranslate">input::placeholder</td>
+            <td>Selects input elements with the &quot;placeholder&quot; attribute specified</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_read-only.asp">:read-only</a></td>
+            <td class="notranslate">input:read-only</td>
+            <td>Selects input elements with the "readonly" attribute specified</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_read-write.asp">:read-write</a></td>
+            <td class="notranslate">input:read-write</td>
+            <td>Selects input elements with the "readonly" attribute NOT specified</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_required.asp">:required</a></td>
+            <td class="notranslate">input:required</td>
+            <td>Selects input elements with the "required" attribute specified</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_root.asp">:root</a></td>
+            <td>:root</td>
+            <td>Selects the document's root element</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_selection.asp">::selection</a></td>
+            <td>::selection</td>
+            <td>Selects the portion of an element that is selected by a user</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_target.asp">:target</a></td>
+            <td>#news:target </td>
+            <td>Selects the current active #news element (clicked on a URL containing that anchor name)</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_valid.asp">:valid</a></td>
+            <td class="notranslate">input:valid</td>
+            <td>Selects all input elements with a valid value</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.w3schools.com/cssref/sel_visited.asp">:visited</a></td>
+            <td class="notranslate">a:visited</td>
+            <td>Selects all visited links</td>
+          </tr>
+        </table>
+      
+      
+      </div>
 
     </div>
 
@@ -234,6 +546,9 @@
     <br><br><hr><br><br>
 
 
+<!-- <h1>The dl, dd, and dt HTML elements</h1>
+
+<p>These three elements are used to create a description list:</p> -->
 
     <h3 id="opdr8">Opdracht 8</h3>
 <dl>
@@ -250,13 +565,24 @@
 </dl>
 
 
-<!-- <h1>The dl, dd, and dt HTML elements</h1>
 
-<p>These three elements are used to create a description list:</p> -->
 
     <br><br><hr><br><br>
 
+    <div>
+        <pre> <!-- dit zorgt dat de whitespaces en enters blijven -->
+            <code> <!-- dit zorgt dat de code niet wordt gerenderd -->
+                Deze code kan niet normaal worden weergegeven en moet zo worden genoteerd:
+                
+                & lt = <
+                & gt = >
+                & amp = &
 
+            </code>
+        </pre>
+    </div>
+
+<p><a href="#top">Back to top</a></p>
 
 </body>
 </html>

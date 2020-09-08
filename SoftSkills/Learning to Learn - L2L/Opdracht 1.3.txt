@@ -3,6 +3,17 @@
  Result: 1. You are familiar with different types of questions and how to ask a good
  questions
 
- //Where can I find this video? I don't see it on the Techgrounds website.
+ // link: https://drive.google.com/file/d/19RJPCR34hV8aTmW6tm7YKYclR4NOyHJl/view
 
  ---mark the completion of the assignment in your portfolio---
+
+
+Type vragen:
+
+ - Informative questions
+ - Mirror questions - Je vraagt dezelfde vraag terug
+ - Follow up questions
+ - Full switch questions - Zetten vragen op een totaal ander pad
+
+
+

@@ -6,11 +6,24 @@
     <title>Box-model</title>
 
 <style>
-
+        html, body {
+        background:linen;
+        margin: 5em;    
+        scroll-behavior: smooth;
+       
+        }
 
         li{
         list-style-type: none;
         padding: 1em;
+        }
+
+        dt{
+            font-weight: bolder;
+        }
+        dd {
+
+            font-style: italic;
         }
         
 </style>
@@ -33,13 +46,20 @@
             <li><a href="#opdr6">OPDR6</a></li>
             <li><a href="#opdr7">OPDR7</a></li>
             <li><a href="#opdr8">OPDR8</a></li>
+            <li><a href="#opdr9">OPDR9</a></li>
         </ul>
     </nav>
 
     <br><hr><br><br>
 
     
-  
+<!-- <h1>The dl, dd, and dt HTML elements</h1>
+
+<p>These three elements are used to create a description list:</p> -->
+
+    <!-- &lt = <
+    &gt = >
+    &amp = & -->
     
 
 
@@ -47,10 +67,11 @@
 
 
 
-
-
-
-
+    <dt>Wat zijn de eigenschappen van block boxes en inline boxes?</dt>
+    <dd>Een block box zal altijd starten op een nieuwe regel, en zoals de naam al indiceert blijven inline elementen
+        in de regel, voor een vorig element. Block boxes vormen standaard naar de box buiten dit element en kunnen bestuurd
+        worden met attributen zoals width, height, paddding en margin.
+    </dd>
 
 
 
@@ -59,7 +80,16 @@
 
 
 
+
     <h3 id="opdr2">Opdracht 2</h3>
+
+
+    <div class="opdracht2" style="display: inline-block; background: rgb(150, 204, 150);">
+        <p style="background: green;">Dit is een block box en neemt de hele breedte in waardoor de volgende box kop de volgende regel zit.</p>
+        <p style="background: green;">In dit blok zit een <span style="background: honeydew; width: 50px; height: 50px;">inline tekst</span> wat dus niet op de volgende regel komt te <span style="background: honeydew;">staan.</span ></p>
+    </div>
+
+
 
 
     <br><br><hr><br><br>
@@ -69,6 +99,8 @@
 
     <h3 id="opdr3">Opdracht 3</h3>
 
+    <dt>Wat gebeurt er als je een width en een height toevoegt aan de span tag ( &lt;span&gt; ) van vorige opdracht?</dt>
+    <dd>Het span element is niet bestuurbaar met height en width indien je het niet als een inline-block definieerd.</dd>
 
     <br><br><hr><br><br>
 
@@ -76,12 +108,30 @@
 
     <h3 id="opdr4">Opdracht 4</h3>
 
+    <dt>Leg uit wat de volgende termen betekenen: content, padding, margin en border.</dt>
+    <dd>Binnen een box bevind zich de content. Om de content maar binnen de box kun je de padding, de ruimte om de content heen
+        instellen. De box zelf heeft een border die je kan besturen met diverse attributen. Buiten de box kun je de afstand tot andere
+        elementen instellen met behulp van de margin.
+    </dd>
+
 
     <br><br><hr><br><br>
 
-
+    
+    <!-- Attributes are defined by HTML. Properties are accessed from DOM (Document Object Model) nodes. -->
+    <!-- Css has 533 properties: https://www.w3.org/Style/CSS/all-properties.en.html -->
 
     <h3 id="opdr5">Opdracht 5</h3>
+
+    <dt>Als je ruimte wilt maken tussen de border en content, welke css property gebruik je dan? Maak een voorbeeld in je antwoord.</dt>
+    <dd>Hiervoor kun je de padding gebruiken.</dd>
+    <br>
+
+    <div style="border: 5px solid black; background:wheat; width:100%; height: 200px; padding: 5px;" >
+        Margin content + Padding buitenste box
+        <div style="border: 2px solid black; background: white; width:70%; padding: 5px; height: 70%; margin: 10px;">Dit is de content</div>
+    </div>
+
 
 
     <br><br><hr><br><br>
@@ -90,20 +140,49 @@
     <h3 id="opdr6">Opdracht 6</h3>
 
 
+    <dt>Als je ruimte wilt maken tussen de border en buiten de box, welke css property gebruik je dan? Maak een voorbeeld in je antwoord.</dt>
+    <dd>Hiervoor kun je de margin gebruiken. Zie opdracht 5.</dd>
+
+
     <br><br><hr><br><br>
 
 
 
     <h3 id="opdr7">Opdracht 7</h3>
+    <br>
+    <div style="background:lightgray; box-sizing: border-box; width: 100px; height: 100px; margin: 5px; padding: 5px; border:5px solid black; ">Dit is de content</div>
+    <br>
+    <dt>Hoe breed is de box? Hoe hoog is de box? Wat merk je op met width en height?</dt>
+    <dd>De totale hoogte en breedte is 100+5+5+5=115px.
+        De opgegeven width en height zijn dus niet absoluut, de waardes van padding, margin enz komen hier nog bij.
+    </dd>
+
+
+
+    <br><br><hr><br><br>
+
+    <!-- box-sizing: border-box; / box-sizing: content-box; https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing-->
+
+    <h3 id="opdr8">Opdracht 8</h3>
+
+    <dt>Welke CSS property kun je gebruiken om ervoor te zorgen dat de waarde van width en height de totale breedte en hoogte is van het blok van de voorgaande opdracht?</dt>
+    <dd>Met de CSS property: box-sizing kun je de totale hoogte en breedte opgeven. Zie vorige opdracht. box-sizing: border-box; / box-sizing: content-box;</dd>
 
 
     <br><br><hr><br><br>
 
 
 
-    <h3 id="opdr8">Opdracht 8</h3>
+    <h3 id="opdr9">Opdracht 9</h3>
 
-
+    <dt>Maak een aantal voorbeelden van boxen en maak gebruik van steeds verschillende margin, padding en border properties.</dt>
+    <dd>Zie hieronder:</dd>
+    <br>
+    <div style="display: flex; background: lightslategray; height:250px;">
+        <div style="background:lightblue; width: 100px; height: 100px; margin: 5px; padding: 5px; border:5px solid black; ">Dit is de content met 5px padding, 5px margin en 5px border</div>
+        <div style="background:lightgreen; width: 100px; height: 100px; margin: 10px; padding: 10px; border:10px solid black; ">Dit is de content met 10px padding, 10px margin en 10px border</div>
+        <div style="background:lightcoral; width: 100px; height: 100px; margin: 15px; padding: 15px; border:15px solid black; ">Dit is de content met 15px padding, 15px margin en 15px border</div>
+    </div>
     <br><br><hr><br><br>
 
 

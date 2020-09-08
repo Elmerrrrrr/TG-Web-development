@@ -3,15 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Display & positioning</title>
 
 <style>
+        html, body {
+        background:linen;
+        margin: 0 5em 0 5em;    
+        scroll-behavior: smooth;
+       
+        }
+        nav{
+        background:linen ;
+        position: sticky;
+        top:  -1px; 
+        }
 
+       nav li{
+        list-style-type: none;
+        padding: 1em;
+;
+        }
 
-    li{
-    list-style-type: none;
-    padding: 1em;
-    }
+        dt{
+            font-weight: bolder;
+            font-size: 1.2em;
+        }
+        dd {
+
+            font-style: italic;
+            font-size: 1.2em;
+        }
     
 </style>
 
@@ -19,7 +40,7 @@
 <body>
         
 
-    <h1>Selectors & Visual rules</h1>
+    <h1>Display & positioning</h1>
 
 
     <nav>
@@ -44,12 +65,22 @@
 
     <h3 id="opdr1">Opdracht 1</h3>
 
-
-
-
-
-
-
+    <dt>Welke position properties zijn er? Leg voor elke position property uit wat het doet.
+        Geef ook aan welke default position waarde elementen hebben die je gebruikt in html.</dt>
+    <dd>De CSS <b>position</b> property heeft een aantal type values, namelijk: 
+        <br>
+        <ol>
+            <li>Static: (default value van position) hier heeft het element de "normale" positie</li>
+            <li>Relative: Hier kun je nog extra waardes meegeven met top, right, bottom en left, <i>relatief aan de orginele positie.</i> 
+                Dit veranderd niet de positie van elementen hier om heen.</li>
+            <li>Absolute: Hier kun je het element relatief positioneren tenopzichte van het parent
+                element doormiddel van top, right, bottom en left.</li>
+            <li>Fixed: Hiermee positioneer je het element ten opzichte van de viewport, ofwel de browser window. </li>
+            <li>Sticky: Hiermee positioneer je een element ten opzichte van zijn dicht bij zijnde parent (relative)
+                met top, right, bottom en left. Dan blijft het plakken bij zijn dicht bij zijnde parent in een fixed positie.
+                Zie het navigatie menu in op deze pagina.</li>
+        </ol>
+    </dd>
 
 
 
@@ -59,14 +90,35 @@
 
 
     <h3 id="opdr2">Opdracht 2</h3>
+    <dt>Zie de onderstaande HTML code.
+
+        h1 Dit is een titel /h1
+        p Dit is een paragraaf /p
+        p Dit is nog een paragraaf /p
+        
+        Hoe zorg je er voor dat het h1 element altijd 50px van de top
+        en 50px van de rechterkant van het scherm zichtbaar is. Maak het h1 element rood door
+        een RGB kleurcodering toe te passen.</dt>
+    <br>
+    <dd>Dit kan goed met position: fixed; Zie ook de code</dd>
+
+        
+            <h1 style="position: sticky; top:50px; right: 50px ; color: rgb(219, 59, 59);">Opdracht 2</h1>
+       
+
 
 
     <br><br><hr><br><br>
 
 
 
-
     <h3 id="opdr3">Opdracht 3</h3>
+    <dt>Zorg er nu voor dat het h1> element uit de voorgaande opdracht 20px links en 30px naar onder wordt geplaatst, relatief t.o.v. diens normale positie.
+    </dt>
+    <br>
+    <dd></dd>
+
+        <h1 style="position: absolute; left: 20px;  bottom:30px; color: rgb(219, 59, 59);">Opdracht 3</h1>
 
 
     <br><br><hr><br><br>
@@ -74,6 +126,12 @@
 
 
     <h3 id="opdr4">Opdracht 4</h3>
+    <dt>Zorg er nu voor dat het h1 element uit opdracht 2 50px links en 100px van de top wordt geplaatst relatief t.o.v. de HTML pagina.</dt>
+    <br>
+    <dd></dd>
+
+    <h1 style="position: fixed; top:100px; left: 50px ; color: rgb(219, 59, 59);">Opdracht 4</h1>
+
 
 
     <br><br><hr><br><br>
@@ -81,12 +139,37 @@
 
 
     <h3 id="opdr5">Opdracht 5</h3>
+    <dt>Positioneer het img element achter de tekst. Zie voorbeeld hierboven en gebruik onderstaande HTML code. Je mag zelf een eigen image gebruiken.</dt>
+    <br>
+    <dd>div tekst elementen: style="position:relative; z-index:2;"<br>
+        img element: style="width: 20%; position: relative ; top:-150px; left: -30px; z-index: 1;"
+    </dd>
+    <br>
 
-
-    <br><br><hr><br><br>
+    <div>
+        <div style="position:relative; z-index:2; color: white;">  
+        <h1>Dit is een titel</h1>
+        <p>Dit is een paragraaf.</p>
+        <p>Dit is nog een paragraaf.</p>
+        </div>
+        <img src="./img/abstract-background-colors.jpg" style="width: 20%; position: relative ; top:-150px; left: -30px; z-index: 1;">
+    </div>
+    
+   
+ <hr><br><br>
 
 
     <h3 id="opdr6">Opdracht 6</h3>
+    <dt>Maak het onderstaande na door gebruik te maken van relative position. De outer div block is 100px breed en 100px hoog. De inner div block is 50px breed en 50px hoog.</dt>
+    <br>
+    <dd> CSS code: position: relative; top: 25px; left: 25px;"</dd>
+    <br>
+    <div style="background:orange; width: 100px; height: 100px;">
+        <div style="background: palegreen; width: 50px; height: 50px; position: relative; top: 25px; left: 25px;"></div>
+
+
+    </div>
+
 
 
     <br><br><hr><br><br>
@@ -94,6 +177,19 @@
 
 
     <h3 id="opdr7">Opdracht 7</h3>
+    <dt>Zie de onderstaande image met tekst. Kun jij dit namaken? Gebruik zelf een foto van een zonnige bestemming. Gebruik position, maar je mag geen z-index toepassen.</dt>
+    <dd></dd>
+    <br>
+     <div>
+        <div style="position: absolute;  left: 500px;" >
+            <h1>Groeten uit <span style="color: white;">Santorini!</span></h1>
+            <p style="color: coral; background: white; width: max-content;">Ben je hier al eens geweest?</p>
+        </div>
+        <img src="./img/santorini_zonsondergang.jpg" alt="">
+     </div>
+<p>Eerst de tekst div die met position:absoluut wordt gepositioneerd
+   aan de buitenste div waar ook het img element in zit. De volgorde is nu belangrijk. Top of bottom kan je nu niet gebruiken?
+</p> 
 
 
     <br><br><hr><br><br>
@@ -101,7 +197,19 @@
 
 
     <h3 id="opdr8">Opdracht 8</h3>
+    <dt>Maak het onderstaande na. Je mag zelf een image zoeken en gebruiken.</dt>
+    <dd></dd>
+    <br>
 
+    <div style="border:1px solid black; position: relative;">
+        <!-- <div style="position: absolute; top: 250px; background: yellow; width: 100%; padding: 15px;"></div> -->
+        <div style="position: absolute; top: 100px; background: yellow; width: 12%; padding: 5px;"><h1>The sky is the limit!</h1></div>
+        <div style="position: absolute; top: 200px; background: white; opacity: 0.5; width: max-content; padding: 0.15em; margin: 5px 0 0 10px;"><p>Skiing in the France Alpes</p></div>
+        <img style="" src="./img/france-ski-resorts-meribel-skier-on-mountain-top.jpg" alt="">
+
+    </div>
+
+    <!-- https://www.w3schools.com/howto/howto_css_image_text.asp -->
 
     <br><br><hr><br><br>
     

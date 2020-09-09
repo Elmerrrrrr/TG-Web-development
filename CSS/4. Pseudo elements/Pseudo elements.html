@@ -3,24 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Display & positioning</title>
+    <title>Pseudo elements</title>
 
 <style>
 
+    html, body {
+    background:linen;
+    margin: 5em;    
+    scroll-behavior: smooth;
+    }
 
-    li{
+
+
+    nav li{
     list-style-type: none;
     padding: 1em;
     }
+
+    dt{
+    font-weight: bolder;
+    font-size: 1.2em;
+    }
+    dd {
+    font-style: italic;
+    font-size: 1.2em;
+    }
+    
+    .opdracht1 form input:focus{
+        background-color: lightgrey;
+    }
+
+
+    .opdracht3-1 p::after {content: " - Remember this"; color: red; }
+    .opdracht3-2 video::backdrop {background-color: #448;}
+    .opdracht3-3 p::before {content: "Remember this - "; color: blue;}
+    .opdracht3-4 video::cue {background:tomato; color: papayawhip;}
+    
+    .opdracht3-5 video::cue-region {background:white; color: blue;}
+
+    .opdracht3-6 p::before {content: "Remember this - "; color: blue; }
+    .opdracht3-7 p::before {content: "Remember this - "; color: blue; }
+    .opdracht3-8 p::before {content: "Remember this - "; color: blue; }
+    .opdracht3-9 p::before {content: "Remember this - "; color: blue; }
+    .opdracht3-10 p::before {content: "Remember this - "; color: blue;}
+    .opdracht3-11 p::before {content: "Remember this - "; color: blue; }
+    .opdracht3-12 p::before {content: "Remember this - "; color: blue; }
+    .opdracht3-13 p::before {content: "Remember this - "; color: blue; }
+    .opdracht3-14 p::before {content: "Remember this - "; color: blue; }
+
+    .opdracht4 button {
+
+        width: 80%;
+        padding: 20px;
+        background:lightskyblue;
+        font-size: 2em ;
+        color: white;
+        border: none;
+
+    }
+    
     
 </style>
 
 </head>
 <body>
-    
-        
-
-    <h1>Display & positioning</h1>
+     
+    <h1>Pseudo elements</h1>
 
 
     <nav>
@@ -44,14 +92,20 @@
 
 
     <h3 id="opdr1">Opdracht 1</h3>
-
-
-
-
-
-
-
-
+    <br>
+    <dt>Kun je enkele voorbeelden geven van pseudo-elementen (minimaal 4)? Beschrijf met je eigen
+        woorden wat deze pseudo-elementen inhouden.</dt>
+    <br>
+    <dd>Er zijn in totaal 61 pseudo classes en 14 elementen die je kunt gebruiken. Pseuso classes kunnen extra content of styles toevoegen aan een element.
+        <br>Voorbeeld van 4 pseudo elementen ::before ::after ::first-letter :first-line.</dd>
+        <br>
+        <div class="opdracht1">
+        <p>Eeen voorbeeld voor :focus</p>
+        <form>
+            First name: <input type="text" name="firstname"><br>
+            Last name: <input type="text" name="lastname">
+          </form>
+        </div>
 
 
     <br><br><hr><br><br>
@@ -60,6 +114,25 @@
 
 
     <h3 id="opdr2">Opdracht 2</h3>
+    <br>
+    <dt>Er zijn 14 verschillende pseudo elementen. Je hebt in de voorgaande opdracht reeds 4 kunnen benoemen. Kun je de andere 10 ook benoemen en aangeven wat ze precies doen?</dt>
+    <br>
+    <dd>::after (:after) <br>
+        ::backdrop <br>
+        ::before (:before)<br>
+        ::cue<br>
+        ::cue-region<br>
+        ::first-letter (:first-letter)<br>
+        ::first-line (:first-line)<br>
+        ::grammar-error<br>
+        ::marker <br>
+        ::part() <br>
+        ::placeholder <br>
+        ::selection<br>
+        ::slotted()<br>
+        ::spelling-error </dd>
+
+      
 
 
     <br><br><hr><br><br>
@@ -68,6 +141,57 @@
 
 
     <h3 id="opdr3">Opdracht 3</h3>
+    <br>
+    <dt></dt>
+    <br>
+    <dd>  p::after { content: " - Remember this"; color:red;}</dd>
+    <br>
+    <div class="opdracht3-1">
+        <h4>p::after</h4>
+        <p>My name is Donald</p>
+        <p>I live in Ducksburg</p>
+    </div>
+    <br>
+
+    <br>
+    <div class="opdracht3-2">
+        <h4>video::backdrop</h4>
+        <p>video::backdrop {background-color: #448;}
+            Geeft een background color voor de zijbalken/achtergrond van de video.
+        </p>
+        <video src="./mov_bbb.mp4" controls></video>
+    </div>
+    <br>
+    <div class="opdracht3-3">
+        <h4>p::before</h4>
+        <p>My name is Donald</p>
+        <p>I live in Ducksburg</p>
+    </div>
+    <br>
+    <div class="opdracht3-4">
+        <h4>video::cue</h4>
+        <p>This can be used to style captions and other cues in media with VTT tracks.</p>
+        <video src="./mov_bbb.mp4" controls>
+            <track src="./subtitle.vtt" kind="subtitles"></video>
+    </div>
+    <br>
+    <div class="opdracht3-5">
+        <h4>video::cue-region</h4>
+        <p></p>
+        <video src="./mov_bbb.mp4" controls>
+            <track src="./subtitle.vtt" kind="subtitles" srclang="en" label="English subtitile" ></video>
+    </div>
+
+<div>
+    <video width="320" height="240" controls>
+        <source src="./mov_bbb.mp4" type="video/mp4">
+        <source src="./mov_bbb.mp4" type="video/ogg">
+        <track src="fgsubtitles_en.vtt" kind="subtitles" srclang="en" label="English">
+        <track src="fgsubtitles_no.vtt" kind="subtitles" srclang="no" label="Norwegian">
+      </video>
+
+</div>
+  
 
 
     <br><br><hr><br><br>
@@ -75,6 +199,16 @@
 
 
     <h3 id="opdr4">Opdracht 4</h3>
+    <br>
+    <dt>Hieronder vind je een voorbeeld van het gebruik van een pseudo-element. Kun jij dit
+        namaken?</dt>
+    <br>
+    <dd> button </dd>
+    <div class="opdracht4">
+        <button>Button</button>
+    </div>
+
+      
 
 
     <br><br><hr><br><br>
@@ -82,12 +216,24 @@
 
 
     <h3 id="opdr5">Opdracht 5</h3>
+    <br>
+    <dt></dt>
+    <br>
+    <dd></dd>
+
+      
 
 
     <br><br><hr><br><br>
 
 
     <h3 id="opdr6">Opdracht 6</h3>
+    <br>
+    <dt></dt>
+    <br>
+    <dd></dd>
+
+      
 
 
     <br><br><hr><br><br>
@@ -95,6 +241,12 @@
 
 
     <h3 id="opdr7">Opdracht 7</h3>
+    <br>
+    <dt></dt>
+    <br>
+    <dd></dd>
+
+      
 
 
     <br><br><hr><br><br>
@@ -102,6 +254,12 @@
 
 
     <h3 id="opdr8">Opdracht 8</h3>
+    <br>
+    <dt></dt>
+    <br>
+    <dd></dd>
+
+      
 
 
     <br><br><hr><br><br>

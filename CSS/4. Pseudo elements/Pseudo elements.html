@@ -9,7 +9,7 @@
 
     html, body {
     background:linen;
-    margin: 5em;    
+    margin-left: 2em;
     scroll-behavior: smooth;
     }
 
@@ -52,17 +52,167 @@
     .opdracht3-14 p::before {content: "Remember this - "; color: blue; }
 
     .opdracht4 button {
-
+        position: relative;
         width: 80%;
         padding: 20px;
         background:lightskyblue;
         font-size: 2em ;
         color: white;
-        border: none;
+        border-left: 4px solid coral;
+        border-right: 4px solid coral;
+        border-top: none;
+        border-bottom: none;
+    }
 
+    .opdracht4 button::before {
+        position: absolute;
+        content: "";
+        border-bottom: 4px solid coral;
+        left: 0px;
+        top: 0px;
+        width: 2em;
+    }
+    .opdracht4 button::after {
+        position: absolute;
+        content: "";
+        border-bottom: 4px solid coral;
+        right: 0px;
+        bottom: 0px;
+        width: 2em;
+    }
+ 
+    .opdracht5 {
+    position: relative;
+    border: 2px solid gray;
+    height: 400px;
+    color: white;
+    width: 600px;
+    /* z-index: 2; */
+    }
+
+ .opdracht5 img {
+    position: absolute;
+    color: white;
+    top: 0; 
+    z-index: 1;
     }
     
-    
+    .opdracht5 p::before{
+        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ipsam quam molestiae soluta officia est nobis temporibus maiores maxime iste dolor unde, harum natus explicabo sed veritatis consequuntur, ea in. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore voluptatem hic fugit quibusdam laborum aut, sint ab odio corrupti harum. Nemo veniam tempore placeat recusandae neque sapiente beatae voluptates sint.";
+        position: absolute;
+        /* top: 20px; */
+        padding: 10px;
+        z-index: 2;
+    }
+
+    .opdracht6{
+        position: relative;
+        
+    }
+
+    .opdracht6 .outer_box{
+        /* display: flex; */
+        position: relative;
+        height: 200px;
+        border: 2px solid gray;
+        margin-left:20px;
+    }
+    .opdracht6 .rectangle{
+        position: absolute;
+        z-index: 2;
+        top: 75px;
+        background: black;
+        width: 200px;
+        height: 50px;
+        border-radius: 25px;
+    }
+     .opdracht6 .circle{
+         position: absolute;
+         z-index: 3;
+         top: 25px;
+         left: 25px;
+         background: black;
+         width: 150px;
+         height: 150px;
+         border-radius: 50%;
+     }
+     .opdracht6 .circle::after{
+         position: absolute;
+         z-index: 2;
+         content: ".";
+         font-size: 40px;
+         top: 30px;
+         color:white;       
+     }
+
+     .opdracht6 .circle::before{
+         position: absolute;
+         z-index: 1;
+         content: ".";
+         font-size: 40px;
+         top: 50px;
+         left: 140px;
+         color:white;       
+     }
+     .opdracht6 p{
+         position: absolute;
+         color: white;
+         font-size: 3em;
+         left: 60px;
+     }
+
+     .opdracht6 .item1{
+        position: absolute;
+        left: 50px;
+     }
+
+     .opdracht6 .item2{
+        position: absolute;
+        left: 350px;
+     }
+
+     .opdracht6 .item3{
+        position: absolute;
+        left: 650px;
+     }
+
+    .opdracht7{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin-top: 50px;
+        height: 400px;
+    }
+
+    .opdracht7 .square{
+        position: absolute;
+        background: red;
+        height: 300px;
+        width: 300px;
+        /* margin: 15px; */
+    }
+
+    .opdracht7 .square::before {
+        content: "";
+        position: absolute;
+        height: 300px;
+        width: 300px;
+        background: red;
+        top: 0px;
+        transform: rotate(122deg);
+    }
+
+    .opdracht7 .square::after {
+        content: "";
+        background: red;
+        height: 300px;
+        width: 300px;
+        position: absolute;
+        top: 0px;
+        transform: rotate(244deg);
+    }
+
+ 
 </style>
 
 </head>
@@ -80,7 +230,6 @@
             <li><a href="#opdr5">OPDR5</a></li>
             <li><a href="#opdr6">OPDR6</a></li>
             <li><a href="#opdr7">OPDR7</a></li>
-            <li><a href="#opdr8">OPDR8</a></li>
         </ul>
     </nav>
 
@@ -203,7 +352,7 @@
     <dt>Hieronder vind je een voorbeeld van het gebruik van een pseudo-element. Kun jij dit
         namaken?</dt>
     <br>
-    <dd> button </dd>
+    <dd> button met border en ::before / ::after </dd>
     <div class="opdracht4">
         <button>Button</button>
     </div>
@@ -217,10 +366,19 @@
 
     <h3 id="opdr5">Opdracht 5</h3>
     <br>
-    <dt></dt>
+    <dt>Hieronder vind je nog eens een voorbeeld van het gebruik van een pseudo-element ::before.
+        Kun jij dit namaken? Zoek een afbeelding op internet.</dt>
     <br>
     <dd></dd>
-
+    <div class="opdracht5">
+        <p></p>
+        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Ad ipsam quam molestiae soluta officia est nobis temporibus maiores maxime iste dolor unde, harum natus explicabo sed veritatis consequuntur, ea in.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore voluptatem hic fugit quibusdam laborum aut, sint ab odio corrupti harum. Nemo veniam tempore
+        placeat recusandae neque sapiente beatae voluptates sint.
+        </p> -->
+        <img height="400px" src="./img/sparrow.jpg" alt="sparrow">
+    </div>
       
 
 
@@ -229,9 +387,33 @@
 
     <h3 id="opdr6">Opdracht 6</h3>
     <br>
-    <dt></dt>
+    <dt>Hieronder vind je wederom een voorbeeld van het gebruik van een pseudo-element. Kun jij
+        dit namaken?</dt>
     <br>
     <dd></dd>
+
+    <div class="opdracht6">
+
+       <div class="outer_box">
+
+            <div style="display: inline-block;" class="item1">
+                <div class="rectangle"></div>
+                <div class="circle"><p>1</p></div>
+            </div>
+
+            <div style="display: inline-block;" class="item2">
+                <div class="rectangle"></div>
+                <div class="circle"><p>2</p></div>
+            </div>
+
+            <div style="display: inline-block;" class="item3">
+                <div class="rectangle"></div>
+                <div class="circle"><p>3</p></div>
+            </div>
+
+       </div>
+    </div>
+    <br>
 
       
 
@@ -242,9 +424,17 @@
 
     <h3 id="opdr7">Opdracht 7</h3>
     <br>
-    <dt></dt>
+    <dt>De laatste opdracht vergt wat creativiteit. Zie het onderstaande voorbeeld en maak het na.</dt>
     <br>
     <dd></dd>
+
+    <div class="opdracht7">
+
+        <div class="square"></div>
+        <!-- <div class="square part2"></div>
+        <div class="square part3"></div> -->
+
+    </div>
 
       
 
@@ -252,17 +442,6 @@
     <br><br><hr><br><br>
 
 
-
-    <h3 id="opdr8">Opdracht 8</h3>
-    <br>
-    <dt></dt>
-    <br>
-    <dd></dd>
-
-      
-
-
-    <br><br><hr><br><br>
 
 
 

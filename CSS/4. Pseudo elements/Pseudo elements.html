@@ -41,13 +41,13 @@
     
     .opdracht3-5 video::cue-region {background:white; color: blue;}
 
-    .opdracht3-6 p::before {content: "Remember this - "; color: blue; }
-    .opdracht3-7 p::before {content: "Remember this - "; color: blue; }
-    .opdracht3-8 p::before {content: "Remember this - "; color: blue; }
-    .opdracht3-9 p::before {content: "Remember this - "; color: blue; }
-    .opdracht3-10 p::before {content: "Remember this - "; color: blue;}
-    .opdracht3-11 p::before {content: "Remember this - "; color: blue; }
-    .opdracht3-12 p::before {content: "Remember this - "; color: blue; }
+    .opdracht3-6 p::first-letter {font-size: 4em; font-style: bold; color:brown }
+    .opdracht3-7 p::first-line {color:crimson; }
+    .opdracht3-8 p::grammar-error {text-decoration: underline red; color: blue; }
+    .opdracht3-9 ul li::marker {font-size: 2em ; color: red; }
+    .opdracht3-10 input::placeholder {background: grey; font-style: italic;; color: white; text-align: center;}
+    .opdracht3-11 p::selection {background-color: cyan;; color: white; }
+    .opdracht3-12::slotted(*){font-weight: bold; }
     .opdracht3-13 p::before {content: "Remember this - "; color: blue; }
     .opdracht3-14 p::before {content: "Remember this - "; color: blue; }
 
@@ -96,6 +96,7 @@
     top: 0; 
     z-index: 1;
     }
+<<<<<<< HEAD
     
     .opdracht5 p::before{
         content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ipsam quam molestiae soluta officia est nobis temporibus maiores maxime iste dolor unde, harum natus explicabo sed veritatis consequuntur, ea in. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore voluptatem hic fugit quibusdam laborum aut, sint ab odio corrupti harum. Nemo veniam tempore placeat recusandae neque sapiente beatae voluptates sint.";
@@ -213,6 +214,10 @@
     }
 
  
+=======
+
+
+>>>>>>> 6ce4b10795b25530d9caa64dfae325a4660f6998
 </style>
 
 </head>
@@ -249,12 +254,9 @@
         <br>Voorbeeld van 4 pseudo elementen ::before ::after ::first-letter :first-line.</dd>
         <br>
         <div class="opdracht1">
-        <p>Eeen voorbeeld voor :focus</p>
+        <p>Een voorbeeld voor :focus</p>
         <form>
-            First name: <input type="text" name="firstname"><br>
-            Last name: <input type="text" name="lastname">
-          </form>
-        </div>
+            First name: <input type="text" name="firsrgb(255, 255, 255)
 
 
     <br><br><hr><br><br>
@@ -266,7 +268,7 @@
     <br>
     <dt>Er zijn 14 verschillende pseudo elementen. Je hebt in de voorgaande opdracht reeds 4 kunnen benoemen. Kun je de andere 10 ook benoemen en aangeven wat ze precies doen?</dt>
     <br>
-    <dd>::after (:after) <br>
+    <dd>::after (:after) <br>rgb(255, 255, 255)
         ::backdrop <br>
         ::before (:before)<br>
         ::cue<br>
@@ -325,25 +327,96 @@
     </div>
     <br>
     <div class="opdracht3-5">
-        <h4>video::cue-region</h4>
+        <h4>Doet het nog niet!!video::cue-region</h4>
         <p></p>
         <video src="./mov_bbb.mp4" controls>
-            <track src="./subtitle.vtt" kind="subtitles" srclang="en" label="English subtitile" ></video>
+            <track src="./subtitle_en.vtt" kind="subtitles" srclang="en" label="English subtitile" ></video>
     </div>
 
-<div>
-    <video width="320" height="240" controls>
-        <source src="./mov_bbb.mp4" type="video/mp4">
-        <source src="./mov_bbb.mp4" type="video/ogg">
-        <track src="fgsubtitles_en.vtt" kind="subtitles" srclang="en" label="English">
-        <track src="fgsubtitles_no.vtt" kind="subtitles" srclang="no" label="Norwegian">
-      </video>
+    <div class="opdracht3-5">
+        <h4>Doet het nog niet!! video::cue-region</h4>
+        <video width="320" height="240" controls="controls">
+            <source src="./mov_bbb.mp4" type="video/mp4">
+            <!-- <source src="./mov_bbb.mp4" type="video/ogg"> -->
+            <track src="./subtitle_en.vtt" kind="subtitles" srclang="en" label="English">
+            <track src="./subtitle_nl.vtt" kind="subtitles" srclang="nl" label="Nederlands"></video>
+    </div>
+    <br>
+    <div class="opdracht3-6">
+        <h4>p::first-letter</h4>
+        <p>My name is Donald</p>
+        <p>I live in Ducksburg</p>
+    </div>
 
-</div>
-  
+    <br>
+    <div class="opdracht3-7">
+        <h4>p::first-line </h4>
+        <p>This is the first line
+            <br>
+            and this is the second line
+        </p>
+    </div>
+    <br>
+    <div class="opdracht3-8">
+        <h4>::grammar-error /::spelling-error</h4>
+        <p>Therrre is no spelling-error / grammar-error support yet from any of the browsers of this pseudo element</p>
+    </div>
+    <br>
+    <div class="opdracht3-9">
+        <h4>ul li::marker </h4>
+        <p>Hiermee kun je de marker box van een li item in in ul stylen. Standaard wordt dit nog niet volledig
+           door google chrome ondersteunt. Je kunt dit in Chrome activeren bij: chrome://flags/#enable-experimental-web-platform-features
+        </p>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+    </div>
+    <br>
+    <div class="opdracht3-8">
+        <h4>::part()</h4>
+        <p>Deze pseudo-element selector gaat</p>
+    </div>
+    custom-element::part(foo) {
+        /* Styles to apply to the `foo` part */
+      }
 
+
+
+
+    <div class="opdracht3-10">
+        <h4>::placeholder</h4>
+        <p>Dit wordt voornamelijk gebruikt bij in put velden. Dit om het veld een kleur te geven indien
+            een input is gevalideerd en dus ook ingevoerd. Daarnaast kan je het ook gebruiken als extra (hint) text in het input veld. </p>
+        <label for="user-email">Label:</label>
+        <input placeholder="This is the placeholder!" id="user-email" aria-describedby="user-email-hint" name="email" type="email">
+    </div>
+    <br>
+    <div class="opdracht3-11">
+        <h4>::selection</h4>
+        <p>Als je deze tekst selecteerd dan zie je wat het pseudo ::selection kan doen met de geselecteeerde tekst.</p>
+
+    </div>
+    <br>
+    <div class="opdracht3-12">
+        <h4>::slotted()</h4>
+        <p>Dit gaat in combinatie met een HTML slot element en javascript.</p>
+        <br>
+        <h2>Personal ID Card</h2>
+        <slot name="person-name">NAME MISSING</slot>
+        <ul>
+          <li><slot name="person-age">AGE MISSING</slot></li>
+          <li><slot name="person-occupation">OCCUPATION MISSING</slot></li>
+        </ul>
+        <br>
+    </div>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/::slotted -->
 
     <br><br><hr><br><br>
+
+
+
 
 
 

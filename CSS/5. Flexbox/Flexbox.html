@@ -6,14 +6,20 @@
     <title>Flexbox</title>
 
 <style>
-            html, body {
+        html, body {
         background:linen;
-        margin: 5em;    
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 2em 5em;    
         scroll-behavior: smooth;
        
         }
+        
+        nav ul{
+            display: flex;
+            flex-wrap: wrap;
+        }
 
-        li{
+        nav li{
         list-style-type: none;
         padding: 1em;
         }
@@ -25,6 +31,70 @@
 
             font-style: italic;
         }
+
+        .opdracht1 {
+            display: flex;
+            flex-wrap: wrap;
+            background: lightyellow;
+        }
+
+        .opdracht1 .box, .opdracht2 .box, .opdracht3 .box{
+            background: lightgreen;
+            margin: 10px;
+            padding: 30px;
+        }
+
+        .opdracht2 {
+            display: flex;
+            flex-wrap: wrap;
+            background: lightyellow;
+            justify-content: flex-end;
+        }
+
+        .opdracht3 {
+            display: flex;
+            flex-wrap: wrap;
+            background: lightyellow;
+        }
+
+        .opdracht3 .box2{
+            flex-grow: 1;
+            text-align: center;
+            background: lightgreen;
+            margin: 10px;
+            padding: 30px;
+        }
+
+
+        .opdracht4-1 .box, .opdracht4-2 .box, .opdracht4-3 .box{
+            background: lightgreen;
+            margin: 10px;
+            padding: 30px;
+        }
+
+        .opdracht4-1 {
+            display: flex;
+            flex-wrap: wrap;
+            background: lightyellow;
+            justify-content:space-evenly;
+            
+        }
+
+        .opdracht4-2 {
+            display: flex;
+            flex-wrap: wrap;
+            background: lightyellow;
+            justify-content:flex-end;
+        }
+
+        .opdracht4-3 {
+            display: flex;
+            flex-wrap: wrap;
+            background: lightyellow;
+            justify-content:center;
+        }
+
+
 
 
 </style>
@@ -53,36 +123,62 @@
 
     <br><hr><br><br>
 
-    
   
-    
-
 
     <h3 id="opdr1">Opdracht 1</h3>
 
-
-
-
-
-
-
-
+    <dt>Zie het onderstaande voorbeeld en maak het na met flex. Gebruik geen width, height of line-height.</dt>
+    <dd></dd>
+    <br>
+    <div class="opdracht1">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
 
 
     <br><br><hr><br><br>
-
 
 
 
     <h3 id="opdr2">Opdracht 2</h3>
 
+    <dt>Zie het onderstaande voorbeeld, de items staan nu anders uitgelijnd. Maak het na met flex. Gebruik geen width, height of line-height.</dt>
+    <dd></dd>
+    <br>
+    <div class="opdracht2">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+
+
 
     <br><br><hr><br><br>
 
-
+    Zie het onderstaande voorbeeld, een van de items is breder dan de rest. Maak het na met flex. Gebruik geen width, height of line-height.
 
 
     <h3 id="opdr3">Opdracht 3</h3>
+    <dt>Zie het onderstaande voorbeeld, een van de items is breder dan de rest. Maak het na met flex. Gebruik geen width, height of line-height.
+    </dt>
+    <dd>flex-grow: 1; Dit laat het flexitem groeien indien mogelijk.</dd>
+    <br>
+    <div class="opdracht3">
+        <div class="box">1</div>
+        <div class="box2">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+
 
 
     <br><br><hr><br><br>
@@ -90,6 +186,41 @@
 
 
     <h3 id="opdr4">Opdracht 4</h3>
+    <dt>De property ‘justify-content’ is een property die door flex gebruikt wordt.
+        Maak verschillende voorbeelden door gebruik te maken van de justify-content property.</dt>
+    <dd></dd>
+    <br>
+    <p>justify-content:space-evenly;</p>
+    <div class="opdracht4-1">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+    <br>
+    <p>justify-content:space-flex-end;</p>
+    <div class="opdracht4-2">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+    <br>
+    <p>justify-content:center;</p>
+    <div class="opdracht4-3">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+
+
 
 
     <br><br><hr><br><br>
@@ -97,12 +228,24 @@
 
 
     <h3 id="opdr5">Opdracht 5</h3>
+    <dt>De property ‘align-items’ is een property die door flex gebruikt wordt.
+        Maak verschillende voorbeelden door gebruik te maken van de align-items property.</dt>
+    <dd></dd>
+    <br>
+
+
 
 
     <br><br><hr><br><br>
 
 
     <h3 id="opdr6">Opdracht 6</h3>
+    <dt>Maak het onderstaande na met flexbox. Properties die je o.a dient te gebruiken zijn:</dt>
+    <dd></dd>
+    <br>
+
+
+
 
 
     <br><br><hr><br><br>
@@ -110,6 +253,14 @@
 
 
     <h3 id="opdr7">Opdracht 7</h3>
+    <dt>Maak het onderstaande na met flexbox. Properties die je o.a dient te gebruiken zijn:</dt>
+    <dd></dd>
+    <br>
+
+
+
+
+
 
 
     <br><br><hr><br><br>
@@ -117,6 +268,41 @@
 
 
     <h3 id="opdr8">Opdracht 8</h3>
+    <dt>Zie het onderstaande voorbeeld en maak het na met flexbox.</dt>
+    <dd></dd>
+    <br>
+
+
+
+
+
+
+    <br><br><hr><br><br>
+
+    <h3 id="opdr9">Opdracht 8</h3>
+    <dt>Zie het onderstaande voorbeeld en maak het na met flexbox. Zorg voor een leuk effect als je met de muis over de ‘play’ knop heen gaat.
+        Optioneel: gebruik .gif bestanden als images voor een levendig effect.
+    </dt>
+    <dd></dd>
+    <br>
+
+
+
+
+
+
+    <br><br><hr><br><br>
+
+
+
+    <h3 id="opdr10">Opdracht 8</h3>
+    <dt>Verzin zelf een opdracht met flexbox. Irriteer je medecursist ermee
+        door je medecursist te vragen om het na te maken.</dt>
+    <dd></dd>
+    <br>
+
+
+
 
 
     <br><br><hr><br><br>

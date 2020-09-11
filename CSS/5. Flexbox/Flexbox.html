@@ -66,7 +66,7 @@
         }
 
 
-        .opdracht4-1 .box, .opdracht4-2 .box, .opdracht4-3 .box{
+        .opdracht4-1 .box, .opdracht4-2 .box, .opdracht4-3 .box {
             background: lightgreen;
             margin: 10px;
             padding: 30px;
@@ -93,7 +93,156 @@
             background: lightyellow;
             justify-content:center;
         }
+        
 
+        .opdracht5-1 .box, .opdracht5-2 .box, .opdracht5-3 .box, .opdracht5-4 .box{
+            background: lightgreen;
+            margin: 10px;
+            padding: 30px;
+        }
+
+        .opdracht5-1 {
+            height: 30vh;
+            display: flex;
+            background: lightyellow;
+            align-items: flex-end;
+            
+        }
+
+        .opdracht5-2 {
+            height: 30vh;
+            display: flex;
+            background: lightyellow;
+            align-items: center;
+        }
+
+        .opdracht5-3 {
+            height: 30vh;
+            display: flex;
+            background: lightyellow;
+            align-items: flex-start;
+            
+        }
+
+        .opdracht5-4 {
+            height: 30vh;
+            display: flex;
+            background: lightyellow;
+            align-items: stretch;
+            
+        }
+
+        .opdracht6{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            background-color: lightyellow;
+            padding: 3em 0;
+        }
+
+        .opdracht6 .box {display: flex;}
+
+        .opdracht6 .item1, .opdracht6 .item2{
+            margin: 0.2em 0;
+            padding: 1em;
+        }
+
+        .item1{ background: rgb(57, 87, 105);}
+        .item2{ background: chartreuse;}
+        .item3{background: rgb(57, 87, 105);}
+
+        .opdracht6 .box1 .item1{ flex-grow: 1;}
+        .opdracht6 .box1 .item2{ flex: none;}
+
+        .opdracht6 .box2 .item1{ flex-grow: 2;}
+        .opdracht6 .box2 .item2{ flex-grow: 3;}
+
+        .opdracht6 .box3 .item1{ flex-grow: 1;}
+        .opdracht6 .box3 .item2{ flex-grow: 1;}
+
+        .opdracht6 .box4 .item1{ flex-grow: 6;}
+        .opdracht6 .box4 .item2{ flex-grow: 4;}
+
+        .opdracht6 .box5 .item1{ flex-grow: 1;}
+        .opdracht6 .box5 .item2{ flex-grow: 4;}
+
+        .opdracht6 .box6 .item1{ flex: 2;}
+        .opdracht6 .box6 .item2{ flex: 4;}
+
+
+        .opdracht7 {
+            display: flex;
+            background-color: lightyellow;
+            /* padding: 3em 0; */
+            height: 40vh;
+            /* flex-direction: column; */
+        }
+
+        .opdracht7 .box{
+            display: flex;
+            flex-direction: column;
+            margin: 1%;
+            align-items: center;
+        }
+
+        .opdracht7 .item1, .opdracht7 .item2, .opdracht7 .item3{
+            margin: 0 0.2em;
+            padding: 1em;
+        }
+        
+
+        .opdracht7 .box1 .item1{ flex: none;}
+        .opdracht7 .box1 .item2{ flex: 1;}
+        .opdracht7 .box1 .item3{ flex: none;}
+
+        .opdracht7 .box2 .item1{ flex: 1;}
+        .opdracht7 .box2 .item2{ flex: 2;}
+        .opdracht7 .box2 .item3{ flex: 1;}
+
+        .opdracht7 .box3 .item1{ flex-grow: 1;}
+        .opdracht7 .box3 .item2{ flex-grow: 5;}
+        .opdracht7 .box3 .item3{ flex-grow: 1;}
+
+        .opdracht7 .box4 .item1{ flex-grow: 1;}
+        .opdracht7 .box4 .item2{ flex-grow: 9;}
+        .opdracht7 .box4 .item3{ flex-grow: 1;}
+
+        .opdracht7 .box5 .item1{ flex-grow: 1;}
+        .opdracht7 .box5 .item2{ flex-grow: 2;}
+        .opdracht7 .box5 .item3{ flex-grow: 1;}
+
+        .opdracht7 .box6 .item1{ flex: 1;}
+        .opdracht7 .box6 .item2{ flex: 6;}
+        .opdracht7 .box6 .item3{ flex: 1;}
+
+
+
+/* Keyword values */
+/* flex: auto;
+flex: initial;
+flex: none; */
+
+/* One value, unitless number: flex-grow */
+/* flex: 2; */
+
+/* One value, width/height: flex-basis */
+/* flex: 10em;
+   flex: 30%;
+   flex: min-content; */
+
+/* Two values: flex-grow | flex-basis */
+/* flex: 1 30px; */
+
+/* Two values: flex-grow | flex-shrink */
+/* flex: 2 2; */
+
+/* Three values: flex-grow | flex-shrink | flex-basis */
+/* flex: 2 2 10%; */
+
+/* Global values */
+/* flex: inherit;
+   flex: initial;
+   flex: unset; */
 
 
 
@@ -109,7 +258,7 @@
 
 
     <nav>
-        <ul style="display:flex;">
+        <ul>
             <li><a href="#opdr1">OPDR1</a></li>
             <li><a href="#opdr2">OPDR2</a></li>
             <li><a href="#opdr3">OPDR3</a></li>
@@ -122,7 +271,7 @@
     </nav>
 
     <br><hr><br><br>
-
+3
   
 
     <h3 id="opdr1">Opdracht 1</h3>
@@ -179,7 +328,8 @@
         <div class="box">6</div>
     </div>
 
-
+    <br>
+    <a href="#top">Back to top</a>
 
     <br><br><hr><br><br>
 
@@ -220,8 +370,8 @@
         <div class="box">6</div>
     </div>
 
-
-
+    <br>
+    <a href="#top">Back to top</a>
 
     <br><br><hr><br><br>
 
@@ -232,10 +382,47 @@
         Maak verschillende voorbeelden door gebruik te maken van de align-items property.</dt>
     <dd></dd>
     <br>
-
-
-
-
+    <p>align-items: flex-end;</p>
+    <div class="opdracht5-1">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+    <br>
+    <p>align-items: center;</p>
+    <div class="opdracht5-2">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+    <br>
+    <p>align-items: flex-start</p>
+    <div class="opdracht5-3">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+    <br>
+    <p> Default: align-items: stretch;</p>
+    <div class="opdracht5-4">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+    <br>
+    <a href="#top">Back to top</a>
     <br><br><hr><br><br>
 
 
@@ -243,11 +430,37 @@
     <dt>Maak het onderstaande na met flexbox. Properties die je o.a dient te gebruiken zijn:</dt>
     <dd></dd>
     <br>
+    <div class="opdracht6">
+        <div class="box box1">
+            <div class="item1">item 1</div>
+            <!-- <div class="item2">item 2</div>  -->
+        </div>
 
+        <div class="box box2"> 
+            <div class="item1">item 1</div>
+            <div class="item2">item 2</div> 
+        </div>
 
-
-
-
+        <div class="box box3">
+            <div class="item1">item 1</div>
+            <div class="item2">item 2</div>  
+        </div>
+        <div class="box box4">
+            <div class="item1">item 1</div>
+            <div class="item2">item 2</div>  
+        </div>
+        <div class="box box5">
+            <div class="item1">item 1</div>
+            <div class="item2">item 2</div>  
+        </div>
+        <div class="box box6">
+            <div class="item1">item 1</div>
+            <div class="item2">item 2</div>  
+        </div>
+    </div>
+    
+    <br>
+    <a href="#top">Back to top</a>
     <br><br><hr><br><br>
 
 
@@ -256,9 +469,41 @@
     <dt>Maak het onderstaande na met flexbox. Properties die je o.a dient te gebruiken zijn:</dt>
     <dd></dd>
     <br>
+    <div class="opdracht7">
+        <div class="box box1">
+            <div class="item1">item 1</div>
+            <div class="item2">item 2</div>
+            <div class="item3">item 3</div> 
+        </div>
 
+        <div class="box box2"> 
+            <div class="item1">item 1</div>
+            <div class="item2">item 2</div>
+            <div class="item3">item 3</div>   
+        </div>
 
-
+        <div class="box box3">
+            <div class="item1">item 1</div>
+            <div class="item2">item 2</div>
+            <div class="item3">item 3</div>  
+        </div>
+        <div class="box box4">
+            <div class="item1">item 1</div>
+            <div class="item2">item 2</div>
+            <div class="item3">item 3</div>  
+        </div>
+        <div class="box box5">
+            <div class="item1">item 1</div>
+            <div class="item2">item 2</div>
+            <div class="item3">item 3</div>  
+        </div>
+        <div class="box box6">
+            <div class="item1">item 1</div>
+            <div class="item2">item 2</div>
+            <div class="item3">item 3</div>  
+        </div>
+    </div>
+   
 
 
 
@@ -279,7 +524,7 @@
 
     <br><br><hr><br><br>
 
-    <h3 id="opdr9">Opdracht 8</h3>
+    <h3 id="opdr9">Opdracht 9</h3>
     <dt>Zie het onderstaande voorbeeld en maak het na met flexbox. Zorg voor een leuk effect als je met de muis over de ‘play’ knop heen gaat.
         Optioneel: gebruik .gif bestanden als images voor een levendig effect.
     </dt>
@@ -295,7 +540,7 @@
 
 
 
-    <h3 id="opdr10">Opdracht 8</h3>
+    <h3 id="opdr10">Opdracht 10</h3>
     <dt>Verzin zelf een opdracht met flexbox. Irriteer je medecursist ermee
         door je medecursist te vragen om het na te maken.</dt>
     <dd></dd>

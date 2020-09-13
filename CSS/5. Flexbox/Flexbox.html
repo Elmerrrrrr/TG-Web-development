@@ -13,7 +13,13 @@
         scroll-behavior: smooth;
        
         }
-        
+        nav{
+            background:linen;
+            position: sticky;
+            top: -1px;
+            width: 100%;
+        }
+
         nav ul{
             display: flex;
             flex-wrap: wrap;
@@ -149,7 +155,7 @@
 
         .opdracht6 .item1{ background: rgb(57, 87, 105);}
         .opdracht6 .item2{ background: chartreuse;}
-        .opdracht6 .item3{background: rgb(57, 87, 105);}
+        .opdracht6 .item3{ background: rgb(57, 87, 105);}
 
         .opdracht6 .box1 .item1{ flex-grow: 1;}
         .opdracht6 .box1 .item2{ flex: none;}
@@ -268,18 +274,17 @@ flex: none; */
         .opdracht8 .box3 { background: lightgreen;}
         .opdracht8 .box4 { background: lightgrey;}
         .opdracht8 .box5 { background: black; color: white;}
-        .opdracht8 .box6 { background-image: linear-gradient(to right,blue , lightblue);}
+        .opdracht8 .box6 { background: linear-gradient(to right,blue , lightblue);}
 
 
         .opdracht9 {
             display: flex;
             flex-wrap: wrap;
-            /* flex-direction: column; */
         }
         .opdracht9 .box1, .opdracht9 .box2, .opdracht9 .box3, .opdracht9 .box4{
             max-width:20vw;
-            min-width: 300px;
-            margin: 1em;
+            min-width: 350px;
+            margin: 2em;
             text-align: center;
         }
         .opdracht9 button{
@@ -287,10 +292,80 @@ flex: none; */
             border: none;
             padding: 20px 10px;
             color: white;
-            background: blue;
-        
+            background: rgb(43, 154, 228);
         }
 
+        .opdracht9 button:hover, .opdracht9 button:focus {
+            filter: brightness(150%);
+            filter: contrast(150%);
+            /* filter: blur(1px) */
+        }
+
+
+  /* ----------------Opdracht 10---------------- */
+
+
+        media(min-width:468px){
+
+        .container-1{
+        display:flex;
+        /*
+        align-items:flex-start;
+        align-items:flex-end;
+        align-items:center;
+        
+        flex-direction:column;
+        */
+        }
+        
+        .container-2{
+        display:flex;  
+        /*
+        justify-content:flex-start;
+        justify-content:flex-end;
+        justify-content:center;
+        justify-content:space-around;
+        */
+        justify-content:space-between;
+        }
+    }
+
+
+    
+    .container-3{
+        display:flex;  
+        flex-wrap:wrap;
+        justify-content:space-between;
+    }
+    
+    .container-1 div, .container-2 div, .container-3 div{
+        border:1px #ccc solid;
+        padding:10px;
+    }
+    
+    .box-1{
+        flex:2;
+        order:2;
+    }
+    
+    .box-2{
+        flex:1;
+        order:1;
+    }
+    
+    .box-3{
+        flex:1;
+        order: 3;
+    }
+    
+    .container-2-box{
+        flex-basis: 27%;  
+    }
+    
+    .container-3-box{
+        flex-basis:12%;
+        
+    }
 
         
 
@@ -316,11 +391,13 @@ flex: none; */
             <li><a href="#opdr6">OPDR6</a></li>
             <li><a href="#opdr7">OPDR7</a></li>
             <li><a href="#opdr8">OPDR8</a></li>
+            <li><a href="#opdr9">OPDR9</a></li>
+            <li><a href="#opdr10">OPDR10</a></li>
         </ul>
     </nav>
 
     <br><hr><br><br>
-3
+
   
 
     <h3 id="opdr1">Opdracht 1</h3>
@@ -328,7 +405,7 @@ flex: none; */
     <dt>Zie het onderstaande voorbeeld en maak het na met flex. Gebruik geen width, height of line-height.</dt>
     <dd></dd>
     <br>
-    <div class="opdracht1">
+    <div class="opdracht1" style="padding-top: 60px; margin-top: -60px;">
         <div class="box">1</div>
         <div class="box">2</div>
         <div class="box">3</div>
@@ -342,7 +419,7 @@ flex: none; */
 
 
 
-    <h3 id="opdr2">Opdracht 2</h3>
+    <h3 id="opdr2" style="padding-top: 120px; margin-top: -120px;">Opdracht 2</h3>
 
     <dt>Zie het onderstaande voorbeeld, de items staan nu anders uitgelijnd. Maak het na met flex. Gebruik geen width, height of line-height.</dt>
     <dd></dd>
@@ -363,7 +440,7 @@ flex: none; */
     Zie het onderstaande voorbeeld, een van de items is breder dan de rest. Maak het na met flex. Gebruik geen width, height of line-height.
 
 
-    <h3 id="opdr3">Opdracht 3</h3>
+    <h3 id="opdr3" style="padding-top: 120px; margin-top: -120px;">Opdracht 3</h3>
     <dt>Zie het onderstaande voorbeeld, een van de items is breder dan de rest. Maak het na met flex. Gebruik geen width, height of line-height.
     </dt>
     <dd>flex-grow: 1; Dit laat het flexitem groeien indien mogelijk.</dd>
@@ -384,7 +461,7 @@ flex: none; */
 
 
 
-    <h3 id="opdr4">Opdracht 4</h3>
+    <h3 id="opdr4" style="padding-top: 120px; margin-top: -120px;">Opdracht 4</h3>
     <dt>De property ‘justify-content’ is een property die door flex gebruikt wordt.
         Maak verschillende voorbeelden door gebruik te maken van de justify-content property.</dt>
     <dd></dd>
@@ -426,7 +503,7 @@ flex: none; */
 
 
 
-    <h3 id="opdr5">Opdracht 5</h3>
+    <h3 id="opdr5" style="padding-top: 120px; margin-top: -120px;">Opdracht 5</h3>
     <dt>De property ‘align-items’ is een property die door flex gebruikt wordt.
         Maak verschillende voorbeelden door gebruik te maken van de align-items property.</dt>
     <dd></dd>
@@ -475,11 +552,11 @@ flex: none; */
     <br><br><hr><br><br>
 
 
-    <h3 id="opdr6">Opdracht 6</h3>
+    <h3 id="opdr6" style="padding-top: 120px; margin-top: -120px;">Opdracht 6</h3>
     <dt>Maak het onderstaande na met flexbox. Properties die je o.a dient te gebruiken zijn:</dt>
     <dd></dd>
     <br>
-    <div class="opdracht6">
+    <div class="opdracht6" style="padding-top: 120px; margin-top: -120px;">
         <div class="box box1">
             <div class="item1">item 1</div>
             <!-- <div class="item2">item 2</div>  -->
@@ -514,7 +591,7 @@ flex: none; */
 
 
 
-    <h3 id="opdr7">Opdracht 7</h3>
+    <h3 id="opdr7" style="padding-top: 120px; margin-top: -120px;">Opdracht 7</h3>
     <dt>Maak het onderstaande na met flexbox. Properties die je o.a dient te gebruiken zijn:</dt>
     <dd></dd>
     <br>
@@ -561,7 +638,7 @@ flex: none; */
 
 
 
-    <h3 id="opdr8">Opdracht 8</h3>
+    <h3 id="opdr8" style="padding-top: 120px; margin-top: -120px;">Opdracht 8</h3>
     <dt>Zie het onderstaande voorbeeld en maak het na met flexbox.</dt>
     <dd></dd>
     <br>
@@ -581,7 +658,7 @@ flex: none; */
 
     <br><br><hr><br><br>
 
-    <h3 id="opdr9">Opdracht 9</h3>
+    <h3 id="opdr9" style="padding-top: 120px; margin-top: -120px;">Opdracht 9</h3>
     <dt>Zie het onderstaande voorbeeld en maak het na met flexbox. Zorg voor een leuk effect als je met de muis over de ‘play’ knop heen gaat.
         Optioneel: gebruik .gif bestanden als images voor een levendig effect.
     </dt>
@@ -592,24 +669,24 @@ flex: none; */
  
         <div class="opdracht9">
                 <div class="box1">
-                    <div class="item1"><img src="" alt=""></div>
+                    <div class="item1"><img src="./img/1.gif" alt="" width="100%"></div>
                     <div class="item2"><h2>Super Mario Run</h2><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus a omnis eius provident dignissimos cumque repellendus ipsam soluta esse ex! Quia debitis amet nobis placeat provident molestias enim optio deleniti?</p></div>
                     <div class="item3"><button>Play Super Mario Run</button></div>
                 </div>
                 <div class="box2">
-                    <div class="item1"><img src="" alt=""></div>
+                    <div class="item1"><img src="./img/2.gif" alt="" width="100%"></div>
                     <div class="item2"><h2>Super Mario Maker</h2><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus a omnis eius provident dignissimos cumque repellendus ipsam soluta esse ex! Quia debitis amet nobis placeat provident molestias enim optio deleniti?</p></div>
                     <div class="item3"><button>Play Super Mario Maker</button></div>
                 </div>
                 <div class="box3">
-                    <div class="item1"><img src="" alt=""></div>
+                    <div class="item1"><img src="./img/3.gif" alt="" width="100%"></div>
                     <div class="item2"><h2>Super Mario 3</h2><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus a omnis eius provident dignissimos cumque repellendus ipsam soluta esse ex! Quia debitis amet nobis placeat provident molestias enim optio deleniti?</p></div>
                     <div class="item3"><button>Play Super Mario 3</button></div>
                 </div>
                 <div class="box4">
-                    <div class="item1"><img src="" alt=""></div>
+                    <div class="item1"><img src="./img/5.gif" alt="" width="100%"></div>
                     <div class="item2"><h2>Yoshi's Island</h2><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus a omnis eius provident dignissimos cumque repellendus ipsam soluta esse ex! Quia debitis amet nobis placeat provident molestias enim optio deleniti?</p></div>
-                    <div class="item3"><button>Play Yoshi's Island</button></div>
+                    <div class="item3"><button onclick="">Play Yoshi's Island</button></div>
                 </div>
             </div>
 
@@ -620,11 +697,68 @@ flex: none; */
 
 
 
-    <h3 id="opdr10">Opdracht 10</h3>
-    <dt>Verzin zelf een opdracht met flexbox. Irriteer je medecursist ermee
-        door je medecursist te vragen om het na te maken.</dt>
-    <dd></dd>
+    <h3 id="opdr10" style="padding-top: 120px; margin-top: -120px;">Opdracht 10</h3>
+    <dt>Verzin zelf een opdracht met flexbox.</dt>
+    <dd>Zie eindopdracht HTML</dd>
     <br>
+        <div class="container-1">
+            <div class="box-1">
+            <h3>Box One</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="box-2">
+            <h3>Box Two</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="box-3">
+            <h3>Box Three</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+            
+        <div class="container-2">
+            <div class="container-2-box">
+            <h3>Box Four</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec elit urna. Suspendisse a erat a nibh imperdiet fermentum. In eleifend ultricies massa, id pretium purus convallis nec. </p>
+            </div>
+            <div class="container-2-box">
+            <h3>Box Five</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec elit urna. Suspendisse a erat a nibh imperdiet fermentum. In eleifend ultricies massa, id pretium purus convallis nec. </p>
+            </div>
+            <div class="container-2-box">
+            <h3>Box Six</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec elit urna. Suspendisse a erat a nibh imperdiet fermentum. In eleifend ultricies massa, id pretium purus convallis nec. </p>
+            </div>
+        </div>
+        
+        <div class="container-3">
+            <div class="container-3-box">
+            <h3>Box Seven</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec elit urna. Suspendisse a erat a nibh imperdiet fermentum. In eleifend ultricies massa, id pretium purus convallis nec. </p>
+            </div>
+            <div class="container-3-box">
+            <h3>Box Eight</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec elit urna. Suspendisse a erat a nibh imperdiet fermentum. In eleifend ultricies massa, id pretium purus convallis nec. </p>
+            </div>
+            <div class="container-3-box">
+            <h3>Box Nine</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec elit urna. Suspendisse a erat a nibh imperdiet fermentum. In eleifend ultricies massa, id pretium purus convallis nec. </p>
+            </div>
+            <div class="container-3-box">
+            <h3>Box Ten</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec elit urna. Suspendisse a erat a nibh imperdiet fermentum. In eleifend ultricies massa, id pretium purus convallis nec. </p>
+            </div>
+            <div class="container-3-box">
+            <h3>Box Eleven</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec elit urna. Suspendisse a erat a nibh imperdiet fermentum. In eleifend ultricies massa, id pretium purus convallis nec. </p>
+            </div>
+            <div class="container-3-box">
+            <h3>Box Twelve</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec elit urna. Suspendisse a erat a nibh imperdiet fermentum. In eleifend ultricies massa, id pretium purus convallis nec. </p>
+            </div>
+        </div>
+
+
 
 
 

@@ -147,6 +147,7 @@
                 position: relative;
                 height: 500px;
                 width: 250px;
+                margin: auto;
                 
                 
 
@@ -178,23 +179,77 @@
 
             .opdracht6{
                 display: flex;
+                height:350px;
+                align-items: center;
+                justify-content: center;
+                
                 /* position: relative; */
 
             }
             .opdracht6 .card{
                 /* position: absolute; */
-                margin: 0em -25px ;
-                padding: 1em;
+                margin: 0 -5em ;
+                padding: 3em 1em;
                 background: gray;
-                border: 2px solid black;
+                border: 3px solid black;
                 border-radius: 10%;
-                transition: margin 2s;
+                transition: margin 1s;
             }
             .opdracht6 .card:hover{
-                margin:0 2em;
+                margin:0 4em;
 
             }
 
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations */
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/animation */
+
+            .opdracht7{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 350px;
+                width: 350px;
+                background: black;
+                margin: auto;
+            }
+            .opdracht7 .shape{
+                width: 150px;
+                height: 150px;
+                background: chocolate;
+                animation-name: deform;
+                animation-duration: 8s;
+                animation-iteration-count: infinite;
+                
+            }
+
+                @keyframes deform {
+                    0% { background-color:aqua;
+                         transform: rotate(45deg);
+                        }
+                    20% {background-color: blue;
+                         transform: rotate(90deg);
+                         border-radius: 50%;
+                        }
+
+                    40%{background: ghostwhite;
+                        border-radius: 0 50% 0 50%;
+                        transform: rotate(180deg);
+
+                    }
+                    60%{border-radius: 50px 50px 0 0;
+                        transform: rotate(90deg);
+                        background: gold;
+                     }
+                    80%{border-radius: 0% 50% 50% 50%;
+                        transform: rotate(45deg);
+                        background: greenyellow; }
+
+                    100%{border-radius: 0 0 50% 50%;
+                        transform: rotate(0deg);
+                        background: deeppink }
+                    
+                }
 
 
 
@@ -219,7 +274,6 @@
             <li><a href="#opdr5">OPDR5</a></li>
             <li><a href="#opdr6">OPDR6</a></li>
             <li><a href="#opdr7">OPDR7</a></li>
-            <li><a href="#opdr8">OPDR8</a></li>
         </ul>
     </nav>
 
@@ -347,16 +401,16 @@
 
 
     <h3 id="opdr7">Opdracht 7</h3>
+    <br>
+    <div class="opdracht7">
+
+        <div class="shape"></div>
+
+    </div>
 
 
     <br><br><hr><br><br>
 
-
-
-    <h3 id="opdr8" style="padding-top: 40px" >Opdracht 8</h3>
-
-
-    <br><br><hr><br><br>
 
 
 

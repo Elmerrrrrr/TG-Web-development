@@ -37,6 +37,169 @@
 
                 font-style: italic;
             }
+
+
+            .opdracht2 p {
+            color: royalblue;
+            
+          }
+          
+          .opdracht2 p:hover {
+            color: red;
+            transition: color 3s;
+          }
+          
+
+          /* opdracht3 .box2, .opdracht3 .box3, .opdracht3 .box4, .opdracht3 .box5 */
+          
+          .opdracht3 .box  {
+            width: 100px;
+            height: 100px;
+            border: 2px solid grey;
+            text-align: center;
+            transition-property:margin-left, background-color, border-radius;
+            transition-duration:3s,3s,2s;
+          }
+
+
+          .opdracht3:hover .box1{
+            margin-left: 600px;
+            background-color: red;
+            border-radius: 50%;
+            transition-timing-function: ease-in-out;
+            /* transition-duration:3s,3s,2s;  */
+              }
+
+            .opdracht3:hover .box2{
+            margin-left: 600px;
+            background-color: red;
+            border-radius: 30px;
+            transition-timing-function: ease;
+            transition-duration:3s,3s,2s;
+            }
+
+            .opdracht3:hover .box3{
+            margin-left: 600px;
+            background-color: red;
+            transition-timing-function: ease-in;
+            transition-duration:3s,3s;
+            }
+            .opdracht3:hover .box4{
+            margin-left: 600px;
+            background-color: red;
+            transition-timing-function: ease-out;
+            transition-duration:3s,2s;
+            }
+            .opdracht3:hover .box5{
+            margin-left: 600px;
+            background-color: red;
+            transition-timing-function:linear;
+            transition-duration:3s,1.5s;
+            }
+
+
+            .opdracht4 {
+            position: relative;
+            height: 500px;
+            width: 500px;
+            background: lightgray;
+            border: 2px solid grey;
+            }
+
+            .opdracht4 .box{
+            position: absolute;
+            text-align: center;
+            height: 100px;
+            width: 100px;
+            /* padding: 50px; */
+            background-color: lightcoral;
+            /* top: 40%; */
+            bottom:0;
+            /* left: 40%; */
+            /* right:40% ; */
+            transition-property:top, bottom, left, right;
+            transition-duration:3s,3s,2s,2s;
+            transition-delay:1s,2s,0s,1s ;
+            }
+
+            .opdracht4 .box1{right:40%; top: 40%;}
+            .opdracht4 .box2{left:40%; top: 40%;}
+            .opdracht4 .box3{left:40%; bottom:40%;}
+
+            .opdracht4:hover .box1{
+            top:0;
+            right: 0px;
+            /* bottom:40% */
+            }
+
+            .opdracht4:hover .box2{
+            top:0;
+            left: 0px;
+            }
+
+            .opdracht4:hover .box3{
+            bottom:0px;
+            left: 0px;
+            }
+            
+
+            .opdracht5 { 
+                position: relative;
+                height: 500px;
+                width: 250px;
+                
+                
+
+            }
+            .opdracht5 .img{
+                position: absolute;
+                /* box-sizing: border-box; */
+                
+                z-index: 1;
+            }
+
+            .opdracht5 .cover{
+                position: absolute;
+                height: 250px;
+                width: 250px;
+                background-color: tomato;
+                z-index: 2;
+                /* transform: translate(0px, 0px); */
+                transform-origin: left bottom;
+                transition: transform 0.8s;
+            }
+
+            .opdracht5:hover .cover{
+                transform: rotate(45deg)  translate(100px, 50px);
+                /* transform: translate(120px, 120px); */
+                 
+
+            }
+
+            .opdracht6{
+                display: flex;
+                /* position: relative; */
+
+            }
+            .opdracht6 .card{
+                /* position: absolute; */
+                margin: 0em -25px ;
+                padding: 1em;
+                background: gray;
+                border: 2px solid black;
+                border-radius: 10%;
+                transition: margin 2s;
+            }
+            .opdracht6 .card:hover{
+                margin:0 2em;
+
+
+            }
+
+
+
+
+
     
 </style>
 
@@ -71,7 +234,9 @@
     <h3 id="opdr1" style="padding-top: 120px; margin-top: -120px;">Opdracht 2</h3>
 
     <dt>Zoek uit wat transitions zijn en beschrijf met eigen woorden wat het betekent.</dt>
-    <dd></dd>
+    <dd>Transitions / annimations binnen CSS zijn opties om waardes van bepaalde CSS properties te veranderen over
+        een bepaalde tijd.
+    </dd>
     <br>
     <div class="opdracht1">
 
@@ -92,7 +257,11 @@
     <br>
     <div class="opdracht2">
 
+        <p>Ga met je muis over deze text.</p>
+
     </div>
+
+
 
 
 
@@ -105,6 +274,15 @@
     <dt>Transitions kent verschillende transition-timing. Zie hieronder een voorbeeld. Maak het na.</dt>
     <dd></dd>
     <br>
+    <div class="opdracht3">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+    </div>
+
+
 
     <br><br><hr><br><br>
 
@@ -114,19 +292,56 @@
     <dt>Je kunt op verschillende properties transitions aangeven. Zie hieronder een voorbeeld. Zoek uit op welke properties de transitions zitten en maak het ongeveer hetzelfde na</dt>
     <dd></dd>
     <br>
+    <div class="opdracht4">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+    </div>
 
     <br><br><hr><br><br>
 
 
 
     <h3 id="opdr5" style="padding-top: 120px; margin-top: -120px;">Opdracht 5</h3>
+    <div class="opdracht5">
+        
+            <div class="img"><img src="./img/emoticon.jpg" alt="" width="250px" ></div>
+            <div class="cover"></div>
+    
+    </div>
+
 
 
     <br><br><hr><br><br>
 
 
     <h3 id="opdr6">Opdracht 6</h3>
+    <br>
+    <div class="opdracht6">
 
+        <div class="card card1">
+            <p>Article Sep 16, 2019</p>
+            <h2>Placeholder title</h2>
+            <p>Author: Elmer Volgers</p>
+        </div>
+        <div class="card card2">
+            <p>Article Sep 16, 2019</p>
+            <h2>Placeholder title</h2>
+            <p>Author: Elmer Volgers</p>
+        </div>
+        <div class="card card3">
+            <p>Article Sep 16, 2019</p>
+            <h2>Placeholder title</h2>
+            <p>Author: Elmer Volgers</p>
+        </div>
+        <div class="card card4">
+            <p>Article Sep 16, 2019</p>
+            <h2>Placeholder title</h2>
+            <p>Author: Elmer Volgers</p>
+        </div>
+
+
+    </div>
 
     <br><br><hr><br><br>
 

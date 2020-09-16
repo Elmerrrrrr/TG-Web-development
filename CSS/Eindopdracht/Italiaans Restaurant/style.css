@@ -37,6 +37,12 @@ nav ul li a {
     font-size: 20px;
 }
 
+nav ul li:hover {
+    background:rgba(194, 177, 82, 0.5);
+    filter: contrast(120%);
+    
+}
+
 
 
 
@@ -142,6 +148,7 @@ color: white;
     margin: 0.5em;
     min-width: 300px;
     max-width: 15vw;
+    margin-bottom: 20px ;
 }
 
 .menus:nth-last-child(1) {
@@ -171,7 +178,13 @@ footer{
     align-items: center;
     background:rgb(128, 179, 128);
     height: 350px;
-    color: cornflowerblue;
+    color: white;
+    margin-bottom: 0;
+}
+
+.contact, .navigation{
+    /* width: 25%;
+    margin: 30px; */
 }
 
 
@@ -184,13 +197,13 @@ footer{
 
 .navigation ul li a{
     text-decoration: none;
-    color: cornflowerblue;
+    color: white;
     font-size: 20px;
 
 }
 
 .socialmedia .fab{
-    color: cornflowerblue;
+    color: white;
     font-size: 1.5em;
     margin-right: 1em;
 }

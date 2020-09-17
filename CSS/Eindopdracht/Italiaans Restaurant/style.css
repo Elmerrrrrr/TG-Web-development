@@ -113,12 +113,14 @@ transition: 1s;
     max-width: 20vw;
 }
 
-.dish .item-header h3, .dish .item-header p{
-    display: inline-block;
+.item-header{
+    display: flex;
+    justify-content: space-between;
 }
 
-.dish .item-header p{
-    float: right;
+
+.item-header p{
+    padding-top: 5px;
 }
 
 .dish .show{text-align: right;}

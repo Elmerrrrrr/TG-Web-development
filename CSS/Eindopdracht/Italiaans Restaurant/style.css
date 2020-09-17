@@ -84,6 +84,7 @@ header {
 background: cornflowerblue;
 /* opacity: 0.5; */
 color: white;
+transition: 1s;
 
 }
 

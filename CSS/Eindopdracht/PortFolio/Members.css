@@ -1,0 +1,182 @@
+body{
+      padding: 0;
+      margin: 0;
+      background-color: #fbf8f3;
+      font-family: 'Work Sans', sans-serif;
+  }
+  
+  
+  /* ---------------------Navigation--------------------- */
+  
+  
+  .checkbtn{
+      font-size: 30px;
+      color: cornflowerblue;
+      float: right;
+      line-height: 80px;
+      margin-right: 40px;
+      cursor: pointer;
+      display: none;
+  }
+  
+  #check{display: none;}
+  
+    
+  nav ul{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: fixed;
+      background:cornflowerblue ;
+      list-style-type: none;
+      margin: -20px;
+      width: 150px;
+      height: 100%;
+  }
+  
+  nav li:first-child{
+      color: white;
+      position: absolute;
+      top: 20px;
+      font-size: xx-large;
+      margin-left:0.8em;
+  
+  }
+  
+  
+  nav ul li{
+      margin-top: 2em;
+  }
+  
+  ul li a {
+      text-decoration: none;
+      background-color: cornflowerblue;
+      color: white;
+      padding: 5px;
+      font-weight: bold;
+      width: 100%;
+  }
+  
+  ul li a:hover {
+      color: white;
+      filter: brightness(150%);
+  }
+  
+  ul li a:active{
+      color: red;
+      filter: brightness(150%);
+  }
+  
+  ul li a:focus{
+      color: whitesmoke;
+      filter: brightness(150%);
+  } 
+  
+
+
+  /* ---------------------Main--------------------- */
+
+
+
+main h1{
+      text-align: center;
+      padding-top: 20px;
+}
+
+.gridtable{
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid black;
+      border-right: 1px solid black;
+      margin-left: 200px;
+      max-width: 80%;
+      /* margin-top: 10%; */
+      
+
+}
+
+.gridtable span{
+
+      padding: 8px 4px;
+      border-left: 1px solid black;
+      border-bottom: 1px solid black;
+}
+.color-row{
+      background: lightgrey;
+}
+
+
+  /* -------Additional Information----------- */
+
+
+section h1{
+      text-align: center;
+      width: 100%;
+}
+
+.info-container{
+
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-left:50px; 
+      margin-right:auto;
+      
+      
+      }
+
+
+
+
+
+
+
+
+
+/* ---------------------Media Queries--------------------- */
+
+
+
+@media (max-width: 1024px){
+
+    .checkbtn{
+            display: block;
+            position: sticky;
+            top: 20px;
+    }
+    
+    #check:checked ~ ul{left: 0;}
+    
+    nav ul{
+          height: 50%; 
+          top: 25%;
+          left: -100%;
+          text-align: center;
+          transition: all .5s;
+          border-top-right-radius: 30px ;
+          border-bottom-right-radius: 30px ;
+          min-height: 60%;
+    }
+    
+    nav li:first-child{display: none;}
+    
+    nav ul li{
+          display: block;
+          margin-left: -20px;
+          line-height: 30px;
+    }
+    nav ul li a{
+          font-size: 20px;
+    }
+    a:hover,a.active{
+          background: none;
+          color: #0082e6;   
+     }
+
+
+     .gridtable{
+      margin-left: 20px;
+     }
+
+}

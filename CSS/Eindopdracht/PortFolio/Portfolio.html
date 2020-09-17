@@ -3,165 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profiel Pagina</title>
-
+    <link rel="stylesheet" href="./PortFolio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
-    <style>
-
-        body{
-
-            /* width: 100%; */
-            background-color: #fbf8f3;
-
-        }
-
-        ul{
-            /* width: 500px; */
-            display: flex;
-            justify-content: center;
-            list-style-type: none;
-            margin: 50px;
-        }
-
-        ul li a {
-            background-color: cornflowerblue;
-            color: white;
-            border-radius: 10px;
-            padding: 0.8em;
-            margin: 15px;
-            font-weight: bold;
-        }
-
-        ul li a:hover {
-            background-color: cornflowerblue;
-            color: rgb(235, 229, 229);
-            border-radius: 10px;
-            padding: 0.8em;
-            margin: 15px;
-            font-weight: bold;
-        }
-
-
-
-        .container{
-
-            display: grid;
-            grid-template-columns: repeat(auto-fill, 500px);
-            gap: 3em;
-            justify-content: center;
-            align-items: center;
-
-        }
-        #banner{
-           
-            border-top-left-radius: 10%;
-            border-top-right-radius: 10%;
-            border-bottom: 8px solid cornflowerblue;
-
-        }
-        .profiel{
-            text-align: center;
-            justify-self: center;
-            align-self: center;
-        }
-
-        #profiel-foto{
-            border-radius: 50%;
-            border-bottom: 8px solid cornflowerblue;
-            margin-top: -95px;
-        }
-
-        .profiel-foto{
-            justify-self: center;
-            align-self: center;
-            
-
-        }
-        a{
-
-        text-decoration: none;
-        }
-
-        .social-bar i{
-
-            padding-right: 3rem;
-            /* margin: 10px; */
-            }
-
-
-        .yls{
-            color: rgb(238, 203, 46);
-
-        }
-
-
-
-        table{
-            table-layout: auto;
-            /* table-layout:fixed; */
-            width: 100%;  
-        }
-
-        th{
-
-            background-color: cornflowerblue;
-            color: white;
-            padding: 10px;
-            margin-bottom: 15px;
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-            /* column-span: all; */
-            
-        }
-
-        td{
-        
-           padding:2px;        }
-
-
-    </style>
-
-
+    <title>Portfolio Elmer Volgers</title>
 </head>
 <body>
+    
+
 
     <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn"><i class="fas fa-bars"></i></label>
         <ul>
-            <li><a href="./website_2-1.html">Home</a></li>
-            <li><a href="./website_2-2.html">Members</a></li>
+            <li>Menu</li>
+            <li><a class="active" href="#">Dashboard</a></li>
+            <li><a href="#">User Profile</a></li>
+            <li><a href="./Members.html">Members</a></li>
+            <li><a href="#">Assignments</a></li>
+            <li><a href="#">Blogs</a></li>
         </ul>
-    </nav>
+      </nav>
+      
 
-    <div class="container">
+    <main>
+        <div class="profiel-container">
+            
 
-        <div class="profiel">
-            <div class="banner">
-                <img id="banner" src="./img/banner.jpg" alt="banner" width="500px" height="200px">
-            </div>
-            <div class="profiel-foto">
-                <img id="profiel-foto" src="./img/elmer.jpeg" alt="elmer" height="150">
+            <div class="profiel">
+                <div class="banner"><img src="./img/banner.jpg" alt="banner"></div>
+                <div class="profiel-foto"><img src="./img/elmer.jpeg" alt="elmer"></div>
                 <h3>Elmer Volgers</h3>
                 <p style="line-height: 1px;"><a href="#">@Elmerrrrrr</a></p>
                 <p><blockquote>"Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Quam nam, minima porro similique quibusdam tempora ipsa cupiditate"</blockquote></p>
                 <hr>
-               <p class="social-bar"><i class="far fa-thumbs-up"> +1000</i><i class="far fa-heart"> +999</i><i class="far fa-thumbs-down"> 0</i></p> 
-
-                <!-- <a href="#"></a> add in social bar to make icons a link-->
+                <p class="social-bar"><i class="far fa-thumbs-up"> +1000</i><i class="far fa-heart"> +999</i><i class="far fa-thumbs-down"> 0</i></p> 
             </div>
 
-            <div class="stats">
-                <img src="./img/data.png" alt="data" height="300px">
-            </div>
+            <div class="stats"><img src="./img/data.png" alt="data" height="300px"></div>
 
         </div>
 
+        <div class="data-container">
 
-        
-
-
-        <div class="data">
 
             <table>           
                 <tr>
@@ -211,7 +96,7 @@
                     <td></td>
                 </tr>
             </table>
-        <br>
+            <br>
             <table>    
                 <tr>
                   <th colspan="5">Languages</th>
@@ -238,26 +123,19 @@
                 </tr>
                 <tr></tr>
             </table>
-        <br>
+            <br>
             <table>
                <tr>
                   <th colspan="5">Framework and Tools</th>
                </tr>
             </table>
+               <div class="wordcloud"><img src="./img/WebDevolpment word cloud.png" alt="word cloud"></div>
+            
+             
 
         </div>
 
-        
-
-
-    </div>
-
-
-
-
-
-
-
+    </main>
 
 
 

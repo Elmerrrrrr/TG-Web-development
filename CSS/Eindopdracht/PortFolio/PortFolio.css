@@ -83,7 +83,7 @@ main {
 
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     margin-top: 20px;
 }
@@ -161,6 +161,9 @@ td{padding:2px; }
     width: 50%;
     margin-left: 25%;
 }
+
+
+/* ---------------------Media Queries--------------------- */
 
 
 

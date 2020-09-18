@@ -2,6 +2,7 @@ body{
       padding: 0;
       margin: 0;
       background-color: #fbf8f3;
+      font-size: 17px;
       font-family: 'Work Sans', sans-serif;
   }
   
@@ -12,9 +13,11 @@ body{
   .checkbtn{
       font-size: 30px;
       color: cornflowerblue;
-      float: right;
+      /* float: right; */
       line-height: 80px;
       margin-right: 40px;
+      position: fixed;
+      top: 20;
       cursor: pointer;
       display: none;
   }
@@ -58,25 +61,34 @@ body{
       width: 100%;
   }
   
-  ul li a:hover {
-      color: white;
+  /* ul li a:hover {
+      background: none;
+      color:rgb(52, 52, 221);
       filter: brightness(150%);
   }
   
   ul li a:active{
-      color: red;
+      color: rgb(52, 52, 221);
       filter: brightness(150%);
   }
   
   ul li a:focus{
-      color: whitesmoke;
+      color:rgb(52, 52, 221);
       filter: brightness(150%);
-  } 
-  
+  }  */
 
+
+
+  ul a:hover, ul a.active{
+      background: none;
+      color: rgb(52, 52, 221);
+  }
+  
+  
   nav ul li:last-child {
       color: cornflowerblue;}
-
+  
+  
 
   /* ---------------------Main--------------------- */
 
@@ -93,11 +105,9 @@ main h1{
       grid-template-columns: repeat(3, 1fr);
       border-top: 1px solid black;
       border-right: 1px solid black;
-      margin-left: 200px;
+      margin-left: 18%;
+      margin-right: 5%;
       max-width: 80%;
-      /* margin-top: 10%; */
-      
-
 }
 
 
@@ -191,11 +201,11 @@ input{
     }
     a:hover,a.active{
           background: none;
-          color: ;
+          color:rgb(52, 52, 221) ;
      }
 
      .gridtable{
-      margin-left: 20px;
+      margin-left: 10%;
      }
 
 }

@@ -85,7 +85,7 @@ main {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 
@@ -108,7 +108,7 @@ main {
     border-top-left-radius: 10%;
     border-top-right-radius: 10%;
     border-bottom: 8px solid cornflowerblue;    
-    width: 70%;
+    width: 65%;
 }
 
 
@@ -123,8 +123,9 @@ main {
 .social-bar i{padding-right: 2%;}
 
 
-.profiel-container hr{
-    max-width: 80%;
+hr, .quote {
+    width: 50%;
+    margin-left: 25%;
 }
 
 
@@ -174,9 +175,12 @@ td{padding:2px; }
         display: block;
         position: sticky;
         top: 20px;
+        margin-left: -30px;
 }
 
-#check:checked ~ ul{left: 0;}
+#check:checked ~ ul{
+    left: 0;
+}
 
 nav ul{
       height: 50%; 
@@ -204,10 +208,40 @@ a:hover,a.active{
       color: #0082e6;
  }
 
+main{
+    padding-right: 5px;
+}
 
-.profiel-container .banner img{width: 100%;}
+/* -------Profiel------- */
 
-.profiel .profiel-foto img{width: 50%;}
+
+ hr, .quote {
+    width: 100%;
+    margin-left: 0;
+}
+
+
+
+.profiel-container .banner img{
+    width: 100%;
+    /* position: relative; */
+    /* margin-left:  -35px; */
+
+}
+
+.profiel .profiel-foto img{
+    width: 50%;
+    /* position: absolute;
+    z-index: -1; */
+}
+
+
+
+
+
+/* -------Personal Data------- */
+
+
 
 table{
         font-size: 1.2em; 

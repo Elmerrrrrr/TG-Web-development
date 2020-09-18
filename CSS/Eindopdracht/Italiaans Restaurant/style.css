@@ -111,6 +111,7 @@ transition: 1s;
 .dish img {
     min-width: 300px;
     max-width: 20vw;
+    border-radius: 50%;
 }
 
 .item-header{

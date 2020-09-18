@@ -140,7 +140,7 @@ transition: 1s;
 }
 .menus-container { 
     display: flex;
-    max-width: 90%;
+    max-width: 100%;
 }
 
 .menus{
@@ -165,6 +165,7 @@ transition: 1s;
     
 }
  .chef img{
+     min-height: 250px;
     height: 20vw;
  }
 
@@ -240,6 +241,20 @@ footer{
 
     /* ------Main------ */    
 
+    .menus-container{
+        margin-left: 15%;
+    }
+
+    .chef {
+        position: absolute;
+        z-index: -1;
+        margin-left:25%;
+    }
+     .chef img{
+        height: 250px;
+     }
+    
+
 }
 
 
@@ -258,6 +273,19 @@ footer{
     .banner-container button {font-size:1.5em;}
 
     /* ------Main------ */ 
+
+    .menus-container{
+        margin-left: 15%;
+    }
+
+    .chef {
+        position: absolute;
+        z-index: -1;
+        margin-left:25%;
+    }
+     .chef img{
+        height: 250px;
+     }
 
 }
 

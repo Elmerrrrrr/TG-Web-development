@@ -12,9 +12,11 @@ body{
 .checkbtn{
     font-size: 30px;
     color: cornflowerblue;
-    float: right;
+    /* float: right; */
     line-height: 80px;
     margin-right: 40px;
+    position: fixed;
+    top: 20;
     cursor: pointer;
     display: none;
 }
@@ -72,6 +74,8 @@ ul li a:focus{
     filter: brightness(150%);
 } 
 
+nav ul li:last-child {
+    color: cornflowerblue;}
 
 
 
@@ -171,11 +175,14 @@ td{padding:2px; }
 
 @media (max-width: 1126px){
 
-.checkbtn{
-        display: block;
-        position: sticky;
+/* -------Navigation------- */
+
+.checkbtn{  
+        display:flex;
+        justify-content: flex-end;
+        position: relative;
         top: 20px;
-        margin-left: -30px;
+        /* right: 20px; */
 }
 
 #check:checked ~ ul{
@@ -183,20 +190,30 @@ td{padding:2px; }
 }
 
 nav ul{
-      height: 50%; 
-      top: 25%;
+      height: 25%; 
+      top: 20%;
       left: -100%;
       text-align: center;
       transition: all .5s;
       border-top-right-radius: 30px ;
       border-bottom-right-radius: 30px ;
+      border: 4px solid white;
       min-height: 60%;
 }
 
 nav li:first-child{display: none;}
 
+nav ul li:last-child{
+    color:white;
+    padding-top: 25px;
+    font-size: x-large;
+    text-align: center;
+}
+
+
 nav ul li{
       display: block;
+      text-align: left;
       margin-left: -20px;
       line-height: 30px;
 }
@@ -205,12 +222,16 @@ nav ul li a{
 }
 a:hover,a.active{
       background: none;
-      color: #0082e6;
+      color: ;
  }
+
+/* -------Main------- */
+
 
 main{
     padding-right: 5px;
 }
+
 
 /* -------Profiel------- */
 
@@ -222,19 +243,9 @@ main{
 
 
 
-.profiel-container .banner img{
-    width: 100%;
-    /* position: relative; */
-    /* margin-left:  -35px; */
+.profiel-container .banner img{width: 100%;}
 
-}
-
-.profiel .profiel-foto img{
-    width: 50%;
-    /* position: absolute;
-    z-index: -1; */
-}
-
+.profiel .profiel-foto img{width: 50%;}
 
 
 
@@ -246,9 +257,10 @@ main{
 table{
         font-size: 1.2em; 
         padding: 20px;
-    }
+     }
 
 .wordcloud img{width: 50%;} 
+
 
 }
   

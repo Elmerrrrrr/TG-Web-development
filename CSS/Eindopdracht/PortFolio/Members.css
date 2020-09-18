@@ -100,12 +100,18 @@ main h1{
 
 }
 
+
 .gridtable span{
 
       padding: 8px 4px;
       border-left: 1px solid black;
       border-bottom: 1px solid black;
 }
+
+.gridtable span:hover{
+      background: chartreuse;
+}
+
 .color-row{
       background: lightgrey;
 }

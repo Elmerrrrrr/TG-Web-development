@@ -10,6 +10,8 @@ body{
 /* ---------------------Navigation--------------------- */
 
 
+
+
 .checkbtn{
     font-size: 30px;
     color: cornflowerblue;
@@ -193,6 +195,63 @@ hr, .quote {
 
 /* -------Navigation------- */
 
+.menu-btn{
+    position: relative;
+    /* left: 250px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    /* border: 3px solid cornflowerblue; */
+}
+
+.menu-btn__burger{
+    width: 50px;
+    height: 6px;
+    background: cornflowerblue;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px blue;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu-btn__burger::before, .menu-btn__burger::after{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background: cornflowerblue;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px blue;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu-btn__burger::before{transform: translateY(-16px);}
+.menu-btn__burger::after{transform: translateY(16px);}
+
+/* Animation Button */
+
+.menu-btn.open .menu-btn__burger{
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+
+.menu-btn.open .menu-btn__burger::before{
+    transform: rotate(45deg) translate(35px, -35px);
+    box-shadow: none;
+
+}
+.menu-btn.open .menu-btn__burger::after{
+    transform: rotate(-45deg) translate(35px, 35px);
+    box-shadow: none;
+}
+
+
+
+
 .checkbtn{  
         display:flex;
         justify-content: flex-end;
@@ -201,7 +260,7 @@ hr, .quote {
         /* right: 20px; */
 }
 
-#check:checked ~ ul{
+#check-menu:checked ~ ul{
     left: 0;
 }
 

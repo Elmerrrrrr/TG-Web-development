@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extend and Inheritance </title>
+</head>
+<body>
+    <h2>Opdracht 5.1</h2>
+    <dt>We hebben nu zowel mixins als extends gezien die beiden styling kunnen overnemen. Geef een uitleg wanneer
+        we inheritance gebruiken en wanneer we mixins gebruiken. </dt>
+        <dd>Er zit een verschil in de output van de compiler maar verder dan dat de @mixin dubbele code kan generen
+            en @extend te geneste element te veel kan groepen.</dd>
+
+            <!--Generally, if you don’t have dynamic styles, using @extend (preferably using placeholders — unless
+                you are referencing the class in the DOM) is good enough. Using mixins for static-only styles causes unnecessarily bloated stylesheets so it’s a good idea to keep the declarations minimal
+                and only for dynamic declarations because it’s going to be duplicated. -->
+
+        <h2>Opdracht 5.2</h2>
+        Een voorbeeld van een media query in SCSS:
+        <pre>
+        $layout-breakpoint-small: 960px;
+
+        @media (min-width: $layout-breakpoint-small) {
+          .hide-extra-small {
+            display: none;
+          }
+        }
+        </pre>
+        <!-- https://sass-lang.com/documentation/at-rules/css#media -->
+
+
+</body>
+</html>

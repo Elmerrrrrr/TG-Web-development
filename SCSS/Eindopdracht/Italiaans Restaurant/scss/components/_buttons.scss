@@ -1,0 +1,30 @@
+// @import'../abstracts/variables';
+// @import'../base/typography';
+
+@mixin standard-button{
+
+    button {
+
+        font-size: 2em;
+        padding: 0.5em;
+        width: 90%;
+        min-width: 3em;
+        max-width: 7em;
+        background:$primary-button-color;
+        font-family: $primary-font-family;
+        font-weight: bold;
+        margin:10px;
+        border: 2px solid rgb(128, 179, 128) ;
+
+        &:hover {
+            background: $primary-button-color-hover;
+            color: white;
+            transition: 1s;}
+            
+    }
+}
+
+
+.banner-container{
+    @include standard-button();
+}

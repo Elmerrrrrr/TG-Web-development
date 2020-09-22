@@ -1,0 +1,11 @@
+// @import'../abstracts/variables';
+
+header { 
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0;
+    background-image: url(./img/cooking.jpg);
+    background-size:cover;
+    min-height: 50vh;
+    color: $secundairy-color;
+}

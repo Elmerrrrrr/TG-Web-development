@@ -1,0 +1,48 @@
+/* ---------------------Main Navigation--------------------- */
+nav { 
+    position: sticky;
+    top: 0;
+
+
+    ul {
+        display: flex;
+        justify-content: flex-end;
+        top: 0;
+        background: $primary-color;
+        min-height: 60px;
+        max-height: 3vw;
+        margin: 0;
+    
+        li {padding: 1em;
+            list-style: none;
+            
+            &:hover {background:$primary-color;
+                     filter: contrast(120%);}
+
+
+            a {text-decoration: none;
+               color: $primary-text-color;
+               font-size: $primary-menu-font-size;}
+        
+        }
+    }
+}
+
+
+
+
+/* ---------------------Footer Navigation--------------------- */
+
+
+.navigation ul li{
+    padding: 0;
+    margin-left: -30px;
+    list-style-type: none;
+
+    a{text-decoration: none;
+      color: $secundairy-text-color;
+      font-size: 20px;
+    }
+}
+
+

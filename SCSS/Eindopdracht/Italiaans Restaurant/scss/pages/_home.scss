@@ -1,0 +1,106 @@
+// @import'../base/_typography';
+
+html, body{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: $primary-font-family;
+    font-size: $primary-font-size;
+
+}
+
+.banner-container{margin:5% 7vw;}
+
+.banner-container h1 {font-size: $banner-header1-font-size;}
+.banner-container p {font-size: $banner-paragraph-font-size;}
+
+
+
+/* ------Populaire gerechten-------- */
+
+
+
+.dishes-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.menus {
+ @extend .dishes-container;
+}
+
+
+.dish {
+    margin: 1em;
+    min-width: 300px;
+    max-width: 20vw;
+
+    img {
+        @extend .dish;
+        border-radius: 50%;
+    }
+
+    .show{text-align: right;}
+
+}
+
+
+.item-header{
+    display: flex;
+    justify-content: space-between;
+
+    p{
+        padding-top: 5px;
+    }
+}
+
+
+.populaire-gerechten h1{
+    text-align: center;
+    font-size: $menus-header-text;
+}
+
+
+
+/* ------------------Menus--------------- */
+
+
+.menus h1{
+    text-align: center;
+    font-size: $menus-header-text;
+    width: 100%;
+}
+
+
+.menus-container { 
+    display: flex;
+    max-width: 100%;
+}
+
+.menus{
+    margin-left: 3%;
+}
+
+.menu{
+    margin: 0.5em;
+    min-width: 300px;
+    max-width: 15vw;
+    margin-bottom: 20px ;
+
+    &:nth-last-child(1) {
+        justify-content: flex-start;
+    }
+}
+
+
+.chef {
+    align-self: flex-end;
+    margin-bottom: -5px;
+    margin-left: 5vw;
+
+    &img{
+        min-height: 250px;
+       height: 20vw;
+    }
+}

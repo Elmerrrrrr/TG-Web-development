@@ -1,5 +1,3 @@
-// @import'../abstracts/variables';
-// @import'../base/typography';
 
 @mixin standard-button{
 
@@ -11,14 +9,16 @@
         min-width: 3em;
         max-width: 7em;
         background:$primary-button-color;
+        color:$secundairy-text-color; 
         font-family: $primary-font-family;
         font-weight: bold;
+        
         margin:10px;
         border: 2px solid rgb(128, 179, 128) ;
 
         &:hover {
             background: $primary-button-color-hover;
-            color: white;
+            color: $secundairy-text-color;
             transition: 1s;}
             
     }

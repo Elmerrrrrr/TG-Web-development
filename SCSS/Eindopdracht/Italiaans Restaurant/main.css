@@ -1,3 +1,4 @@
+/* -----Screen Sizes---- */
 @import url(https://fonts.googleapis.com/css2?family=Lobster);
 .banner-container button {
   font-size: 2em;
@@ -6,6 +7,7 @@
   min-width: 3em;
   max-width: 7em;
   background: none;
+  color: white;
   font-family: "Lobster", cursive;
   font-weight: bold;
   margin: 10px;
@@ -50,6 +52,12 @@ nav ul li a {
   font-size: 20px;
 }
 
+@media (max-width: 992px) {
+  nav ul {
+    justify-content: center;
+  }
+}
+
 /* ---------------------Footer Navigation--------------------- */
 .navigation ul li {
   padding: 0;
@@ -61,16 +69,6 @@ nav ul li a {
   text-decoration: none;
   color: white;
   font-size: 20px;
-}
-
-header {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 0;
-  background-image: url(./img/cooking.jpg);
-  background-size: cover;
-  min-height: 50vh;
-  color: cornflowerblue;
 }
 
 footer {
@@ -89,6 +87,7 @@ footer {
   margin-right: 1em;
 }
 
+/* ------Main------- */
 html, body {
   margin: 0;
   padding: 0;
@@ -109,7 +108,7 @@ html, body {
   font-size: 2vw;
 }
 
-/* ------Populaire gerechten-------- */
+/* ------Popular dishes-------- */
 .dishes-container, .menus {
   display: flex;
   justify-content: space-evenly;
@@ -180,5 +179,63 @@ html, body {
 .chefimg {
   min-height: 250px;
   height: 20vw;
+}
+
+@media (max-width: 768px) {
+  .menus-container {
+    margin-left: 15%;
+  }
+  .chef {
+    position: absolute;
+    z-index: -1;
+    margin-left: 25%;
+  }
+  .chef img {
+    height: 250px;
+  }
+}
+
+/* ------Header / Banner------- */
+header {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0;
+  background-image: url(./img/cooking.jpg);
+  background-size: cover;
+  min-height: 50vh;
+  color: cornflowerblue;
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .banner-container {
+    text-align: center;
+  }
+  .banner-container h1 {
+    font-size: 4em;
+  }
+  .banner-container p {
+    font-size: 2em;
+  }
+  .banner-container button {
+    font-size: 1.5em;
+  }
+  .menus-container {
+    margin-left: 25%;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-container {
+    text-align: center;
+  }
+  .banner-container h1 {
+    font-size: 4em;
+  }
+  .banner-container p {
+    font-size: 2em;
+  }
+  .banner-container button {
+    font-size: 1.5em;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,5 +1,4 @@
-// @import'../abstracts/variables';
-
+/* ------Header / Banner------- */
 header { 
     display: flex;
     justify-content: flex-end;
@@ -9,3 +8,23 @@ header {
     min-height: 50vh;
     color: $secundairy-color;
 }
+
+@media (min-width:$mobile-small) and (max-width:768px){
+
+    .banner-container{text-align: center;}
+    .banner-container h1{font-size: 4em;}
+    .banner-container p{font-size: 2em;}
+    .banner-container button {font-size:1.5em;}
+
+    .menus-container{ margin-left: 25%;}
+
+}
+@media (max-width:$mobile-medium){
+
+    .banner-container{ text-align: center;}
+    .banner-container h1{font-size: 4em;}
+    .banner-container p{font-size: 2em;}
+    .banner-container button {font-size:1.5em;}
+
+}
+

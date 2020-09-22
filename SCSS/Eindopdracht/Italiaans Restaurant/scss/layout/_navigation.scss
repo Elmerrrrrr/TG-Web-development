@@ -1,4 +1,6 @@
+
 /* ---------------------Main Navigation--------------------- */
+
 nav { 
     position: sticky;
     top: 0;
@@ -26,6 +28,12 @@ nav {
         
         }
     }
+}
+
+
+@media (max-width:$mobile-big){
+
+     nav ul{justify-content: center;}
 }
 
 

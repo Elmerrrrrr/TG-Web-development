@@ -1,5 +1,4 @@
-// @import'../base/_typography';
-
+/* ------Main------- */
 html, body{
     margin: 0;
     padding: 0;
@@ -11,12 +10,12 @@ html, body{
 
 .banner-container{margin:5% 7vw;}
 
-.banner-container h1 {font-size: $banner-header1-font-size;}
+.banner-container h1 {font-size: 5vw;}
 .banner-container p {font-size: $banner-paragraph-font-size;}
 
 
 
-/* ------Populaire gerechten-------- */
+/* ------Popular dishes-------- */
 
 
 
@@ -100,7 +99,25 @@ html, body{
     margin-left: 5vw;
 
     &img{
-        min-height: 250px;
+       min-height: 250px;
        height: 20vw;
     }
 }
+
+
+
+@media (max-width:$mobile-medium){
+
+    .menus-container{margin-left: 15%;}
+
+    .chef {
+        position: absolute;
+        z-index: -1;
+        margin-left:25%;
+    }
+
+     .chef img{height: 250px;}
+
+}
+
+

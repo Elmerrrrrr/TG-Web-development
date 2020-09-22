@@ -1,0 +1,302 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family: 'Lobster', cursive;
+    scroll-behavior: smooth;
+
+
+}
+
+
+/* ---------------------Navigation--------------------- */
+
+nav { 
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    top: 0;
+    background: rgba(194, 177, 82, 0.5);
+    min-height: 60px;
+    max-height: 3vw;
+    margin: 0;
+}
+
+nav ul li {
+    padding: 1em;
+    list-style: none;
+    
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+nav ul li:hover {
+    background:rgba(194, 177, 82, 0.5);
+    filter: contrast(120%);
+    
+}
+
+
+
+
+
+/* ---------------------Header--------------------- */
+
+
+
+
+
+.banner-container{margin:5% 7vw;}
+
+.banner-container h1{font-size: 5vw;}
+.banner-container p {font-size: 2vw;}
+
+
+.banner-container button {
+
+    font-size: 2em;
+    padding: 0.5em;
+    width: 90%;
+    min-width: 3em;
+    max-width: 7em;
+    background:none;
+    color: cornflowerblue;
+    font-family: 'Lobster', cursive;
+    font-weight: bold;
+    margin:10px;
+    border: 2px solid rgb(128, 179, 128) ;
+}
+
+.banner-container button:hover {
+background: cornflowerblue;
+/* opacity: 0.5; */
+color: white;
+transition: 1s;
+
+}
+
+
+
+/* ---------------------Main--------------------- */
+
+
+/* ------Populaire gerechten-------- */
+
+.dishes-container, .menus{
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: flex-start; */
+    flex-wrap: wrap;
+}
+
+.dish {
+    margin: 1em;
+    min-width: 300px;
+    max-width: 20vw;
+}
+
+.dish img {
+    min-width: 300px;
+    max-width: 20vw;
+    border-radius: 50%;
+}
+
+.item-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.item-header p{
+    padding-top: 5px;
+}
+
+.dish .show{text-align: right;}
+
+#populaire-gerechten h1{
+    text-align: center;
+    font-size: 3em;
+}
+
+
+/* ------Menus-------- */
+
+#menus h1{
+    font-size: 3em;
+    width: 100%;
+    text-align: center;
+}
+.menus-container { 
+    display: flex;
+    max-width: 100%;
+}
+
+.menus{
+    margin-left: 3%;
+}
+
+.menu{
+    margin: 0.5em;
+    min-width: 300px;
+    max-width: 15vw;
+    margin-bottom: 20px ;
+}
+
+.menus:nth-last-child(1) {
+    justify-content: flex-start;
+}
+
+.chef {
+    align-self: flex-end;
+    margin-bottom: -5px;
+    margin-left: 5vw;
+    
+}
+ .chef img{
+     min-height: 250px;
+    height: 20vw;
+ }
+
+
+
+
+
+/* ---------------------Footer--------------------- */
+
+
+
+
+.contact, .navigation{
+    /* width: 25%;
+    margin: 30px; */
+}
+
+
+.navigation ul li{
+    padding: 0;
+    margin-left: -30px;
+    list-style-type: none;
+}
+
+
+.navigation ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+
+}
+
+.socialmedia .fab{
+    color: white;
+    font-size: 1.5em;
+    margin-right: 1em;
+}
+
+
+
+
+
+
+
+
+/* ---------------------Media Queries--------------------- */
+
+@media (max-width:576px){
+
+    /* -----Navigation---- */
+
+     nav ul{justify-content: center;}
+
+    /* ------Header------ */
+    .banner-container{
+        text-align: center;
+    }
+
+    .banner-container h1{font-size: 4em;}
+    .banner-container p{font-size: 2em;}
+    .banner-container button {
+        font-size:1.5em;
+        
+    }
+
+    /* ------Main------ */    
+
+    .menus-container{
+        margin-left: 15%;
+    }
+
+    .chef {
+        position: absolute;
+        z-index: -1;
+        margin-left:25%;
+    }
+     .chef img{
+        height: 250px;
+     }
+    
+
+}
+
+
+
+@media (min-width:576px) and (max-width:768px){
+
+    /* -----Navigation---- */
+    nav ul{justify-content: center;}
+
+    /* ------Header------ */
+    .banner-container{
+        text-align: center;
+    }
+    .banner-container h1{font-size: 4em;}
+    .banner-container p{font-size: 2em;}
+    .banner-container button {font-size:1.5em;}
+
+    /* ------Main------ */ 
+
+    .menus-container{
+        margin-left: 15%;
+    }
+
+    .chef {
+        position: absolute;
+        z-index: -1;
+        margin-left:25%;
+    }
+     .chef img{
+        height: 250px;
+     }
+
+}
+
+
+@media (min-width:768px) and (max-width:992px){
+
+        /* -----Navigation---- */
+        nav ul{justify-content: center;}
+
+        /* ------Header------ */
+        .banner-container h1{font-size: 4em;}
+        .banner-container p{font-size: 2em;}
+        .banner-container button {font-size:1.5em;}
+
+        /* ------Main------ */ 
+}
+
+
+@media (min-width:992px) and (max-width:1200px){
+         /* -----Navigation---- */
+
+         /* ------Header------ */
+
+         /* ------Main------ */ 
+  
+}

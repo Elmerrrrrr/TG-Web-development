@@ -1,0 +1,80 @@
+/* ------Main------- */
+
+html, body{
+    padding: 0;
+    margin: 0;
+    background-color: $secundairy-color;
+    font-size: $primary-font-size;
+    font-family: $primary-font-family;
+}
+
+
+main h1{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.gridtable{
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    margin-left: 18%;
+    margin-right: 5%;
+    max-width: 80%;
+
+    span{
+
+        padding: 8px 4px;
+        border-left: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+}
+
+
+.gridtable span:hover{
+    background: chartreuse;
+}
+
+.color-row{
+    background: lightgrey;
+}
+
+
+/* -------Additional Information----------- */
+
+
+section h1{
+    text-align: center;
+    width: 100%;
+}
+
+input{
+    width: 20vw;
+}
+
+.info-container{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left:5%; 
+    margin-right:auto;
+    }
+
+
+
+
+@media (max-width:$mobile-superbig){
+
+ .gridtable{
+  margin-left: 10%;
+ }
+
+}
+
+
+
+
+

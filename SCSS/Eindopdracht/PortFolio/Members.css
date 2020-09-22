@@ -1,0 +1,222 @@
+@import url(https://fonts.googleapis.com/css2?family=Work+Sans);
+/* ---------------------Main Navigation--------------------- */
+.checkbtn {
+  font-size: 30px;
+  color: cornflowerblue;
+  line-height: 80px;
+  margin-right: 40px;
+  position: fixed;
+  top: 20;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  background: cornflowerblue;
+  list-style-type: none;
+  margin: -20px;
+  width: 150px;
+  height: 100%;
+}
+
+nav li:first-child {
+  color: white;
+  position: absolute;
+  top: 20px;
+  font-size: xx-large;
+  margin-left: 0.8em;
+}
+
+nav ul li {
+  padding-left: 3px;
+  margin-top: 2em;
+}
+
+nav ul li:last-child {
+  color: cornflowerblue;
+}
+
+nav ul li a {
+  text-decoration: none;
+  background-color: cornflowerblue;
+  color: white;
+  padding: 5px;
+  font-weight: bold;
+  width: 100%;
+}
+
+ul a:hover, ul a.active {
+  background: none;
+  color: cornflowerblue;
+  filter: contrast(150%);
+}
+
+@media (max-width: 1126px) {
+  .menu-btn {
+    position: relative;
+    /* left: 250px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    /* border: 3px solid cornflowerblue; */
+  }
+  .menu-btn__burger {
+    width: 50px;
+    height: 6px;
+    background: cornflowerblue;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px blue;
+    transition: all 0.5s ease-in-out;
+  }
+  .menu-btn__burger::before, .menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background: cornflowerblue;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px blue;
+    transition: all 0.5s ease-in-out;
+  }
+  .menu-btn__burger::before {
+    transform: translateY(-16px);
+  }
+  .menu-btn__burger::after {
+    transform: translateY(16px);
+  }
+  /* Animation Button */
+  .menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+  }
+  .menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+    box-shadow: none;
+  }
+  .menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+    box-shadow: none;
+  }
+  .checkbtn {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    top: 20px;
+    /* right: 20px; */
+  }
+  #check-menu {
+    display: none;
+  }
+  #check-menu:checked ~ ul {
+    left: 0;
+  }
+  nav ul {
+    height: 25%;
+    top: 20%;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border: 4px solid white;
+    min-height: 60%;
+  }
+  nav ul li {
+    display: block;
+    text-align: left;
+    margin-left: -20px;
+    line-height: 30px;
+  }
+  nav ul li:first-child {
+    display: none;
+  }
+  nav ul li:last-child {
+    color: white;
+    padding-top: 25px;
+    font-size: x-large;
+    text-align: center;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  a:hover, a.active {
+    background: none;
+    color: #3434dd;
+  }
+}
+
+/* ------Main------- */
+html, body {
+  padding: 0;
+  margin: 0;
+  background-color: #fbf8f3;
+  font-size: 18px;
+  font-family: "Work Sans", sans-serif;
+}
+
+main h1 {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.gridtable {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  margin-left: 18%;
+  margin-right: 5%;
+  max-width: 80%;
+}
+
+.gridtable span {
+  padding: 8px 4px;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.gridtable span:hover {
+  background: chartreuse;
+}
+
+.color-row {
+  background: lightgrey;
+}
+
+/* -------Additional Information----------- */
+section h1 {
+  text-align: center;
+  width: 100%;
+}
+
+input {
+  width: 20vw;
+}
+
+.info-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 5%;
+  margin-right: auto;
+}
+
+@media (max-width: 1126px) {
+  .gridtable {
+    margin-left: 10%;
+  }
+}
+/*# sourceMappingURL=Members.css.map */

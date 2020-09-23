@@ -11,25 +11,17 @@
   display: none;
 }
 
-#check {
+#check-menu {
   display: none;
 }
 
 nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   position: fixed;
   background: cornflowerblue;
-  -webkit-box-shadow: 0px 10px 10px;
-          box-shadow: 0px 10px 10px;
+  box-shadow: 2px 0px 6px;
   list-style-type: none;
   margin: -20px;
   width: 150px;
@@ -65,27 +57,19 @@ nav ul li a {
 ul a:hover, ul a.active {
   background: none;
   color: cornflowerblue;
-  -webkit-filter: brightness(70%);
-          filter: brightness(70%);
+  filter: brightness(70%);
 }
 
 @media (max-width: 1126px) {
   .menu-btn {
     position: relative;
     /* left: 250px; */
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
     width: 40px;
     height: 40px;
     cursor: pointer;
-    -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
     /* border: 3px solid cornflowerblue; */
   }
@@ -94,9 +78,7 @@ ul a:hover, ul a.active {
     height: 6px;
     background: cornflowerblue;
     border-radius: 5px;
-    -webkit-box-shadow: 0 2px 5px blue;
-            box-shadow: 0 2px 5px blue;
-    -webkit-transition: all 0.5s ease-in-out;
+    box-shadow: 0 2px 5px blue;
     transition: all 0.5s ease-in-out;
   }
   .menu-btn__burger::before, .menu-btn__burger::after {
@@ -106,46 +88,32 @@ ul a:hover, ul a.active {
     height: 6px;
     background: cornflowerblue;
     border-radius: 5px;
-    -webkit-box-shadow: 0 2px 5px blue;
-            box-shadow: 0 2px 5px blue;
-    -webkit-transition: all 0.5s ease-in-out;
+    box-shadow: 0 2px 5px blue;
     transition: all 0.5s ease-in-out;
   }
   .menu-btn__burger::before {
-    -webkit-transform: translateY(-16px);
-            transform: translateY(-16px);
+    transform: translateY(-16px);
   }
   .menu-btn__burger::after {
-    -webkit-transform: translateY(16px);
-            transform: translateY(16px);
+    transform: translateY(16px);
   }
   /* Animation Button */
   .menu-btn.open .menu-btn__burger {
-    -webkit-transform: translateX(-50px);
-            transform: translateX(-50px);
+    transform: translateX(-50px);
     background: transparent;
-    -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
   }
   .menu-btn.open .menu-btn__burger::before {
-    -webkit-transform: rotate(45deg) translate(35px, -35px);
-            transform: rotate(45deg) translate(35px, -35px);
-    -webkit-box-shadow: none;
-            box-shadow: none;
+    transform: rotate(45deg) translate(35px, -35px);
+    box-shadow: none;
   }
   .menu-btn.open .menu-btn__burger::after {
-    -webkit-transform: rotate(-45deg) translate(35px, 35px);
-            transform: rotate(-45deg) translate(35px, 35px);
-    -webkit-box-shadow: none;
-            box-shadow: none;
+    transform: rotate(-45deg) translate(35px, 35px);
+    box-shadow: none;
   }
   .checkbtn {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    justify-content: flex-end;
     position: relative;
     top: 20px;
     /* right: 20px; */
@@ -161,14 +129,11 @@ ul a:hover, ul a.active {
     top: 20%;
     left: -100%;
     text-align: center;
-    -webkit-transition: all .5s;
     transition: all .5s;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
     border: 4px solid white;
     min-height: 70%;
-    -webkit-box-shadow: 0px 10px 10px;
-            box-shadow: 0px 10px 10px;
   }
   nav ul li {
     display: block;
@@ -209,10 +174,8 @@ main h1 {
 }
 
 .gridtable {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   border-top: 1px solid black;
   border-right: 1px solid black;
   margin-left: 18%;
@@ -245,14 +208,9 @@ input {
 }
 
 .info-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-left: 5%;
   margin-right: auto;
 }

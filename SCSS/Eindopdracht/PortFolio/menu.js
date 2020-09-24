@@ -19,7 +19,7 @@ menuBtn.addEventListener('click', function(){
 console.log(checkBox);
 
 // checkBox.addEventListener('click', function(){
-//     if(!menuOpen) {
+//     if(menuOpen) {
 //         menuBtn.classList.add('open');
 //         menuOpen= true;
         

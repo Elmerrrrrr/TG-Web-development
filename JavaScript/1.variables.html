@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Variables</title>
+    <style>
+        html{
+            background: cornsilk;
+        }
+        h1{
+            text-align: center;
+            color:darkcyan;
+
+        }
+
+        h4{
+            font-size: large;
+            text-decoration: underline;
+            color:darkcyan;
+        }
+
+        dt{
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>JavaScript - Variables</h1>
+
+
+    <h4>Opdracht 1</h4>
+    <dt>Open dit html bestand in jouw browser en kijk in je console. Wat zie je dan?</dt>
+        <dd>getal1 undefined</dd>
+
+    <h4>Opdracht 2</h4>
+    <dt>Open dit html bestand in jouw browser en kijk in je console. Wat zie je dan?</dt>
+        <dd>Missing initializer in const declaration</dd>
+
+    <h4>Opdracht 3</h4>
+    <dt>Maak een let variable en noem het getal3. Ken gelijk een Number 3 aan toe. Hoe
+        programmeer je dat ?</dt>
+        <dd>let getal3 = 3; // Zie code</dd>
+    
+    <h4>Opdracht 4</h4>
+    <dt>Open dit html bestand in jouw browser en kijk in je console. Je zult “getal3 5” in console zien</dt>
+        <dd>Zie code en resultaat</dd>
+    
+    <h4>Opdracht 5</h4>
+    <dt>Wat voor type is de waarde false? // typeof datatype</dt>
+        <dd>Boolean</dd>
+
+    <h4>Opdracht 6</h4>
+    <dt>Hoe herken je dat een waarde String is? Geef ook een voorbeeld.</dt>
+        <dd>Doormiddel van de quote brackets // "Dit is een (string) tekst."</dd>
+
+    <dt>Hoe herken je dat een waarde Number is? Geef ook een voorbeeld</dt>
+        <dd>De waarde van een Number is altijd een getal. // 101</dd>
+
+    <dt>Hoe herken je dat een waarde BigInt is? Geef ook een voorbeeld</dt>
+        <dd>BigInt is een getal dat eindigt met een 'n' en kan oneindig groot zijn // 102n </dd>
+
+    <dt>Hoe herken je dat een waarde Symbol is? Geef ook een voorbeeld</dt>
+        <dd>Via de code Symbol(). Deze zijn altijd unique waardes die aan bijvoorbeeld object kunnen worden mee
+            gegeven. De eventuele inhoud tussen de brackets is een identifier geen waarde.
+        </dd>
+
+    <h4>Opdracht 7</h4>
+    <dt>De verschillende berekingen met variabelen</dt>
+        <dd><pre> 
+
+            let cijfer6 = 6;
+            let cijfer8 = 8;
+    
+            totaal = cijfer6+cijfer8;
+            console.log('Totaal is: ' + totaal);
+    
+            totaal2 = cijfer8-cijfer6;
+            console.log('Totaal is: ' + totaal2);
+    
+            totaal3 = cijfer8*cijfer6;
+            console.log('Totaal is: ' + totaal3);
+    
+            totaal3 = cijfer8/cijfer6;
+            console.log('Totaal is: ' + totaal3);</pre></dd>
+
+    <h4>Opdracht 8</h4>
+    <dt>Wat is het antwoord van de volgende som: 3 + 5 * 10 / 2?</dt>
+            <dd><pre>
+                som = 3 + 5 * 10 / 2;
+                console.log(som);
+            </pre> //het antwoord is 28</dd>
+
+    <h4>Opdracht 9</h4>
+    <dt>Wat is de uitkomst? ++</dt>
+        <dd>Het cijfer 3 wordt verhoogt met 1 (++) dus: 4</dd>
+
+    <dt>Wat is de uitkomst? --</dt>
+        <dd>Het cijfer 3 wordt verlaagt met 1 (--) dus: 2</dd>
+
+    <dt>Wat is de uitkomst? cijfer++ +2 (post-increment) //  evaluates the value, then increments and stores it.</dt>
+        <dd>Bij post-increment wordt de waarde gereturned voor dat er 1 bij op wordt geteld. Het antwoord is dus 5</dd>
+
+    <dt>Wat is de uitkomst? ++cijfer +2 (pre-increment) // increments the value, then evaluates and stores</dt>
+        <dd>Bij pre-increment wordt het cijfer 3 wordt verhoogt met 1 en vervolgens gereturned en er wordt daarna nog 2 bij opgeteld dus: 6</dd>
+
+
+    <h4>Opdracht 10</h4>
+        <dt>Wat is de uitkomst van van de som? += // Addition assignment</dt>
+        <dd> De addition assignment voegt de waarde toe aan de variabele en slaat het vervolgens op.
+            Dit geeft een kortere schrijfwijze van de zelfde code als:
+            <pre>
+                //Andere manier met hetzelfde resultaat:
+
+                let number = 3;
+                number = number+4; //ipv number+=4
+                console.log(number);
+            </pre>
+        </dd>
+
+
+    <h4>Opdracht 11</h4>
+    <dd>Wat is de uitkomst?</dd>
+        <dt>De uitkomst is: 4</dt>
+
+    <h4>Opdracht 12</h4>
+    <dd>Wat merk je op t.o.v het uitprinten van numbers?</dd>
+        <dt>Tekst wordt gedefinieerd tussen aanhalingstekens.</dt>  
+
+    <h4>Opdracht 13</h4>
+    <dd>Print vervolgens de combinedText in jou console. // ("3"+3)</dd>
+        <dt>Het resultaat van een een cijfer in een String opgeteld met een cijfer
+            in Number is dat de cijfers achter elkaar worden gezet. // Antwoord is 33</dt>
+    
+    <h4>Opdracht 14</h4>
+    <dt>Wanneer zou je een String met single quote gebruiken?</dt>
+        <dd>Wanneer je in je tekst zelf ook "aanhalingstekens" wilt gebruiken. Dan
+            wordt dit gezien als tekst en niet als code als je voor de openingsaccolade en 
+            closings accolade de andere variant gebruikt.
+        </dd>  
+
+    
+    <h4>Opdracht 15</h4>
+    <dt>Wat wordt er geprint?</dt>
+        <dd>De teksten worden "bij elkaar opgeteld" en dus achter elkaar gezet en opgeslagen
+            in een variable.
+
+            <pre>
+                //Het zelfde resultaat op een andere maniet geschreven:
+
+                let text = "text";
+                text = text + "another text";
+                console.log(text);
+
+            </pre>
+        </dd>
+    
+    <h4>Opdracht 16</h4>
+    <dt>Maak een eigen voorbeeld van de volgende functies: charAt(), concat()</dt>
+        <dd>
+            <pre>
+
+                //charAt()
+                let str = "abcd efgh" ;
+                let character = str.charAt(5);
+                console.log(character); // output is e, space is not counted.
+        
+                //concat()
+                const str1 = "abc";
+                const str2 = "def";
+                console.log(str1.concat(str2));
+                console.log(str1.concat('-', str2)); //je kan doormiddel van een komma nog meer samenvoegen
+                
+                //slice()
+                const str3 = "Lotje leerde lopen langs de lange Lindenlaan";
+                console.log(str3.slice(6));// spaties worden hierin wel meegeteld.
+                console.log(str3.slice(6, 13));// "leerde" is de output hier
+                console.log(str3.slice(-10));// "Lindenlaan" is de output hier
+                console.log(str3.slice(-19,-10 ));// "de lange" is de output hier
+                
+                //split()
+                const str4 = "Lotje leerde lopen langs de lange Lindenlaan";
+                const words = str4.split(' '); // the space in the brackets selects all words and puts them in an array.
+                console.log(words[3]); // output is the 4th word, starts at 0.
+        
+                const letter = str4.split(''); // without the space in the brackets selects all words and puts them in an array.
+                console.log(letter[2]); // output is the 3th letter, starts at 0.
+        
+                const strCopy = str4.split(); // nothing inside the brackets defines all text
+                console.log(strCopy); // output is the complete string
+        
+                //substr()
+                const str5 = 'Mozilla';
+                
+                console.log('substr2:' + str5.substr(2)); //output "zilla", removes an number of caracther from the string.
+                console.log('substr:' + str5.substr(1, 5)); // output: "ozill", last index number is included
+                
+            </pre>
+
+
+        </dd>
+    
+
+    <script>
+        //Opdracht1
+        let getal1 = 101;
+        console.log("getal1: " + getal1);
+
+        //Opdracht2
+        const getal2 = 102;
+        console.log("getal2: " + getal2)
+
+        //Opdracht3+4
+        let getal3 = 5;
+        console.log("getal3: " + getal3)
+        
+        //Opdracht5
+        let datatype1 = true;
+        console.log("datatype: " + typeof datatype1)
+
+        //Opdracht6
+        let datatype2 = " ";
+        console.log("datatype: " + typeof datatype2)
+
+        let datatype3 = 101;
+        console.log("datatype: " + typeof datatype3)
+
+        let datatype4 = 101n;
+        console.log("datatype: " + typeof datatype4)
+
+        let datatype5 = Symbol('identifier');
+        console.log("datatype: " + typeof datatype5) //https://www.youtube.com/watch?v=gANDd4l-G5U
+
+        //Opdracht7
+
+        let cijfer6 = 6;
+        let cijfer8 = 8;
+
+        totaal = cijfer6+cijfer8;
+        console.log('Totaal is: ' + totaal);
+
+        totaal2 = cijfer8-cijfer6;
+        console.log('Totaal is: ' + totaal2);
+
+        totaal3 = cijfer8*cijfer6;
+        console.log('Totaal is: ' + totaal3);
+
+        totaal3 = cijfer8/cijfer6;
+        console.log('Totaal is: ' + totaal3);
+
+        //Opdracht8
+        som = 3 + 5 * 10 / 2;
+        console.log(som);
+
+        //Opdracht9
+        let number1 = 3;
+        number1++;
+        console.log(number1);
+
+        let number2 = 3;
+        number2--;
+        console.log(number2);
+
+        let number3 = 3;
+        const sum3 = number3++ + 2;
+        console.log(sum3);
+
+        let number4 = 3;
+        const sum4 = ++number4 + 2;
+        console.log(sum4);
+
+        //Opdracht10
+        let number10 = 3;
+        number10 += 4;
+        console.log('Opdracht10-1: ' + number10);
+
+        let number11 = 3;
+        number11 = number11+4;
+        console.log('Opdracht10-2: ' +  number11);
+
+
+        //Opdracht11
+        let number011 = 3;
+        number011 += 4;
+        number011 -= 2;
+        number011 /= 5;
+        number011 *= 4;
+        console.log('Opdracht11: ' + number011);
+
+        //Opdracht12
+        let voorNaam = "Voornaam";
+        let achterNaam = "Achternaam";
+        console.log(voorNaam + ' ' + achterNaam);
+
+        //Opdracht13
+        let numeroText = "3";
+        let numeroNumber = 3;
+        combinedText = numeroText + numeroNumber;
+        console.log(combinedText);
+
+        // Opdracht14
+        // alert("It's \"game\" time.");
+        // alert('It\'s "game" time.');
+
+        //Opdracht15
+        let text = "text";
+        text += "another text";
+        console.log(text);
+
+        let text2 = "text";
+        text2 = text2 + "another text";
+        console.log(text2);
+
+        //Opdracht16
+
+        //charAt()
+        let str = "abcd efgh" ;
+        let character = str.charAt(5);
+        console.log(character); // output is e, space is not counted.
+
+        //concat()
+        const str1 = "abc";
+        const str2 = "def";
+        console.log(str1.concat(str2));
+        console.log(str1.concat('-', str2)); //je kan doormiddel van een komma nog meer samenvoegen
+        
+        //slice()
+        const str3 = "Lotje leerde lopen langs de lange Lindenlaan";
+        console.log(str3.slice(6));// spaties worden hierin wel meegeteld.
+        console.log(str3.slice(6, 13));// "leerde" is de output hier
+        console.log(str3.slice(-10));// "Lindenlaan" is de output hier
+        console.log(str3.slice(-19,-10 ));// "de lange" is de output hier
+        
+        //split()
+        const str4 = "Lotje leerde lopen langs de lange Lindenlaan";
+        const words = str4.split(' '); // the space in the brackets selects all words and puts them in an array.
+        console.log(words[3]); // output is the 4th word, starts at 0.
+
+        const letter = str4.split(''); // without the space in the brackets selects all words and puts them in an array.
+        console.log(letter[2]); // output is the 3th letter, starts at 0.
+
+        const strCopy = str4.split(); // nothing inside the brackets defines all text
+        console.log(strCopy); // output is the complete string
+
+        //substr()
+        const str5 = 'Mozilla';
+        
+        console.log('substr2:' + str5.substr(2)); //output "zilla", removes an number of caracther from the string.
+        console.log('substr:' + str5.substr(1, 5)); // output: "ozill", last index number is included
+        //similar String methods:
+        console.log('substring:' + str5.substring( 1, 5)); // output "ozil" , last index number is NOT included
+        console.log('slice:' + str5.slice(1, 5)); // output is "ozil", 
+        console.log('charAt:' + str5.charAt(1));// output just one caracther
+
+        
+
+
+
+
+    </script>
+</body>
+</html>

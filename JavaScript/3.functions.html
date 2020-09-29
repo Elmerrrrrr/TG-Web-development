@@ -27,9 +27,127 @@
 </head>
 <body>
 
+    <h1>JavaScript - Functions</h1>
+
+<h4>Opdracht 1</h4>
+<dt>Schrijf een functie die de tekst “hello world” in de console uitprint. Geef een goede functie
+    naam ervoor</dt>
+<dd><pre>
+    function answer1(){
+        console.log("Hello World");
+        document.getElementById('answer1').innerText="Hello World";
+    }
+</pre></dd>
+<br>
+
+<p id="answer1"></p>
+<button onclick="answer1()">Click</button>
+
+<h4>Opdracht 2</h4>
+<dt>Schrijf een functie waarbij je een tekst mee kan geven aan de functie. Print vervolgens de
+    tekst uit in de console.</dt>
+<dd><pre>
+
+    // onclick="answer('voorbeeldText')"
+
+    function answer2(text){
+        console.log(text);
+        document.getElementById('answer2').innerText= text;
+    }
+</pre></dd>
+
+<p id="answer2"></p>
+<button onclick="answer2('voorbeeldTekst')">Click</button>
+
+<br>
 
 
+<h4>Opdracht 3</h4>
+<dt>Schrijf een functie waarbij je een getal mee kan geven aan de functie. Print vervolgens het
+getal uit in de console</dt>
+<dd><pre>
     
+    function answer3(getal){
+        console.log(getal);
+        document.getElementById('answer3').innerText= getal;
+    }
+
+</pre></dd>
+
+<p id="answer3"></p>
+<button onclick="answer3(3)">Click</button>
+
+<br>
+
+
+<h4>Opdracht 4</h4>
+<dt>Schrijf een functie die twee getallen met elkaar vermenigvuldigt en geef de waarde van de
+    vermenigvuldiging terug. Geef een goede functie naam ervoor.</dt>
+<dd><pre>
+
+</pre></dd>
+
+<p id="answer4"></p>
+<button onclick="multiply()">Click</button>
+
+<br>
+
+
+<h4>Opdracht 5</h4>
+<dt>Schrijf een functie waarbij je een naam kan meegeven aan de functie. De functie moet
+    vervolgens controleren of de naam een bekende is.</dt>
+<dd></dd>
+<br>
+
+
+<h4>Opdracht 6</h4>
+<dt></dt>
+<dd></dd>
+<br>
+
+
+<h4>Opdracht 7</h4>
+<dt></dt>
+<dd></dd>
+<br>
+
+<h4>Opdracht 8</h4>
+<dt></dt>
+<dd></dd>
+<br>
+
+<script>
+   
+
+    //Opdracht1
+    function answer1(){
+        console.log("Hello World");
+        document.getElementById('answer1').innerText="Hello World";
+    }
+    // Opdracht2
+    function answer2(text){
+        console.log(text);
+        document.getElementById('answer2').innerText= text;
+    }
+    //Opdracht3
+    function answer3(getal){
+        console.log(getal);
+        document.getElementById('answer3').innerText= getal;
+    }
+    //Opdracht4
+    function multiply(sum){
+      sum= 3*2;
+      console.log(sum);
+      document.getElementById('answer4').innerText= sum;
+      return sum;
+    }
+    var functionOutput = multiply(sum);
+    console.log(functionOutput);
+
+
+</script>
+
+
     
 </body>
 </html>

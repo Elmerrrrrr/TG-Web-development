@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Conditions</title>
+    <style>
+        html{background: cornsilk;}
+
+        h1{
+            text-align: center;
+            color:darkcyan;
+        }
+
+        h4{
+            font-size: large;
+            text-decoration: underline;
+            color:darkcyan;
+        }
+
+        dt{font-weight: bold;}
+
+    </style>
+
+</head>
+<body>
+    <h1>JavaScript - Conditions</h1>
+
+<h4>Opdracht 1</h4>
+<dt></dt>
+<dd><pre>
+    function getInputValue(){
+
+        var inputValue = document.getElementById('number').value;
+    
+        if(inputValue === '3'){
+            
+           document.getElementById('label').innerText = "Het ingevoerde getal is gelijk aan 3";
+        }
+        
+    }
+</pre></dd>
+
+
+<input type="number" placeholder="Enter a number.." name="number" id="number">
+<button id="button" onclick="getInputValue();">Button</button>
+                     
+<div style="margin-top: 10px; font-weight: bold;"><span id="label"></span></div>
+
+
+<br>
+
+
+<h4>Opdracht 2</h4>
+<dt>Als het ingevoerde getal ​ is groter dan​ 4, dan toon je op het label: “Het ingevoerde
+    getal is groter dan 4”.</dt>
+<dd><pre>
+    function getInputValue(){
+
+        var inputValue = document.getElementById('number').value;
+    
+        if(inputValue >3 ){
+            
+           document.getElementById('label').innerText = "Het ingevoerde getal is groter dan 4";
+        }
+        
+    }
+     
+</pre></dd>
+<br>
+
+<h4>Opdracht 3</h4>
+<dt>Als het ingevoerde getal ​ is gelijk aan​ en i ​ s groter dan​ 11, dan toon je op het label</dt>
+<dd><pre>
+
+    function getInputValue(){
+
+        var inputValue = document.getElementById('number').value;
+    
+        if(inputValue >=11 ){
+            
+           document.getElementById('label').innerText = "Het ingevoerde getal is gelijk aan 11 of groter dan 11";
+        }
+        
+    }
+     
+     
+</pre></dd>
+<br>
+
+<h4>Opdracht 4</h4>
+<dt>Als het ingevoerde getal ​ is kleiner dan​ 3, dan toon je op het label: “Het ingevoerde
+    getal is kleiner dan 3”.</dt>
+<dd><pre>
+    
+function getInputValue(){
+
+    var inputValue = document.getElementById('number').value;
+
+    if(inputValue < 3 ){
+        
+       document.getElementById('label').innerText = "Het ingevoerde getal is kleiner dan 3";
+    }
+    
+}
+ 
+
+</pre></dd>
+<br>
+
+<h4>Opdracht 5</h4>
+<dt>Wat is het verschil tussen < en <= ?</dt>
+<dd>Het verschil is kleiner dan en kleiner dan of gelijk aan.</dd>
+<br>
+
+<h4>Opdracht 6</h4>
+<dt>We hebben nog een comparison operator niet gehad, namelijk ​ !​comparison. Wat doet een ​!
+    comparison? Maak een voorbeeld van een ! comparison</dt>
+<dd>Het uitroepteken is een niet comparison symbol. Deze draait de vergelijking om.main
+
+    <pre>
+     function notComparison{
+         if(!inputValue = 0){ //als inputValue is ongelijk aan 0
+             inputValue--;    //haal 1 van de waarde af
+         }
+     }
+    </pre>
+</dd>
+<br>
+
+<h4>Opdracht 7</h4>
+<dt>Schrijf de code van
+    opdracht 1 t/m 4 zo dat als de conditie niet waar is dat de tekst van de label verwijdert
+    wordt.</dt>
+<dd><pre>
+    function getInputValue(){
+
+        var inputValue = document.getElementById('number').value;
+    
+        if(inputValue >0 && inputValue <10 ){
+            
+           document.getElementById('label').innerText = "Het ingevoerde getal is kleiner dan 10";
+    
+             } else if(!inputValue>0){
+    
+            document.getElementById('label').innerText = "";
+        }
+        
+    }
+     
+</pre></dd>
+<br>
+
+<h4>Opdracht 8</h4>
+<dt>Wat is een strict equality comparison ?</dt>
+<dd>Een strickt equality comparison (===) is een vergelijking waarin ook het dataType hetzelfde moet zijn.
+    Numbers met Numbers en Strings met Strings enz.
+</dd>
+<br>
+
+<h4>Opdracht 9</h4>
+<dt>Als het ingevoerde getal ​ is groter dan​ 5 ​ en​ ​ is kleiner dan​ 10, dan toon je op het label:
+    “Het ingevoerde getal is tussen 5 en 10”.</dt>
+<dd><pre>
+    function getInputValue2(){
+
+        var inputValue2 = document.getElementById('number2').value;
+        
+        if(inputValue2 >5 && inputValue2 <10 ){
+        document.getElementById('label2').innerText = "Het ingevoerde getal is tussen 5 en 10";
+    
+        }   else if(!inputValue2>0){
+        
+        document.getElementById('label').innerText = "";
+    
+        }
+    }
+
+</pre></dd>
+
+<input type="number2" placeholder="Enter a number.." name="number2" id="number2">
+<button id="button2" onclick="getInputValue2();">Button</button>
+<div style="margin-top: 10px; font-weight: bold;"><span id="label2"></span></div>
+
+<br>
+
+<h4>Opdracht 10</h4>
+<dt>Als het ingevoerde getal ​ is gelijk aan​ 13 of​ is groter dan​ 13 en het ingevoerde getal is
+    gelijk aan​ 20 of kleiner dan​ 20, dan toon je op het label: “Het ingevoerde getal is
+    gelijk aan 11 of groter dan 11 en is gelijk aan 20 of kleiner dan 20.”.</dt>
+<dd><pre>
+    function getInputValue(){
+
+        var inputValue = document.getElementById('number').value;
+    
+        if(inputValue >=11 && inputValue <=20 ){
+            
+           document.getElementById('label').innerText = "Het ingevoerde getal is gelijk aan 11 of groter dan 11 en is gelijk aan 20 of kleiner dan 20";
+    
+        } else if(!inputValue>0){
+        
+            document.getElementById('label').innerText = "";
+        }
+    }
+</pre></dd>
+<br>
+
+<h4>Opdracht 11</h4>
+<dt>Als het ingevoerde getal ​ is gelijk aan​ 21 of het ingevoerde getal is gelijk aan​ 23 , dan
+    toon je op het label: “Het ingevoerde getal is gelijk aan 21 of is gelijk aan 23.”.</dt>
+<dd><pre>
+    function getInputValue(){
+
+        var inputValue = document.getElementById('number').value;
+    
+        if(inputValue ==21 || inputValue ==23 ){
+            
+           document.getElementById('label').innerText = "Het ingevoerde getal is gelijk aan 21 of is gelijk aan 23.";
+    
+        } else if(!inputValue>0){
+        
+            document.getElementById('label').innerText = "";
+        }
+    }
+</pre></dd>
+<br>
+
+<h4>Opdracht 12</h4>
+<dt>Als het ingevoerde getal​ groter is dan​ 30 en​ ​kleiner is dan​ 35 of​ als het ingevoerde
+    getal groter is dan ​ 40 of kleiner is dan​ 45, toon dan op het label: “het getal is tussen
+    30 en 35 of het getal is tussen 40 en 45.”</dt>
+<dd><pre>
+    function getInputValue(){
+
+        var inputValue = document.getElementById('number').value;
+    
+        if(inputValue >30 && inputValue <35 || inputValue >40 && inputValue <45 ){
+            
+           document.getElementById('label').innerText = "het getal is tussen 30 en 35 of het getal is tussen 40 en 45.";
+    
+        } else if(!inputValue>0){
+        
+            document.getElementById('label').innerText = "";
+        }
+    }
+</pre></dd>
+<br>
+
+<h4>Opdracht 13</h4>
+<dt>Het vertalen van getallen naar maanden. Bijvoorbeeld, als je het getal 1 invoert dan
+    toon je op het scherm “Januari”.</dt>
+<dd><pre>
+
+    function translateMonth(){
+
+        var inputValue = document.getElementById('number3').value;
+        var divText = document.getElementById('translatedMonth');
+    
+        if(inputValue == 1){
+            divText.innerText = 'January';
+        } else if(inputValue == 2){
+            divText.innerText= 'February';
+        } else if(inputValue == 3){
+            divText.innerText = 'March';
+        } else if(inputValue == 4){
+            divText.innerText = 'April';
+        } else if(inputValue == 5){
+            divText.innerText = 'May';
+        } else if(inputValue == 6){
+            divText.innerText = 'June';
+        } else if(inputValue == 7){
+            divText.innerText = 'Juli';
+        } else if(inputValue == 8){
+            divText.innerText = 'August';
+        } else if(inputValue == 9){
+            divText.innerText = 'September';
+        } else if(inputValue == 10){
+            divText.innerText = 'Oktober';
+        } else if(inputValue == 11){
+            divText.innerText = 'November';
+        } else if(inputValue == 12){
+            divText.innerText = 'December';
+        }
+    }
+
+</pre></dd>
+
+<input type="number3" name="number3" id="number3">
+<button onclick="translateMonth();">Translate</button>
+<div id="translatedMonth" style="margin-top: 10px; font-weight: bold;"></div>
+
+<br>
+
+<h4>Opdracht 14</h4>
+<dt>Maak opdracht 13 opnieuw, maar gebruik nu ​ Switch​ statement om dezelfde resultaten te
+    maken</dt>
+<dd><pre>
+    function translateMonth2(){
+
+        var inputValue = document.getElementById('number4').value;
+        var divText = document.getElementById('translatedMonth2');
+        
+        switch(inputValue){
+        
+            case "1": divText.innerText = 'January';
+            break;
+            case "2": divText.innerText = 'February';
+            break;
+            case "3": divText.innerText = 'March';
+            break;
+            case "4": divText.innerText = 'April';
+            break;
+            case "5": divText.innerText = 'May';
+            break;
+            case "6": divText.innerText = 'June';
+            break;
+            case "7": divText.innerText = 'July';
+            break;
+            case "8": divText.innerText = 'August';
+            break;
+            case "9": divText.innerText = 'September';
+            break;
+            case "10": divText.innerText = 'October';
+            break;
+            case "11": divText.innerText = 'November';
+            break;
+            case "12": divText.innerText = 'December';
+            break;
+            case "": divText.innerText = '';} //removes the text with no input
+        
+        }
+
+</pre></dd>
+
+<input type="number4" name="number4" id="number4">
+<button onclick="translateMonth2();">Translate</button>
+<div id="translatedMonth2" style="margin-top: 10px; font-weight: bold;"></div>
+
+<br>
+
+<h4>Opdracht 15</h4>
+<dt>Maak een nieuwe html bestand aan en copy de volgende code naar jouw bestand</dt>
+<dd>Guess the word!// zie: guess_the_word.html</dd>
+<br>
+
+
+
+
+
+
+
+<script>
+//Opdrachten 1 tm 7 +10 +11
+function getInputValue(){
+
+var inputValue = document.getElementById('number').value;
+
+if(inputValue >30 && inputValue <35 || inputValue >40 && inputValue <45 ){
+    
+   document.getElementById('label').innerText = "het getal is tussen 30 en 35 of het getal is tussen 40 en 45.";
+
+    } else if(!inputValue>0){
+
+        document.getElementById('label').innerText = "";
+    }
+}
+
+
+// //Opdracht 9
+function getInputValue2(){
+
+var inputValue2 = document.getElementById('number2').value;
+
+if(inputValue2 >5 && inputValue2 <10 ){
+document.getElementById('label2').innerText = "Het ingevoerde getal is tussen 5 en 10";
+
+}   else if(!inputValue2>0){
+
+document.getElementById('label').innerText = "";
+
+}
+}
+
+
+//Opdracht 13
+function translateMonth(){
+
+var inputValue = document.getElementById('number3').value;
+var divText = document.getElementById('translatedMonth');
+
+if(inputValue == 1){
+    divText.innerText = 'January';
+} else if(inputValue == 2){
+    divText.innerText= 'February';
+} else if(inputValue == 3){
+    divText.innerText = 'March';
+} else if(inputValue == 4){
+    divText.innerText = 'April';
+} else if(inputValue == 5){
+    divText.innerText = 'May';
+} else if(inputValue == 6){
+    divText.innerText = 'June';
+} else if(inputValue == 7){
+    divText.innerText = 'Juli';
+} else if(inputValue == 8){
+    divText.innerText = 'August';
+} else if(inputValue == 9){
+    divText.innerText = 'September';
+} else if(inputValue == 10){
+    divText.innerText = 'October';
+} else if(inputValue == 11){
+    divText.innerText = 'November';
+} else if(inputValue == 12){
+    divText.innerText = 'December';
+}
+}
+
+//Opdracht 14
+function translateMonth2(){
+
+var inputValue = document.getElementById('number4').value;
+var divText = document.getElementById('translatedMonth2');
+
+switch(inputValue){
+
+case "1": divText.innerText = 'January';
+break;
+case "2": divText.innerText = 'February';
+break;
+case "3": divText.innerText = 'March';
+break;
+case "4": divText.innerText = 'April';
+break;
+case "5": divText.innerText = 'May';
+break;
+case "6": divText.innerText = 'June';
+break;
+case "7": divText.innerText = 'July';
+break;
+case "8": divText.innerText = 'August';
+break;
+case "9": divText.innerText = 'September';
+break;
+case "10": divText.innerText = 'October';
+break;
+case "11": divText.innerText = 'November';
+break;
+case "12": divText.innerText = 'December';
+break;
+case "": divText.innerText = '';} //removes the text with no input
+
+}
+
+</script>
+
+
+</body>
+</html>

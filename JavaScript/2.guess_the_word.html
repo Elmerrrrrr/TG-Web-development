@@ -1,210 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+ 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guess The Word</title>
-
-    <style>
-        .words​ ​button​ { 
-        ​position​: ​relative​; 
-        ​border​: ​1px​ ​solid​ ​black​; 
-        ​border-radius​: ​.5em​; 
-        ​background-color​: ​white​; 
-        ​padding​: ​.5em​; 
-        ​cursor​: ​pointer​; 
-        ​transition​: background-color ​.3s​ ​ease-in-out​; 
-        ​z-index​: ​1​; 
-        } 
-        ​.words​ ​button:focus​ { 
-        ​outline​: ​none​; 
-        ​background-color​: ​grey​; 
-        } 
-        ​.words​ ​.fg​ { 
-        ​position​: ​absolute​; 
-        ​content​: ​''​; 
-        ​display​:​flex​; 
-        ​justify-content​: ​center​; 
-        ​align-items​: ​center​; 
-        ​top​: ​0​; 
-        ​left​: ​0​; 
-        ​width​: ​100%​; 
-        ​height​: ​100%​; 
-        ​border-radius​: ​inherit​; 
-        ​background-color​: ​white​; 
-        ​z-index​: ​2​; 
-        ​transition​: width ​.3s​ ​ease-out​; 
-        ​overflow​: ​hidden​; 
-        } 
-        
-        ​.words​ ​button:hover​ ​.fg​ { 
-        ​width​: ​0​; 
-        ​z-index​: ​1​; 
-        }
-        ​.words​ ​button:focus​ ​.fg​ { 
-        ​width​: ​0​; 
-        } 
-        ​.answer​ { 
-        ​font-size​: ​2em​; 
-        ​font-weight​: ​900​; 
-        } 
-
-    </style>
-
-
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+       .words button {
+           position: relative;
+           border: 1px solid black;
+           border-radius: .5em;
+           background-color: white;
+           padding: .5em;
+           cursor: pointer;
+           transition: background-color .3s ease-in-out;
+           z-index: 1;
+       }
+ 
+       .words button:focus {
+           outline: none;
+           background-color: grey;
+       }
+ 
+       .words .fg {
+           position: absolute;
+           content: '';
+           display:flex;
+           justify-content: center;
+           align-items: center;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           border-radius: inherit;
+           background-color: white;
+           z-index: 2;
+           transition: width .3s ease-out;
+           overflow: hidden;
+       }
+ 
+       .words button:hover .fg {
+           width: 0;
+           z-index: 1;
+       }
+ 
+       .words button:focus .fg {
+           width: 0;
+       }
+ 
+       .answer {
+           font-size: 2em;
+           font-weight: 900;
+       }
+   </style>
 </head>
+ 
 <body>
-
-<h1>Guess the word​</h1>
-
-<section>
-<div class="words">
-    <button onclick="guess1();"><div class="fg">Show</div><span class="text">Together</span></button>
-    <button onclick="guess2();"><div class="fg">Show</div><span class="text">Teamwork​</span></button>
-    <button onclick="guess3();"><div class="fg">Show</div><span class="text">​Scrum</span></button>
-    <button onclick="guess4();"><div class="fg">Show</div><span class="text">Individual</span></button>
-    <button onclick="guess5();"><div class="fg">Show</div><span class="text">Moments​</span></button>
-    <button onclick="guess6();"><div class="fg">Show</div><span class="text">​Like​</span></button>
-    <button onclick="guess7();"><div class="fg">Show</div><span class="text">Dislike</span></button>
-    <button onclick="guess8();"><div class="fg">Show</div><span class="text">Money</span></button>
-    <button onclick="guess9();"><div class="fg">Show</div><span class="text">Important</span></button>
-</div>
-
-</section>
-<br>
-
-<div><span>​The number of wrong guessing:<span id="count">0</span></span><p id="label"></p></div>    
-
-
-
-
-<script>
-
-const words =["Together", "Teamwork", "Scrum", "Individual", "Moments", "Like", "Dislike", "Money", "Important"];
-const guessingWord = words[Math.round(Math.random()*8)];
-
-console.log(guessingWord);
-
-function guess1(){
-
-    var buttonText = document.getElementsByClassName('text')[0].innerHTML;
-    console.log(buttonText);
-
-    if(guessingWord == buttonText){ 
-        document.getElementById('label').innerText = "Goed geraden!"
-    }
-
-}
-
-function guess2(){
-
-
-    var buttonText = document.getElementsByClassName('text')[1].innerHTML;
-    console.log(buttonText);
-
-    if(guessingWord == buttonText){ 
-        document.getElementById('label').innerText = "Goed geraden!"
-    }
-
-}
-
-
-function guess3(){
-
-
-    var buttonText = document.getElementsByClassName('text')[2].innerHTML;
-    console.log(buttonText);
-
-    if(guessingWord == buttonText){ 
-        document.getElementById('label').innerText = "Goed geraden!"
-    }
-
-}
-
-
-
-function guess4(){
-
-
-    var buttonText = document.getElementsByClassName('text')[3].innerHTML;
-    console.log(buttonText);
-
-    if(guessingWord == buttonText){ 
-        document.getElementById('label').innerText = "Goed geraden!"
-    }
-
-}
-
-
-
-function guess5(){
-
-
-    var buttonText = document.getElementsByClassName('text')[4].innerHTML;
-    console.log(buttonText);
-
-    if(guessingWord == buttonText){ 
-        document.getElementById('label').innerText = "Goed geraden!"
-    }
-
-}
-
-
-function guess6(){
-
-
-    var buttonText = document.getElementsByClassName('text')[5].innerHTML;
-    console.log(buttonText);
-
-    if(guessingWord == buttonText){ 
-        document.getElementById('label').innerText = "Goed geraden!"
-    }
-
-}
-
-
-function guess7(){
-
-
-    var buttonText = document.getElementsByClassName('text')[6].innerHTML;
-    console.log(buttonText);
-
-    if(guessingWord == buttonText){ 
-        document.getElementById('label').innerText = "Goed geraden!"
-    }
-
-}
-
-
-function guess8(){
-
-
-    var buttonText = document.getElementsByClassName('text')[7].innerHTML;
-    console.log(buttonText);
-
-    if(guessingWord == buttonText){ 
-        document.getElementById('label').innerText = "Goed geraden!"
-    }
-
-}
-
-
-function guess9(){
-
-
-    var buttonText = document.getElementsByClassName('text')[8].innerHTML;
-    console.log(buttonText);
-
-    if(guessingWord == buttonText){ 
-        document.getElementById('label').innerText = "Goed geraden!"
-    }
-
-}
-
-
-
-
-</script>
-
+   <h1>Guess the word</h1>
+   <section>
+       <div class="words">
+           <button onclick="guess(this)"><div class="fg">Show</div><span>Together</span></button>
+           <button onclick="guess(this)"><div class="fg">Show</div><span>Teamwork</span></button>
+           <button onclick="guess(this)"><div class="fg">Show</div><span>Scrum</span></button>
+           <button onclick="guess(this)"><div class="fg">Show</div><span>Individual</span></button>
+           <button onclick="guess(this)"><div class="fg">Show</div><span>Moments</span></button>
+           <button onclick="guess(this)"><div class="fg">Show</div><span>Like</span></button>
+           <button onclick="guess(this)"><div class="fg">Show</div><span>Dislike</span></button>
+           <button onclick="guess(this)"><div class="fg">Show</div><span>Money</span></button>
+           <button onclick="guess(this)"><div class="fg">Show</div><span>Important</span></button>
+       </div>
+   </section>
+ 
+   <div>
+       <span>The number of wrong guessing: <span id="count">0</span></span>
+       <p id="label"></p>
+   </div>
+   <script>
+       const words = ["Together", "Teamwork", "Scrum", "Individual", "Moments", "Like", "Dislike", "Money", "Important"];
+       const guessingWord = words[Math.round(Math.random() * 8)];
+       console.log(guessingWord);
+       var displayText = document.getElementById('label');
+      
+       function guess(obj) {
+        for (c=0){}
+
+         var chosenWord = obj.children[1].innerText;
+        //  console.log(chosenWord);
+
+            if(chosenWord == guessingWord){
+                displayText.innerText = "Goed geraden!!";
+                
+            }
+
+        }
+
+ 
+   </script>
 </body>
+ 
 </html>
+
+
+
+    <!-- var buttonText = document.getElementsByClassName('text')[0].innerHTML;
+    console.log(buttonText);
+
+    if(guessingWord == buttonText){ 
+        document.getElementById('label').innerText = "Goed geraden!"
+    } -->

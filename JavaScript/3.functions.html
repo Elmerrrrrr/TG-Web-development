@@ -66,7 +66,8 @@
 <dt>Schrijf een functie waarbij je een getal mee kan geven aan de functie. Print vervolgens het
 getal uit in de console</dt>
 <dd><pre>
-    
+    button onclick="answer3(3)"
+
     function answer3(getal){
         console.log(getal);
         document.getElementById('answer3').innerText= getal;
@@ -85,6 +86,12 @@ getal uit in de console</dt>
     vermenigvuldiging terug. Geef een goede functie naam ervoor.</dt>
 <dd><pre>
 
+    var x = multiply(6, 7);   // Function is called, return value will end up in x
+    console.log(x);
+    function multiply(a, b) {
+    return a * b;             // Function returns the product of a and b
+    }
+
 </pre></dd>
 
 <p id="answer4"></p>
@@ -96,9 +103,43 @@ getal uit in de console</dt>
 <h4>Opdracht 5</h4>
 <dt>Schrijf een functie waarbij je een naam kan meegeven aan de functie. De functie moet
     vervolgens controleren of de naam een bekende is.</dt>
-<dd></dd>
-<br>
+<dd><pre>
+    var namesKnown = ['John', 'Olly', 'Hendrik',"Tony"];
+    var arrayLenght = namesKnown.length;
+    var labelText = document.getElementById('label-check');
+    
+    function checkNames(){
+    var inputValue = document.getElementById('input-namefind').value;
+    console.log(inputValue);
 
+        for (i=0; i< arrayLenght; i++){
+            
+           if (namesKnown[i] == inputValue){
+                labelText.innerText= 'Dit is een bekende van ons';
+                return;
+            }
+            
+            else{
+                labelText.innerText= 'Onbekend in ons systeem!';
+            }
+        }
+    }
+
+
+   
+
+</pre></dd>
+
+<input type="text" placeholder="Enter a name." name="namefind" id="input-namefind">
+<button id="button-check" onclick="checkNames();">Find</button>
+<div style="margin-top: 10px; font-weight: bold;"><span id="label-check"></span></div>
+
+
+<br>
+<button id="button-random" onclick="randomNames();">Random Name</button>
+<div style="margin-top: 10px; font-weight: bold;"><span id="random-name"></span></div>
+<div style="margin-top: 10px; font-weight: bold; color: red;"><span id="random-name2"></span></div>
+<br>
 
 <h4>Opdracht 6</h4>
 <dt></dt>
@@ -135,16 +176,51 @@ getal uit in de console</dt>
         document.getElementById('answer3').innerText= getal;
     }
     //Opdracht4
-    function multiply(sum){
-      sum= 3*2;
-      console.log(sum);
-      document.getElementById('answer4').innerText= sum;
-      return sum;
+    var x = multiply(6, 7); // Function is called, return value is in x
+    // console.log(x);
+    document.getElementById('answer4').innerText= x;
+    function multiply(a, b) {
+    return a * b; // Function returns the product of a and b
     }
-    var functionOutput = multiply(sum);
-    console.log(functionOutput);
 
 
+    //Opdracht5
+    var namesKnown = ['John', 'Olly', 'Hendrik',"Tony"];
+    var arrayLenght = namesKnown.length;
+    var labelText = document.getElementById('label-check');
+    
+    function checkNames(randomName){
+    var inputValue = document.getElementById('input-namefind').value;
+    randomNames();
+    console.log('');
+    
+
+        for (i=0; i<arrayLenght; i++){
+            
+           if (namesKnown[i] == randomName){
+                labelText.innerText= 'Dit is een bekende van ons';
+                return;
+            }
+            
+            // else{
+            //     labelText.innerText= 'Onbekend in ons systeem!';
+            // }
+        }
+    }
+
+// checkNames(John);
+    
+    function randomNames(randomName){
+    //    randomNumber = Math.round(Math.random()*3);
+    //    randomName = namesKnown[randomNumber];
+
+       randomName = namesKnown[Math.round(Math.random()*3)];
+       document.getElementById('random-name2').innerText= 'Random Name: '+  randomName;
+       return randomName;
+
+    }
+    randomNames();
+    
 </script>
 
 

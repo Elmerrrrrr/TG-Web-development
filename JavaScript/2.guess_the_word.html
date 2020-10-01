@@ -78,19 +78,32 @@
    <script>
        const words = ["Together", "Teamwork", "Scrum", "Individual", "Moments", "Like", "Dislike", "Money", "Important"];
        const guessingWord = words[Math.round(Math.random() * 8)];
+       let displayText = document.getElementById('label');
+       let attempts = 0;
        console.log(guessingWord);
-       var displayText = document.getElementById('label');
       
        function guess(obj) {
-        for (c=0){}
 
-         var chosenWord = obj.children[1].innerText;
-        //  console.log(chosenWord);
+        // console.log(obj.children[1].innerHTML);
+
+        let chosenWord = obj.children[1].innerText;
+
+        if (attempts<=3){
+            
+            attempts++;
+            console.log(attempts);
 
             if(chosenWord == guessingWord){
-                displayText.innerText = "Goed geraden!!";
+                displayText.innerText = "Yess!! Goed geraden!!";
                 
-            }
+                
+            } else if (attempts<3){
+                displayText.innerText = "Helaas niet juist, probeer het nog een keer!"
+
+                } else {
+                     displayText.innerText = "Game over!!!"
+                    }      
+         }
 
         }
 
@@ -99,12 +112,3 @@
 </body>
  
 </html>
-
-
-
-    <!-- var buttonText = document.getElementsByClassName('text')[0].innerHTML;
-    console.log(buttonText);
-
-    if(guessingWord == buttonText){ 
-        document.getElementById('label').innerText = "Goed geraden!"
-    } -->

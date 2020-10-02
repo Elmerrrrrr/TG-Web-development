@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grades</title>
+    <style>
+        html, body{
+            background: cornsilk;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        body h1{
+            color: cornflowerblue;
+            text-shadow: 0px 5px 5px darkgray;
+            text-align: center;
+
+        }
+
+        .container{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+
+        }
+        .subjects{
+            display: flex;
+            flex-direction: column;
+            border:1px solid lightgray;
+            justify-content: flex-end;
+            padding: 10px;
+            margin-top: 50px;
+        }
+        .subjects:last-child{
+            justify-self: flex-start;
+        }
+        .subjects h2, .container-results h2{
+            text-align: center;
+            color: cornflowerblue;
+            text-shadow: 0px 2px 2px darkgray;
+        }
+        .header{
+            display: flex;
+            font-size: large;
+            font-weight: bold;
+            padding: 0.2em;
+            margin-bottom: 20px;
+            background-color:cornflowerblue;
+            color: white;
+        }
+        .header .grade{
+            margin-left: 90px;
+        }
+        .header .name{
+            margin-left: 15px;
+
+
+        }
+        .subject {
+            display: flex;
+            justify-content: flex-end;
+            padding: 2px;
+        }
+
+       .subject input{
+            margin-left: 20px;
+            padding: 5px 10px;
+            text-align: center;
+        }
+
+        .name0, .name1, .name2, .name3, .name4{
+            align-self: center;
+            font-style: italic;
+            font-weight: bold;
+        }
+        .name4{
+            text-align: left;
+            margin-left: -20px;
+            justify-self: flex-start;        
+        }
+        .container-results{
+            display: flex;
+            flex-direction: column;
+            border:1px solid lightgray;
+            justify-content: center;
+            align-self: center;
+            padding: 10px;
+            margin-top: 50px;
+            width: 50vw;
+
+        }
+        .results-avrg .id {
+            display: flex;
+            justify-content:space-around;
+            text-align: left;
+            margin-left: 25;
+
+        }
+        .hresults{
+            justify-content: space-around;
+            margin-left: 5px;
+        }
+
+        .id1, .id3, .id5 {
+            background-color: lightblue;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <h1>Student Grades</h1>
+
+    <div class="container">
+
+        <div class="subjects">
+            <h2>Math</h2>
+            <div class="header"><div class="h-name">Name</div><div class="grade">Grade</div></div>
+            <div class="subject"><div class="name0"></div><div class="math"><input type="number" name="math-1" id="math-1"></div></div>
+            <div class="subject"><div class="name0"></div><div class="math"><input type="number" name="math-2" id="math-2"></div></div>
+            <div class="subject"><div class="name0"></div><div class="math"><input type="number" name="math-3" id="math-3"></div></div>
+            <div class="subject"><div class="name0"></div><div class="math"><input type="number" name="math-4" id="math-4"></div></div>
+            <div class="subject"><div class="name0"></div><div class="math"><input type="number" name="math-5" id="math-5"></div></div>
+            <div class="subject"><div class="name0"></div><div class="math"><input type="number" name="math-6" id="math-6"></div></div>
+        </div>
+
+        <div class="subjects">
+            <h2>Physics</h2>
+            <div class="header"><div class="h-name">Name</div><div class="grade">Grade</div></div>
+            <div class="subject phys"><div class="name1"></div><input type="number" name="phys-1" id="phys-1"></div>
+            <div class="subject phys"><div class="name1"></div><input type="number" name="phys-2" id="phys-2"></div>
+            <div class="subject phys"><div class="name1"></div><input type="number" name="phys-3" id="phys-3"></div>
+            <div class="subject phys"><div class="name1"></div><input type="number" name="phys-4" id="phys-4"></div>
+            <div class="subject phys"><div class="name1"></div><input type="number" name="phys-5" id="phys-5"></div>
+            <div class="subject phys"><div class="name1"></div><input type="number" name="phys-6" id="phys-6"></div>
+        </div>
+
+        <div class="subjects">
+            <h2>Dutch</h2>
+            <div class="header"><div class="h-name">Name</div><div class="grade">Grade</div></div>
+            <div class="subject dutch"><div class="name2"></div><input type="number" name="dutch-1" id="dutch-1"></div>
+            <div class="subject dutch"><div class="name2"></div><input type="number" name="dutch-2" id="dutch-2"></div>
+            <div class="subject dutch"><div class="name2"></div><input type="number" name="dutch-3" id="dutch-3"></div>
+            <div class="subject dutch"><div class="name2"></div><input type="number" name="dutch-4" id="dutch-4"></div>
+            <div class="subject dutch"><div class="name2"></div><input type="number" name="dutch-5" id="dutch-5"></div>
+            <div class="subject dutch"><div class="name2"></div><input type="number" name="dutch-6" id="dutch-6"></div>
+        </div>
+
+        <div class="subjects">
+            <h2>English</h2>
+            <div class="header"><div class="h-name">Name</div><div class="grade">Grade</div></div>
+            <div class="subject english"><div class="name3"></div><input type="number" name="english-1" id="engl-1"></div>
+            <div class="subject english"><div class="name3"></div><input type="number" name="english-2" id="engl-2"></div>
+            <div class="subject english"><div class="name3"></div><input type="number" name="english-3" id="engl-3"></div>
+            <div class="subject english"><div class="name3"></div><input type="number" name="english-4" id="engl-4"></div>
+            <div class="subject english"><div class="name3"></div><input type="number" name="english-5" id="engl-5"></div>
+            <div class="subject english"><div class="name3"></div><input type="number" name="english-6" id="engl-6"></div>
+        </div>
+
+        <div class="container-results">
+            <h2>Results Average</h2>
+            <div class="header hresults"><div class="h-name">Name</div><div class="h-lang">Languages</div><div class="h-betasubj">Beta subjects</div><div class="h-pass">Pass</div></div>
+            <div class="results-avrg">
+                
+                <div class="id id1"><div class="name4"></div><div class="lang"></div><div class="betasubj"></div><div class="pass">4</div></div>
+                <div class="id id2"><div class="name4"></div><div class="lang"></div><div class="betasubj"></div><div class="pass">4</div></div>
+                <div class="id id3"><div class="name4"></div><div class="lang"></div><div class="betasubj"></div><div class="pass">4</div></div>
+                <div class="id id4"><div class="name4"></div><div class="lang"></div><div class="betasubj"></div><div class="pass">4</div></div>
+                <div class="id id5"><div class="name4"></div><div class="lang"></div><div class="betasubj"></div><div class="pass">4</div></div>
+                <div class="id id6"><div class="name4"></div><div class="lang"></div><div class="betasubj"></div><div class="pass">4</div></div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+        
+        let names = ['Willem', 'Jan', 'Elmer', 'Samantha', 'Joyce', 'Gareth'];
+        let mathGrades = [3, 7, 10, 4, 5.5, 1];
+        let physGrades = [7, 5, 8, 6, 9, 5.5];
+        let dutchGrades = [7, 7, 4, 8, 8.5, 4];
+        let englGrades = [6, 6, 5.5, 4.3, 5.5, 8];
+        let arrayLenght = names.length;
+
+
+        function average(betaGrades){
+
+            for(i=0; i<arrayLenght; i++){
+
+            document.getElementsByClassName('name0')[i].innerHTML = names[i];
+            document.getElementsByClassName('name1')[i].innerHTML = names[i];
+            document.getElementsByClassName('name2')[i].innerHTML = names[i];
+            document.getElementsByClassName('name3')[i].innerHTML = names[i];                
+            document.getElementsByClassName('name4')[i].innerHTML = names[i];
+            document.getElementsByClassName('betasubj')[i].innerHTML = Math.round((mathGrades[i]+physGrades[i])/2);
+            document.getElementsByClassName('lang')[i].innerHTML = Math.round((dutchGrades[i]+englGrades[i])/2);
+            document.getElementsByClassName('pass')[i].innerHTML = (mathGrades[i]+physGrades[i]+dutchGrades[i]+englGrades[i])/4;
+
+            // console.log(document.getElementsByClassName('betasubj')[0].innerHTML=betaGrades[]);
+               
+            }
+
+        
+
+        }
+
+        average();
+        // console.log(betaGrades);
+
+       // Put the grades in the fields (for loop)
+       document.getElementById('math-1').value = mathGrades[0];
+       document.getElementById('math-2').value = mathGrades[1];
+       document.getElementById('math-3').value = mathGrades[2];
+       document.getElementById('math-4').value = mathGrades[3];
+       document.getElementById('math-5').value = mathGrades[4];
+       document.getElementById('math-6').value = mathGrades[5];
+
+       document.getElementById('phys-1').value = physGrades[0];
+       document.getElementById('phys-2').value = physGrades[1];
+       document.getElementById('phys-3').value = physGrades[2];
+       document.getElementById('phys-4').value = physGrades[3];
+       document.getElementById('phys-5').value = physGrades[4];
+       document.getElementById('phys-6').value = physGrades[5];
+
+       document.getElementById('dutch-1').value = dutchGrades[0];
+       document.getElementById('dutch-2').value = dutchGrades[1];
+       document.getElementById('dutch-3').value = dutchGrades[2];
+       document.getElementById('dutch-4').value = dutchGrades[3];
+       document.getElementById('dutch-5').value = dutchGrades[4];
+       document.getElementById('dutch-6').value = dutchGrades[5];
+
+       document.getElementById('engl-1').value = englGrades[0];
+       document.getElementById('engl-2').value = englGrades[1];
+       document.getElementById('engl-3').value = englGrades[2];
+       document.getElementById('engl-4').value = englGrades[3];
+       document.getElementById('engl-5').value = englGrades[4];
+       document.getElementById('engl-6').value = englGrades[5];
+
+
+
+    //    let mathInput = document.getElementsByClassName('math');
+    //    console.log(mathInput[0].children);
+
+    //    let math = document.getElementsByClassName('math');
+    //    console.log(math[0]);
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

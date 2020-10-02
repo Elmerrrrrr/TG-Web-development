@@ -104,29 +104,45 @@ getal uit in de console</dt>
 <dt>Schrijf een functie waarbij je een naam kan meegeven aan de functie. De functie moet
     vervolgens controleren of de naam een bekende is.</dt>
 <dd><pre>
+
     var namesKnown = ['John', 'Olly', 'Hendrik',"Tony"];
     var arrayLenght = namesKnown.length;
     var labelText = document.getElementById('label-check');
-    
+
+
+
     function checkNames(){
-    var inputValue = document.getElementById('input-namefind').value;
-    console.log(inputValue);
-
+        var inputValue = document.getElementById('input-namefind').value;
+    
+    
         for (i=0; i< arrayLenght; i++){
-            
-           if (namesKnown[i] == inputValue){
-                labelText.innerText= 'Dit is een bekende van ons';
-                return;
-            }
-            
-            else{
-                labelText.innerText= 'Onbekend in ons systeem!';
-            }
+                
+                if(namesKnown[i] == inputValue ){
+                labelText.innerText = 'Dit is een bekende van ons!';
+                console.log("known");
+                return;           
+                }
+                else if(inputValue==""){
+                labelText.innerText = 'Voer een naam in';
+                console.log("no value");
+                }
+    
+                else {
+                labelText.innerText = 'Deze naam komt niet voor in ons systeem.';
+                console.log("unknown");
+                //  return;
+                 }
+                 
+             }
         }
-    }
-
-
-   
+    
+    
+        function randomNames(randomName){
+           randomName = namesKnown[Math.round(Math.random()*3)];
+           document.getElementById('input-namefind').value= randomName;
+           return randomName;
+    
+        }
 
 </pre></dd>
 
@@ -142,14 +158,59 @@ getal uit in de console</dt>
 <br>
 
 <h4>Opdracht 6</h4>
-<dt></dt>
-<dd></dd>
+<dt>De functies die kunnen ook met arrow functions geschreven worden. Herschrijf opdracht 5
+    zodat arrow functions gebruikt wordt.</dt>
+<dd><pre>
+
+
+    let randomNames = (randomName) =>{
+        randomName = namesKnown[Math.round(Math.random()*3)];
+        document.getElementById('input-namefind').value= randomName;
+        
+       }
+       console.log(randomNames);
+ 
+     
+</pre></dd>
 <br>
 
 
 <h4>Opdracht 7</h4>
-<dt></dt>
-<dd></dd>
+<dt>Hoe geef je 2 of meer parameters mee aan een functie? Geef een voorbeeld.
+    Wat zijn rest parameters? Geef een voorbeeld.
+    Wat is het verschil tussen rest parameters en expliciete parameters die je aangeeft bij een
+    functie?</dt>
+<dd>Je kan een functie meerdere waardes (argumenten) in de parameters van de functie meegeven (ongelimieerd en gescheiden met een ,). Deze kunnen in de 
+    functie als variabele gebruikt worden, en daarna eventueel met een nieuwe waarden worden gereturned.
+
+    Maar als we meer argumenten meegeven dan er parameters zijn worden alleen de gedefineerde parameters meegenomen in de functie. Om
+    er voor te zorgen dat indien er meer argumenten(waardes) worden meegegeven aan de functie dan dat er parameters zijn gedefinieerd kan
+    er gebruikt gemaakt worden van een rest parameter die als laaste parameter in de functie wordt gedefineerd doormiddel van drie puntjes:
+    
+<pre>
+    // function with rest (which makes an array of the rest items)
+    function assignment7Part2(a,b,...c){ 
+        console.log(`${a} ${b}`); //Mukul Latiyan 
+        console.log(c);  //[ 'Lionel', 'Messi', 'Barcelona' ] 
+        console.log(c[0]); //Lionel 
+        console.log(c.length); //3 
+        console.log(c.indexOf('Lionel')); //0 
+    } 
+    assignment7Part2('Mukul','Latiyan','Lionel','Messi','Barcelona'); 
+
+    // same function with no rest
+    function assignment7Part1(a,b,c){ 
+        console.log(`${a} ${b}`); //Mukul Latiyan 
+        console.log(c);  // Lionel  
+        console.log(c[0]); //L 
+        console.log(c.length); //6 but this is the word Lionel now!
+        console.log(c.indexOf('Lionel')); //0 it is not an array anymore.
+    } 
+    assignment7Part1('Mukul','Latiyan','Lionel','Messi','Barcelona'); 
+
+
+</pre>
+</dd>
 <br>
 
 <h4>Opdracht 8</h4>
@@ -226,38 +287,62 @@ getal uit in de console</dt>
 
     //Opdracht6
 
-    function checkNames(){
-    var inputValue = document.getElementById('input-namefind').value;
+    // function checkNames(){
+    // var inputValue = document.getElementById('input-namefind').value;
 
 
-    for (i=0; i<arrayLenght; i++){
+    // for (i=0; i<arrayLenght; i++){
             
-            if(namesKnown[i] == inputValue ){
-            labelText.innerText = 'Dit is een bekende van ons!';
-            console.log("known");
-            return;           
-            }
-            else if(inputValue==""){
-            labelText.innerText = 'Voer een naam in';
-            console.log("no value");
-            }
+    //         if(namesKnown[i] == inputValue ){
+    //         labelText.innerText = 'Dit is een bekende van ons!';
+    //         console.log("known");
+    //         return;           
+    //         }
+    //         else if(inputValue==""){
+    //         labelText.innerText = 'Voer een naam in';
+    //         console.log("no value");
+    //         }
 
-            else {
-            labelText.innerText = 'Deze naam komt niet voor in ons systeem.';
-            console.log("unknown");
-            //  return;
-             }
+    //         else {
+    //         labelText.innerText = 'Deze naam komt niet voor in ons systeem.';
+    //         console.log("unknown");
+    //         //  return;
+    //          }
              
-         }
-    }
+    //      }
+    // }
 
 
-      let randomNames = (randomName) =>{
-       randomName = namesKnown[Math.round(Math.random()*3)];
-       document.getElementById('input-namefind').value= randomName;
+    //   let randomNames = (randomName) =>{
+    //    randomName = namesKnown[Math.round(Math.random()*3)];
+    //    document.getElementById('input-namefind').value= randomName;
        
-      }
-      console.log(randomNames);
+    //   }
+    //   console.log(randomNames);
+
+
+      //Opdracht7
+
+      // function with rest (which makes an array of the rest items)
+        function assignment7Part2(a,b,...c){ 
+            console.log(`${a} ${b}`); //Mukul Latiyan 
+            console.log(c);  //[ 'Lionel', 'Messi', 'Barcelona' ] 
+            console.log(c[0]); //Lionel 
+            console.log(c.length); //3 
+            console.log(c.indexOf('Lionel')); //0 
+        } 
+        assignment7Part2('Mukul','Latiyan','Lionel','Messi','Barcelona'); 
+
+        // same function with no rest
+        function assignment7Part1(a,b,c){ 
+            console.log(`${a} ${b}`); //Mukul Latiyan 
+            console.log(c);  // Lionel  
+            console.log(c[0]); //L 
+            console.log(c.length); //6 but this is the word Lionel now!
+            console.log(c.indexOf('Lionel')); //0 it is not an array anymore.
+        } 
+        assignment7Part1('Mukul','Latiyan','Lionel','Messi','Barcelona'); 
+
 
     
 </script>

@@ -213,6 +213,7 @@
         initalize();
         calculateGradesAverage();
         passedCheck();
+        checkGrade();
 
 
         //Check for changes and calculate new grades
@@ -220,6 +221,7 @@
 
         calculateGradesAverage();
         passedCheck();
+        checkGrade();
 
         });
 
@@ -253,12 +255,29 @@
                 }
         }
 
+        function checkGrade(){
+            
+            let arrayInputs = document.getElementsByTagName('input');
+            let arrayLengthInputs = arrayInputs.length;
+                    // console.log(arrayLengthInputs);
+            for(i=0; i<arrayLengthInputs; i++){
 
+                if (parseFloat(arrayInputs[i].value) < 5.5){
+                                console.log('1');
+                                arrayInputs[i].style.backgroundColor = "lightcoral";
+                }
+                else if(parseFloat(arrayInputs[i].value) >= 5.5){
+                    arrayInputs[i].style.backgroundColor = "lightgreen";
+                }
+            }
+        }
 
-
+        
 
 
         function passedCheck(){
+
+           
             for(i=0; i<arrayLenght; i++){  
 
                 if (parseFloat(document.getElementsByClassName('pass')[i].innerHTML) <= 6.5 ){
@@ -267,9 +286,13 @@
                 else if (parseFloat(document.getElementsByClassName('pass')[i].innerHTML) > 6.5){
                     document.getElementsByClassName('id')[i].children[3].style.color = "green"; 
                 }
+
+               
+                
             }
         }
         
+        // console.log(document.getElementsByTagName('input')[1].value);
 
 
     </script>

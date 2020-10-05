@@ -104,45 +104,47 @@ getal uit in de console</dt>
 <dt>Schrijf een functie waarbij je een naam kan meegeven aan de functie. De functie moet
     vervolgens controleren of de naam een bekende is.</dt>
 <dd><pre>
-
+    //Opdracht5
     var namesKnown = ['John', 'Olly', 'Hendrik',"Tony"];
     var arrayLenght = namesKnown.length;
     var labelText = document.getElementById('label-check');
-
+    
 
 
     function checkNames(){
-        var inputValue = document.getElementById('input-namefind').value;
-    
-    
-        for (i=0; i< arrayLenght; i++){
-                
-                if(namesKnown[i] == inputValue ){
-                labelText.innerText = 'Dit is een bekende van ons!';
-                console.log("known");
-                return;           
-                }
-                else if(inputValue==""){
-                labelText.innerText = 'Voer een naam in';
-                console.log("no value");
-                }
-    
-                else {
-                labelText.innerText = 'Deze naam komt niet voor in ons systeem.';
-                console.log("unknown");
-                //  return;
-                 }
-                 
+    var inputValue = document.getElementById('input-namefind').value;
+
+
+    for (i=0; i< arrayLenght; i++){
+            
+            if(namesKnown[i] == inputValue ){
+            labelText.innerText = 'Dit is een bekende van ons!';
+            console.log("known");
+            return;           
+            }
+            else if(inputValue==""){
+            labelText.innerText = 'Voer een naam in';
+             console.log("no value");
+            }
+
+            else   {
+             labelText.innerText = 'Deze naam komt niet voor in ons systeem.';
+             console.log("unknown");
+            //  return;
              }
-        }
-    
-    
-        function randomNames(randomName){
-           randomName = namesKnown[Math.round(Math.random()*3)];
-           document.getElementById('input-namefind').value= randomName;
-           return randomName;
-    
-        }
+             
+         }
+    }
+
+
+    function randomNames(randomName){
+       randomName = namesKnown[Math.round(Math.random()*3)];
+       document.getElementById('input-namefind').value= randomName;
+       return randomName;
+
+    }
+
+
 
 </pre></dd>
 

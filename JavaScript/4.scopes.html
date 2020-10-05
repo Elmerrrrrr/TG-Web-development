@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        html{background: cornsilk;}
+
+        h1{
+            text-align: center;
+            color:darkcyan;
+        }
+
+        h4{
+            font-size: large;
+            text-decoration: underline;
+            color:darkcyan;
+        }
+
+        dt{font-weight: bold;}
+
+    </style>
+   
+</head>
+<body>
+
+    <h1>JavaScript - Scopes</h1>
+
+<h4>Opdracht 1</h4>
+<dt>Wat wordt er in de console gelogt? Wat voor scoping heb je hier te maken?
+    <pre>
+        function printCar() { 
+            const carBrand = "Volvo"; 
+            } 
+            console.log(carBrand); 
+                   
+    </pre>
+</dt>
+<dd>//Uncaught ReferenceError: carBrand is not defined. Dit komt omdat de variabele in een block scopes
+    is gedeclareerd. Dus niet toegangkelijk buiten de functie.
+</dd>
+<br>
+
+
+<h4>Opdracht 2</h4>
+<dt>Wat wordt er in de console gelogt?    
+    <pre>
+        let carName; 
+        function printCar() { 
+        carBrand = "Volvo"; 
+        } 
+        console.log(carBrand); // Uncaught ReferenceError
+</pre></dt>
+<dd>// Uncaught ReferenceError: carBrand is not defined. <-- indien je de functie niet start.
+    Indien de functie wordt gestart is de variabele die niet is gedeclareerd wel automatisch als global gedeclareerd
+    aangezien dit niet is gebeurt in de functie</dd>
+<br>
+
+
+<h4>Opdracht 3</h4>
+<dt>Wat wordt er in de console gelogt?
+    <pre>
+        function printCar() {
+            carBrand = "Volvo";
+        }
+  
+        printCar();
+        console.log(carBrand); //Volvo
+</dt>
+<dd></dd>
+<br>
+
+
+<h4>Opdracht 4</h4>
+<dt>Wat wordt er in de console gelogt? Hoe is dit anders voorgaande opdrachten? 
+    <pre>
+        function printCar() {
+            carBrand = "Volvo";
+            
+            return function(type) {
+                console.log(carBrand + " " + type);
+            }
+        }
+  
+        const car = printCar(); // De waarde van deze variabele is wat er gereturned word uit de functie en is in dit geval een functie.
+        console.log(car);
+        car("v40"); //de functie wordt gestart en geeft een argument mee.
+      
+    </pre>
+</dt>
+<dd>De waarde van de variabele 'car' is een geneste functie met een parameter 'type'. Deze word vervolgens gestart
+    met een argument 'v40' en geconsole logt samen met de variabele 'carBrand' die in de functie er buiten is gedeclareerd maar
+    wel toegangkelijk is. (Lexical Scope)</dd>
+<br>
+
+
+
+
+<script>
+//Opdracht1
+    // function printCar() {
+    //     const carBrand = "Volvo";
+    // }
+
+    // console.log(carBrand);
+
+
+//Opdracht2
+// // let carBrand;
+//        function printCar() {
+//            carBrand = "Volvo";
+//        }
+// //  printCar();
+//        console.log(carBrand);
+
+
+
+ //Opdracht 3
+//  function printCar() { 
+//  carBrand = "Volvo"; 
+//  } 
+//  printCar(); 
+//  console.log(carBrand);
+
+
+//Opdracht4
+function printCar() {
+           carBrand = "Volvo";
+ 
+           return function(type) {
+               console.log(carBrand + " " + type); // carBrand is hier toegangkelijk (Lexical Scope)
+           }
+       }
+ 
+       const car = printCar();
+       console.log(car);
+       car("v40");
+
+</script>
+
+    
+</body>
+</html>

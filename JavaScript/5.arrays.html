@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Arrays</title>
+
+    <style>
+        
+        html{background: cornsilk;}
+
+        h1{
+            text-align: center;
+            color:darkcyan;
+        }
+
+        h4{
+            font-size: large;
+            text-decoration: underline;
+            color:darkcyan;
+        }
+
+        dt{font-weight: bold;}
+
+    </style>
+
+</head>
+<body>
+
+    <h1>JavaScript - Arrays</h1>
+
+    <h4>Opdracht 1</h4>
+    <dt>Maak een array met 10 getallen die willekeurig in een array staan. Print de array uit in jouw console.</dt>
+    <dd><pre>
+        let array1 = Array.from({length: 10}, () => Math.floor(Math.random() * 10));
+        console.log(array1);
+    </pre></dd>
+    <br>
+
+    <h4>Opdracht 2</h4>
+    <dt>Maak een array met 5 verschillende fruitsoorten. Print de array uit in jouw console.</dt>
+    <dd><pre>
+        //Opdracht2+3+4
+
+        let array2 = ['Apple','Banana','Cherries','Dates','Eggfruit' ]
+        console.log(array2);
+        console.log(array2[0]);
+        console.log(array2[2]);
+
+    </pre></dd>
+    <br>
+
+
+    <h4>Opdracht 3</h4>
+    <dt>Op welke index staat “Appel”. Gebruik de index waarde om “Appel” in jouw console uit te printen.</dt>
+    <dd>Zie opdracht 2</dd>
+    <br>
+
+    <h4>Opdracht 4</h4>
+    <dt>Op welke index staat “Aardbei”. Gebruik de index waarde om “Aardbei” in jouw console uit te printen.</dt>
+    <dd>Zie opdracht 2</dd>
+    <br>
+
+    <h4>Opdracht 5</h4>
+    <dt>Gebruik de Math.random() methode om te bepalen welke waarde uit de eerste array wordt gehaald. Vervolgens kun je de waarde gebruiken als index en de fruitsoort printen in jouw console. Helaas, de getallen 5 t/m 10 uit de eerste array zullen een undefined teruggeven als je dat als index bij de fruit array zal gebruiken. Hiervoor kun je de modulo (%) gebruiken.
+        Zoek uit hoe modulo werkt en pas dat toe aan de waarde van de eerste array.</dt>
+    <dd><pre>
+        console.log(array2[array1[Math.floor(Math.random() * 5)]]); //is nog zonder de modulo
+    </pre></dd>
+    <br>
+
+    <h4>Opdracht 6</h4>
+    <dt>Arrays hebben ook functies die je kunt gebruiken.
+        Zoek uit wat push(), pop(), shift(), slice(), splice(), sort(). Maak gebruik van de fruits array en maak voor elke functie een voorbeeld en geef in commentaar wat het doet.</dt>
+    <dd><pre>
+        array2.push("New fruit item"); //adds new item to the end of the array
+        console.log(array2);
+        
+        array2.pop(); //deletes the last item
+        console.log(array2);
+        
+        array2.shift(); //removes the first element from an array and returns that removed element
+        console.log(array2);//shows the array with the first item removed
+        console.log(array2.shift());// shows the returned value, the deleted item
+        
+        array2.slice(1,3); //method returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included) where start and end represent the index of items in that array. The original array will not be modified.
+        console.log(array2);// returns the items on index position from index 2 until and with index 3
+        
+        array2.splice(0,0,'Apple, Banana'); //method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+        console.log(array2);
+        
+        array2.splice(0,3, 'New fruit 1, New fruit 2'); //Deletes 3 items start from index 0 and adds two new ones
+        console.log(array2);
+        
+        // array2.sort(); // method sorts the elements of an array in place and returns the sorted array. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values.
+        // console.log(array2);
+        
+        array2.sort((a, b) => b - a);// sort method with function for sorting decending.
+        
+        //same as 
+        // array2.sort(function(a, b) {
+        //   return a - b;
+        // });
+        // console.log(array2
+
+    </pre></dd>
+    <br>
+
+    <h4>Opdracht 7</h4>
+    <dt>Gebruik de length property en print in de console uit hoe groot de fruits array is.</dt>
+    <dd><pre>
+
+        console.log(array2.length);
+
+    </pre></dd>
+    <br>
+
+    <h4>Opdracht 8</h4>
+    <dt>Zoek uit hoe je op een specifieke index de waarde kan aanpassen. Pas de value “Peer” naar “Sinaasappel”.</dt>
+    <dd><pre>
+
+        array2.splice(0,1,'Replaced');
+        console.log(array2);
+
+    </pre></dd>
+    <br>
+
+    <h4>Opdracht 9</h4>
+    <dt>Kijkend naar de fruits array. Hoe draai je de values “Aardbei” en “Mandarijn” om in de array door gebruik te maken van indices (index).</dt>
+    <dd><pre>
+
+        let swap = array2[0]
+        array2[0]=array2[1];
+        array2[1]= swap;
+        console.log(array2);
+        
+    </pre></dd>
+    <br>
+
+
+<script>
+
+//Opdracht1
+
+let array1 = Array.from({length: 10}, () => Math.floor(Math.random() * 10));
+console.log(array1);
+
+// console.log(Array.from({length: 10}, (v, i) => i));
+// console.log(Array.from({length: 10}, () => 1));
+// console.log(Array.from({length: 10}, () => Math.floor(Math.random() * 10)));
+
+
+//Opdracht2+3+4
+
+let array2 = ['Apple','Banana','Cherries','Dates','Eggfruit' ]
+console.log(array2);
+console.log(array2[0]);
+console.log(array2[2]);
+
+//opdracht5
+
+console.log(array2[array1[Math.floor(Math.random() * 5)]]);
+console.log(array1[10% 5]);
+
+//Opdracht6
+//push(), pop(), shift(), slice(), splice(), sort()
+
+array2.push("New fruit item"); //adds new item to the end of the array
+console.log(array2);
+
+array2.pop(); //deletes the last item
+console.log(array2);
+
+array2.shift(); //removes the first element from an array and returns that removed element
+console.log(array2);//shows the array with the first item removed
+console.log(array2.shift());// shows the returned value, the deleted item
+
+array2.slice(1,3); //method returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included) where start and end represent the index of items in that array. The original array will not be modified.
+console.log(array2);// returns the items on index position from index 2 until and with index 3
+
+array2.splice(0,0,'Apple, Banana'); //method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+console.log(array2);
+
+array2.splice(0,3, 'New fruit 1, New fruit 2'); //Deletes 3 items start from index 0 and adds two new ones
+console.log(array2);
+
+// array2.sort(); // method sorts the elements of an array in place and returns the sorted array. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values.
+// console.log(array2);
+
+// array2.sort((a, b) => b - a);// sort method with function for sorting decending.
+
+//same as 
+// array2.sort(function(a, b) {
+//   return a - b;
+// });
+// console.log(array2);
+
+
+//Opdracht 7
+console.log(array2.length);
+
+//Opdracht 8
+array2.splice(0,1,'Replaced');
+console.log(array2);
+
+
+//Opdracht 9
+let swap = array2[0]
+array2[0]=array2[1];
+array2[1]= swap;
+console.log(array2);
+
+
+</script>
+
+
+
+
+    
+</body>
+</html>

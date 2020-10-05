@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JavaScript - Scopes</title>
     <style>
         
         html{background: cornsilk;}
@@ -35,10 +35,11 @@
             const carBrand = "Volvo"; 
             } 
             console.log(carBrand); 
+            printCar()
                    
     </pre>
 </dt>
-<dd>//Uncaught ReferenceError: carBrand is not defined. Dit komt omdat de variabele in een block scopes
+<dd>//Uncaught ReferenceError: carBrand is not defined. Dit komt omdat de variabele in een block scope
     is gedeclareerd. Dus niet toegangkelijk buiten de functie.
 </dd>
 <br>
@@ -103,7 +104,6 @@
     // function printCar() {
     //     const carBrand = "Volvo";
     // }
-
     // console.log(carBrand);
 
 

@@ -101,12 +101,13 @@
             padding-left: 70px;
         }
         .id *{
-            width: 25%;
+            width: 20%;
             margin-left: 15%;
         }
 
         .id *:first-child{
-            margin-left: -5%;
+            width: 40%;
+            margin-left: -20%;
         }
 
         .hresults{
@@ -184,12 +185,12 @@
             <div class="header hresults"><div class="h-name">Name</div><div class="h-lang">Languages</div><div class="h-betasubj">Beta subjects</div><div class="h-pass">Pass</div></div>
             <div class="results-avrg">
                 
-                <div class="id id1"><div class="name"></div><div class="lang"></div><div class="betasubj"></div><div class="pass">4</div></div>
-                <div class="id id2"><div class="name"></div><div class="lang"></div><div class="betasubj"></div><div class="pass">4</div></div>
-                <div class="id id3"><div class="name"></div><div class="lang"></div><div class="betasubj"></div><div class="pass">4</div></div>
-                <div class="id id4"><div class="name"></div><div class="lang"></div><div class="betasubj"></div><div class="pass">4</div></div>
-                <div class="id id5"><div class="name"></div><div class="lang"></div><div class="betasubj"></div><div class="pass">4</div></div>
-                <div class="id id6"><div class="name"></div><div class="lang"></div><div class="betasubj"></div><div class="pass">4</div></div>
+                <div class="id id1"><div class="name"></div><div class="lang"></div><div class="betasubj"></div><div class="pass"></div></div>
+                <div class="id id2"><div class="name"></div><div class="lang"></div><div class="betasubj"></div><div class="pass"></div></div>
+                <div class="id id3"><div class="name"></div><div class="lang"></div><div class="betasubj"></div><div class="pass"></div></div>
+                <div class="id id4"><div class="name"></div><div class="lang"></div><div class="betasubj"></div><div class="pass"></div></div>
+                <div class="id id5"><div class="name"></div><div class="lang"></div><div class="betasubj"></div><div class="pass"></div></div>
+                <div class="id id6"><div class="name"></div><div class="lang"></div><div class="betasubj"></div><div class="pass"></div></div>
             </div>
         </div>
             
@@ -200,14 +201,12 @@
     <script>
         
         let names = ['Willem', 'Jan', 'Elmer', 'Samantha', 'Joyce', 'Gareth'];
-        const repeatedArrayNames = [].concat(...Array(5).fill(names)); // repeats the data of the array 5 times to give data to all the divs with the class name.
 
         let mathGrades = [3, 7, 10, 4, 5.5, 1];
         let physGrades = [7, 5, 8, 6, 9, 5.5];
         let dutchGrades = [7, 7, 4, 8, 8.5, 4];
         let englGrades = [6, 6, 5.5, 4.3, 5.5, 8];
         const arrayLenght = names.length;
-        const arrayLenghtNames = repeatedArrayNames.length;
 
         //Start functions
         initalize();
@@ -236,18 +235,22 @@
               document.getElementsByClassName('english')[i].children[1].value = englGrades[i]
             }
             //Fill the names
-            for(i=0; i<arrayLenghtNames; i++){
-            document.getElementsByClassName('name')[i].innerHTML = repeatedArrayNames[i];
-            }
+             for (let i=0; i<names.length*5;) { // 30 x uitgevoerd
+                let j=0; //reset j after array lenght, to start at index 0 of the array
+                for (j=0; j<names.length; j++) {
+                    document.getElementsByClassName('name')[i].innerHTML = names[j];
+                    ++i; // total counter
+                }
+             }
         }
-
+       
 
         function calculateGradesAverage(){
 
             for(i=0; i<arrayLenght; i++){   
 
-            document.getElementsByClassName('betasubj')[i].innerHTML = ((parseFloat(document.getElementsByClassName('math')[i].children[1].value) + parseInt(document.getElementsByClassName('phys')[i].children[1].value))/2).toPrecision(2);
-            document.getElementsByClassName('lang')[i].innerHTML = ((parseFloat(document.getElementsByClassName('dutch')[i].children[1].value) + parseInt(document.getElementsByClassName('english')[i].children[1].value))/2).toPrecision(2);
+            document.getElementsByClassName('betasubj')[i].innerHTML = ((parseFloat(document.getElementsByClassName('math')[i].children[1].value) + parseFloat(document.getElementsByClassName('phys')[i].children[1].value))/2).toPrecision(2);
+            document.getElementsByClassName('lang')[i].innerHTML = ((parseFloat(document.getElementsByClassName('dutch')[i].children[1].value) + parseFloat(document.getElementsByClassName('english')[i].children[1].value))/2).toPrecision(2);
             document.getElementsByClassName('pass')[i].innerHTML = ((parseFloat(document.getElementsByClassName('math')[i].children[1].value) +
                                                                     parseFloat(document.getElementsByClassName('phys')[i].children[1].value)+
                                                                     parseFloat(document.getElementsByClassName('dutch')[i].children[1].value)+
@@ -263,7 +266,6 @@
             for(i=0; i<arrayLengthInputs; i++){
 
                 if (parseFloat(arrayInputs[i].value) < 5.5){
-                                console.log('1');
                                 arrayInputs[i].style.backgroundColor = "lightcoral";
                 }
                 else if(parseFloat(arrayInputs[i].value) >= 5.5){
@@ -272,11 +274,9 @@
             }
         }
 
-        
 
 
         function passedCheck(){
-
            
             for(i=0; i<arrayLenght; i++){  
 
@@ -286,13 +286,9 @@
                 else if (parseFloat(document.getElementsByClassName('pass')[i].innerHTML) > 6.5){
                     document.getElementsByClassName('id')[i].children[3].style.color = "green"; 
                 }
-
-               
-                
             }
         }
         
-        // console.log(document.getElementsByTagName('input')[1].value);
 
 
     </script>

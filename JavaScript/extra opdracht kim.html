@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let array=[2,5,7,1,8]
+        
+
+        //setInterval(
+        function bubble(array) {
+
+            let arrayLenght = array.length;
+
+            console.log(array);
+            // i=0;
+            for (let i=0; i< arrayLenght- i- 1; i++) {
+                console.log('i: ' +i);
+                // i++;
+
+                for (let j=0; j<arrayLenght- i- 1; j++)
+                {console.log('j: '+ j);
+                    if (array[j] > array[j + 1]) {
+                        [array[j], array[j + 1]] = [array[j + 1], array[j]]
+                    }
+                }console.log(array);
+                
+            }
+            return array;
+         }//,1000);
+
+        document.write(bubble([8, 4, 2, 3, 1]));
+        // document.write(bubble([1, 5, 9, 7, 6]));
+    </script>
+</body>
+</html>
+
+<!-- arrayLenght- i- 1 -->

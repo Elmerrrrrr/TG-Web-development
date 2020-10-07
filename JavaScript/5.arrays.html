@@ -143,6 +143,7 @@
 //Opdracht1
 
 let array1 = Array.from({length: 10}, () => Math.floor(Math.random() * 10));
+let array2 = ['Apple','Banana','Cherries','Dates','Eggfruit'];
 console.log(array1);
 
 // console.log(Array.from({length: 10}, (v, i) => i));
@@ -152,15 +153,15 @@ console.log(array1);
 
 //Opdracht2+3+4
 
-let array2 = ['Apple','Banana','Cherries','Dates','Eggfruit' ]
+
 console.log(array2);
 console.log(array2[0]);
 console.log(array2[2]);
 
 //opdracht5
 
-console.log(array2[array1[Math.floor(Math.random() * 5)]]);
-console.log(array1[10% 5]);
+console.log('modulo: ' + array2[array1[Math.floor(Math.random() * 10)]%5]); // met modulo 5 komt de waarde nooit boven de 5 uit
+// console.log(array2[array1[]]);
 
 //Opdracht6
 //push(), pop(), shift(), slice(), splice(), sort()
@@ -209,6 +210,13 @@ let swap = array2[0]
 array2[0]=array2[1];
 array2[1]= swap;
 console.log(array2);
+
+
+
+
+// let array1 = Array.from({length: 10}, () => Math.floor(Math.random() * 10));
+// let array2 = ['Apple','Banana','Cherries','Dates','Eggfruit' ];
+// console.log('modulo: ' + array2[array1[Math.floor(Math.random() * 10)]%5]);
 
 
 </script>

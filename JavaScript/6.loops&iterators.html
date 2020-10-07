@@ -157,12 +157,52 @@
 
     <h4>Opdracht 8</h4>
     <dt>Maak een for loop die van 0 t/m 50 itereert. Een hele bekende oefening is de fibonacci reeks.</dt>
-    <dd></dd>
+    <dd><pre>
+
+        const fib = []; 
+        fib[0] = 0;
+        fib[1] = 1;
+
+        for (let i= 2; i<=11; i++) {
+
+        // Next fibonacci number = previous + one before previous
+        fib[i] = fib[i-2] + fib[i-1];
+        console.log(fib[i]);
+        }
+
+    </pre></dd>
     <br>
 
     <h4>Opdracht 9</h4>
-    <dt></dt>
-    <dd></dd>
+    <dt>Lees je in hoe Bubble sort werkt: ​ https://en.wikipedia.org/wiki/Bubble_sort​ en
+        codeer de sorterings algoritme uit.</dt>
+    <dd><pre>
+
+
+        function bubble(array1, array2) {
+
+            const arrayCombined = [...array1, ...array2]
+            let arrayLenght = arrayCombined.length;
+
+            // console.log(arrayCombined);
+            
+            for (let i=0; i< arrayLenght; i++) {
+                    console.log('i: ' +i);
+
+                for (let j=0; j<arrayLenght; j++) {
+                    console.log('j: '+ j);
+                    if (arrayCombined[j] > arrayCombined[j + 1]) {
+                        [arrayCombined[j], arrayCombined[j + 1]] = [arrayCombined[j + 1], arrayCombined[j]]
+                    }
+                }
+                console.log(arrayCombined);
+            }
+            return arrayCombined;
+         }
+
+        document.write(bubble([8, 4, 2, 3, 1], [1, 5, 9, 7, 6]));
+
+    </pre></dd>
     <br>
 
 
@@ -255,19 +295,44 @@
 
 //Opdracht8
 
-function fibonacci(){
+const fib = []; 
+fib[0] = 0;
+fib[1] = 1;
 
-let i =0;
+for (let i=2; i<=11; i++) {
 
-    for(i=0; i<50; i++){
-       j= i+i;
-       console.log(j);
-       k=j+i;
-       console.log(i);
-    }
+// Next fibonacci number = previous + one before previous
+  fib[i] = fib[i-2] + fib[i-1];
+  console.log(fib[i]);
 }
 
-fibonacci();
+
+
+//Opdracht9
+
+function bubble(array1, array2) {
+
+const arrayCombined = [...array1, ...array2]
+let arrayLenght = arrayCombined.length;
+
+// console.log(arrayCombined);
+
+for (let i=0; i< arrayLenght; i++) {
+        console.log('i: ' +i);
+
+    for (let j=0; j<arrayLenght; j++) {
+        console.log('j: '+ j);
+        if (arrayCombined[j] > arrayCombined[j + 1]) {
+            [arrayCombined[j], arrayCombined[j + 1]] = [arrayCombined[j + 1], arrayCombined[j]]
+        }
+    }
+    console.log(arrayCombined);
+}
+return arrayCombined;
+}
+
+document.write(bubble([8, 4, 2, 3, 1], [1, 5, 9, 7, 6]));
+
 
 
 

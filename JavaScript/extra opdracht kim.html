@@ -3,39 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Array Sort - Bubble</title>
 </head>
 <body>
     <script>
-        // let array=[2,5,7,1,8]
-        
 
-        //setInterval(
-        function bubble(array) {
+        function bubble(array1, array2) {
 
-            let arrayLenght = array.length;
+            const arrayCombined = [...array1, ...array2]
+            let arrayLenght = arrayCombined.length;
 
-            console.log(array);
-            // i=0;
-            for (let i=0; i< arrayLenght- i- 1; i++) {
-                console.log('i: ' +i);
-                // i++;
+            // console.log(arrayCombined);
+            
+            for (let i=0; i< arrayLenght; i++) {
+                    console.log('i: ' +i);
 
-                for (let j=0; j<arrayLenght- i- 1; j++)
-                {console.log('j: '+ j);
-                    if (array[j] > array[j + 1]) {
-                        [array[j], array[j + 1]] = [array[j + 1], array[j]]
+                for (let j=0; j<arrayLenght; j++) {
+                    console.log('j: '+ j);
+                    if (arrayCombined[j] > arrayCombined[j + 1]) {
+                        [arrayCombined[j], arrayCombined[j + 1]] = [arrayCombined[j + 1], arrayCombined[j]]
                     }
-                }console.log(array);
-                
+                }
+                console.log(arrayCombined);
             }
-            return array;
-         }//,1000);
+            return arrayCombined;
+         }
 
-        document.write(bubble([8, 4, 2, 3, 1]));
-        // document.write(bubble([1, 5, 9, 7, 6]));
+        document.write(bubble([8, 4, 2, 3, 1], [1, 5, 9, 7, 6]));
+
     </script>
 </body>
 </html>
-
-<!-- arrayLenght- i- 1 -->

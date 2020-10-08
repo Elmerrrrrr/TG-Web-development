@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Objects</title>
+
+    <style>
+        
+        html{background: cornsilk;}
+
+        h1{
+            text-align: center;
+            color:darkcyan;
+        }
+
+        h4{
+            font-size: large;
+            text-decoration: underline;
+            color:darkcyan;
+        }
+
+        dt{font-weight: bold;}
+
+    </style>
+
+</head>
+<body>
+
+    <h1>JavaScript - Objects</h1>
+
+    <h4>Opdracht 1</h4>
+    <dt>Maak een Object die club informatie bijhoudt: 
+        ● Naam van de club 
+        ● Type sport 
+        ● Aantal leden 
+        </dt>
+    <dd>Er zijn meedere manieren om een object aan te maken, afhankelijk van de toepassing er van kun je 
+        een keuze maken uit:
+        <pre>
+                Examples:
+        1. Object constructor //Focus
+
+        var person = new Object();
+
+        person.name = "Anand",
+        person.getName = function(){
+        return this.name ; 
+        };
+
+        2. Literal constructor  //Focus
+
+        var person = { 
+        name : "Anand",
+        getName : function (){
+        return this.nam
+            }
+        } 
+
+        3. Function Constructor
+        function Person(name){
+        this.name = name
+        this.getName = function(){
+            return this.name}
+        }
+
+        4. Prototype
+        function Person(){};
+
+        Person.prototype.name = "Anand";
+
+        5. Function/Prototype combination
+
+        function Person(name){
+        this.name = name;
+        } 
+
+        Person.prototype.getName = function(){
+        return this.name
+        }
+
+        6. Singleton
+        var person = new function(){
+        this.name = "Anand"
+        } 
+        </pre>
+
+        <pre>
+            //Opdracht1
+
+            let clubInformation = new Object();
+    
+            clubInformation.clubName =  'BestClubEver',
+            clubInformation.typeSport = 'Soccer',
+            clubInformation.memberCount = 1500;
+    
+            
+        </pre>
+        
+        </dd>
+    <br>
+
+    <div id="clubs" class="clubs"></div> 
+
+    <br>
+
+    <h4>Opdracht 2</h4>
+    <dt>Maak een Object van contactgegevens en voeg dat ook toe aan de club object: ● Contactgegevens 
+        ○ Adres 
+        ○ Telefoonnr 
+        ○ Contactpersoon 
+        </dt>
+    <dd><pre>
+
+        clubInformation.contactInformation = {
+            Adress: "Best Lane Ever",
+            Telephone: "777-7777777",
+            Contactperson: "Superman"
+        }
+
+        console.log(clubInformation);
+
+    </pre></dd>
+    <br>
+
+    <h4>Opdracht 3</h4>
+    <dt>Het is heel gebruikelijk dat dezelfde objecten in een lijst staan. Maak een lijst aan en voeg 4 Club objecten toe aan de lijst.
+        Itereer over de lijst heen en print de verschillende clubnamen uit op jouw pagina.</dt>
+    <dd><pre>
+
+
+        function ClubInformation (clubName, typeSport, memberCount, contactInformation){
+
+            this.clubName =  clubName;
+            this.typeSport = typeSport;
+            this.memberCount = memberCount;
+            this.contactInformation = contactInformation;
+            }
+    
+            let club1 = new ClubInformation('Club1', 'Soccer', 1500, {Adress: 'Lane1', Telephone: '777-77777', Contactperson: 'Contactperson1'});
+            let club2 = new ClubInformation('Club2', 'Soccer', 2500, {Adress: 'Lane2', Telephone: '777-77777', Contactperson: 'Contactperson2'});
+            let club3 = new ClubInformation('Club3', 'Soccer', 3500, {Adress: 'Lane3', Telephone: '777-77777', Contactperson: 'Contactperson3'});
+            let club4 = new ClubInformation('Club4', 'Soccer', 4500, {Adress: 'Lane4', Telephone: '777-77777', Contactperson: 'Contactperson4'});
+            
+            let array = [club1, club2, club3, club4];
+    
+            // console.log(club1, club2, club3, club4);
+            // console.log(array);
+    
+            let arrayLenght = array.length;
+    
+            for (let i =0; i< arrayLenght; i++){
+                console.log(array[i].clubName);
+            }
+    
+
+
+    </pre></dd>
+    <br>
+
+    <h4>Opdracht 4</h4>
+    <dt>Sorteer persons op leeftijd van klein naar groot.</dt>
+    <dd><pre>
+        function Person(name, age) { 
+            this.name = name; 
+            this.age = age; 
+            } 
+
+            const persons = [ 
+            new Person("Jan", 24), 
+            new Person("Klaas", 15), 
+            new Person("Yanis", 42), 
+            new Person("Rupel", 55), 
+            new Person("Hendrik", 32), 
+            new Person("Mono", 28), 
+            new Person("West", 23), 
+            ];
+            console.log(person.age);
+
+
+            for(let i=0; i< persons.length; i++ ){
+                
+                // console.log(persons[i].age);
+                }
+                // console.log(persons.sort( (a,b) => (a.age > b.age) ? 1 : ((b.age > a.age) ? -1 : 0)));
+    
+    
+               function compare( a, b ) {
+                    if ( a.age < b.age ){
+                        return -1;
+                    }
+                    if ( a.age > b.age ){
+                        return 1;
+                    }
+                    return 0;
+                    }
+    
+              console.log(persons.sort(compare));  
+    
+
+    </pre></dd>
+    <br>
+
+    <h4>Opdracht 5</h4>
+    <dt></dt>
+    <dd></dd>
+    <br>
+
+    <h4>Opdracht 6</h4>
+    <dt></dt>
+    <dd></dd>
+    <br>
+
+    <h4>Opdracht 7</h4>
+    <dt></dt>
+    <dd></dd>
+    <br>
+
+    <h4>Opdracht 8</h4>
+    <dt></dt>
+    <dd></dd>
+    <br>
+
+
+
+<script>
+
+        //Opdracht1
+
+        // let clubInformation = new Object();
+
+        // clubInformation.clubName =  'BestClubEver',
+        // clubInformation.typeSport = 'Soccer',
+        // clubInformation.memberCount = 1500;
+
+        
+
+        // //Opdracht2
+
+        // clubInformation.contactInformation = {
+        //     Adress: "Best Lane Ever",
+        //     Telephone: "777-7777777",
+        //     Contactperson: "person1"
+        // }
+
+        // console.log(clubInformation);
+
+
+        //Opdracht3
+
+        // function ClubInformation (clubName, typeSport, memberCount, contactInformation){
+
+        // this.clubName =  clubName;
+        // this.typeSport = typeSport;
+        // this.memberCount = memberCount;
+        // this.contactInformation = contactInformation;
+        // }
+
+        // let club1 = new ClubInformation('Club1', 'Soccer', 1500, {Adress: 'Lane1', Telephone: '777-77777', Contactperson: 'Contactperson1'});
+        // let club2 = new ClubInformation('Club2', 'Soccer', 2500, {Adress: 'Lane2', Telephone: '777-77777', Contactperson: 'Contactperson2'});
+        // let club3 = new ClubInformation('Club3', 'Soccer', 3500, {Adress: 'Lane3', Telephone: '777-77777', Contactperson: 'Contactperson3'});
+        // let club4 = new ClubInformation('Club4', 'Soccer', 4500, {Adress: 'Lane4', Telephone: '777-77777', Contactperson: 'Contactperson4'});
+        
+        // let array = [club1, club2, club3, club4];
+
+        // // console.log(club1, club2, club3, club4);
+        // // console.log(array);
+
+        // let arrayLenght = array.length;
+
+        // for (let i =0; i<arrayLenght; i++){
+        //     console.log(array[i].memberCount);
+        // }
+        
+
+        //Opdracht4
+
+            function Person(name, age) { 
+            this.name = name; 
+            this.age = age; 
+            } 
+
+            const persons = [ 
+            new Person("Jan", 24), 
+            new Person("Klaas", 15), 
+            new Person("Yanis", 42), 
+            new Person("Rupel", 55), 
+            new Person("Hendrik", 32), 
+            new Person("Mono", 28), 
+            new Person("West", 23), 
+            ];
+            // console.log(persons.age);
+
+
+            for(let i=0; i<persons.length; i++ ){
+                
+                console.log(persons[i].age);
+            }
+            // console.log(persons.sort( (a,b) => (a.age > b.age) ? 1 : ((b.age > a.age) ? -1 : 0)));
+    
+    
+            function compare( a, b ) {
+                    if ( a.age < b.age ){
+                        return -1;
+                    }
+                    if ( a.age > b.age ){
+                        return 1;
+                    }
+                    return 0;
+                    }
+    
+            console.log(persons.sort(compare));  
+    
+        //Opdracht5
+
+
+
+
+
+
+</script>
+
+
+
+
+    
+</body>
+</html>

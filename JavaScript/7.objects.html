@@ -202,23 +202,85 @@
     <br>
 
     <h4>Opdracht 5</h4>
-    <dt></dt>
-    <dd></dd>
+    <dt>Maak nu een Person object door gebruik te maken van Object initializers.
+        Wat zou eventueel de voor en nadelen t.o.v Object constructors? </dt>
+    <dd>Een voordeel van Object contructor is dat als je veel objecten wil creeeren je dit veel minder
+        code is dan via een directe one line Object initializer, wat dus weer handig is als je maar 1 of 2 objecten wilt
+        aanmaken.
+        
+        <pre>
+            jan = {name:"Jan", age: 24}
+            console.log(jan);
+            document.getElementById('opdracht5').innerText = jan.name + " is " +jan.age;
+
+    </pre></dd>
+
+    <div id="opdracht5"></div>
     <br>
 
     <h4>Opdracht 6</h4>
-    <dt></dt>
-    <dd></dd>
+    <dt>Zet opdracht 4 om in classes i.p.v object constructors. </dt>
+    <dd><pre>
+
+
+        class Person {
+
+            constructor(name, age){
+                this.name = name;
+                this.age = age;
+            }
+
+            writeData(){
+
+            document.getElementById('opdracht6').innerText = this.name +" is " + this.age + " years old."
+
+            }
+
+        }
+
+        let person1 = new Person("Jan" , 68);
+        let person2 = new Person("Klaas" , 33)
+        console.log(person1, person2);
+        person1.writeData();
+
+
+
+    </pre></dd>
+
+    <div id="opdracht6"></div>
     <br>
 
     <h4>Opdracht 7</h4>
-    <dt></dt>
-    <dd></dd>
+    <dt>Met al de voorgaande onderdelen ben je nu in staat om een simpele spel te maken, Bijvoorbeeld rock, paper scissor.</dt>
+    <dd><pre>
+        
+
+
+    </pre></dd>
     <br>
 
     <h4>Opdracht 8</h4>
-    <dt></dt>
-    <dd></dd>
+    <dt>JSON is een heel bekend concept binnen developers. Zoek naar een aantal artikelen over JSON. Belangrijk concept om te kennen.</dt>
+    <dd><pre>
+
+        JSON = JavaScript Object Notation --> Language independent and user-readable. Based on 2 data structures;
+
+        - collection of name & value pairs // similar like objects. Think like JavaScript objects stringlified.
+
+        - ordered list of values // comparable with arrays. This has the ability of transfering  a collection in
+          single line file for transfer
+
+        links:
+
+        https://www.w3schools.com/js/js_json.asp
+
+        https://www.youtube.com/watch?v=OEqHC1kbrbg&list=PLlrxD0HtieHhW0NCG7M536uHGOtJ95Ut2&index=41
+        https://www.youtube.com/watch?v=hxQmx2R1zJw&list=PLlrxD0HtieHhW0NCG7M536uHGOtJ95Ut2&index=42
+
+        
+
+    </pre>
+    </dd>
     <br>
 
 
@@ -275,45 +337,72 @@
 
         //Opdracht4
 
-            function Person(name, age) { 
-            this.name = name; 
-            this.age = age; 
-            } 
+            // function Person(name, age) { 
+            // this.name = name; 
+            // this.age = age; 
+            // } 
 
-            const persons = [ 
-            new Person("Jan", 24), 
-            new Person("Klaas", 15), 
-            new Person("Yanis", 42), 
-            new Person("Rupel", 55), 
-            new Person("Hendrik", 32), 
-            new Person("Mono", 28), 
-            new Person("West", 23), 
-            ];
-            // console.log(persons.age);
+            // const persons = [ 
+            // new Person("Jan", 24), 
+            // new Person("Klaas", 15), 
+            // new Person("Yanis", 42), 
+            // new Person("Rupel", 55), 
+            // new Person("Hendrik", 32), 
+            // new Person("Mono", 28), 
+            // new Person("West", 23), 
+            // ];
+            // // console.log(persons.age);
 
 
-            for(let i=0; i<persons.length; i++ ){
+            // for(let i=0; i<persons.length; i++ ){
                 
-                console.log(persons[i].age);
-            }
+            //     console.log(persons[i].age);
+            // }
             // console.log(persons.sort( (a,b) => (a.age > b.age) ? 1 : ((b.age > a.age) ? -1 : 0)));
     
     
-            function compare( a, b ) {
-                    if ( a.age < b.age ){
-                        return -1;
-                    }
-                    if ( a.age > b.age ){
-                        return 1;
-                    }
-                    return 0;
-                    }
+            // function compare( a, b ) {
+            //         if ( a.age < b.age ){
+            //             return -1;
+            //         }
+            //         if ( a.age > b.age ){
+            //             return 1;
+            //         }
+            //         return 0;
+            //         }
     
-            console.log(persons.sort(compare));  
+            // console.log(persons.sort(compare));  
     
         //Opdracht5
 
+        // jan = {name:"Jan", age: 24}
+        // console.log(jan);
+        // document.getElementById('opdracht5').innerText = jan.name + " is " +jan.age;
 
+
+        //Opdracht6
+
+        class Person {
+
+            constructor(name, age){
+                this.name = name;
+                this.age = age;
+            }
+
+            writeData(){
+
+            document.getElementById('opdracht6').innerText = this.name +" is " + this.age + " years old."
+
+            }
+
+        }
+
+        let person1 = new Person("Jan" , 68);
+        let person2 = new Person("Klaas" , 33)
+        console.log(person1, person2);
+        person1.writeData();
+
+        //Opdracht7
 
 
 

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Sissor Game</title>
+    <script src="https://kit.fontawesome.com/a9545f17e8.js" crossorigin="anonymous"></script>
+
+    <style>
+        html, body{
+
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: cornsilk;
+            color: cornflowerblue;
+            
+        }
+       .container{
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           flex-wrap: wrap;
+
+        }
+        h1{
+            align-self: center;
+            text-shadow: 1px 1px 1px gray;
+
+        }
+        .name{
+            text-shadow: 1px 1px 1px gray;
+        }
+
+        .players{
+
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 5%;
+            font-size: x-large;
+            font-weight: bold;
+        }
+        #scorePlayer, #scoreComputer{
+            margin-left: 48%;
+            filter: contrast(250%);
+        }
+        #resultGame{
+
+            display: flex;
+            justify-content: center;
+            margin-top: 20%;
+            filter: contrast(250%);
+            text-shadow: 1px 1px 1px gray;
+            font-size: x-large;
+            font-weight: bold;
+        }
+
+        .buttons{
+
+            display: flex;
+            justify-content: space-around;
+            margin-top: 25%;
+        }
+        button{
+            padding: 0.5em;
+            width: 200px;
+            background-color: cornflowerblue;
+            color: white;
+            border: 2px solid white;
+            border-radius: 20px;
+            font-size: x-large;
+            font-weight: bold;
+            box-shadow: 4px 4px 4px grey;
+            transition: 0.2s ease-in-out;
+
+        }
+        button:hover, button:focus {
+        outline: none;
+        }
+
+        button:hover{
+            translate: 4px 4px;
+            box-shadow: none;
+        }
+
+        .item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .fas{
+            margin-bottom: 1em;
+            font-size: 50px;
+            text-shadow: 2px 2px 2px gray;
+            transition: 0.2s ease-in-out;
+        }
+        .fas:hover{
+            transform: rotate(45deg);
+        }
+
+        footer {
+        position: fixed;
+        bottom: 0px;
+        left: 45vw;
+        margin-bottom: 10px;
+        font-size: small;
+        color: gray;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+    <h1>Rock - Paper - Scissors</h1>
+
+    <div class="players"><div class="name">Player<div id="scorePlayer">0</div></div><div class="name">Computer<div id="scoreComputer">0</div></div></div>
+
+
+    <div id="resultGame">Play the game..!</div>
+
+
+   <div class="buttons"> 
+
+    <div class="item rock">
+        <i class="fas fa-hand-rock"></i>
+        <button onclick="play(this)">rock</button>
+    </div>
+    
+    <div class="item paper">
+        <i class="fas fa-hand-paper"></i>
+        <button onclick="play(this)">paper</button>
+    </div> 
+
+    <div class="item scissors">
+        <i class="fas fa-hand-scissors"></i>
+        <button onclick="play(this)">scissors</button>
+    </div> 
+       
+</div>
+
+
+<footer>Right to copy 2020 - Elmer Volgers</footer>
+    
+
+<script>
+
+let playerScore = 0;
+let computerScore = 0;
+
+    function play(btnElement) {
+
+        let chosenItem = btnElement.innerHTML;
+        let items = ['rock', 'paper' , 'scissors']
+        let randomItem = items[Math.floor(Math.random()*3)];
+
+        // console.log(randomItem);
+
+         if (chosenItem == randomItem) {
+             document.getElementById('resultGame').innerText = 'Player Wins!!';
+             playerScore++;
+             document.getElementById('scorePlayer').innerText = playerScore;
+         } 
+         else {
+             document.getElementById('resultGame').innerText = 'Computer Wins:(';
+             computerScore++;
+             document.getElementById('scoreComputer').innerText = computerScore;
+         }
+    }
+
+</script>
+
+    
+</body>
+</html>

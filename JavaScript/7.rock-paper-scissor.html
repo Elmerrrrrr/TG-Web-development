@@ -26,6 +26,7 @@
         h1{
             align-self: center;
             text-shadow: 1px 1px 1px gray;
+            text-align: center;
 
         }
         .name{
@@ -36,34 +37,47 @@
 
             display: flex;
             justify-content: space-evenly;
-            margin-top: 5%;
+            margin-top: 50px;
             font-size: x-large;
             font-weight: bold;
         }
         #scorePlayer, #scoreComputer{
-            margin-left: 48%;
+            margin-left: 40%;
             filter: contrast(250%);
         }
-        #resultGame{
+        #resultGame, .resultItems{
 
             display: flex;
             justify-content: center;
-            margin-top: 20%;
+            margin-top: 50px;
             filter: contrast(250%);
             text-shadow: 1px 1px 1px gray;
             font-size: x-large;
             font-weight: bold;
         }
 
-        .buttons{
+        .resultItems{
+            
+            justify-content: space-evenly;
+        }
+
+        #resultItem{
+            margin-top: 1em;
+            margin-bottom: -1em;
+
+        }
+
+        .button-container{
 
             display: flex;
             justify-content: space-around;
-            margin-top: 25%;
+            flex-wrap: wrap;
+            padding-top: 50px;
+            min-width: 200px;
         }
         button{
             padding: 0.5em;
-            width: 200px;
+            width: 150px;
             background-color: cornflowerblue;
             color: white;
             border: 2px solid white;
@@ -87,14 +101,14 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-
+            padding-top: 50px;
         }
 
         .fas{
-            margin-bottom: 1em;
+            margin-bottom: 0.3em;
             font-size: 50px;
             text-shadow: 2px 2px 2px gray;
-            transition: 0.2s ease-in-out;
+            transition: 0.1s ease-in-out;
         }
         .fas:hover{
             transform: rotate(45deg);
@@ -102,11 +116,12 @@
 
         footer {
         position: fixed;
+        width: 100%;
         bottom: 0px;
-        left: 45vw;
         margin-bottom: 10px;
         font-size: small;
         color: gray;
+        text-align: center;
         }
 
 
@@ -118,13 +133,14 @@
 <div class="container">
     <h1>Rock - Paper - Scissors</h1>
 
-    <div class="players"><div class="name">Player<div id="scorePlayer">0</div></div><div class="name">Computer<div id="scoreComputer">0</div></div></div>
+    <div class="players"><div class="name">You<div id="scorePlayer">0</div></div><div class="name">Computer<div id="scoreComputer">0</div></div></div>
 
 
     <div id="resultGame">Play the game..!</div>
+   <div class="resultItems"><div id="resultItemPlayer"></div><div id="resultItemTie"></div><div id="resultItemComputer"></div></div> 
 
 
-   <div class="buttons"> 
+   <div class="button-container"> 
 
     <div class="item rock">
         <i class="fas fa-hand-rock"></i>
@@ -152,25 +168,105 @@
 let playerScore = 0;
 let computerScore = 0;
 
+
+
     function play(btnElement) {
 
-        let chosenItem = btnElement.innerHTML;
-        let items = ['rock', 'paper' , 'scissors']
-        let randomItem = items[Math.floor(Math.random()*3)];
+    let chosenItem = btnElement.innerHTML;
+    let items = [{ name:'rock', icon: '<i class="fas fa-hand-rock"></i>'},{ name:'paper', icon: '<i class="fas fa-hand-paper"></i>'}, {name:'scissors', icon:'<i class="fas fa-hand-scissors"></i>'}];
+    let randomItem = items[Math.floor(Math.random()*3)].name;
 
-        // console.log(randomItem);
 
-         if (chosenItem == randomItem) {
-             document.getElementById('resultGame').innerText = 'Player Wins!!';
-             playerScore++;
-             document.getElementById('scorePlayer').innerText = playerScore;
-         } 
-         else {
-             document.getElementById('resultGame').innerText = 'Computer Wins:(';
-             computerScore++;
-             document.getElementById('scoreComputer').innerText = computerScore;
-         }
+        
+    console.log('Chosen Item: ' + chosenItem);
+    console.log("Random item:" + randomItem);
+
+    document.getElementById('resultItemComputer').innerHTML = randomItem;
+
+
+                //Display items
+            for (let i = 0; i < 3; i++) { 
+
+                //Display chosen item Player
+                if (chosenItem == items[i].name) {
+                    document.getElementById('resultItemPlayer').innerHTML = items[i].icon;
+                }
+                else if (chosenItem == items[i].name) {
+                    document.getElementById('resultItemPlayer').innerHTML = items[i].icon;
+                }
+                else if (chosenItem == items[i].name) {
+                    document.getElementById('resultItemPlayer').innerHTML = items[i].icon;
+                }
+
+                //Display chosen item Computer
+                if (randomItem == items[i].name) {
+                    document.getElementById('resultItemComputer').innerHTML = items[i].icon;
+                }
+                else if (randomItem == items[i].name) {
+                    document.getElementById('resultItemComputer').innerHTML = items[i].icon;
+                }
+                else if (randomItem == items[i].name) {
+                    document.getElementById('resultItemComputer').innerHTML = items[i].icon;
+                }
+
+            }
+
+
+                
+        
+                //Rules of the game //0=rock 1=paper 2=scissor
+
+                if(chosenItem == randomItem){
+                    document.getElementById('resultGame').innerHTML = "It's a tie!";
+                }
+
+                //Chosen Item is rock & rock over scissor     
+                if(chosenItem == items[0].name && randomItem != items[1].name && randomItem != items[0].name){ //rock over scissor
+                    document.getElementById('scorePlayer').innerHTML= ++playerScore;
+                    document.getElementById('resultGame').innerHTML = 'You Win!!';
+                }
+                //Chosen Item is rock & paper over rock 
+                if(chosenItem == items[0].name && randomItem == items[1].name && randomItem != items[0].name){ 
+                    document.getElementById('scoreComputer').innerHTML= ++computerScore;
+                    document.getElementById('resultGame').innerHTML = 'Computer Wins :(';
+                }
+
+
+                //Chosen Item is paper & paper over rock
+                if(chosenItem == items[1].name && randomItem != items[2].name && randomItem != items[1].name){ //paper over scissor
+                    document.getElementById('scorePlayer').innerHTML= ++playerScore;
+                    document.getElementById('resultGame').innerHTML = 'You Win!!';
+                }
+                //Chosen Item is paper & scissor over paper
+                if(chosenItem == items[1].name && randomItem == items[2].name && randomItem != items[1].name){ //paper over scissor
+                    document.getElementById('scoreComputer').innerHTML= ++computerScore;
+                    document.getElementById('resultGame').innerHTML = 'Computer Wins :(';
+                }
+
+
+                //Chosen Item is scissor & scissor over paper
+                if(chosenItem == items[2].name && randomItem != items[0].name && randomItem != items[2].name){ //paper over scissor
+                    document.getElementById('scorePlayer').innerHTML= ++playerScore;
+                    document.getElementById('resultGame').innerHTML = 'You Win!!';
+                }
+                //Chosen Item is scissor & rock over scissor
+                if(chosenItem == items[2].name && randomItem == items[0].name && randomItem != items[2].name){ //paper over scissor
+                    document.getElementById('scoreComputer').innerHTML= ++computerScore;
+                    document.getElementById('resultGame').innerHTML = 'Computer Wins :(';
+                }
+
+
+          
     }
+
+
+
+
+
+
+
+
+
 
 </script>
 

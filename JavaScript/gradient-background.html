@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Background</title>
+
+    <style>
+
+        html, body{
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100vh;
+            /* background: linear-gradient(45deg, #ff3479, #0319f4); */
+            background-blend-mode: soft-light;
+            color: cornsilk;
+        }
+        button{
+            background: rgb(255, 52, 121);
+            color: cornsilk;
+            padding: 5px 20px;
+            font-size: large;
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px;
+        }
+        button:hover, button:focus {
+        outline: none;
+        }
+        button:hover{
+            translate: 1px 1px;
+            /* box-shadow: -1px 1px 5px; */
+        }
+
+        h1{
+            margin-top: 0;
+            padding-top: 15px;
+        }
+        .container{
+
+        text-align: center;
+        }
+
+
+    </style>
+
+
+</head>
+
+
+
+<body>
+
+    <div class="container">
+        <h1>Gradient Background</h1>
+        
+        <button onclick="changeBackground()" id="btn-change">change bg</button>
+    </div>
+
+
+
+    <script>
+    
+    //Default values
+
+    let angle = 45;
+    let colorOne = 'rgb(255, 52,'; // rgb(255, 52, 121)
+    let colorTwo = 'rgb(3, 25,'; //  rgb(3, 25, 244)
+    let clr1 = 121;
+    let clr2 = 244;
+    document.body.style.background = '-webkit-linear-gradient('+ angle +'deg' + ', ' + colorOne + clr1 + ')' + ', ' + colorTwo + clr2 + ')';
+
+        function changeBackground(){
+
+            let clr1 = Math.round(Math.random()*255);
+            let clr2 = Math.round(Math.random()*255);
+            angle = Math.floor(Math.random()*360);
+            console.log(angle);
+            document.body.style.background = '-webkit-linear-gradient('+ angle +'deg' + ', ' + colorOne + clr1 + ')' + ', ' + colorTwo + clr2 + ')';
+            
+        }
+
+        // setInterval(changeBackground,500);
+
+
+
+
+    </script> 
+
+</body>
+</html>

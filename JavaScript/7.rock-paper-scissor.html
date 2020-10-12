@@ -7,40 +7,49 @@
     <script src="https://kit.fontawesome.com/a9545f17e8.js" crossorigin="anonymous"></script>
 
     <style>
-        html, body{
 
+         html, body{
             margin: 0;
             padding: 0;
             height: 100%;
             background-color: cornsilk;
             color: cornflowerblue;
-            
         }
        .container{
            display: flex;
            flex-direction: column;
            justify-content: center;
-           flex-wrap: wrap;
-
+           height: 100vh;
+           width: 50%;
+           margin-left: auto;
+           margin-right: auto;
         }
         h1{
             align-self: center;
             text-shadow: 1px 1px 1px gray;
             text-align: center;
-
+            width: 100%;
+            padding-top: 50px;
         }
-        .name{
+        .namePlayer, .nameComputer{
             text-shadow: 1px 1px 1px gray;
         }
 
-        .players{
+        .namePlayer, #resultItemPlayer{
+            color:rgb(50, 79, 134)
+        }
+        .nameComputer, #resultItemComputer{
+            color:rgb(9, 155, 142)
+        }
 
+        .players{
             display: flex;
             justify-content: space-evenly;
             margin-top: 50px;
             font-size: x-large;
             font-weight: bold;
         }
+
         #scorePlayer, #scoreComputer{
             margin-left: 40%;
             filter: contrast(250%);
@@ -51,9 +60,10 @@
             justify-content: center;
             margin-top: 50px;
             filter: contrast(250%);
-            text-shadow: 1px 1px 1px gray;
-            font-size: x-large;
+            text-shadow: 1px 2px 2px gray;
+            font-size: xx-large;
             font-weight: bold;
+            text-align: center;
         }
 
         .resultItems{
@@ -61,20 +71,20 @@
             justify-content: space-evenly;
         }
 
-        #resultItem{
+        #resultItemPlayer, #resultItemComputer {
             margin-top: 1em;
             margin-bottom: -1em;
-
         }
+      
+
 
         .button-container{
-
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
-            padding-top: 50px;
-            min-width: 200px;
+            padding-top: 30px;
         }
+
         button{
             padding: 0.5em;
             width: 150px;
@@ -102,6 +112,8 @@
             flex-direction: column;
             align-items: center;
             padding-top: 50px;
+            padding-left: 15px;
+            height: 150px;
         }
 
         .fas{
@@ -115,13 +127,33 @@
         }
 
         footer {
-        position: fixed;
-        width: 100%;
-        bottom: 0px;
-        margin-bottom: 10px;
-        font-size: small;
-        color: gray;
-        text-align: center;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            margin-bottom: 10px;
+            font-size: small;
+            color: gray;
+            text-align: center;
+        }
+
+        #btn-change{
+            background: rgb(255, 52, 121);
+            color: cornsilk;
+            padding: 3px 5px;
+            width: fit-content;
+            margin-left: 20px;
+            font-size: small;
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px;
+        }
+        #btn-change:hover, #btn-change:focus {
+        outline: none;
+        }
+        #btn-change:hover{
+            translate: 1px 1px;
         }
 
 
@@ -133,34 +165,37 @@
 <div class="container">
     <h1>Rock - Paper - Scissors</h1>
 
-    <div class="players"><div class="name">You<div id="scorePlayer">0</div></div><div class="name">Computer<div id="scoreComputer">0</div></div></div>
+    <div class="players"><div class="namePlayer">You<div id="scorePlayer">0</div></div><div class="nameComputer">Computer<div id="scoreComputer">0</div></div></div>
 
 
     <div id="resultGame">Play the game..!</div>
-   <div class="resultItems"><div id="resultItemPlayer"></div><div id="resultItemTie"></div><div id="resultItemComputer"></div></div> 
+    <div class="resultItems"><div id="resultItemPlayer"></div><div id="resultItemTie"></div><div id="resultItemComputer"></div></div> 
 
 
-   <div class="button-container"> 
+    <div class="button-container"> 
 
-    <div class="item rock">
-        <i class="fas fa-hand-rock"></i>
-        <button onclick="play(this)">rock</button>
+        <div class="item rock">
+            <i class="fas fa-hand-rock"></i>
+            <button onclick="play(this)">rock</button>
+        </div>
+        
+        <div class="item paper">
+            <i class="fas fa-hand-paper"></i>
+            <button onclick="play(this)">paper</button>
+        </div> 
+
+        <div class="item scissors">
+            <i class="fas fa-hand-scissors"></i>
+            <button onclick="play(this)">scissors</button>
+        </div> 
+
     </div>
-    
-    <div class="item paper">
-        <i class="fas fa-hand-paper"></i>
-        <button onclick="play(this)">paper</button>
-    </div> 
 
-    <div class="item scissors">
-        <i class="fas fa-hand-scissors"></i>
-        <button onclick="play(this)">scissors</button>
-    </div> 
-       
+    <footer>Right to copy 2020 - Elmer Volgers <button onclick="changeBackground()" id="btn-change">change bg</button> </footer>
 </div>
 
 
-<footer>Right to copy 2020 - Elmer Volgers</footer>
+
     
 
 <script>
@@ -168,6 +203,8 @@
 let playerScore = 0;
 let computerScore = 0;
 
+//  console.log(document.documentElement);
+//  document.documentElement.style.color = 'white';
 
 
     function play(btnElement) {
@@ -175,11 +212,6 @@ let computerScore = 0;
     let chosenItem = btnElement.innerHTML;
     let items = [{ name:'rock', icon: '<i class="fas fa-hand-rock"></i>'},{ name:'paper', icon: '<i class="fas fa-hand-paper"></i>'}, {name:'scissors', icon:'<i class="fas fa-hand-scissors"></i>'}];
     let randomItem = items[Math.floor(Math.random()*3)].name;
-
-
-        
-    console.log('Chosen Item: ' + chosenItem);
-    console.log("Random item:" + randomItem);
 
     document.getElementById('resultItemComputer').innerHTML = randomItem;
 
@@ -221,37 +253,37 @@ let computerScore = 0;
                 }
 
                 //Chosen Item is rock & rock over scissor     
-                if(chosenItem == items[0].name && randomItem != items[1].name && randomItem != items[0].name){ //rock over scissor
-                    document.getElementById('scorePlayer').innerHTML= ++playerScore;
+                if(chosenItem == items[0].name && randomItem != items[1].name && randomItem != items[0].name){
+                    document.getElementById('scorePlayer').innerHTML = ++playerScore;
                     document.getElementById('resultGame').innerHTML = 'You Win!!';
                 }
                 //Chosen Item is rock & paper over rock 
                 if(chosenItem == items[0].name && randomItem == items[1].name && randomItem != items[0].name){ 
-                    document.getElementById('scoreComputer').innerHTML= ++computerScore;
+                    document.getElementById('scoreComputer').innerHTML = ++computerScore;
                     document.getElementById('resultGame').innerHTML = 'Computer Wins :(';
                 }
 
 
                 //Chosen Item is paper & paper over rock
-                if(chosenItem == items[1].name && randomItem != items[2].name && randomItem != items[1].name){ //paper over scissor
-                    document.getElementById('scorePlayer').innerHTML= ++playerScore;
+                if(chosenItem == items[1].name && randomItem != items[2].name && randomItem != items[1].name){
+                    document.getElementById('scorePlayer').innerHTML = ++playerScore;
                     document.getElementById('resultGame').innerHTML = 'You Win!!';
                 }
                 //Chosen Item is paper & scissor over paper
-                if(chosenItem == items[1].name && randomItem == items[2].name && randomItem != items[1].name){ //paper over scissor
-                    document.getElementById('scoreComputer').innerHTML= ++computerScore;
+                if(chosenItem == items[1].name && randomItem == items[2].name && randomItem != items[1].name){
+                    document.getElementById('scoreComputer').innerHTML = ++computerScore;
                     document.getElementById('resultGame').innerHTML = 'Computer Wins :(';
                 }
 
 
                 //Chosen Item is scissor & scissor over paper
-                if(chosenItem == items[2].name && randomItem != items[0].name && randomItem != items[2].name){ //paper over scissor
-                    document.getElementById('scorePlayer').innerHTML= ++playerScore;
+                if(chosenItem == items[2].name && randomItem != items[0].name && randomItem != items[2].name){
+                    document.getElementById('scorePlayer').innerHTML = ++playerScore;
                     document.getElementById('resultGame').innerHTML = 'You Win!!';
                 }
                 //Chosen Item is scissor & rock over scissor
-                if(chosenItem == items[2].name && randomItem == items[0].name && randomItem != items[2].name){ //paper over scissor
-                    document.getElementById('scoreComputer').innerHTML= ++computerScore;
+                if(chosenItem == items[2].name && randomItem == items[0].name && randomItem != items[2].name){
+                    document.getElementById('scoreComputer').innerHTML = ++computerScore;
                     document.getElementById('resultGame').innerHTML = 'Computer Wins :(';
                 }
 
@@ -259,15 +291,33 @@ let computerScore = 0;
           
     }
 
+// ---------------Change Background---------------
 
+    //Default values
 
+    let angle = 45;
+    let colorOne = 'rgb(255, 52,'; // rgb(255, 52, 121)
+    let colorTwo = 'rgb(3, 25,'; //  rgb(3, 25, 244)
+    let clr1 = 121;
+    let clr2 = 244;
+    // document.body.style.background = '-webkit-linear-gradient('+ angle +'deg' + ', ' + colorOne + clr1 + ')' + ', ' + colorTwo + clr2 + ')';
 
+    function changeBackground(){
 
+        let clr1 = Math.round(Math.random()*255);
+        let clr2 = Math.round(Math.random()*255);
+        angle = Math.round(Math.random()*360);
+        document.body.style.background = '-webkit-linear-gradient('+ angle +'deg' + ', ' + colorOne + clr1 + ')' + ', ' + colorTwo + clr2 + ')';
+        document.body.style.color = 'white';
+        document.getElementsByClassName('players')[0].children[0].style.color = 'white';
+        document.getElementsByClassName('players')[0].children[1].style.color = 'white';
+        document.getElementsByTagName('footer')[0].style.color = 'white';
+        
+    }
 
+    // setInterval(changeBackground,500);
 
-
-
-
+   
 </script>
 
     

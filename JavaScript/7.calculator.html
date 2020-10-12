@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <style>
+
+
+html, body{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: cornsilk;
+            color: cornflowerblue;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #display{
+
+            padding: 15px;
+            /* padding-left: 20px; */
+            height: 50px;
+            width: 220px;
+            margin-bottom: 20px;
+            text-align: right;
+            font-size: 30px;
+        }
+
+       .keys{
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: center;
+           width: 300px;
+           margin-left: auto;
+           margin-right: auto;
+        }
+        h1{
+            align-self: center;
+            text-shadow: 1px 1px 1px gray;
+            text-align: center;
+            width: 100%;
+            padding-top: 50px;
+        }
+ 
+
+
+        button{
+            padding: 0.5em;
+            margin: 4px;
+            width: 60px;
+            background-color: cornflowerblue;
+            color: white;
+            border: 2px solid white;
+            border-radius: 50%;
+            font-size: x-large;
+            font-weight: bold;
+            box-shadow: 1px 1px 4px grey;
+            transition: 0.1s ease-in-out;
+            cursor: pointer;
+        }
+        button:hover, button:focus {
+        outline: none;
+        }
+
+        button:hover{
+            translate: 1px 1px;
+            box-shadow: none;
+        }
+
+        .item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+            padding-left: 15px;
+            height: 150px;
+        }
+
+        .fas{
+            margin-bottom: 0.3em;
+            font-size: 50px;
+            text-shadow: 2px 2px 2px gray;
+            transition: 0.1s ease-in-out;
+        }
+        .fas:hover{
+            transform: rotate(45deg);
+        }
+
+        footer {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            /* height: 100%; */
+            margin-bottom: 10px;
+            font-size: small;
+            color: gray;
+            text-align: center;
+        }
+
+        #btn-change{
+            background: rgb(255, 52, 121);
+            color: cornsilk;
+            padding: 3px 5px;
+            width: fit-content;
+            margin-left: 20px;
+            font-size: small;
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px;
+            cursor: pointer;
+        }
+        #btn-change:hover, #btn-change:focus {
+        outline: none;
+        }
+        #btn-change:hover{
+            translate: 1px 1px;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+<div class="container">
+    <h1>Calculator</h1>
+
+
+    <div class="display"><input id="display" type="numbers"></div>
+
+    <div class="keys">
+        <button id="n1" onclick="numberInput(this)">1</button><button id="n2" onclick="numberInput(this)">2</button><button id="n3" onclick="numberInput(this)">9</button><button id="f/" onclick="calculate(this)">/</button>
+        <button id="n4" onclick="numberInput(this)">4</button><button id="n5" onclick="numberInput(this)">5</button><button id="n6" onclick="numberInput(this)">6</button><button id="fx" onclick="calculate(this)">x</button>
+        <button id="n1" onclick="numberInput(this)">1</button><button id="n2" onclick="numberInput(this)">2</button><button id="n3" onclick="numberInput(this)">3</button><button id="f-" onclick="calculate(this)">-</button>
+        <button id="n0" onclick="numberInput(this)">0</button><button id="fpoint" onclick="point(this)">.</button><button id="f=" onclick="total(this)">=</button><button id="f+" onclick="calculate(this)">+</button>
+
+    </div>
+
+
+</div>
+
+
+
+    <footer>Right to copy 2020 - Elmer Volgers <button onclick="changeBackground()" id="btn-change">change bg</button> </footer>
+    
+    <script>
+
+
+    
+    let buttons = document.getElementsByTagName('button');
+    // buttons[0].addEventListener("click", numberInput);
+
+    let display = document.getElementById('display')
+    let storeInputNumbers1 = [];
+    let storeInputNumbers2 = [];
+    let storeMathAction = [];
+    let firstNumber;
+    let secondNumber = 2;
+    let result = 0;
+    let enterSecondNumber = false;
+    
+
+    function numberInput(btnElement){
+       
+        let inputValue = btnElement.innerText;
+        //Store input in array
+        storeInputNumbers1.push(parseInt(inputValue));
+        firstNumber = storeInputNumbers1.join('');
+        console.log(firstNumber);
+     
+        //Show input on Display
+        for(let i=0; i<storeInputNumbers1.length; i++){
+        display.value = storeInputNumbers1.join('');
+        }
+    }
+
+
+
+
+
+    function calculate(btnElement){
+
+        enterSecondNumber = true;
+        console.log(enterSecondNumber);
+
+        let mathAction = btnElement.innerText;
+        console.log(mathAction);
+        display.value = mathAction;
+
+        if(mathAction == '/'){
+            result= firstNumber / secondNumber;
+            // display.value = result;
+        }
+        else if(mathAction == 'x'){
+            result= firstNumber * secondNumber;
+        }
+        else if(mathAction == '-'){
+            result= firstNumber - secondNumber;
+        }
+        else if(mathAction == '+'){
+            result= firstNumber + secondNumber;
+        }
+    
+       
+    }
+    
+    
+    console.log(enterSecondNumber);
+
+
+    function total(btnElement){
+        console.log(enterSecondnumber);
+
+        let resultBtn = btnElement.innerText;
+        display.value = resultBtn;
+        display.value = result;
+
+
+    }
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+// ---------------Change Background---------------
+
+    //Default values
+
+    let angle = 45;
+    let colorOne = 'rgb(255, 52,'; // rgb(255, 52, 121)
+    let colorTwo = 'rgb(3, 25,'; //  rgb(3, 25, 244)
+    let clr1 = 121;
+    let clr2 = 244;
+
+    function changeBackground(){
+
+        let clr1 = Math.round(Math.random()*255);
+        let clr2 = Math.round(Math.random()*255);
+        angle = Math.round(Math.random()*360);
+        document.body.style.background = '-webkit-linear-gradient('+ angle +'deg' + ', ' + colorOne + clr1 + ')' + ', ' + colorTwo + clr2 + ')';
+        document.body.style.color = 'white';
+        document.getElementsByClassName('players')[0].children[0].style.color = 'white';
+        document.getElementsByClassName('players')[0].children[1].style.color = 'white';
+        document.getElementsByTagName('footer')[0].style.color = 'white';
+        
+    }
+
+    </script>
+    
+</body>
+</html>

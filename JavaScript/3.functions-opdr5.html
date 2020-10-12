@@ -35,7 +35,7 @@
     var inputValue = document.getElementById('input-namefind').value;
 
 
-    for (i=0; i<arrayLenght; i++){
+    for (let i=0; i<arrayLenght; i++){
             
             if(namesKnown[i] == inputValue ){
             labelText.innerText = 'Dit is een bekende van ons!';
@@ -61,7 +61,6 @@
        randomName = namesKnown[Math.round(Math.random()*3)];
        document.getElementById('input-namefind').value= randomName;
        return randomName;
-
     }
 
 

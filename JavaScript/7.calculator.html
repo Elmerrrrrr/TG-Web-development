@@ -7,13 +7,19 @@
 
     <style>
 
+@font-face {
+font-family: "Minisystem";
+src: url("./font/minisystem.ttf");
+src: url("./font/minisystem.ttf") format("ttf"),
+}
+
 
 html, body{
             margin: 0;
             padding: 0;
             height: 100%;
             background-color: cornsilk;
-            color: cornflowerblue;
+            color: rgb(19, 172, 233) ;
         }
         .container{
             display: flex;
@@ -22,14 +28,15 @@ html, body{
             align-items: center;
         }
         #display{
-
+            font-family: "Minisystem";
+            color:rgb(19, 172, 233) ;
+            background: black;
             padding: 15px;
-            /* padding-left: 20px; */
-            height: 50px;
-            width: 220px;
-            margin-bottom: 20px;
+            height: 100px;
+            width: 225px;
+            margin-bottom: 10px;
             text-align: right;
-            font-size: 30px;
+            font-size: 50px;
         }
 
        .keys{
@@ -54,7 +61,7 @@ html, body{
             padding: 0.5em;
             margin: 4px;
             width: 60px;
-            background-color: cornflowerblue;
+            background-color: rgb(19, 172, 233) ;
             color: white;
             border: 2px solid white;
             border-radius: 50%;
@@ -124,6 +131,17 @@ html, body{
             translate: 1px 1px;
         }
 
+        #functions{
+
+        margin-left: -130px;
+      
+        }
+
+        #functions  button{
+            background-color: rgb(19, 172, 233);
+            filter: brightness(120%);
+            color: white;
+        }
 
     </style>
 
@@ -135,6 +153,8 @@ html, body{
     <h1>Calculator</h1>
 
     <div class="display"><input id="display" type="numbers"></div>
+
+    <div id="functions"><button id="cl" onclick="clearAll(this)">C</button><button id="cle" onclick="clearLastEntry(this)">CE</button></div>
 
     <div class="keys">
         <button id="n1" onclick="numberInput(this)">1</button><button id="n2" onclick="numberInput(this)">2</button><button id="n3" onclick="numberInput(this)">9</button><button id="f/" onclick="calculate(this)">/</button>
@@ -154,41 +174,55 @@ html, body{
     let display = document.getElementById('display')
     let storeInputNumbers1 = [];
     let storeInputNumbers2 = [];
+    let storeInputNumbers3 = [];
     let storeMathAction = [];
     let mathAction;
     let firstNumber;
     let secondNumber;
+    let thirdNumber;
+    let enterNextNumber = 0;
     let result = 0;
-    let enterSecondNumber = false;
+
+    display.value = result;
     
 
     function numberInput(btnElement){
 
         let inputValue = btnElement.innerText;
-       
-        if(enterSecondNumber == false){      
 
-        //Store input in array
+        //Store first numberinput in array
+        if(enterNextNumber == 0){           
         storeInputNumbers1.push(parseInt(inputValue));
         firstNumber = parseInt(storeInputNumbers1.join(''));
      
         //Show input on Display
         display.value = storeInputNumbers1.join('');
         }
+
         //Start filling array 2 for entering second number
-        if(enterSecondNumber == true){
+        if(enterNextNumber == 1){
         storeInputNumbers2.push(parseInt(inputValue));
         secondNumber = parseInt(storeInputNumbers2.join(''));
         display.value = storeInputNumbers2.join('');
         }
+
+        //Start filling array 3 for entering third number
+        if(enterNextNumber == 2){
+        storeInputNumbers3.push(parseInt(inputValue));
+        thirdNumber = parseInt(storeInputNumbers3.join(''));
+        display.value = storeInputNumbers3.join('');
+        console.log(thirdNumber);
+        }
+
 
     }
 
 
     function calculate(btnElement){
 
-        //Store second number in different array
-        enterSecondNumber = true;
+        //Store next number in different array
+        enterNextNumber++;
+        console.log('nextnumber: ' + enterNextNumber);
 
         //Display math action
         mathAction = btnElement.innerText;
@@ -209,26 +243,72 @@ html, body{
         let resultBtn = btnElement.innerText;
 
         //Calculate result
-        if(mathAction == '/'){
+        if(mathAction[0] == '/'){
+            if(enterNextNumber ==1){
             result = (firstNumber / secondNumber);
+            }
+            if(enterNextNumber == 2 && mathAction[1] == '/'){
+            result = (result / thirdNumber);
+        }
 
         }
-        else if(mathAction == 'x'){
+        else if(mathAction[0] == 'x'){
+            if(enterNextNumber ==1){
             result = (firstNumber * secondNumber);
+            }
+            if(enterNextNumber == 2 && mathAction[1] == 'x'){
+            result = (result * thirdNumber);
+            }
         }
-        else if(mathAction == '-' && secondNumber>0){
+
+       
+        else if(mathAction[0] == '-'){
+            if(enterNextNumber ==1){
             result = (firstNumber - secondNumber);
-            
+            }
+            if(enterNextNumber == 2 && mathAction[1] == '-'){
+            result = (result - thirdNumber);
+            }
         }
+
         else if(mathAction == '+'){
+            if(enterNextNumber ==1){
             result = (firstNumber + secondNumber);
+            }
+            if(enterNextNumber == 2 && mathAction[1] == '+'){
+            result = (result + thirdNumber);
+            }
         }
+
         //Display result
         display.value = result;
         console.log(result);
 
     }
 
+    function clearAll(){
+        storeInputNumbers1 = [];
+        storeInputNumbers2 = [];
+        let storeInputNumbers3 = [];
+        storeMathAction = [];
+        mathAction;
+        firstNumber;
+        secondNumber;
+        thirdNumber;
+        enterNextNumber = 0;
+        result = 0;
+        display.value = result;
+    }
+
+    function clearLastEntry(){
+        storeInputNumbers2 = [];
+        storeMathAction = [];
+        display.value = storeInputNumbers1.join('');
+
+        if(storeInputNumbers1.length <1){
+            display.value = result;
+        }
+    }
 
 
 // ---------------Change Background---------------

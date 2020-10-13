@@ -99,7 +99,6 @@ html, body{
             width: 100%;
             position: absolute;
             bottom: 0;
-            /* height: 100%; */
             margin-bottom: 10px;
             font-size: small;
             color: gray;
@@ -135,7 +134,6 @@ html, body{
 <div class="container">
     <h1>Calculator</h1>
 
-
     <div class="display"><input id="display" type="numbers"></div>
 
     <div class="keys">
@@ -146,98 +144,90 @@ html, body{
 
     </div>
 
-
 </div>
-
 
 
     <footer>Right to copy 2020 - Elmer Volgers <button onclick="changeBackground()" id="btn-change">change bg</button> </footer>
     
     <script>
-
-
     
-    let buttons = document.getElementsByTagName('button');
-    // buttons[0].addEventListener("click", numberInput);
-
     let display = document.getElementById('display')
     let storeInputNumbers1 = [];
     let storeInputNumbers2 = [];
     let storeMathAction = [];
+    let mathAction;
     let firstNumber;
-    let secondNumber = 2;
+    let secondNumber;
     let result = 0;
     let enterSecondNumber = false;
     
 
     function numberInput(btnElement){
-       
+
         let inputValue = btnElement.innerText;
+       
+        if(enterSecondNumber == false){      
+
         //Store input in array
         storeInputNumbers1.push(parseInt(inputValue));
-        firstNumber = storeInputNumbers1.join('');
-        console.log(firstNumber);
+        firstNumber = parseInt(storeInputNumbers1.join(''));
      
         //Show input on Display
-        for(let i=0; i<storeInputNumbers1.length; i++){
         display.value = storeInputNumbers1.join('');
         }
+        //Start filling array 2 for entering second number
+        if(enterSecondNumber == true){
+        storeInputNumbers2.push(parseInt(inputValue));
+        secondNumber = parseInt(storeInputNumbers2.join(''));
+        display.value = storeInputNumbers2.join('');
+        }
+
     }
-
-
-
 
 
     function calculate(btnElement){
 
+        //Store second number in different array
         enterSecondNumber = true;
-        console.log(enterSecondNumber);
 
-        let mathAction = btnElement.innerText;
+        //Display math action
+        mathAction = btnElement.innerText;
         console.log(mathAction);
         display.value = mathAction;
 
-        if(mathAction == '/'){
-            result= firstNumber / secondNumber;
-            // display.value = result;
-        }
-        else if(mathAction == 'x'){
-            result= firstNumber * secondNumber;
-        }
-        else if(mathAction == '-'){
-            result= firstNumber - secondNumber;
-        }
-        else if(mathAction == '+'){
-            result= firstNumber + secondNumber;
-        }
-    
-       
+        //Store math action in array
+        storeMathAction.push(mathAction);
+        mathAction = storeMathAction.join('');
+        console.log(storeMathAction);
     }
     
     
-    console.log(enterSecondNumber);
-
 
     function total(btnElement){
-        console.log(enterSecondnumber);
+        
 
         let resultBtn = btnElement.innerText;
-        display.value = resultBtn;
-        display.value = result;
 
+        //Calculate result
+        if(mathAction == '/'){
+            result = (firstNumber / secondNumber);
+
+        }
+        else if(mathAction == 'x'){
+            result = (firstNumber * secondNumber);
+        }
+        else if(mathAction == '-' && secondNumber>0){
+            result = (firstNumber - secondNumber);
+            
+        }
+        else if(mathAction == '+'){
+            result = (firstNumber + secondNumber);
+        }
+        //Display result
+        display.value = result;
+        console.log(result);
 
     }
-
-
-
-
-
-  
-
-
-
-
-
 
 
 
@@ -258,10 +248,7 @@ html, body{
         angle = Math.round(Math.random()*360);
         document.body.style.background = '-webkit-linear-gradient('+ angle +'deg' + ', ' + colorOne + clr1 + ')' + ', ' + colorTwo + clr2 + ')';
         document.body.style.color = 'white';
-        document.getElementsByClassName('players')[0].children[0].style.color = 'white';
-        document.getElementsByClassName('players')[0].children[1].style.color = 'white';
         document.getElementsByTagName('footer')[0].style.color = 'white';
-        
     }
 
     </script>

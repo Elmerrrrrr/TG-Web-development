@@ -21,15 +21,27 @@ html, body{
             background-color: cornsilk;
             color: rgb(19, 172, 233) ;
         }
+        .wrapper{
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
         .container{
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            width: 340px;
+            padding: 20px;
+            border: 2px solid white;
+            background: white;
+            box-shadow: 2px 2px 8px black;
+            border-radius: 20px;
         }
         #display{
             font-family: "Minisystem";
-            color:rgb(19, 172, 233) ;
+            color:rgb(19, 172, 233);
             background: black;
             padding: 15px;
             height: 100px;
@@ -37,6 +49,7 @@ html, body{
             margin-bottom: 10px;
             text-align: right;
             font-size: 50px;
+            border-radius: 15px;
         }
 
        .keys{
@@ -52,7 +65,7 @@ html, body{
             text-shadow: 1px 1px 1px gray;
             text-align: center;
             width: 100%;
-            padding-top: 50px;
+            padding-top: 10px;
         }
  
 
@@ -100,16 +113,17 @@ html, body{
         }
 
         footer {
-            display: flex;
+            /* display: flex;
             align-items: flex-end;
-            justify-content: center;
+            justify-content: center; */
             width: 100%;
             position: absolute;
             bottom: 0;
-            margin-bottom: 10px;
+            margin: 10px 0px;
             font-size: small;
             color: gray;
             text-align: center;
+            overflow: hidden;
         }
 
         #btn-change{
@@ -148,24 +162,26 @@ html, body{
 
 </head>
 <body>
-
-<div class="container">
     <h1>Calculator</h1>
 
-    <div class="display"><input id="display" type="numbers"></div>
+<div class="wrapper">
+    <div class="container">
+        
 
-    <div id="functions"><button id="cl" onclick="clearAll(this)">C</button><button id="cle" onclick="clearLastEntry(this)">CE</button></div>
+        <div class="display"><input id="display" type="numbers"></div>
 
-    <div class="keys">
-        <button id="n1" onclick="numberInput(this)">7</button><button id="n2" onclick="numberInput(this)">8</button><button id="n3" onclick="numberInput(this)">9</button><button id="f/" onclick="calculate(this)">/</button>
-        <button id="n4" onclick="numberInput(this)">4</button><button id="n5" onclick="numberInput(this)">5</button><button id="n6" onclick="numberInput(this)">6</button><button id="fx" onclick="calculate(this)">x</button>
-        <button id="n1" onclick="numberInput(this)">1</button><button id="n2" onclick="numberInput(this)">2</button><button id="n3" onclick="numberInput(this)">3</button><button id="f-" onclick="calculate(this)">-</button>
-        <button id="n0" onclick="numberInput(this)">0</button><button id="fpoint" onclick="point(this)">.</button><button id="f=" onclick="total(this)">=</button><button id="f+" onclick="calculate(this)">+</button>
+        <div id="functions"><button id="cl" onclick="clearAll(this)">C</button><button id="cle" onclick="clearLastEntry(this)">CE</button></div>
+
+        <div class="keys">
+            <button id="n1" onclick="numberInput(this)">7</button><button id="n2" onclick="numberInput(this)">8</button><button id="n3" onclick="numberInput(this)">9</button><button id="f/" onclick="calculate(this)">÷</button>
+            <button id="n4" onclick="numberInput(this)">4</button><button id="n5" onclick="numberInput(this)">5</button><button id="n6" onclick="numberInput(this)">6</button><button id="fx" onclick="calculate(this)">x</button>
+            <button id="n1" onclick="numberInput(this)">1</button><button id="n2" onclick="numberInput(this)">2</button><button id="n3" onclick="numberInput(this)">3</button><button id="f-" onclick="calculate(this)">-</button>
+            <button id="n0" onclick="numberInput(this)">0</button><button id="fpoint" onclick="point(this)">.</button><button id="f=" onclick="total(this)">=</button><button id="f+" onclick="calculate(this)">+</button>
+
+        </div>
 
     </div>
-
 </div>
-
 
     <footer>Right to copy 2020 - Elmer Volgers <button onclick="changeBackground()" id="btn-change">change bg</button> </footer>
     
@@ -175,11 +191,13 @@ html, body{
     let storeInputNumbers1 = [];
     let storeInputNumbers2 = [];
     let storeInputNumbers3 = [];
+    let storeInputNumbers4 = [];
     let storeMathAction = [];
     let mathAction;
     let firstNumber;
     let secondNumber;
     let thirdNumber;
+    let fourthNumber;
     let enterNextNumber = 0;
     let result = 0;
 
@@ -194,6 +212,7 @@ html, body{
         if(enterNextNumber == 0){           
         storeInputNumbers1.push(parseInt(inputValue));
         firstNumber = parseInt(storeInputNumbers1.join(''));
+        console.log('firstnumber: ' +firstNumber);
      
         //Show input on Display
         display.value = storeInputNumbers1.join('');
@@ -204,6 +223,7 @@ html, body{
         storeInputNumbers2.push(parseInt(inputValue));
         secondNumber = parseInt(storeInputNumbers2.join(''));
         display.value = storeInputNumbers2.join('');
+        console.log('secondnumber: ' +secondNumber);
         }
 
         //Start filling array 3 for entering third number
@@ -211,9 +231,16 @@ html, body{
         storeInputNumbers3.push(parseInt(inputValue));
         thirdNumber = parseInt(storeInputNumbers3.join(''));
         display.value = storeInputNumbers3.join('');
-        console.log(thirdNumber);
+        console.log('thirdnumber: ' +thirdNumber);
         }
 
+        //Start filling array 4 for entering fourth number
+        if(enterNextNumber == 3){
+        storeInputNumbers4.push(parseInt(inputValue));
+        thirdNumber = parseInt(storeInputNumbers4.join(''));
+        display.value = storeInputNumbers4.join('');
+        console.log('thirdnumber: ' +fourthNumber);
+        }
 
     }
 
@@ -226,13 +253,50 @@ html, body{
 
         //Display math action
         mathAction = btnElement.innerText;
-        console.log(mathAction);
+        // console.log(mathAction);
         display.value = mathAction;
 
         //Store math action in array
         storeMathAction.push(mathAction);
         mathAction = storeMathAction.join('');
         console.log(storeMathAction);
+
+        //Calculating ÷ result before entering thirdnumber
+
+            //÷
+            if(mathAction[0] == '÷' && enterNextNumber ==2){
+                result = (firstNumber / secondNumber);
+            }
+            if(mathAction[1] == '÷' && enterNextNumber == 3){
+                result = (result / thirdNumber);
+            }
+
+            //x
+            if(mathAction[0] == 'x' && enterNextNumber == 2){
+                result = (firstNumber * secondNumber);
+            }
+            if(mathAction[1] == 'x' && enterNextNumber == 3){
+                result = (result * thirdNumber);
+            }
+
+            //-
+            if(mathAction[0] == '-' && enterNextNumber == 2){
+                result = (firstNumber - secondNumber);
+            }
+            if(mathAction[1] == '-' && enterNextNumber == 3){
+                result = (result - thirdNumber);
+            }
+
+            //+
+            if(mathAction[0] == '+' && enterNextNumber == 2){
+                result = (firstNumber + secondNumber);
+            }
+            if(mathAction[1] == '+' && enterNextNumber == 3){
+                result = (result + thirdNumber);
+            }
+        
+
+
     }
     
     
@@ -243,53 +307,63 @@ html, body{
         let resultBtn = btnElement.innerText;
 
         //Calculate result
-        if(mathAction[0] == '/'){
-            if(enterNextNumber ==1){
+
+            //÷
+            if(enterNextNumber == 1 && mathAction[0] == '÷'){
             result = (firstNumber / secondNumber);
             }
-            if(enterNextNumber == 2 && mathAction[1] == '/'){
+            if(enterNextNumber == 2 && mathAction[1] == '÷'){
             result = (result / thirdNumber);
-        }
+            }
+            if(enterNextNumber == 3 && mathAction[2] == '÷'){
+            result = (result / fourthNumber);
+            }
+    
 
-        }
-        else if(mathAction[0] == 'x'){
-            if(enterNextNumber ==1){
+            //x
+            if(enterNextNumber == 1 && mathAction[0] == 'x'){
             result = (firstNumber * secondNumber);
             }
             if(enterNextNumber == 2 && mathAction[1] == 'x'){
             result = (result * thirdNumber);
             }
-        }
-
-       
-        else if(mathAction[0] == '-'){
-            if(enterNextNumber ==1){
+            if(enterNextNumber == 3 && mathAction[2] == 'x'){
+            result = (result * fourthNumber);
+            }
+        
+            //-
+            if(enterNextNumber == 1 && mathAction[0] == '-'){
             result = (firstNumber - secondNumber);
             }
             if(enterNextNumber == 2 && mathAction[1] == '-'){
             result = (result - thirdNumber);
             }
-        }
+            if(enterNextNumber == 3 && mathAction[2] == '-'){
+            result = (result - fourthNumber);
+            }
 
-        else if(mathAction == '+'){
-            if(enterNextNumber ==1){
+
+            //+
+            if(enterNextNumber == 1 && mathAction[0] == '+'){
             result = (firstNumber + secondNumber);
             }
             if(enterNextNumber == 2 && mathAction[1] == '+'){
             result = (result + thirdNumber);
             }
-        }
+            if(enterNextNumber == 3 && mathAction[2] == '+'){
+            result = (result + fourthNumber);
+            }
 
         //Display result
         display.value = result;
-        console.log(result);
 
     }
 
     function clearAll(){
         storeInputNumbers1 = [];
         storeInputNumbers2 = [];
-        let storeInputNumbers3 = [];
+        storeInputNumbers3 = [];
+        storeInputNumbers4 = [];
         storeMathAction = [];
         mathAction;
         firstNumber;
@@ -301,7 +375,23 @@ html, body{
     }
 
     function clearLastEntry(){
-        storeInputNumbers2 = [];
+        if(storeInputNumbers4.length >0){
+            storeInputNumbers4 = [];
+            display.value = thirdNumber;
+        }
+        if(storeInputNumbers3.length >0){
+            storeInputNumbers3 = [];
+            display.value = secondNumber;
+        }
+        if(storeInputNumbers2.length >0){
+            storeInputNumbers2 = [];
+            display.value = firstNumber;
+        }
+        if(storeInputNumbers1.length >0){
+            storeInputNumbers1 = [];
+            display.value = result;
+        }
+        
         storeMathAction = [];
         display.value = storeInputNumbers1.join('');
 

@@ -21,13 +21,13 @@ html, body{
             background-color: cornsilk;
             color: rgb(19, 172, 233) ;
         }
-        .wrapper{
+        .container{
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             height: 100%;
         }
-        .container{
+        .calculator{
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -150,8 +150,8 @@ html, body{
 </head>
 <body>
 
-<div class="wrapper">
-    <div class="container">
+<div class="container">
+    <div class="calculator">
         
 
         <div class="display"><input id="display" type="numbers"></div>
@@ -180,14 +180,19 @@ html, body{
     let storeInputNumbers2 = [];
     let storeInputNumbers3 = [];
     let storeInputNumbers4 = [];
+    let storeInputNumbers5 = [];
     let storeMathAction = [];
     let mathAction;
     let firstNumber;
     let secondNumber;
     let thirdNumber;
     let fourthNumber;
+    let fifthNumber;
     let enterNextNumber = 0;
     let result = 0;
+    let result1 = 0;
+    let result2 = 0;
+    let result3 = 0;
 
     display.value = result;
     
@@ -224,6 +229,14 @@ html, body{
         display.value = storeInputNumbers4.join('');
         }
 
+         //Start filling array 5 for entering fifth number
+        if(enterNextNumber == 4){
+        storeInputNumbers5.push(inputValue);
+        fifthNumber= parseFloat(storeInputNumbers5.join(''));
+        display.value = storeInputNumbers5.join('');
+        }
+
+
     }
 
 
@@ -234,22 +247,27 @@ html, body{
 
         //Display math action
         mathAction = btnElement.innerText;
-        // console.log(mathAction);
         display.value = mathAction;
 
         //Store math action in array
         storeMathAction.push(mathAction);
         mathAction = storeMathAction.join('');
 
-        
-        //Calculating ÷ result before entering thirdnumber
+
+         //Calculating result before =
 
             //÷
-            if(mathAction[0] == '÷' && enterNextNumber ==2){
+            if(mathAction[0] == '÷' && enterNextNumber == 2){
                 result = (firstNumber / secondNumber);
             }
             if(mathAction[1] == '÷' && enterNextNumber == 3){
                 result = (result / thirdNumber);
+            }
+            if(mathAction[2] == '÷' && enterNextNumber == 4){
+                result3 = (result2 / fourthNumber);
+            }
+            if(mathAction[3] == '÷' && enterNextNumber == 5){
+                result4 = (result3 / fifthNumber);
             }
 
             //x
@@ -259,6 +277,12 @@ html, body{
             if(mathAction[1] == 'x' && enterNextNumber == 3){
                 result = (result * thirdNumber);
             }
+            if(mathAction[2] == 'x' && enterNextNumber == 4){
+                result3 = (result2 * fourthNumber);
+            }
+            if(mathAction[3] == 'x' && enterNextNumber == 5){
+                result4 = (result3 * fifthNumber);
+            }
 
             //-
             if(mathAction[0] == '-' && enterNextNumber == 2){
@@ -267,17 +291,34 @@ html, body{
             if(mathAction[1] == '-' && enterNextNumber == 3){
                 result = (result - thirdNumber);
             }
+            if(mathAction[2] == '-' && enterNextNumber == 4){
+                result3 = (result2 - fourthNumber);
+            }
+            if(mathAction[3] == '-' && enterNextNumber == 5){
+                result4 = (result3 - fifthNumber);
+            }
+            
 
-            //+
+           // +
             if(mathAction[0] == '+' && enterNextNumber == 2){
                 result = (firstNumber + secondNumber);
             }
             if(mathAction[1] == '+' && enterNextNumber == 3){
-                result = (result + thirdNumber);
+                result2 = (result + thirdNumber);
             }
+            if(mathAction[2] == '+' && enterNextNumber == 4){
+                result3 = (result2 + fourthNumber);
+            }
+            if(mathAction[3] == '+' && enterNextNumber == 5){
+                result4 = (result3 + fifthNumber);
+            }
+
+            if(enterNextNumber>5){
+                result = "ERROR ";
+                display.value = result;
+            }
+
         
-
-
     }
     
     
@@ -297,46 +338,68 @@ html, body{
             result = (result / thirdNumber);
             }
             if(enterNextNumber == 3 && mathAction[2] == '÷'){
-            result = (result / fourthNumber);
+            result3 = (result2 / fourthNumber);
             }
-    
+            if(enterNextNumber == 4 && mathAction[3] == '÷'){
+            result4 = (result3 / thirdNumber);
+            }
+
+
 
             //x
             if(enterNextNumber == 1 && mathAction[0] == 'x'){
             result = (firstNumber * secondNumber);
             }
             if(enterNextNumber == 2 && mathAction[1] == 'x'){
-            result = (result * thirdNumber);
+            result2 = (result * thirdNumber);
             }
             if(enterNextNumber == 3 && mathAction[2] == 'x'){
-            result = (result * fourthNumber);
+            result3 = (result2 * fourthNumber);
             }
-        
+            if(enterNextNumber == 4 && mathAction[3] == 'x'){
+            result4 = (result3 * thirdNumber);
+            }
+
+
             //-
             if(enterNextNumber == 1 && mathAction[0] == '-'){
             result = (firstNumber - secondNumber);
             }
             if(enterNextNumber == 2 && mathAction[1] == '-'){
-            result = (result - thirdNumber);
+            result2 = (result - thirdNumber);
             }
             if(enterNextNumber == 3 && mathAction[2] == '-'){
-            result = (result - fourthNumber);
+            result3 = (result2 - fourthNumber);
+            }
+            if(enterNextNumber == 4 && mathAction[3] == '-'){
+            result4 = (result3 - thirdNumber);
             }
 
 
-            //+
+            // +
             if(enterNextNumber == 1 && mathAction[0] == '+'){
             result = (firstNumber + secondNumber);
             }
             if(enterNextNumber == 2 && mathAction[1] == '+'){
-            result = (result + thirdNumber);
+            result2 = (result + thirdNumber);
             }
             if(enterNextNumber == 3 && mathAction[2] == '+'){
-            result = (result + fourthNumber);
+            result3 = (result2 + fourthNumber);
+            }
+            if(enterNextNumber == 4 && mathAction[3] == '+'){
+            result4 = (result3 + fifthNumber);
             }
 
-        //Display result
-        display.value = result;
+            if(enterNextNumber>4){
+                result = "ERROR ";
+            }
+
+            //Display result
+            if (result>0) {display.value = result;}
+            if (result1>0) {display.value = result1;}
+            if (result2>0) {display.value = result2;}
+            if (result3>0) {display.value = result3;}
+
 
     }
 
@@ -345,33 +408,46 @@ html, body{
         storeInputNumbers2 = [];
         storeInputNumbers3 = [];
         storeInputNumbers4 = [];
+        storeInputNumbers5 = [];
         storeMathAction = [];
         mathAction;
         firstNumber;
         secondNumber;
         thirdNumber;
+        fourthNumber;
+        fifthNumber;
         enterNextNumber = 0;
         result = 0;
+        result1 = 0;
+        result2 = 0;
+        result3 = 0;
+        result4 = 0;
+
         display.value = result;
     }
 
     function clearLastEntry(){
+        if(storeInputNumbers5.length >0){
+            storeInputNumbers5 = [];
+            display.value = mathAction[3];
+        }
         if(storeInputNumbers4.length >0){
             storeInputNumbers4 = [];
-            display.value = thirdNumber;
+            display.value = mathAction[2];
         }
         if(storeInputNumbers3.length >0){
             storeInputNumbers3 = [];
-            display.value = secondNumber;
+            display.value = mathAction[1];
         }
         if(storeInputNumbers2.length >0){
             storeInputNumbers2 = [];
-            display.value = firstNumber;
+            display.value = mathAction[0];
         }
         if(storeInputNumbers1.length >0){
             storeInputNumbers1 = [];
             display.value = result;
         }
+
         
         storeMathAction = [];
         display.value = storeInputNumbers1.join('');

@@ -1,4 +1,4 @@
-body{
+html, body{
       padding: 0;
       margin: 0;
       background-color: #fbf8f3;
@@ -39,8 +39,7 @@ body{
   
   nav li:first-child{
       color: white;
-      position: absolute;
-      top: 20px;
+      padding-bottom: 50px;
       font-size: xx-large;
       margin-left:0.8em;
   
@@ -61,27 +60,11 @@ body{
       width: 100%;
   }
   
-  /* ul li a:hover {
-      background: none;
-      color:rgb(52, 52, 221);
-      filter: brightness(150%);
-  }
-  
-  ul li a:active{
-      color: rgb(52, 52, 221);
-      filter: brightness(150%);
-  }
-  
-  ul li a:focus{
-      color:rgb(52, 52, 221);
-      filter: brightness(150%);
-  }  */
-
-
 
   ul a:hover, ul a.active{
       background: none;
-      color: rgb(52, 52, 221);
+      color: rgb(19, 172, 233);
+      filter: contrast(50%);
   }
   
   
@@ -92,49 +75,34 @@ body{
 
   /* ---------------------Main--------------------- */
 
+main{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
 
+}
 
 main h1{
+      color:rgb(19, 172, 233) ;
       text-align: center;
       padding-top: 20px;
-}
-
-.gridtable{
-
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      border-top: 1px solid black;
-      border-right: 1px solid black;
-      margin-left: 18%;
-      margin-right: 5%;
-      max-width: 80%;
+      margin-left: 250px;
+      width: 100%;
 }
 
 
-.gridtable span{
-
-      padding: 8px 4px;
-      border-left: 1px solid black;
-      border-bottom: 1px solid black;
-}
-
-.gridtable span:hover{
-      background: chartreuse;
-}
-
-.color-row{
-      background: lightgrey;
-}
   /* -------Members table----------- */
 
 
 .divTable{
 	display: table;
-      width: 80%;
+      width: 75%;
       margin-left: 200px;
       /* margin-right: 200px; */
 }
 .divTableRow {
+ 
 	display: table-row;
 }
 .divTableRow:hover {
@@ -142,11 +110,10 @@ main h1{
       color: white;
 }
 
+
 .divTableHeading {
       background-color: rgb(19, 172, 233);
       color: white;
-      
-      /* display: table-header-group; */
       display: table-row;
 }
 .divTableCell, .divTableHead {
@@ -154,17 +121,14 @@ main h1{
 	display: table-cell;
 	padding: 3px 10px;
 }
-/* .divTableHeading {
-	background-color: #EEE;
-	display: table-header-group;
-	font-weight: bold;
-} */
+
 .divTableFoot {
 	background-color: #EEE;
 	display: table-footer-group;
 	font-weight: bold;
 }
 .divTableBody {
+      position: relative;
 	display: table-row-group;
 }
 
@@ -175,6 +139,7 @@ main h1{
 
   
 section h1{
+      color:rgb(19, 172, 233);
       text-align: center;
       width: 100%;
 }
@@ -182,13 +147,19 @@ section h1{
 input{
       width: 20vw;
       background: rgb(174, 225, 245);
-      padding: 5px;
+      padding: 8px;
       border-radius: 10px;
+      border: none;
       margin: 5px;
 }
 input:focus {
       outline: none;
 }
+
+input::placeholder { 
+      color: gray;
+      opacity: 1;
+    }
 
 .info-container{
 
@@ -199,16 +170,19 @@ input:focus {
       margin-right:auto;
       width: 80%;
       }
-.btn{
+.btnAdd {
       display: flex;
       justify-content: flex-end;
       width: 100%;
-      margin-right:5%;     
+      margin-right:8%;     
+}
+.btnDelete{
+      width: 75%;
+      margin-left: 200px;
 }
 
+
 button{
-      /* justify-items: flex-end;
-      align-self: flex-end; */
       margin-top: 5px;
       padding: 8px;
       border-radius: 5px;
@@ -247,6 +221,7 @@ button{
     }
     
     nav ul{
+          min-height: 800px;
           height: 25%; 
           top: 20%;
           left: -100%;
@@ -256,7 +231,10 @@ button{
           border-bottom-right-radius: 30px ;
           border: 4px solid white;
           min-height: 60%;
+          box-shadow: 2px 2px 5px gray;
+          overflow: none;
     }
+
     
     nav li:first-child{display: none;}
     
@@ -279,11 +257,22 @@ button{
     }
     a:hover,a.active{
           background: none;
-          color:rgb(52, 52, 221) ;
+          color: rgb(19, 172, 233);
+          filter: contrast(120%);
      }
 
-     .gridtable{
-      margin-left: 10%;
-     }
+
+     .divTable{
+	display: table;
+      width: 75%;
+      margin-left: 20px;
+      /* margin-right: 200px; */
+}
+
+      .btnDelete{
+            width: 75%;
+            margin-left: -75px;
+      }
+
 
 }

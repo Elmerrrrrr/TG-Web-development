@@ -25,12 +25,12 @@
         </ul>
     </nav>
 
-    <main>
+<main>
       <h1>Members</h1>
 
 
 <div class="divTable">
-      <div class="divTableBody">
+    <div class="divTableBody">
         <div class="divTableHeading">
         <div class="divTableHead">Firstname</div>
         <div class="divTableHead">Surname</div>
@@ -43,54 +43,7 @@
         <div class="divTableHead">Postal Code</div>
         <div class="divTableHead">Country</div>
         </div>
-        <div class="divTableRow">
-        <div class="divTableCell">&nbsp;</div>
-        <div class="divTableCell">&nbsp;</div>
-        <div class="divTableCell">&nbsp;</div>
-        <div class="divTableCell">&nbsp;</div>
-        <div class="divTableCell">&nbsp;</div>
-        <div class="divTableCell">&nbsp;</div>
-        <div class="divTableCell">&nbsp;</div>
-        <div class="divTableCell">&nbsp;</div>
-        <div class="divTableCell">&nbsp;</div>
-        <div class="divTableCell">&nbsp;</div>
-        </div>
-        <div class="divTableRow">
-        <div class="divTableCell">&nbsp;</div>
-        <div class="divTableCell">&nbsp;</div>
-        <div class="divTableCell">&nbsp;</div>
-        <div class="divTableCell">&nbsp;</div>
-        <div class="divTableCell">&nbsp;</div>
-        <div class="divTableCell">&nbsp;</div>
-        <div class="divTableCell">&nbsp;</div>
-        <div class="divTableCell">&nbsp;</div>
-        <div class="divTableCell">&nbsp;</div>
-        <div class="divTableCell">&nbsp;</div>
-        </div>
-        <div class="divTableRow">
-        <div class="divTableCell">&nbsp;</div>
-        <div class="divTableCell">&nbsp;</div>
-        <div class="divTableCell">&nbsp;</div>
-        <div class="divTableCell">&nbsp;</div>
-        <div class="divTableCell">&nbsp;</div>
-        <div class="divTableCell">&nbsp;</div>
-        <div class="divTableCell">&nbsp;</div>
-        <div class="divTableCell">&nbsp;</div>
-        <div class="divTableCell">&nbsp;</div>
-        <div class="divTableCell">&nbsp;</div>
-        </div>
-        <div class="divTableRow">
-        <div class="divTableCell">&nbsp;</div>
-        <div class="divTableCell">&nbsp;</div>
-        <div class="divTableCell">&nbsp;</div>
-        <div class="divTableCell">&nbsp;</div>
-        <div class="divTableCell">&nbsp;</div>
-        <div class="divTableCell">&nbsp;</div>
-        <div class="divTableCell">&nbsp;</div>
-        <div class="divTableCell">&nbsp;</div>
-        <div class="divTableCell">&nbsp;</div>
-        <div class="divTableCell">&nbsp;</div>
-        </div>
+
         <div class="divTableRow">
         <div class="divTableCell">&nbsp;</div>
         <div class="divTableCell">&nbsp;</div>
@@ -104,7 +57,13 @@
         <div class="divTableCell">&nbsp;</div>
         </div>
     </div>
+
   </div>
+
+  <div class="btnDelete"><button id="enterData" onclick="deleteRow()">Delete Data</button></div>
+
+
+
 </main>
 
 
@@ -121,32 +80,32 @@
              <div>
                 <span style="display:inline-block">
                     <label for=fname style="display:block">First name:</label>
-                    <input type=text name=firstname id=fname />
+                    <input type=text name=firstname id=fname placeholder="First name" required/>
                 </span>
                 
                 <span style="display:inline-block">
                     <label for=lname  style="display:block">Surname:</label>
-                    <input type=text name=surname id=lname />
+                    <input type=text name=surname id=lname placeholder="Surname" required />
                 </span>
                 <span style="display:inline-block">
                     <label for=age style="display:block">Age:</label>
-                    <input type=text name=age id=age />
+                    <input type=text name=age id=age placeholder="Your age in numbers"/>
                 </span>
             </div> 
                 
             <div>
                 <span style="display:inline-block">
                     <label for=company style="display:block">Company:</label>
-                    <input type=text name=company id=company />
+                    <input type=text name=company id=company placeholder="Company name"/>
                 </span>
                 
                 <span style="display:inline-block">
                     <label for=username style="display:block">Username:</label>
-                    <input type=text name=username id=username />
+                    <input type=text name=username id=username placeholder="Username" />
                 </span>
                 <span style="display:inline-block">
                     <label for=email style="display:block">Email:</label>
-                    <input type="email" name="email" id="email"/>
+                    <input type="email" name="email" id="email" placeholder="example@domail.com" required/>
                 </span>
             </div> 
 
@@ -154,7 +113,7 @@
             <div>
                 <span style="display:inline-block">
                     <label for=adress style="display:block">Adress:</label>
-                    <input style="widspan:36rem" type=text name=adress id=adress />
+                    <input style="widspan:36rem" type=text name=adress id=adress placeholder="Adress"/>
                 </span>
             </div> 
 
@@ -162,21 +121,21 @@
             <div>
                 <span style="display:inline-block">
                     <label for=city style="display:block">City:</label>
-                    <input type=text name=city id=city />
+                    <input type=text name=city id=city placeholder="City" />
                 </span>
                 
                 <span style="display:inline-block">
                     <label for=pstcode  style="display:block">Postal code:</label>
-                    <input type=text name=pstcode id=pstcode />
+                    <input type=text name=pstcode id=pstcode placeholder="1234 AA"/>
                 </span>
                 <span style="display:inline-block">
                     <label for=country style="display:block">Country</label>
-                    <input type=text name=country id=country />
+                    <input type=text name=country id=country placeholder="Country"/>
                 </span>
             </div> 
             
         </form>
-        <div class="btn"><button id="enterData" onclick="enterData()">Enter Data</button></div>
+        <div class="btnAdd"><button id="enterData" onclick="enterData()">Enter Data</button></div>
     </div>
    
 </section> 

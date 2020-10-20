@@ -82,7 +82,7 @@ html, body{
             transition: 0.1s ease-in-out;
             cursor: pointer;
         }
-        button:hover, button:focus {
+        button:hover, button:focus, #display:focus{
         outline: none;
         }
         button:hover{
@@ -324,11 +324,14 @@ html, body{
 
         //Special functions
         if (specialfunctions == true && calculateSum[0] == '/' ){
-            result2 = calculateSum[1] / calculateSum[1];
+            resultFinal = calculateSum[1] / calculateSum[1];
+            console.log('resultFinal: ' +resultFinal);
+            display.value = resultFinal;
 
         }
         else if (specialfunctions == true && calculateSum[0] == '*' ){
-            result2 = calculateSum[1] * calculateSum[1];
+            resultFinal = calculateSum[1] * calculateSum[1];
+            display.value = resultFinal;
         }
         
         else if (specialfunctions == false) {

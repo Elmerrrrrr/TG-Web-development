@@ -1,7 +1,10 @@
 import Navbar from "reactjs-navbar";
+// import About from '../about';
+import { Refresh } from "../../Refresh";
+import { useState } from "react";
 
 // import logo from "../../logo.svg";
-// import Loader from "react-loader-spinner";
+
 import {
   faPaperPlane,
   faUser,
@@ -15,7 +18,11 @@ import './_navigation.scss'
  
 
 function Navigation() {
+    const [count, setCount] = useState(0);
     return (
+
+      
+
       <Navbar
       //  logo={logo}
        // loader={<Loader type="Puff" color="#D85B5B" height={25} width={25} />}
@@ -49,7 +56,17 @@ function Navigation() {
               return true;
             },
           }
-
+          ,
+          {
+            title: null,
+            icon: faLink,
+            isAuth: true,
+            onClick: () => {
+              <Refresh />
+             
+              return true;
+            },
+          }
         ]}
      />
     );

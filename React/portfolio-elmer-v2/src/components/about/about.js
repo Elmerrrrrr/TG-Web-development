@@ -11,7 +11,7 @@ function About(){
     return(
 
 
-<motion.div className="aboutContainter" ref={constraintsRef}>
+<motion.div className="aboutContainter" id="about" ref={constraintsRef}>
 
 
 <motion.div drag dragConstraints={constraintsRef} ><Profile /></motion.div>  

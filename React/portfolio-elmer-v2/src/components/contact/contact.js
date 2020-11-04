@@ -3,19 +3,31 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button'
-// import {MDCTextField} from '@material/textfield';
+
+import * as React from "react";
+// import { useState } from "react";
+import { useRef } from "react";
+import { motion } from "framer-motion"
 
 
 function Contact(){
+    const constraintsRef = useRef(null);
+    // const [count, setCount] = useState(0);
 
     return(
-    <div className ='contactContainer' id='contact'> 
 
 
-<Form>
-<h3>Let get in touch!</h3>
- <br/>
+
+
  
+ <motion.div className="contactContainer" id='contact' ref={constraintsRef}>
+        
+    <motion.div drag dragConstraints={constraintsRef} >
+
+    <Form>
+    <h3>Let's get in touch!</h3>
+    <br/>
+
     <Form.Group as={Row} controlId="formName">
     <Form.Label column sm={2}>
         Name
@@ -43,16 +55,18 @@ function Contact(){
         </Col>
     </Form.Group>
 
-
     <Form.Group as={Row}>
         <Col sm={{ span: 10, offset: 2 }}>
         <Button type="submit">Send Message</Button>
         </Col>
     </Form.Group>
-    
    </Form>
 
-    </div>   
+
+  </motion.div>  
+
+</motion.div>
+ 
     );
 }
 

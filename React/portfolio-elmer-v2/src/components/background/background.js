@@ -1,5 +1,4 @@
-
-// function Background(){
+//  function Background(){
  
 //  // geting canvas by id c
 //  var c = document.getElementById("c");
@@ -51,9 +50,7 @@
 //          drops[i]++;
 //         }
 //     }
-
 //  setInterval( draw, 35 );
 
-
 // }
-
+// Background();

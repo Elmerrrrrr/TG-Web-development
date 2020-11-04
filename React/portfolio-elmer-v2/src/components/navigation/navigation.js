@@ -1,7 +1,7 @@
 import Navbar from "reactjs-navbar";
 // import About from '../about';
 import { Refresh } from "../../Refresh";
-import { useState } from "react";
+// import { useState } from "react";
 
 // import logo from "../../logo.svg";
 
@@ -18,7 +18,7 @@ import './_navigation.scss'
  
 
 function Navigation() {
-    const [count, setCount] = useState(0);
+    // const [count, setCount] = useState(0);
     return (
 
       

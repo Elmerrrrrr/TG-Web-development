@@ -1,6 +1,3 @@
-
-function Background(){
- 
  // geting canvas by id c
  var c = document.getElementById("c");
  console.log(c);
@@ -53,8 +50,3 @@ function Background(){
     }
 
  setInterval( draw, 35 );
-
-
-}
-
-Background();

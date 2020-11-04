@@ -1,4 +1,5 @@
 import Container from 'react-bootstrap/Container';
+import {Helmet} from "react-helmet";
 // import Row from 'react-bootstrap/Row';
 // import Col from 'react-bootstrap/Col';
 // import Jumbotron from 'react-bootstrap/Jumbotron';
@@ -11,13 +12,22 @@ function Banner() {
 
 
     <Container fluid className ='banner' >
-        {/* <h1>Elmer Volgers</h1>
-        <h2>WebDev</h2> 
-        <img src={ Background } alt="banner"/>*/}
+        <h1>Elmer Volgers</h1>
+        <h2>WebDeveloper</h2> 
+        
+
+        <canvas id="c">
+
+        </canvas>
+     
+       
+     <Helmet>
+             <script src="../background.js"></script>
+     </Helmet>
+
        
     </Container>
-         
-
+             
       
       );
 }

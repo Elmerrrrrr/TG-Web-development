@@ -2,9 +2,59 @@
 
     background-image: url("../../assets/img/portfolio/elmer-portfolio-banner-1030x500v1.1.jpg");
     background-attachment: fixed;
-    background-position: left;
+    background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 700px;
+    min-height: 800px;
 
 }
+
+
+/* Page settings */
+
+
+// canvas {
+//     // display:flex;
+//     position: absolute;
+//     height: 400px;
+//     width: 100%;
+
+
+// }
+
+// #author {
+//     position: absolute;
+//     bottom: 10px;
+//     left: 10px;
+//     color : #0F0;
+//     z-index : 1;
+//     box-sizing: border-box;
+//     vertical-align: middle;
+// }
+
+// span {
+//     font-family: monospace;
+//     font-size: 1.5em;
+// }
+// span:after {
+//     content:"_gheorghe";
+//     opacity: 0;
+//     animation: cursor 1s infinite;
+// }
+// @keyframes cursor {
+//     0% {
+//         opacity: 0;
+//     }
+//     40% {
+//         opacity: 0;
+//     }
+//     50% {
+//         opacity: 1;
+//     }
+//     90% {
+//         opacity: 1;
+//     }
+//     100% {
+//         opacity: 0;
+//     }
+// }

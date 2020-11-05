@@ -1,7 +1,12 @@
 .footer{
-color: gray;
-text-align: center;
-padding: 20px;
-background-color: ivory;
+    // position: relative;
+    height: fit-content;
+    color: gray;
+    text-align: center;
+    background-color: ivory;
 
+    h3{
+        font-size: medium;
+        padding: 40px;
+    }
 }

@@ -1,21 +1,17 @@
+import './_navigation.scss'
 import Navbar from "reactjs-navbar";
-// import About from '../about';
 import { Refresh } from "../../Refresh";
-// import { useState } from "react";
-
-// import logo from "../../logo.svg";
-
 import {
   faPaperPlane,
   faUser,
-  faLink
+  faLink,
+  
 
 } from "@fortawesome/free-solid-svg-icons";
- 
-// import "reactjs-navbar/dist/index.css";
 
-import './_navigation.scss'
- 
+import React from 'react'
+
+
 
 function Navigation() {
     // const [count, setCount] = useState(0);
@@ -32,6 +28,14 @@ function Navigation() {
         // }}
         menuItems={[
           {
+            title: "Home",
+            icon: faUser,
+            isAuth: true,
+            onClick: () => {
+              window.location = "#";   
+            },
+          },
+          {
             title: "About me",
             icon: faUser,
             isAuth: true,
@@ -47,16 +51,7 @@ function Navigation() {
               window.location = "#contact";
             },
           },
-          {
-            title: null,
-            icon: faLink,
-            isAuth: true,
-            onClick: () => {
-              window.location = "www.linkedin.com";
-              return true;
-            },
-          }
-          ,
+        
           {
             title: null,
             icon: faLink,

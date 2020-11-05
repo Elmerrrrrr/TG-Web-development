@@ -12,7 +12,6 @@ function Portfolio() {
   
   return (
     <>
-
       <Navigation />
       <Banner />
       <About />

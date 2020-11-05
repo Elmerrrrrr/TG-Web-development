@@ -3,6 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button'
+import { BsArrowsMove } from 'react-icons/bs';
 
 import * as React from "react";
 // import { useState } from "react";
@@ -21,7 +22,7 @@ function Contact(){
 
  
  <motion.div className="contactContainer" id='contact' ref={constraintsRef}>
-        
+     
     <motion.div drag dragConstraints={constraintsRef} >
 
     <Form>
@@ -60,13 +61,33 @@ function Contact(){
         <Button type="submit">Send Message</Button>
         </Col>
     </Form.Group>
+    <p  className ='arrow-move-contact'><BsArrowsMove/></p>
    </Form>
 
-
+   
   </motion.div>  
+{/* 
+  <div>
+<form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
+<div className="form-group">
+    <label htmlFor="name">Name</label>
+    <input type="text" className="form-control" />
+</div>
+<div className="form-group">
+    <label htmlFor="exampleInputEmail1">Email address</label>
+    <input type="email" className="form-control" aria-describedby="emailHelp" />
+</div>
+<div className="form-group">
+    <label htmlFor="message">Message</label>
+    <textarea className="form-control" rows="5"></textarea>
+</div>
+<button type="submit" className="btn btn-primary">Submit</button>
+</form>
+ </div> */}
 
 </motion.div>
- 
+
+
     );
 }
 

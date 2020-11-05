@@ -3,19 +3,51 @@
 
 .contactContainer{
     display: flex;
+    
     justify-content: center;
     align-items: flex-end;
     width: 100%;
     padding: 50px;
     padding-top: 8vw;
-    background-color: ivory;
+    // background-color: ivory;
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background-size: 100% 100%;
+    -webkit-animation: Gradient 5s ease infinite;
+    -moz-animation: Gradient 5s ease infinite;
+    animation: Gradient 5s ease infinite;
 
+
+    @-webkit-keyframes Gradient {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
+        }
+    }
+
+    @-moz-keyframes Gradient {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
+        }
+    }
+}
 
 
     form{
         display: flex;
         flex-direction: column;
         justify-items: center;
+        position: relative;
         background-color: white;
         width: 65vw;
         padding: 20px;
@@ -77,6 +109,44 @@
         margin-left: auto;
         margin-right: auto;
     }
-}
+    p svg{
+        
+        position: absolute;
+        bottom: 50px;
+        right: 50px;
+        // width: 3em;
+        fill: gray;
+        transform: scale(2.5);
+        animation-name: ckw;
+        animation-duration: 3s;
+        /* Things added */
+        animation-iteration-count: infinite;
+        // transform-origin: 50% 50%;
+   
+        
+        @keyframes ckw {
+            0% {transform: scale(2) rotate(0deg);
+            
+            }
+            100% {transform: scale(2) rotate(360deg);
+            }
+        }
+    }
+    p svg:hover{
 
+        animation-name: ckx;
+        animation-duration: 0s;
+        /* Things added */
+        animation-iteration-count: infinite;
 
+    
+    @keyframes ckx {
+        0% {transform: scale(2) rotate(0deg);
+        
+        }
+        100% {transform: scale(2) rotate(0deg);
+            
+        }
+     }
+    
+    }

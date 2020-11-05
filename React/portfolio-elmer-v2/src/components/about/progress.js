@@ -1,4 +1,5 @@
 import ProgressBar from 'react-bootstrap/ProgressBar';
+import { BsArrowsMove } from 'react-icons/bs';
 import './_about.scss';
 
 
@@ -7,8 +8,9 @@ function Progress(){
 
     return(
 
-    <div className ='progress-programming' >  
-        <h3>Progress</h3>
+    <div className ='progress-programming' >
+        <p  className ='arrow-move'><BsArrowsMove/></p>  
+        <h3>Skills</h3>
         <br/>
         <h4>HTML</h4>
         <ProgressBar variant="success" now={85} />

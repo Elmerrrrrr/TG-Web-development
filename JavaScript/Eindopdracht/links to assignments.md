@@ -10,7 +10,7 @@ https://bwxkzbnkzutzwfucqsbxog-on.drv.tw/hosting_webpages/TechGrounds/JavaScript
 
 
 Calculator:
-https://bwxkzbnkzutzwfucqsbxog-on.drv.tw/hosting_webpages/TechGrounds/JavaScript/calculator.html
+https://bwxkzbnkzutzwfucqsbxog-on.drv.tw/hosting_webpages/TechGrounds/JavaScript/calculatorV2.html
 
 
 Poftfolio Members:

@@ -9,6 +9,8 @@
 
  //chinese characters - taken from the unicode charset
  var matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%";
+//  var matrix = "ELMERVOLGERS";
+
  //converting the string into an array of single characters
  matrix = matrix.split("");
 
@@ -49,4 +51,4 @@
         }
     }
 
- setInterval( draw, 35 );
+ setInterval( draw, 70 );

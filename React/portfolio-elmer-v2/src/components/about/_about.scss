@@ -1,25 +1,44 @@
 .aboutContainter{
     display: flex;
     justify-content: space-evenly;
-    background-color: ivory;
+    position: relative;
+    background-color: white;
     flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
     padding-top: 8vw;
+    background-image: url("../../assets/img/portfolio/codePattrn.jpg");
+    
+    background-attachment: fixed;
+    // background-position: center;
+    background-repeat: repeat;
+    background-size: 249px 213px;
+    // background-blend-mode: soft-light;
+    // background-color: white;
 }
+
+.aboutContainter:before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: white;
+    opacity: 0.95;
+    // filter: grayscale(50%);
+  }
 
 
 .card{
     width: 65vw;
     min-width: 250px;
-    max-width: 700px;
+    max-width: 500px;
     text-align: center;
-    padding: 50px;
+    padding: 20px;
     margin-top: auto;
     margin-bottom: 20%;
     border: 1px solid lightgray;
     box-shadow: 0px 0px 5px gray;
-    border-radius: 5vw;
+    border-radius: 2vw;
 
 
     img{
@@ -102,27 +121,26 @@
 .progress-programming{
     position: relative;
     align-self: center;
-    max-width: 800px;
+    max-width: 500px;
     width: 65vw;
     padding: 70px 50px 100px 50px;
     margin-top: auto;
     margin-bottom: 20%;
     border: 1px solid lightgray;
     box-shadow: 0px 0px 5px gray;
-    border-radius: 5vw;
+    border-radius: 2vw;
     background-color: white;
 
     h3{
+        font-size: 1.25rem;
         padding: 5px 0px;
-        color: gray;
-        font-style: italic;
         text-align: center;
     }
 
     h4{
+        font-size: 1rem;
         padding-top: 8px;
         color: gray;
-        font-style: italic;
     }
 
     .progress{
@@ -174,4 +192,12 @@
      }
     
     }
+}
+
+
+
+
+@media (min-width: 2400px) {
+
+    .card{ border-radius: 2vw;}
 }

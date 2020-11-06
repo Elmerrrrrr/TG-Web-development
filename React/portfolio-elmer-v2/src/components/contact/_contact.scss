@@ -3,20 +3,24 @@
 
 .contactContainer{
     display: flex;
-    
     justify-content: center;
     align-items: flex-end;
     width: 100%;
     padding: 50px;
     padding-top: 8vw;
-    // background-color: ivory;
-    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
-    background-size: 100% 100%;
+    background-image: url("../../assets/img/portfolio/codebg-elmer.jpg");
+    // background-attachment: fixed;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: 50% 50%;
+    // background-color: white;
+
+    // background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
     -webkit-animation: Gradient 5s ease infinite;
     -moz-animation: Gradient 5s ease infinite;
     animation: Gradient 5s ease infinite;
 
-
+    
     @-webkit-keyframes Gradient {
         0% {
             background-position: 0% 50%
@@ -50,10 +54,10 @@
         position: relative;
         background-color: white;
         width: 65vw;
-        padding: 20px;
+        padding: 20px 10px;
         border: 1px solid lightgray;
         box-shadow: 0px 0px 5px gray;
-        border-radius: 5vw;
+        border-radius: 2vw;
         margin: 8% 5%;
 
         
@@ -63,9 +67,9 @@
         }
 
         h3{
-            color: gray;
+            font-size: 1.25rem;
             text-align: center;
-            font-style: italic;
+           
         }
 
 

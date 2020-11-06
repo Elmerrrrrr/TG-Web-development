@@ -1,71 +1,28 @@
-import './_navigation.scss'
-import Navbar from "reactjs-navbar";
-import { Refresh } from "../../Refresh";
-import {
-  faPaperPlane,
-  faUser,
-  faLink,
-  
+import {Nav, Navbar} from 'react-bootstrap';
+import { BiArrowToTop, BiFingerprint } from 'react-icons/bi';
+import { IoIosPerson } from 'react-icons/io';
+import { GiPaperPlane } from 'react-icons/gi';
+import { FaLinkedin} from 'react-icons/fa';
 
-} from "@fortawesome/free-solid-svg-icons";
-
-import React from 'react'
-
-
+import './_navigation.scss';
 
 function Navigation() {
-    // const [count, setCount] = useState(0);
-    return (
 
-      
+    return(
 
-      <Navbar
-      //  logo={logo}
-       // loader={<Loader type="Puff" color="#D85B5B" height={25} width={25} />}
-        // isLoading={this.state.isLoading}
-        // helpCallback={() => {
-        //   alert("I need help... and coffee...");
-        // }}
-        menuItems={[
-          {
-            title: "Home",
-            icon: faUser,
-            isAuth: true,
-            onClick: () => {
-              window.location = "#";   
-            },
-          },
-          {
-            title: "About me",
-            icon: faUser,
-            isAuth: true,
-            onClick: () => {
-              window.location = "#about";   
-            },
-          },
-          {
-            title: "Contact",
-            icon: faPaperPlane,
-            isAuth: true,
-            onClick: () => {
-              window.location = "#contact";
-            },
-          },
-        
-          {
-            title: null,
-            icon: faLink,
-            isAuth: true,
-            onClick: () => {
-              <Refresh />
-             
-              return true;
-            },
-          }
-        ]}
-     />
+        <>
+  <Navbar sticky="top" variant="dark">
+    <Navbar.Brand href="https://github.com/Elmerrrrrr/TG-Web-development" target="_blank"><BiFingerprint/></Navbar.Brand>
+    <Nav className="mr-auto">
+      <Nav.Link href="#about" ><IoIosPerson /> About Me</Nav.Link>
+      <Nav.Link href="#contact"><GiPaperPlane /> Contact</Nav.Link>
+      <Nav.Link href="https://www.linkedin.com/in/elmer-volgers-67729614a/" target="_blank"><FaLinkedin/></Nav.Link>
+      <Nav.Link href="#top"><BiArrowToTop/></Nav.Link>
+    </Nav>
+  </Navbar>
+        </>
     );
-  }
-  
-  export default Navigation;
+    
+}
 
+export default Navigation;

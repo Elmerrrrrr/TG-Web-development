@@ -16,7 +16,7 @@ function Profile(){
                 <Card.Title>Elmer Volgers</Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">Webdeveloper</Card.Subtitle>
                 <Card.Text>
-                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora fugiat officiis suscipit non ea at, cupiditate quas architecto velit assumenda iste facere hic dolore distinctio repellat provident illum dignissimos aspernatur!
+                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora fugiat officiis suscipit non ea at, cupiditate quas architecto.
                 </Card.Text>
                 <Card.Link href="https://www.linkedin.com/in/elmer-volgers-67729614a/" target="_blank"><FaLinkedin /></Card.Link>
             </Card.Body>

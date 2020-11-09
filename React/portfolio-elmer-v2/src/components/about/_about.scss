@@ -7,12 +7,12 @@
     margin-left: auto;
     margin-right: auto;
     padding-top: 8vw;
-    background-image: url("../../assets/img/portfolio/codePattrn.jpg");
+    background-image: url("../../assets/img/portfolio/code-pattrn-bg.jpg");
     
     background-attachment: fixed;
     // background-position: center;
     background-repeat: repeat;
-    background-size: 249px 213px;
+    background-size: 250x 250px;
     // background-blend-mode: soft-light;
     // background-color: white;
 }
@@ -22,8 +22,10 @@
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background-color: white;
+    background: linear-gradient(180deg,  #fff, #fff2b9, #fff);
     opacity: 0.95;
+    // background-color: white;
+    // opacity: 0.98;
     // filter: grayscale(50%);
   }
 
@@ -196,8 +198,9 @@
 
 
 
-
 @media (min-width: 2400px) {
 
     .card{ border-radius: 2vw;}
 }
+
+

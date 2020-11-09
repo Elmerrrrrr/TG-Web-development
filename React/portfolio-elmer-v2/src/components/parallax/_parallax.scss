@@ -5,16 +5,20 @@
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
-    filter: contrast(120%);
+    // filter: contrast(120%);
     min-height: 650px;
 
 }
 
 
 
-@media (max-width:768px){
+@media (max-width:1024px){
 
-    background-image: url("../../assets/img/portfolio/elmer-portfolio-banner-1030x500v1.2.jpg");
+    .parallax{
+    background-image: url("../../assets/img/portfolio/elmer-portfolio-banner-small.jpg");
+    // filter: contrast(100%);
+    background-position: center;
+    }
 }
 
 

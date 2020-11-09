@@ -1,6 +1,6 @@
  // geting canvas by id c
  var c = document.getElementById("c");
- console.log(c);
+//  console.log(c);
  var ctx = c.getContext("2d");
 
  //making the canvas full screen

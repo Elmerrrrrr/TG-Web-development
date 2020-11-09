@@ -1,3 +1,6 @@
+import '../footer/_footer.scss';
+import DencryptFooter from '../crypting/cryptingFooter';
+
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
@@ -83,6 +86,8 @@ function Contact(){
 <button type="submit" className="btn btn-primary">Submit</button>
 </form>
  </div> */}
+
+<div className='footer'> <DencryptFooter /> </div>
 
 </motion.div>
 

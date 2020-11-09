@@ -1,20 +1,14 @@
-TG-Web-development
+
  
+# TG-Web-development
 
-# Sky
+Here are the links to the assignments that are hosted somewhere else:
 
-React component for interactive backgrounds
+## JavaScript
 
-## Demo
 
-https://codepen.io/lucagez/full/oQoRyK/
-
-## Installation
+## React
 
 ```
-$ npm install --save react-sky
+
 ```
-
-
-
-## Usage

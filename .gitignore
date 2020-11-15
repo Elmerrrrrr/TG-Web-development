@@ -27,14 +27,13 @@ JavaScript/Eindopdracht/PortFolio/img/data.png
 JavaScript/Eindopdracht/PortFolio/img/elmer.jpeg
 JavaScript/Eindopdracht/PortFolio/img/WebDevolpment word cloud.png
 
-React/portfolio-elmer/
 
-React/portfolio-elmer-V2/node_modules
-React/portfolio-elmer-v2/.gitignore
-React/portfolio-elmer-v2/README.md
-React/portfolio-elmer-v2/src/logo.svg
-React/portfolio-elmer-v2/src/reportWebVitals.js
-React/portfolio-elmer-v2/src/setupTests.js
+React/portfolio-elmer/node_modules
+React/portfolio-elmer/.gitignore
+React/portfolio-elmer/README.md
+React/portfolio-elmer/src/logo.svg
+React/portfolio-elmer/src/setupTests.js
+React/portfolio-elmer/src/reportWebVitals.js
 
-React/portfolio-elmer-v2/src/config.js
+React/portfolio-elmer/src/config.js
 >>>>>>> a8d2d7370dcb082718dfdec2a1396051450512c2

@@ -1,0 +1,20 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+@import 'components/banner/_banner.scss';
+@import 'components/about/_about.scss';
+@import 'components/contact/_contact.scss';
+@import 'components/footer/footer.scss';
+
+@import 'components/navigation/_navigation.scss';
+
+  @font-face {
+    font-family: "Minisystem";
+    src: url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+  }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: 'Source Code Pro', monospace;
+}

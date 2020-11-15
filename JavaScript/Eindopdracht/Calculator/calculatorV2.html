@@ -310,8 +310,6 @@ html, body{
 
         let resultBtn = btnElement.innerText;
 
-
-
         if (calculateSum[0]== '*' || calculateSum[0]== '/') {
             specialfunctions = true;
         }
@@ -338,6 +336,7 @@ html, body{
 
             //Calculate the sum in the array
             result = eval(calculateSum.join(''));
+            console.log(result);
 
             //Check if number is an Interger number
             if (result %1 == 0) {
@@ -348,7 +347,7 @@ html, body{
             // Check if number is an float number
             else if (result %1 != 0){
 
-                resultFinal = eval(calculateSum.join('')).toPrecision(2);
+                resultFinal = eval(calculateSum.join('')).toFixed(2);
                 display.value = resultFinal;
             }
         }

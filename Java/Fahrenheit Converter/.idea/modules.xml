@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/TG-Web-development.iml" filepath="$PROJECT_DIR$/.idea/TG-Web-development.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FahrenheitConverter.iml" filepath="$PROJECT_DIR$/FahrenheitConverter.iml" />
     </modules>
   </component>
 </project>

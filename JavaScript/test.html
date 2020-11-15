@@ -6,43 +6,141 @@
     <title>Document</title>
 </head>
 <body>
-
+    
 
     <script>
 
+//         let number = 6;
+
+//         switch (true) {
+//     case number == 0:
+//             console.log('case 1');
+//         break;
+//     case number<=5 && number>0:
+//             console.log('case 2');
+//         break;
+//     case number<=10 && number>5:
+//             console.log('case 3');
+//         break;
+//     case number>10:
+//              console.log('case 4');
+//         break;   
+//         console.log('');
+//         console.log();
+                       
+// }
 
 
-// let i=0;
-//     while(i<2){
-//         console.log(1,2,3,4,5,6,7,8,9,10);
-//         i++;
 
-//         for(j=0; j<10; j++){ 
-            
-//             while(i==2){
-//             console.log(2,4,6,8,10,12,14,16,18,20);
-//             i++;
-//             }
-//             while(i==3){
-//             console.log(3,6,9,12,15,18,21,24,27,30);
-//             i++;
-//             }
-//         }
+
+// 7 in the array? then print BOOOOM!
+// function sevenBoom(arr) {
+//     for(let i = 0; i < arr.length; i++) {
+//         let elementAgain = arr[i];
+//         let includes_seven = /\7/;
+
+//         if(elementAgain == includes_seven) {
+//             return "BOOOOM!";
+//         } else text = "There is no 7 in the array!"
 //     }
-
-let i = 0;
-        while (i < 3) {
-            i++;
-            {
-                for (let a = i; a < i * 11; a += i) {
-                    console.log(a);
-                }
-            }
-        } 
+//     return text;
+// }
+// console.log(sevenBoom([1, 3, 5, 9, 23, 7]));
 
 
-        
-    </script>
+//Opdracht3
+
+// function ClubInformation (clubName, typeSport, memberCount, contactInformation){
+
+// this.clubName =  clubName;
+// this.typeSport = typeSport;
+// this.memberCount = memberCount;
+// this.contactInformation = contactInformation;
+// }
+
+// let club1 = new ClubInformation('Club1', 'Soccer', 9500, {Adress: 'Lane1', Telephone: '777-77777', Contactperson: 'Contactperson1'});
+// let club2 = new ClubInformation('Club2', 'Soccer', 2500, {Adress: 'Lane2', Telephone: '777-77777', Contactperson: 'Contactperson2'});
+// let club3 = new ClubInformation('Club3', 'Soccer', 3500, {Adress: 'Lane3', Telephone: '777-77777', Contactperson: 'Contactperson3'});
+// let club4 = new ClubInformation('Club4', 'Soccer', 4500, {Adress: 'Lane4', Telephone: '777-77777', Contactperson: 'Contactperson4'});
+
+// let array = [club1, club2, club3, club4];
+
+// // console.log(club1, club2, club3, club4);
+// // console.log(array);
+
+// let arrayLenght = array.length;
+
+// for (let i =0; i<arrayLenght; i++){
     
+//     console.log(array[i].memberCount);
+// }
+
+//Opdracht4
+
+
+
+
+function Person(name, age) { 
+            this.name = name; 
+            this.age = age; 
+            } 
+
+            const persons = [ 
+            new Person("Jan", 24), 
+            new Person("Klaas", 15), 
+            new Person("Yanis", 42), 
+            new Person("Rupel", 55), 
+            new Person("Hendrik", 32), 
+            new Person("Mono", 28), 
+            new Person("West", 23), 
+            ];
+            // console.log(persons);
+
+            for(let i=0; i<persons.length; i++ ){
+                
+            // console.log(persons[i].age);
+            }
+            // console.log(persons.sort( (a,b) => (a.age > b.age) ? 1 : ((b.age > a.age) ? -1 : 0)));
+
+
+        //    function compare( a, b ) {
+        //         if ( a.age < b.age ){
+        //             return -1;
+        //         }
+        //         if ( a.age > b.age ){
+        //             return 1;
+        //         }
+        //         return 0;
+        //         }
+
+        //   console.log(persons.sort(compare));  
+
+
+        //   //Opdracht5
+
+        //   let person = {name: 'Jan', age: 24};
+
+
+
+
+
+
+ function checkEmptyString(string) {
+	var regex = "^\\s+$";
+	if (string == regex) {
+    	console.log(true)
+
+	} else {
+		console.log(false)
+	}
+}
+checkEmptyString("");
+
+
+    </script>
 </body>
 </html>
+
+
+
+

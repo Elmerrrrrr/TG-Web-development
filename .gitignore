@@ -1,6 +1,40 @@
 
+<<<<<<< HEAD
 .tmp.drivedownload
 Techgrounds.code-workspace
 JavaScript/Eindopdracht/Calculator/calculatorV2.html
 .gitignore
 
+=======
+Techgrounds.code-workspace
+JavaScript/test.html
+JavaScript/Eindopdracht/Calculator/calculatorV2.html
+JavaScript/Eindopdracht/Sudoku/sudoku.js
+React/package-lock.json
+
+
+package-lock.json
+JavaScript/test.html
+JavaScript/Eindopdracht/Calculator
+JavaScript/Eindopdracht/Calculator/calculator.html
+JavaScript/Eindopdracht/Calculator/font/minisystem.ttf
+
+JavaScript/Eindopdracht/PortFolio/PortFolio.css
+JavaScript/Eindopdracht/PortFolio/Portfolio.html
+JavaScript/Eindopdracht/PortFolio/PortFolio.js
+JavaScript/Eindopdracht/PortFolio/img/banner.jpg
+JavaScript/Eindopdracht/PortFolio/img/data.png
+JavaScript/Eindopdracht/PortFolio/img/elmer.jpeg
+JavaScript/Eindopdracht/PortFolio/img/WebDevolpment word cloud.png
+
+React/portfolio-elmer/
+
+React/portfolio-elmer-V2/node_modules
+React/portfolio-elmer-v2/.gitignore
+React/portfolio-elmer-v2/README.md
+React/portfolio-elmer-v2/src/logo.svg
+React/portfolio-elmer-v2/src/reportWebVitals.js
+React/portfolio-elmer-v2/src/setupTests.js
+
+React/portfolio-elmer-v2/src/config.js
+>>>>>>> a8d2d7370dcb082718dfdec2a1396051450512c2

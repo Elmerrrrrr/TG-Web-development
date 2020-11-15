@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator V2</title>
+
+    <style>
+
+@font-face {
+font-family: "Minisystem";
+src: url("./font/minisystem.ttf");
+src: url("./font/minisystem.ttf") format("ttf"),
+}
+
+
+html, body{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: cornsilk;
+            color: rgb(19, 172, 233) ;
+        }
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            height: 100%;
+        }
+        .calculator{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+            width: 340px;
+            padding: 20px;
+            margin-top: 5%;
+            border: 2px solid white;
+            background: white;
+            box-shadow: 2px 2px 8px black;
+            border-radius: 20px;
+        }
+        #display{
+            font-family: "Minisystem";
+            color:rgb(19, 172, 233);
+            background: black;
+            padding: 15px;
+            height: 100px;
+            width: 225px;
+            margin-bottom: 10px;
+            text-align: right;
+            font-size: 50px;
+            border-radius: 15px;
+        }
+       .keys{
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: center;
+           width: 300px;
+           margin-left: auto;
+           margin-right: auto;
+        }
+        h1{
+            align-self: center;
+            text-shadow: 1px 1px 1px gray;
+            text-align: center;
+            width: 100%;
+            padding-top: 10px;
+        }
+        button{
+            padding: 0.5em;
+            margin: 4px;
+            width: 60px;
+            background-color: rgb(19, 172, 233) ;
+            color: white;
+            border: 2px solid white;
+            border-radius: 50%;
+            font-size: x-large;
+            font-weight: bold;
+            box-shadow: 1px 1px 4px grey;
+            transition: 0.1s ease-in-out;
+            cursor: pointer;
+        }
+        button:hover, button:focus, #display:focus{
+        outline: none;
+        }
+        button:hover{
+            translate: 1px 1px;
+            box-shadow: none;
+        }
+        .item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+            padding-left: 15px;
+            height: 150px;
+        }
+        .fas{
+            margin-bottom: 0.3em;
+            font-size: 50px;
+            text-shadow: 2px 2px 2px gray;
+            transition: 0.1s ease-in-out;
+        }
+        .fas:hover{
+            transform: rotate(45deg);
+        }
+        footer {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            width: 100%;
+            margin: 15px 0px;
+            font-size: small;
+            color: gray;
+            text-align: center;
+            overflow: hidden;
+        }
+        #btn-change{
+            background: rgb(255, 52, 121);
+            color: cornsilk;
+            padding: 3px 5px;
+            width: fit-content;
+            margin-left: 20px;
+            font-size: small;
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px;
+            cursor: pointer;
+        }
+        #btn-change:hover, #btn-change:focus {
+        outline: none;
+        }
+        #btn-change:hover{
+            translate: 1px 1px;
+        }
+        #functions:hover{
+        /* margin-left: -65px; */
+        
+        }
+        #functions  button{
+            background-color: rgb(19, 172, 233);
+            filter: brightness(120%);
+            color: white;
+        }
+        #functions  button:hover{
+            background-color: rgb(236, 97, 46);
+            border: 2px solid rgb(173, 170, 170);
+        }
+
+
+        @media (max-width: 567px) {
+
+            .calculator{
+            height: 375px;
+            width: 225px;
+            padding: 10px;
+            margin: 15% 8%;
+            
+            }
+            button{
+            padding: 0.35em;
+            margin: 4px;
+            width: 40px;
+            font-size: large;
+            }
+            .keys{
+             width: 200px;
+            }
+            #display{
+            padding: 10px;
+            height: 75px;
+            width: 160px;
+            font-size: 30px;
+            }
+            footer button {
+            display: none;
+            }
+
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+<div class="container">
+    <div class="calculator">
+        
+
+        <div class="display"><input id="display" type="numbers"></div>
+
+        <div id="functions"><button id="cl" onclick="clearAll(this)">C</button><button id="cle" onclick="clearEntry(this)">CE</button><button id="f%" onclick="calculate(this)">%</button><button id="f%" onclick="numberInput(this)">+-</button></div>
+
+        <div class="keys">
+            <button id="n1" onclick="numberInput(this)">7</button><button id="n2" onclick="numberInput(this)">8</button><button id="n3" onclick="numberInput(this)">9</button><button id="f/" onclick="calculate(this)">/</button>
+            <button id="n4" onclick="numberInput(this)">4</button><button id="n5" onclick="numberInput(this)">5</button><button id="n6" onclick="numberInput(this)">6</button><button id="fx" onclick="calculate(this)">x</button>
+            <button id="n1" onclick="numberInput(this)">1</button><button id="n2" onclick="numberInput(this)">2</button><button id="n3" onclick="numberInput(this)">3</button><button id="f-" onclick="calculate(this)">-</button>
+            <button id="n0" onclick="numberInput(this)">0</button><button id="fpoint" onclick="numberInput(this)">.</button><button id="f=" onclick="total(this)">=</button><button id="f+" onclick="calculate(this)">+</button>
+
+        </div>
+
+    </div>
+
+    <footer>Right to copy 2020 - Elmer Volgers <button onclick="changeBackground()" id="btn-change">change bg</button> </footer>
+</div>
+
+
+    
+    <script>
+    
+    let display = document.getElementById('display')
+    let storeInputNumbers= [];
+    let storeMathAction = [];
+    let calculateSum = [];
+    let inputValue;
+    let mathAction;
+    let number = 0;
+    let result = 0;
+    let resultFinal = 0;
+    let calculatedTotal = false;
+    let specialfunctions = true;
+    display.value = result;
+
+
+    
+
+    function numberInput(btnElement){
+       
+        inputValue = btnElement.innerText;
+
+        //Change positive input value
+        if (inputValue == '+-' && number >=0 && resultFinal == 0 ) {
+         storeInputNumbers.unshift('-');
+         number = storeInputNumbers.join('');
+         display.value = number;
+         console.log(number);
+        }
+        //Change negative input value
+        else if (inputValue == '+-' && number <0 && resultFinal == 0) {
+            number *= -1;
+            storeInputNumbers.shift();
+            display.value = number;
+        }
+        //Change calculated value
+        else if (inputValue == '+-') {
+                resultFinal *= -1;
+                console.log('resultFinal: '+resultFinal);
+                calculateSum.pop();
+                calculateSum.push(resultFinal);
+                display.value = resultFinal;
+        }
+        //Positive number inputs
+        else if (inputValue != '+-') {
+        storeInputNumbers.push(inputValue);
+        number = storeInputNumbers.join('');
+        display.value = number;
+        }
+        //Reset calculatedTotal to continue calculating
+        calculatedTotal = false;
+
+        //Reset mathAction Array
+        storeMathAction = [];
+
+        //Set specialfunctions
+        if (calculateSum[0]== '*' || calculateSum[0]== '/') {
+            specialfunctions = true;
+        }
+        else { specialfunctions = false;}
+
+    }
+
+
+
+
+
+    function calculate(btnElement){
+
+
+        //dont put an empty number in the array && dont put zero before math action special functions
+        if ( calculatedTotal == false && specialfunctions == false ) {
+        calculateSum.push(number);
+        }
+        // Reset input
+        inputValue;
+        storeInputNumbers = [];
+
+        //Display math action
+        mathAction = btnElement.innerText;
+        display.value = mathAction;
+
+        //Transform math operator
+        if (mathAction == 'x' ) {
+        storeMathAction.push('*');
+        }
+        else {
+        storeMathAction.push(mathAction);
+        } 
+
+       // Store mathoperator in Calsum array
+        operator = storeMathAction.pop();
+        calculateSum.push(operator);
+    }
+    
+    
+
+    function total(btnElement){
+
+        let resultBtn = btnElement.innerText;
+
+        if (calculateSum[0]== '*' || calculateSum[0]== '/') {
+            specialfunctions = true;
+        }
+
+        //Put number in array before calculating the total
+         if (calculatedTotal == false) {
+        calculateSum.push(number);
+        calculateSum.join('');
+         }
+
+        //Special functions
+        if (specialfunctions == true && calculateSum[0] == '/' ){
+            resultFinal = calculateSum[1] / calculateSum[1];
+            console.log('resultFinal: ' +resultFinal);
+            display.value = resultFinal;
+
+        }
+        else if (specialfunctions == true && calculateSum[0] == '*' ){
+            resultFinal = calculateSum[1] * calculateSum[1];
+            display.value = resultFinal;
+        }
+        
+        else if (specialfunctions == false) {
+
+            //Calculate the sum in the array
+            result = eval(calculateSum.join(''));
+            console.log(result);
+
+            //Check if number is an Interger number
+            if (result %1 == 0) {
+
+                resultFinal = eval(calculateSum.join(''));
+                display.value = resultFinal;
+            }    
+            // Check if number is an float number
+            else if (result %1 != 0){
+
+                resultFinal = eval(calculateSum.join('')).toFixed(2);
+                display.value = resultFinal;
+            }
+        }
+
+
+      
+        //Reset inputvalue
+        inputValue ;
+        number;
+        
+        //Result in calculate array for continuing calculating
+        // if (calculatedTotal == false) {
+        calculateSum = [];
+        calculateSum.push(resultFinal);
+        console.log(calculateSum);
+        storeInputNumbers = [];
+        storeMathAction = [];
+        display.value = resultFinal;
+
+        //}
+        //Set for not adding number again when calculating further
+        calculatedTotal = true;
+        
+
+        //set special functions off for calculating further
+        specialfunctions = false;
+
+    }
+
+
+    function clearAll(){
+        storeInputNumbers= [];
+        storeMathAction = [];
+        calculateSum = [];
+        inputValue;
+        mathAction;
+        number = 0;
+        result = 0;
+        display.value = result;
+        specialfunctions = true;
+        calculatedTotal = false;
+    }
+
+    function clearEntry(){
+
+        storeInputNumbers.pop();
+        console.log(storeInputNumbers);
+        number = storeInputNumbers.join('');
+        display.value = number;
+        
+    }
+
+
+
+
+
+// ---------------Change Background---------------
+
+    //Default values
+
+    let angle = 45;
+    let colorOne = 'rgb(255, 52,'; // rgb(255, 52, 121)
+    let colorTwo = 'rgb(3, 25,'; //  rgb(3, 25, 244)
+    let clr1 = 121;
+    let clr2 = 244;
+
+    function changeBackground(){
+
+        let clr1 = Math.round(Math.random()*255);
+        let clr2 = Math.round(Math.random()*255);
+        angle = Math.round(Math.random()*360);
+        document.body.style.background = '-webkit-linear-gradient('+ angle +'deg' + ', ' + colorOne + clr1 + ')' + ', ' + colorTwo + clr2 + ')';
+        document.body.style.color = 'white';
+        document.getElementsByTagName('footer')[0].style.color = 'white';
+    }
+
+    </script>
+    
+</body>
+</html>

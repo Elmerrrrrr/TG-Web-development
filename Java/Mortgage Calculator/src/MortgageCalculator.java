@@ -1,10 +1,8 @@
-package MortgageCalulator;
-
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.NumberFormat;
-import java.awt.Dimension;
 
 public class MortgageCalculator extends JFrame {
     private JPanel panel1;
@@ -14,6 +12,9 @@ public class MortgageCalculator extends JFrame {
     private JTextField interestRateAnInput;
     private JTextField principalInput;
     private JLabel mortgageResultLabel;
+    private JLabel principalErrorLabel;
+    private JLabel interestRateErrorLabel;
+    private JLabel periodErrorLabel;
 
 
     MortgageCalculator(String title){
@@ -31,20 +32,48 @@ public class MortgageCalculator extends JFrame {
         calculateButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+               boolean inputOkay  = true;
                int principal = Integer.parseInt(principalInput.getText());
                double annualInterestRate = Double.parseDouble(interestRateAnInput.getText());
                byte periodYears = Byte.parseByte(periodInput.getText());
 
-               double monthlyInterestRate = annualInterestRate / MONTHS_PER_YEAR / PERCENT;
-               int amountMonthlyPayments = periodYears * MONTHS_PER_YEAR;
+               if (principal == 0) {
+                   principalErrorLabel.setText(" X ");
+                   principalErrorLabel.setForeground(Color.RED);
+                   mortgageResultLabel.setText("Come on this is useless:)");
+                   mortgageResultLabel.setForeground(Color.RED);
+                   inputOkay  = false;
+               }
+               if(annualInterestRate <0){
+                   interestRateErrorLabel.setText(" X ");
+                   interestRateErrorLabel.setForeground(Color.RED);
+                   mortgageResultLabel.setText("Invalid value");
+                   mortgageResultLabel.setForeground(Color.RED);
+                   inputOkay  = false;
+               }
+               if(periodYears <=0){
+                   periodErrorLabel.setText(" X ");
+                   periodErrorLabel.setForeground(Color.RED);
+                   mortgageResultLabel.setText("Invalid value");
+                   mortgageResultLabel.setForeground(Color.RED);
+                   inputOkay  = false;
 
-               double devisionUP = principal*(monthlyInterestRate*(Math.pow(monthlyInterestRate+1,amountMonthlyPayments)));
-               double devisionDown = Math.pow(monthlyInterestRate+1 ,amountMonthlyPayments)-1;
-               String result = NumberFormat.getCurrencyInstance().format((devisionUP /devisionDown)) ;
+               }
+               if(inputOkay) {
+                   double monthlyInterestRate = annualInterestRate / MONTHS_PER_YEAR / PERCENT;
+                   int amountMonthlyPayments = periodYears * MONTHS_PER_YEAR;
 
-               mortgageResultLabel.setText(result);
+                   double devisionUP = principal * (monthlyInterestRate * (Math.pow(monthlyInterestRate + 1, amountMonthlyPayments)));
+                   double devisionDown = Math.pow(monthlyInterestRate + 1, amountMonthlyPayments) - 1;
+                   String result = NumberFormat.getCurrencyInstance().format((devisionUP / devisionDown));
+                   principalErrorLabel.setText("");
+                   interestRateErrorLabel.setText("");
+                   periodErrorLabel.setText("");
 
+                   mortgageResultLabel.setForeground(Color.BLACK);
+                   mortgageResultLabel.setText(result);
+
+               }
             }
         });
 

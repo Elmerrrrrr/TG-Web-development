@@ -208,7 +208,7 @@ return arrayFilled;
                 if (i == deleteNr-1) { // check if index is crossed, continue without copying
                     continue;
                 }
-                array[i][j] = arrayNew[i][j];
+                array[i][j] = arrayNew[i][j]; //does not function yet, and needs a array write to file functionality
             }
 
         }

@@ -1,0 +1,3 @@
+Nokia 768 150
+Samsung S10 500
+Windows Mobile 250

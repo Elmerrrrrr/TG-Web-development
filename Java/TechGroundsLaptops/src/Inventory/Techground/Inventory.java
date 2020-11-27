@@ -1,6 +1,5 @@
 package Inventory.Techground;
 
-import Inventory.Techground.Items.Laptops;
 import Inventory.Techground.Methods.*;
 
 import java.io.FileNotFoundException;
@@ -12,26 +11,17 @@ public class Inventory {
 
     public Inventory(String inventoryName){
         this.inventoryName = inventoryName;
-//        this.brandName = brandName;
-//        this.model = model;
-//        this.price = price;
     }
 
-    public Inventory() {
 
-    }
 
 
     public static void main(String[] args) throws FileNotFoundException {
 
-        String inventoryFile = "inventory-overview.txt";
-
-        String newMenuItem3 ="";
-        String newItem4="";
-
+        String inventoryFile = "inventory-overview.dat";
 
         Scanner scanner = new Scanner(System.in);
-        String inputContinue = "";
+        String inputContinue = " ";
         boolean inputCont = true;
 
 
@@ -41,17 +31,16 @@ public class Inventory {
            String[] indexArray = IndexFileToArray.fileToArray(rowsIndex,inventoryFile, false);
 
 
-                    System.out.print("\n\n<----Welkom bij TechGrounds Inverntory, selecteer één van de volgende opties:---->\n\n" +
-                             indexArray[0] +
-                             indexArray[1] +
+                    System.out.print("\n\n<----Welkom bij TechGrounds Inventory, selecteer één van de volgende opties:---->\n\n" +
+                            (indexArray.length >0 ? indexArray[0]:"Maak de eerste inventory categorie aan!") +
+                            (indexArray.length >1 ? indexArray[1]:"") +
                             (indexArray.length >2 ? indexArray[2]:"") +
                             (indexArray.length >3 ? indexArray[3]:"") +
                             (indexArray.length >4 ? indexArray[4]:"") +
                             (indexArray.length >5 ? indexArray[5]:"") +
                             "\n11.Voeg een nieuwe inventory categorie toe.\n" +
-                            "12.Beëindig de applicatie\n" +
-                            "\n" +
-                            ">Uw keuze: ");
+                            "12.Beëindig de applicatie" +
+                            "\n\n>Uw keuze: ");
 
 
             String inputChoice = scanner.nextLine();
@@ -62,7 +51,7 @@ public class Inventory {
 
                 case "1":
 
-                    MenuInventoryItems.menu(indexCaseArray[0], indexCaseArray[0]+".txt");
+                    MenuInventoryItems.menu(indexCaseArray[0], indexCaseArray[0]+".dat");
 
                     System.out.println("\nDruk Enter om verder te gaan");
                     inputContinue = scanner.nextLine();
@@ -71,7 +60,7 @@ public class Inventory {
 
                 case "2":
 
-                    MenuInventoryItems.menu(indexCaseArray[1], indexCaseArray[1]+".txt");
+                    MenuInventoryItems.menu(indexCaseArray[1], indexCaseArray[1]+".dat");
                     System.out.println("\nDruk Enter om verder te gaan");
                     inputContinue = scanner.nextLine();
 
@@ -80,7 +69,7 @@ public class Inventory {
 
                 case "3":
                     if (indexCaseArray.length>2){
-                    MenuInventoryItems.menu(indexCaseArray[2], indexCaseArray[2]+".txt");
+                    MenuInventoryItems.menu(indexCaseArray[2], indexCaseArray[2]+".dat");
                     }
                     System.out.println("\nDruk Enter om verder te gaan");
                     inputContinue = scanner.nextLine();
@@ -89,7 +78,7 @@ public class Inventory {
 
                 case "4":
                     if (indexCaseArray.length>3) {
-                        MenuInventoryItems.menu(indexCaseArray[3], indexCaseArray[3] + ".txt");
+                        MenuInventoryItems.menu(indexCaseArray[3], indexCaseArray[3]+".dat");
                     }
                     System.out.println("\nDruk Enter om verder te gaan");
                     inputContinue = scanner.nextLine();
@@ -99,7 +88,7 @@ public class Inventory {
 
                 case "5":
                     if (indexCaseArray.length>4) {
-                        MenuInventoryItems.menu(indexCaseArray[4], indexCaseArray[4] + ".txt");
+                        MenuInventoryItems.menu(indexCaseArray[4], indexCaseArray[4]+".dat");
                     }
                     System.out.println("\nDruk Enter om verder te gaan");
                     inputContinue = scanner.nextLine();
@@ -111,17 +100,17 @@ public class Inventory {
                     System.out.print("Wat is de naam van de nieuwe inventory categorie? ");
                     String itemName = scanner.nextLine();
 
-                    Inventory newItem = new Inventory(itemName);
+//                    Inventory newItem = new Inventory(itemName);
                     CreateNewFile.createNewFile (itemName);
-
                     WriteNewInventoryItemToFile.writeToFile(inventoryFile,itemName);
+
                     System.out.println("\nDruk Enter om verder te gaan");
                     inputContinue = scanner.nextLine();
                 break;
 
                 case "12":
-
                     inputCont = false;
+                    System.out.println("\n      <---Bedankt voor het gebruik van deze software!--->\n\n");
                     break;
 
                 default:

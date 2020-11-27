@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/TechGroundsLaptops.iml" filepath="$PROJECT_DIR$/TechGroundsLaptops.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TechGrounds-Inventory.iml" filepath="$PROJECT_DIR$/TechGrounds-Inventory.iml" />
     </modules>
   </component>
 </project>

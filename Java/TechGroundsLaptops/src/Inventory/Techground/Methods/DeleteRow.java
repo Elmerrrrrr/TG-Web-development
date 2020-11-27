@@ -10,12 +10,11 @@ public class DeleteRow {
         int currentShift = 0;
         for (int i = 0; i < array.length - 1; i++) {
 
-            if (i == deleteNr - 1) { //  continue without copying
+            if (i == deleteNr - 1) {
 
                 for (int j = 0; j < array[i].length; j++) {
 
-                    arrayNew[i][j] = array[i + 1][j];
-
+                    arrayNew[i][j] = array[i + 1][j];//  shift the index number to delete
                 }
                 currentShift++;
             } else {
@@ -24,9 +23,7 @@ public class DeleteRow {
 
                     arrayNew[i][j] = array[i + currentShift][j];
                 }
-
             }
-
 
         }
 

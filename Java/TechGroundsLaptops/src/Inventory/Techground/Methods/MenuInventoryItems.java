@@ -1,7 +1,6 @@
 package Inventory.Techground.Methods;
 
 import Inventory.Techground.Inventory;
-import Inventory.Techground.Items.Laptops;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -18,26 +17,22 @@ public class MenuInventoryItems {
         String inputContinue = "";
         boolean inputCont = true;
 
-        if (inputContinue == "c") {
-            inputCont = true;
-        }
+
 
         while (inputCont) {
 
             int rows = CountRows.countRows(file);
 
-            System.out.print("<----\n\nWelkom bij TechGrounds Inventory "+inventoryName+", selecteer één van de volgende opties:---->\n\n" +
-                    "1.Toon alle producten.\n" +
-                    "2.Toon alle producten gesorteerd op merknaam van a → z.\n" +
-                    "3.Toon alle producten gesorteerd op merknaam van z ← a.\n" +
-                    "4.Toon alle producten gesorteerd op prijs van hoog naar laag.\n" +
-                    "5.Toon alle producten gesorteerd op prijs van laag naar hoog.\n" +
-                    "6.Voeg een product toe.\n" +
-                    "7.Verwijder een product.\n" +
-                    "8.Terug naar vorig menu.\n" +
-                    "9.Beëindig de applicatie\n" +
-                    "\n" +
-                    ">Uw keuze: ");
+            System.out.print("\n\n<----Welkom bij TechGrounds Inventory "+inventoryName+", selecteer één van de volgende opties:---->\n\n" +
+                    "1.Toon alle "+inventoryName+".\n" +
+                    "2.Toon alle "+inventoryName+" gesorteerd op merknaam van a → z.\n" +
+                    "3.Toon alle "+inventoryName+" gesorteerd op merknaam van z ← a.\n" +
+                    "4.Toon alle "+inventoryName+" gesorteerd op prijs van hoog naar laag.\n" +
+                    "5.Toon alle "+inventoryName+" gesorteerd op prijs van laag naar hoog.\n" +
+                    "6.Voeg "+inventoryName+" toe.\n" +
+                    "7.Verwijder "+inventoryName+".\n" +
+                    "8.Terug naar het hoofd menu.\n" +
+                    "\n>Uw keuze: ");
 
             String inputChoice = scanner.nextLine();
 
@@ -117,7 +112,7 @@ public class MenuInventoryItems {
 
                     String[][] arrayDelete = FileToArray.fileToArray(rows, columns, file);
 
-                    System.out.println("Dit zijn de aanwezige laptops:");
+                    System.out.println("Dit zijn de aanwezige "+inventoryName+":");
                     PrintArray.printArray(arrayDelete, columns, false);
 
                     System.out.print("\n\nWelke nummer wilt u verwijderen? ");
@@ -133,14 +128,13 @@ public class MenuInventoryItems {
                     break;
 
                 case "8":
-                    Inventory inventory = new Inventory();
-                    inventory.main(null);
+                    inputCont = false;
+                    return;
 
-
-                    break;
 
                 case "9":
-                    return; //exit program
+
+                    break;
 
                 case "10":
                     //int rows, int columns, String file

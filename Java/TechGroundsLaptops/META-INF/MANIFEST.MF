@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Main-Class: C:\Users\Elmer\IdeaProjects\TG-Web-development\Java\TechGrou
+ ndsLaptops\out\production\TechGrounds-Inventory\Inventory\Techground\In
+ ventory.class
+Class-Path: C:\Users\Elmer\IdeaProjects\TG-Web-development\Java\TechGrou
+ ndsLaptops\out\production\TechGrounds-Inventory\Inventory\Techground\
+

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ceac7829-5f26-4da8-a3df-70c945e6a26d" name="Default Changelist" comment="update" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1kKFFAzFyvnH7aW8emtu8NTrlLc" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Java/Mortgage Calculator/Morgage-Calculator-by-Elmer.iml" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Elmer\IdeaProjects\TG-Web-development\Java\Mortgage Calculator\src" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ceac7829-5f26-4da8-a3df-70c945e6a26d" name="Default Changelist" comment="" />
+      <created>1605441272304</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605441272304</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Update README.md">
+      <created>1605441818544</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1605441818544</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Update">
+      <created>1605442042400</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605442042400</updated>
+    </task>
+    <task id="LOCAL-00003" summary="update">
+      <created>1605442435728</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1605442435728</updated>
+    </task>
+    <task id="LOCAL-00004" summary="update">
+      <created>1605453724008</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1605453724008</updated>
+    </task>
+    <task id="LOCAL-00005" summary="update">
+      <created>1605453825658</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1605453825658</updated>
+    </task>
+    <task id="LOCAL-00006" summary="update">
+      <created>1605541773641</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1605541773641</updated>
+    </task>
+    <task id="LOCAL-00007" summary="update">
+      <created>1605542848283</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1605542848283</updated>
+    </task>
+    <task id="LOCAL-00008" summary="update">
+      <created>1605542891600</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1605542891600</updated>
+    </task>
+    <task id="LOCAL-00009" summary="update">
+      <created>1605627959076</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1605627959076</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update 15-11-2020" />
+    <MESSAGE value="Update README.md" />
+    <MESSAGE value="Update" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="693" y="380" key="#Notifications" timestamp="1605441721882">
+      <screen x="0" y="0" width="2752" height="1112" />
+    </state>
+    <state x="693" y="380" key="#Notifications/0.0.2752.1112@0.0.2752.1112" timestamp="1605441721882" />
+    <state x="1143" y="429" key="FileChooserDialogImpl" timestamp="1605602553025">
+      <screen x="0" y="0" width="2752" height="1112" />
+    </state>
+    <state x="1143" y="429" key="FileChooserDialogImpl/0.0.2752.1112@0.0.2752.1112" timestamp="1605602553025" />
+    <state x="1106" y="215" key="SettingsEditor" timestamp="1605448888062">
+      <screen x="0" y="0" width="2752" height="1112" />
+    </state>
+    <state x="1106" y="215" key="SettingsEditor/0.0.2752.1112@0.0.2752.1112" timestamp="1605448888062" />
+    <state x="856" y="329" key="Vcs.Push.Dialog.v2" timestamp="1605442058052">
+      <screen x="0" y="0" width="2752" height="1112" />
+    </state>
+    <state x="856" y="329" key="Vcs.Push.Dialog.v2/0.0.2752.1112@0.0.2752.1112" timestamp="1605442058052" />
+    <state x="1264" y="260" key="new project wizard" timestamp="1605602561261">
+      <screen x="0" y="0" width="2752" height="1112" />
+    </state>
+    <state x="1264" y="260" key="new project wizard/0.0.2752.1112@0.0.2752.1112" timestamp="1605602561261" />
+    <state x="998" y="362" width="672" height="678" key="search.everywhere.popup" timestamp="1605448329937">
+      <screen x="0" y="0" width="2752" height="1112" />
+    </state>
+    <state x="998" y="362" width="672" height="678" key="search.everywhere.popup/0.0.2752.1112@0.0.2752.1112" timestamp="1605448329937" />
+  </component>
+</project>

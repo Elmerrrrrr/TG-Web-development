@@ -8,10 +8,10 @@ import java.util.Scanner;
 
 public class Inventory {
 
-    public String itemName;
+    public String inventoryName;
 
-    public Inventory(String itemName){
-        this.itemName = itemName;
+    public Inventory(String inventoryName){
+        this.inventoryName = inventoryName;
 //        this.brandName = brandName;
 //        this.model = model;
 //        this.price = price;
@@ -34,39 +34,35 @@ public class Inventory {
         String inputContinue = "";
         boolean inputCont = true;
 
-        if (inputContinue == "c") {
-            inputCont = true;
-        }
 
         while (inputCont) {
 
-            int rowsIndex = CountRows.countRows(inventoryFile);
-           String[] indexArray = IndexFileToArray.fileToArray(rowsIndex,inventoryFile);
+           int rowsIndex = CountRows.countRows(inventoryFile);
+           String[] indexArray = IndexFileToArray.fileToArray(rowsIndex,inventoryFile, false);
 
 
-            for(int i=0; i<indexArray.length; i++) {
-
-
-                    System.out.print("\nWelkom bij TechGrounds Inverntory, selecteer één van de volgende opties:\n" +
-                            "1.Toon de " + indexArray[i]+ " inventory.\n" +
-                            "2.Toon de " + indexArray[i]+ " inventory.\n" +
-                            newMenuItem3 +
+                    System.out.print("\n\n<----Welkom bij TechGrounds Inverntory, selecteer één van de volgende opties:---->\n\n" +
+                             indexArray[0] +
+                             indexArray[1] +
+                            (indexArray.length >2 ? indexArray[2]:"") +
+                            (indexArray.length >3 ? indexArray[3]:"") +
+                            (indexArray.length >4 ? indexArray[4]:"") +
+                            (indexArray.length >5 ? indexArray[5]:"") +
                             "\n11.Voeg een nieuwe inventory categorie toe.\n" +
                             "12.Beëindig de applicatie\n" +
                             "\n" +
                             ">Uw keuze: ");
 
-            }
 
             String inputChoice = scanner.nextLine();
 
+            String[] indexCaseArray = IndexFileToArray.fileToArray(rowsIndex,inventoryFile, true);
 
             switch (inputChoice) {
 
                 case "1":
 
-                    Laptops laptops = new Laptops();
-                    laptops.menuLaptop();
+                    MenuInventoryItems.menu(indexCaseArray[0], indexCaseArray[0]+".txt");
 
                     System.out.println("\nDruk Enter om verder te gaan");
                     inputContinue = scanner.nextLine();
@@ -75,6 +71,36 @@ public class Inventory {
 
                 case "2":
 
+                    MenuInventoryItems.menu(indexCaseArray[1], indexCaseArray[1]+".txt");
+                    System.out.println("\nDruk Enter om verder te gaan");
+                    inputContinue = scanner.nextLine();
+
+                    break;
+
+
+                case "3":
+                    if (indexCaseArray.length>2){
+                    MenuInventoryItems.menu(indexCaseArray[2], indexCaseArray[2]+".txt");
+                    }
+                    System.out.println("\nDruk Enter om verder te gaan");
+                    inputContinue = scanner.nextLine();
+
+                    break;
+
+                case "4":
+                    if (indexCaseArray.length>3) {
+                        MenuInventoryItems.menu(indexCaseArray[3], indexCaseArray[3] + ".txt");
+                    }
+                    System.out.println("\nDruk Enter om verder te gaan");
+                    inputContinue = scanner.nextLine();
+
+                    break;
+
+
+                case "5":
+                    if (indexCaseArray.length>4) {
+                        MenuInventoryItems.menu(indexCaseArray[4], indexCaseArray[4] + ".txt");
+                    }
                     System.out.println("\nDruk Enter om verder te gaan");
                     inputContinue = scanner.nextLine();
 
@@ -86,10 +112,6 @@ public class Inventory {
                     String itemName = scanner.nextLine();
 
                     Inventory newItem = new Inventory(itemName);
-
-                    int i=0;
-                    newMenuItem3 = "3.Toon de "+indexArray[i]+ " inventory.\n";
-
                     CreateNewFile.createNewFile (itemName);
 
                     WriteNewInventoryItemToFile.writeToFile(inventoryFile,itemName);

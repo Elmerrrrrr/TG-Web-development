@@ -1,0 +1,1 @@
+Deze tekst wordt gekopieerd van de input naar de output.txt file.

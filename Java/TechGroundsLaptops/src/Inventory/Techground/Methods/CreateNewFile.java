@@ -7,7 +7,7 @@ public class CreateNewFile {
 
     public static void createNewFile (String fileName) {
         try {
-            File myObj = new File(fileName+".txt");
+            File myObj = new File(fileName+".dat");
             if (myObj.createNewFile()) {
                 System.out.println("Nieuwe inventory succesvol aangemaakt: ");
             } else {

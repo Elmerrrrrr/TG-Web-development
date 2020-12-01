@@ -1,7 +1,5 @@
 package Inventory.Techground.Methods;
 
-import Inventory.Techground.Inventory;
-
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -128,7 +126,7 @@ public class MenuInventoryItems {
                     break;
 
                 case "8":
-                    inputCont = false;
+
                     return;
 
 
@@ -153,5 +151,6 @@ public class MenuInventoryItems {
 
             }
         }
+
     }
 }

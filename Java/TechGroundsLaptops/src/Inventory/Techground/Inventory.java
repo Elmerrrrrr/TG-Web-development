@@ -32,7 +32,7 @@ public class Inventory {
 
 
                     System.out.print("\n\n<----Welkom bij TechGrounds Inventory, selecteer één van de volgende opties:---->\n\n" +
-                            (indexArray.length >0 ? indexArray[0]:"Maak de eerste inventory categorie aan!") +
+                            (indexArray.length >0 ? indexArray[0]:"\nVoeg de eerste inventory categorie toe!\n") +
                             (indexArray.length >1 ? indexArray[1]:"") +
                             (indexArray.length >2 ? indexArray[2]:"") +
                             (indexArray.length >3 ? indexArray[3]:"") +
@@ -112,6 +112,7 @@ public class Inventory {
                     inputCont = false;
                     System.out.println("\n      <---Bedankt voor het gebruik van deze software!--->\n\n");
                     break;
+
 
                 default:
 

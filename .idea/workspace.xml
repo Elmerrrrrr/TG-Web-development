@@ -26,7 +26,53 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ceac7829-5f26-4da8-a3df-70c945e6a26d" name="Default Changelist" comment="update" />
+    <list default="true" id="ceac7829-5f26-4da8-a3df-70c945e6a26d" name="Default Changelist" comment="update">
+      <change afterPath="$PROJECT_DIR$/Java/Practice assignments/src/Polymorphism.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/Practice assignments/src/BMICalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/Practice assignments/src/BMICalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/TechGroundsLaptops/out/production/TechGrounds-Inventory/Inventory/Techground/Inventory.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/TechGroundsLaptops/out/production/TechGrounds-Inventory/Inventory/Techground/Inventory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/TechGroundsLaptops/out/production/TechGrounds-Inventory/Inventory/Techground/Methods/CreateNewFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/TechGroundsLaptops/out/production/TechGrounds-Inventory/Inventory/Techground/Methods/CreateNewFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/TechGroundsLaptops/out/production/TechGrounds-Inventory/Inventory/Techground/Methods/MenuInventoryItems.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/TechGroundsLaptops/out/production/TechGrounds-Inventory/Inventory/Techground/Methods/MenuInventoryItems.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/TechGroundsLaptops/src/Inventory/Techground/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/TechGroundsLaptops/src/Inventory/Techground/Inventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/TechGroundsLaptops/src/Inventory/Techground/Methods/CreateNewFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/TechGroundsLaptops/src/Inventory/Techground/Methods/CreateNewFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/TechGroundsLaptops/src/Inventory/Techground/Methods/MenuInventoryItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/TechGroundsLaptops/src/Inventory/Techground/Methods/MenuInventoryItems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/old/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/old/.idea/artifacts/Morgage_Calculator_by_Elmer_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/old/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/old/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/old/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/old/Morgage-Calculator-by-Elmer.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/old/Morgage-Calculator-by-Elmer.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/old/Morgage-Calculator-by-Elmer.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/old/out/artifacts/Morgage_Calculator_by_Elmer_jar/Morgage-Calculator-by-Elmer.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/old/out/production/Morgage-Calculator-by-Elmer/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/old/out/production/Morgage-Calculator-by-Elmer/MortgageCalculator$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/old/out/production/Morgage-Calculator-by-Elmer/MortgageCalculator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/old/out/production/Morgage-Calculator-by-Elmer/com/intellij/uiDesigner/core/AbstractLayout.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/old/out/production/Morgage-Calculator-by-Elmer/com/intellij/uiDesigner/core/DimensionInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/old/out/production/Morgage-Calculator-by-Elmer/com/intellij/uiDesigner/core/GridConstraints.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/old/out/production/Morgage-Calculator-by-Elmer/com/intellij/uiDesigner/core/GridLayoutManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/old/out/production/Morgage-Calculator-by-Elmer/com/intellij/uiDesigner/core/HorizontalInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/old/out/production/Morgage-Calculator-by-Elmer/com/intellij/uiDesigner/core/LayoutState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/old/out/production/Morgage-Calculator-by-Elmer/com/intellij/uiDesigner/core/Spacer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/old/out/production/Morgage-Calculator-by-Elmer/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/old/out/production/Morgage-Calculator-by-Elmer/com/intellij/uiDesigner/core/SupportCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/old/out/production/Morgage-Calculator-by-Elmer/com/intellij/uiDesigner/core/Util.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/old/out/production/Morgage-Calculator-by-Elmer/com/intellij/uiDesigner/core/VerticalInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/old/out/production/NewGUIApp/com/intellij/uiDesigner/core/AbstractLayout.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/old/out/production/NewGUIApp/com/intellij/uiDesigner/core/DimensionInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/old/out/production/NewGUIApp/com/intellij/uiDesigner/core/GridConstraints.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/old/out/production/NewGUIApp/com/intellij/uiDesigner/core/GridLayoutManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/old/out/production/NewGUIApp/com/intellij/uiDesigner/core/HorizontalInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/old/out/production/NewGUIApp/com/intellij/uiDesigner/core/LayoutState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/old/out/production/NewGUIApp/com/intellij/uiDesigner/core/Spacer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/old/out/production/NewGUIApp/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/old/out/production/NewGUIApp/com/intellij/uiDesigner/core/SupportCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/old/out/production/NewGUIApp/com/intellij/uiDesigner/core/Util.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/old/out/production/NewGUIApp/com/intellij/uiDesigner/core/VerticalInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/old/src/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/old/src/MortgageCalculator.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/old/src/MortgageCalculator.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

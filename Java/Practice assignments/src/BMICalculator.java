@@ -17,8 +17,8 @@ public class BMICalculator {
            Scanner scanner = new Scanner(System.in);
 
            System.out.print("\nLengte in m: ");
-           double length = scanner.nextDouble();
-//           double len = Double.parseDouble(length);
+           String length = scanner.next();
+     double len = Double.parseDouble(length);
            System.out.print("Gewicht in kg: ");
            weight = scanner.next();
            double wei = Double.parseDouble(weight);

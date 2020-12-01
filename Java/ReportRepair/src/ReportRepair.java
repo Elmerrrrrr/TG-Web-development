@@ -21,13 +21,30 @@ public class ReportRepair {
                                 System.out.println("Found on position: " + i +" and " + j);
                                 System.out.printf("%d %d", reportList.get(i), reportList.get(j));
                                 System.out.println("\nThe multiplication of these numbers is: " + reportList.get(i)*reportList.get(j));
-                                return;
+                                continue;
                             }
 
+                         for (int k=2; k<reportList.size()-2; k++){
+
+                             if(reportList.get(i)+reportList.get(j)+reportList.get(k)==2020){
+
+                                 System.out.println("\nFound on position: " + i +" and " + j +" and " + k);
+                                 System.out.printf("%d %d %d", reportList.get(i), reportList.get(j), reportList.get(k));
+                                 System.out.println("\nThe multiplication of these numbers is: " + reportList.get(i)*reportList.get(j)*reportList.get(k));
+                                 return;
+
+                             }
+
+
+
+                         }
 
                      }
 
         }
+
+
+
 
 
 

@@ -32,17 +32,17 @@
 
                 for ( int  j = 0; j < stringToCheck.length(); j++) {
 
-                    if (stringToCheck.charAt(j) == letterToCheck && (positionCheck1) == j+1 ) {
+                    if (stringToCheck.charAt(j) == letterToCheck && positionCheck1 == j+1 ) {
 
                          valid1=true;
 
                     }
-                    if(valid1 && stringToCheck.charAt(j) == letterToCheck && (positionCheck2) == j+1){
+                    if(valid1 && stringToCheck.charAt(j) == letterToCheck && positionCheck2 == j+1){
 
                         valid2 = false;
                     }
 
-                    if(!valid1 && stringToCheck.charAt(j) == letterToCheck && (positionCheck2) == j+1){
+                    if(!valid1 && stringToCheck.charAt(j) == letterToCheck && positionCheck2 == j+1){
 
                         valid1 = true;
                     }

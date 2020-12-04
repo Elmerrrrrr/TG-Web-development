@@ -1,7 +1,6 @@
 package Inventory.Techground;
 
 import Inventory.Techground.Methods.*;
-
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
@@ -12,7 +11,6 @@ public class Inventory {
     public Inventory(String inventoryName){
         this.inventoryName = inventoryName;
     }
-
 
 
 

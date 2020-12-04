@@ -4,12 +4,13 @@ import java.util.Arrays;
 
 public class ReportRepair {
 
+    static String file = "report.txt";
 
     public static void main(String[] args) {
 
-        ArrayList<Integer>reportList = ReadFiletoArray.fileToListArray();
+        ArrayList<Integer>reportList = ReadFiletoArray.fileToArrayList(file);
 
-//        System.out.println(Arrays.toString(reportList.toArray()));
+        System.out.println(Arrays.toString(reportList.toArray()));
 //        for(int nr : reportList) System.out.println(nr);
 
         for(int i=0; i<reportList.size(); i++){
@@ -21,7 +22,7 @@ public class ReportRepair {
                                 System.out.println("Found on position: " + i +" and " + j);
                                 System.out.printf("%d %d", reportList.get(i), reportList.get(j));
                                 System.out.println("\nThe multiplication of these numbers is: " + reportList.get(i)*reportList.get(j));
-                                continue;
+//                                continue;
                             }
 
                          for (int k=2; k<reportList.size()-2; k++){

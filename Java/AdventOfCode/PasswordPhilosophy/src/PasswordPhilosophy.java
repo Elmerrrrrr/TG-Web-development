@@ -10,9 +10,9 @@ public class PasswordPhilosophy {
 //        for(String[] nr : passwordsList) System.out.println(Arrays.toString(nr));
 
 
-        LetterCount.letterCheck(passwordsList);//assignment 1
+       // LetterCount.letterCheck(passwordsList);//assignment 1
 
-       // LetterPosition.letterCheck(passwordsList);//assignment 2
+        LetterPosition.letterCheck(passwordsList);//assignment 2
 
     }
 

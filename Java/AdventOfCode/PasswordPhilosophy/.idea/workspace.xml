@@ -20,28 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9530e12-691d-45c4-afbe-98b698887431" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PasswordPhilosophy.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pws.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FileToArrayList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LetterCount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LetterPosition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PasswordPhilosophy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/count.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ReportRepair/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ReportRepair/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../TechGroundsLaptops/.idea/artifacts/Nieuw.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../TechGroundsLaptops/Irene.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ReportRepair/out/production/ReportRepair/ReadFiletoArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../ReportRepair/out/production/ReportRepair/ReadFiletoArray.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ReportRepair/out/production/ReportRepair/ReportRepair.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../ReportRepair/out/production/ReportRepair/ReportRepair.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ReportRepair/src/ReadFiletoArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ReportRepair/src/ReadFiletoArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ReportRepair/src/ReportRepair.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ReportRepair/src/ReportRepair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../TechGroundsLaptops/inventory-overview.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../../TechGroundsLaptops/inventory-overview.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../TechGroundsLaptops/out/production/TechGrounds-Inventory/Inventory/Techground/Inventory.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../TechGroundsLaptops/out/production/TechGrounds-Inventory/Inventory/Techground/Inventory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../TechGroundsLaptops/src/Inventory/Techground/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../TechGroundsLaptops/src/Inventory/Techground/Inventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PasswordPhilosophy/PasswordPhilosophy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PasswordPhilosophy/PasswordPhilosophy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PasswordPhilosophy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PasswordPhilosophy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +79,14 @@
       <option name="presentableId" value="Default" />
       <updated>1606910273058</updated>
     </task>
+    <task id="LOCAL-00001" summary="update">
+      <created>1607071710941</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607071710941</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -114,6 +103,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1239" y="384" key="#Custom_Plugin_Repositories" timestamp="1606915636455">
@@ -140,22 +133,22 @@
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
     <state x="1404" y="282" key="FileChooserDialogImpl/0.0.2752.1112@0.0.2752.1112" timestamp="1606987726269" />
-    <state width="1819" height="300" key="GridCell.Tab.0.bottom" timestamp="1607071205478">
+    <state width="1819" height="226" key="GridCell.Tab.0.bottom" timestamp="1607072141904">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
-    <state width="1819" height="300" key="GridCell.Tab.0.bottom/0.0.2752.1112@0.0.2752.1112" timestamp="1607071205478" />
-    <state width="1819" height="300" key="GridCell.Tab.0.center" timestamp="1607071205478">
+    <state width="1819" height="226" key="GridCell.Tab.0.bottom/0.0.2752.1112@0.0.2752.1112" timestamp="1607072141904" />
+    <state width="1819" height="226" key="GridCell.Tab.0.center" timestamp="1607072141903">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
-    <state width="1819" height="300" key="GridCell.Tab.0.center/0.0.2752.1112@0.0.2752.1112" timestamp="1607071205478" />
-    <state width="1819" height="300" key="GridCell.Tab.0.left" timestamp="1607071205477">
+    <state width="1819" height="226" key="GridCell.Tab.0.center/0.0.2752.1112@0.0.2752.1112" timestamp="1607072141903" />
+    <state width="1819" height="226" key="GridCell.Tab.0.left" timestamp="1607072141903">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
-    <state width="1819" height="300" key="GridCell.Tab.0.left/0.0.2752.1112@0.0.2752.1112" timestamp="1607071205477" />
-    <state width="1819" height="300" key="GridCell.Tab.0.right" timestamp="1607071205478">
+    <state width="1819" height="226" key="GridCell.Tab.0.left/0.0.2752.1112@0.0.2752.1112" timestamp="1607072141903" />
+    <state width="1819" height="226" key="GridCell.Tab.0.right" timestamp="1607072141903">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
-    <state width="1819" height="300" key="GridCell.Tab.0.right/0.0.2752.1112@0.0.2752.1112" timestamp="1607071205478" />
+    <state width="1819" height="226" key="GridCell.Tab.0.right/0.0.2752.1112@0.0.2752.1112" timestamp="1607072141903" />
     <state width="2709" height="259" key="GridCell.Tab.1.bottom" timestamp="1607029827874">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>

@@ -20,18 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9530e12-691d-45c4-afbe-98b698887431" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../TobogganTrajectory/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TobogganTrajectory/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TobogganTrajectory/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TobogganTrajectory/TobogganTrajectory.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TobogganTrajectory/map.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TobogganTrajectory/mapExamp.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TobogganTrajectory/out/production/TobogganTrajectory/FileToArray.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TobogganTrajectory/out/production/TobogganTrajectory/TobogganTrajectory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TobogganTrajectory/src/FileToArray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TobogganTrajectory/src/FindRoute.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TobogganTrajectory/src/TobogganTrajectory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PassportProcessing/src/FileToArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PassportProcessing/src/PassportProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PassportProcessing/src/PassportProcessing.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -26,53 +26,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ceac7829-5f26-4da8-a3df-70c945e6a26d" name="Default Changelist" comment="update">
-      <change afterPath="$PROJECT_DIR$/Java/Practice assignments/src/Polymorphism.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/Practice assignments/src/BMICalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/Practice assignments/src/BMICalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/TechGroundsLaptops/out/production/TechGrounds-Inventory/Inventory/Techground/Inventory.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/TechGroundsLaptops/out/production/TechGrounds-Inventory/Inventory/Techground/Inventory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/TechGroundsLaptops/out/production/TechGrounds-Inventory/Inventory/Techground/Methods/CreateNewFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/TechGroundsLaptops/out/production/TechGrounds-Inventory/Inventory/Techground/Methods/CreateNewFile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/TechGroundsLaptops/out/production/TechGrounds-Inventory/Inventory/Techground/Methods/MenuInventoryItems.class" beforeDir="false" afterPath="$PROJECT_DIR$/Java/TechGroundsLaptops/out/production/TechGrounds-Inventory/Inventory/Techground/Methods/MenuInventoryItems.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/TechGroundsLaptops/src/Inventory/Techground/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/TechGroundsLaptops/src/Inventory/Techground/Inventory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/TechGroundsLaptops/src/Inventory/Techground/Methods/CreateNewFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/TechGroundsLaptops/src/Inventory/Techground/Methods/CreateNewFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/TechGroundsLaptops/src/Inventory/Techground/Methods/MenuInventoryItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/TechGroundsLaptops/src/Inventory/Techground/Methods/MenuInventoryItems.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/old/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/old/.idea/artifacts/Morgage_Calculator_by_Elmer_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/old/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/old/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/old/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/old/Morgage-Calculator-by-Elmer.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/old/Morgage-Calculator-by-Elmer.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/old/Morgage-Calculator-by-Elmer.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/old/out/artifacts/Morgage_Calculator_by_Elmer_jar/Morgage-Calculator-by-Elmer.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/old/out/production/Morgage-Calculator-by-Elmer/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/old/out/production/Morgage-Calculator-by-Elmer/MortgageCalculator$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/old/out/production/Morgage-Calculator-by-Elmer/MortgageCalculator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/old/out/production/Morgage-Calculator-by-Elmer/com/intellij/uiDesigner/core/AbstractLayout.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/old/out/production/Morgage-Calculator-by-Elmer/com/intellij/uiDesigner/core/DimensionInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/old/out/production/Morgage-Calculator-by-Elmer/com/intellij/uiDesigner/core/GridConstraints.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/old/out/production/Morgage-Calculator-by-Elmer/com/intellij/uiDesigner/core/GridLayoutManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/old/out/production/Morgage-Calculator-by-Elmer/com/intellij/uiDesigner/core/HorizontalInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/old/out/production/Morgage-Calculator-by-Elmer/com/intellij/uiDesigner/core/LayoutState.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/old/out/production/Morgage-Calculator-by-Elmer/com/intellij/uiDesigner/core/Spacer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/old/out/production/Morgage-Calculator-by-Elmer/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/old/out/production/Morgage-Calculator-by-Elmer/com/intellij/uiDesigner/core/SupportCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/old/out/production/Morgage-Calculator-by-Elmer/com/intellij/uiDesigner/core/Util.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/old/out/production/Morgage-Calculator-by-Elmer/com/intellij/uiDesigner/core/VerticalInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/old/out/production/NewGUIApp/com/intellij/uiDesigner/core/AbstractLayout.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/old/out/production/NewGUIApp/com/intellij/uiDesigner/core/DimensionInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/old/out/production/NewGUIApp/com/intellij/uiDesigner/core/GridConstraints.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/old/out/production/NewGUIApp/com/intellij/uiDesigner/core/GridLayoutManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/old/out/production/NewGUIApp/com/intellij/uiDesigner/core/HorizontalInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/old/out/production/NewGUIApp/com/intellij/uiDesigner/core/LayoutState.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/old/out/production/NewGUIApp/com/intellij/uiDesigner/core/Spacer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/old/out/production/NewGUIApp/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/old/out/production/NewGUIApp/com/intellij/uiDesigner/core/SupportCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/old/out/production/NewGUIApp/com/intellij/uiDesigner/core/Util.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/old/out/production/NewGUIApp/com/intellij/uiDesigner/core/VerticalInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/old/src/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/old/src/MortgageCalculator.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/old/src/MortgageCalculator.java" beforeDir="false" />
-    </list>
+    <list default="true" id="ceac7829-5f26-4da8-a3df-70c945e6a26d" name="Default Changelist" comment="update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -223,6 +177,10 @@
       <screen x="0" y="0" width="2752" height="1112" />
     </state>
     <state x="856" y="329" key="Vcs.Push.Dialog.v2/0.0.2752.1112@0.0.2752.1112" timestamp="1605442058052" />
+    <state x="1343" y="500" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607285005901">
+      <screen x="0" y="0" width="2752" height="1112" />
+    </state>
+    <state x="1343" y="500" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2752.1112@0.0.2752.1112" timestamp="1607285005901" />
     <state x="1264" y="260" key="new project wizard" timestamp="1605602561261">
       <screen x="0" y="0" width="2752" height="1112" />
     </state>

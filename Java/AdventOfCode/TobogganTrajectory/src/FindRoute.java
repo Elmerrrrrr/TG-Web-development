@@ -20,8 +20,6 @@ public class FindRoute {
 
             String lineToCheck = arrayList.get(i);
 
-//            int slopeCheck = lineToCheck.length()%3;
-//            System.out.println(slopeCheck);
 
 
             for ( j = 0; j < lineToCheck.length(); j++) {

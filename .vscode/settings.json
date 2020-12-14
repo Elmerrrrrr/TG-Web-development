@@ -1,3 +1,9 @@
 {
-    "cSpell.enabled": false
+    "cSpell.enabled": false,
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    }
 }

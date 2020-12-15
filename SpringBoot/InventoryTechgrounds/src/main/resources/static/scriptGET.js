@@ -18,7 +18,7 @@ function loadInventory(){
       for (i = 0; i < inventory.length; i++){
         main +=
 
-        "<div class='divTableRow'><div class='divTableCell'>"+ inventory[i].brand+ "</div><div class='divTableCell'>"+ inventory[i].model + "</div><div class='divTableCell'>"+ inventory[i].price + "</div><div class='divTableCell'><button id='updateData' onclick='updateRow("+[i]+")'>Update Data</button><button id='deleteData' onclick='deleteRow()'>Delete Data</button><button id='viewData' onclick='viewRow()'>View</button></div></div>";
+        "<div class='divTableRow'><div class='divTableCell'>"+ inventory[i].brand+ "</div><div class='divTableCell'>"+ inventory[i].model + "</div><div class='divTableCell'>"+ inventory[i].price + "</div><div class='divTableCell'><button id='updateData' onclick='updateRow("+inventory[i].id+")'>Update Data</button><button id='deleteData' onclick='deleteRow()'>Delete Data</button><button id='viewData' onclick='viewRow()'>View</button></div></div>";
 
       }
       var tblbottom = "";

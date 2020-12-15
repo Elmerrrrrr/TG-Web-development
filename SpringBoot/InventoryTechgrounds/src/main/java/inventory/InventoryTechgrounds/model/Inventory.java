@@ -2,7 +2,7 @@ package inventory.InventoryTechgrounds.model;
 
 public class Inventory {
 
-    private int id;
+    private String id;
     private String brand;
     private String model;
     private int price;
@@ -10,18 +10,16 @@ public class Inventory {
 
 
 
-    public Inventory(int id, String brand, String model, int price) {
+    public Inventory(String id, String brand, String model, int price) {
         this.id = id;
         this.brand = brand;
         this.model = model;
         this.price = price;
     }
 
-    public int getId() {
-        return id;
-    }
+    public String getId() {return id; }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

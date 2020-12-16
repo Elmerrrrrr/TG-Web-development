@@ -6,8 +6,10 @@
     <title>Techgrounds Inventory - Spring Boot Application</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="scriptUPDATE.js"></script>
-    <script type="text/javascript" src="scriptGET.js"></script>
+    <script type="text/javascript" src="scriptUpdate.js"></script>
+    <script type="text/javascript" src="scriptGet.js"></script>
+    <script type="text/javascript" src="scriptAdd.js"></script>
+    <script type="text/javascript" src="scriptDelete.js"></script>
     
     <link rel="stylesheet" href="index.css">
 </head>
@@ -16,8 +18,8 @@
 <div class="menu">
 <ul>
     <li ><a href="#"><h3 class="name">Laptops Inventory</h3></a></li>
-    <li><a href="#">All Laptops</a></li>
-    <li><a href="#">Add Laptop</a></li>
+    <li><a onclick=" loadInventory()" href="javascript:void(0);">All Laptops</a></li>
+    <li><a onclick="addData()" href="javascript:void(0);">Add Laptop</a></li>
 </ul>
 
 </div>
@@ -29,39 +31,31 @@
 
     <div class="divTable">
 
-        <div class="btnAdd"><button id="addData" onclick="addRow()">Add Laptop</button></div>  
+        <div class="btnAdd"><button id="addData" onclick="addData()">Add Laptop</button></div>  
 
         <div class="divTableBody">
             <div class="divTableHeading">
-                <div class="divTableHead">Brand</div>
-                <div class="divTableHead">Model</div>
-                <div class="divTableHead">Price</div>
-                <div class="divTableHead">Actions</div>
-            </div>
 
-            <!-- <div class="divTableRow">
-                <div class="divTableCell">&nbsp;</div>
-                <div class="divTableCell">&nbsp;</div>
-                <div class="divTableCell">&nbsp;</div>
-                <div class="divTableCell">
-                    <button id="updateData" onclick="updateRow()">Update Data</button>
-                    <button id="deleteData" onclick="deleteRow()">Delete Data</button>
-                    <button id="viewData" onclick="viewRow()">View</button>
-                </div>     -->
-                      
+                    <div class="divTableHead">Brand</div>
+                    <div class="divTableHead">Model</div>
+                    <div class="divTableHead">Price</div>
+                    <div class="divTableHead">Actions</div>
             </div>
+            <div id='divTableContent'></div>
         </div>
-
     </div>
 
+ 
+
+    <div id='addMessageNew'></div>
+    <div id='addMessageUpdate'></div>
     <div class="updateRow"></div>
+    
 
 
 </div>
 
-
-
-</div>
-
+<footer>Copyright 2020 - By Elmerrr</footer>
 </body>
+
 </html>

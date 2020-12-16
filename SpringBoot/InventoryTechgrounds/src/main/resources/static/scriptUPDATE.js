@@ -1,7 +1,7 @@
 var baseurl = "http://localhost:8080/inventory";
 
-function updateRow(id){
-
+function updateRow(indexNr){
+  document.getElementsByClassName('updateRow')[0].innerHTML ="";
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.open("GET",baseurl + "",true);
 
@@ -10,22 +10,26 @@ function updateRow(id){
     if(xmlhttp.readyState ===4 && xmlhttp.status ===200){
       var inventory = JSON.parse(xmlhttp.responseText);
       console.log(inventory);
-      let brand = inventory[id].brand;
-      let model = inventory[id].model;
-      let price = inventory[id].price;
+
+      let id = inventory[indexNr].id;
+      let brand = inventory[indexNr].brand;
+      let model = inventory[indexNr].model;
+      let price = inventory[indexNr].price;
+      let latestIndexNumber = inventory.length;
+      
 
       var tbltop = "";
 
       //main table content we fill from data from the rest call
-      var main ="<h1>Update Data:</h1>";
+      var main ="<h1>Update Laptop data:</h1>";
       // for (i = 0; i < inventory.length; i++){
         main +=
 
-             "<form>" +
+             "<form id='updateForm'>" +
             "<div>"+
                "<span style='display:inline-block'>"+
                     "<label for=brand style='display:block'>Brand:</label>"+
-                   " <input type=text name=brandid=brand placeholder='Brand' required value="+ brand +" onChange={dataUpdate()}/>"+
+                   " <input type=text name=brand id=brand placeholder='Brand' required value="+ brand +" onChange={dataUpdate()}/>"+
                "</span>"+
                 
                 "<span style='display:inline-block'>"+
@@ -39,10 +43,10 @@ function updateRow(id){
           "</div>"+
           "</form>";
 
-
-      var tblbottom = "<div><button id='saveData' onclick='saveData("+ id, brand, model, price +')>Save</button></div>";
+       var tblbottom = "<div><button id='saveData' onclick='updateData("+ id +")'>Save</button><button id='cancel' onclick='cancel()'>Cancel</button></div><div id='addMessageUpdate'></div>";
       var tbl = tbltop + main + tblbottom;
       document.getElementsByClassName('updateRow')[0].innerHTML += tbl;
+      return latestIndexNumber;
     }
   };
   xmlhttp.send();
@@ -50,26 +54,45 @@ function updateRow(id){
 }
 
 
-function saveData(itemNr, brand, model, price){
+function updateData(id){
 
-  fetch('http://localhost:8080/inventory/'+itemNr, {
-    method: 'POST',
+//Get updated values from form
+let brandUpdated = document.getElementById("brand").value;
+let modelUpdated = document.getElementById("model").value;
+let priceUpdated = document.getElementById("price").value;
+
+
+  fetch('http://localhost:8080/inventory/'+id, {
+    method: 'PUT',
     headers: {
       'content-type': 'application/json'
     },
-    body: {
-      id: itemNr,
-      brand: 'Dell',
-      model: "XZZ-850",
-      price: 1500,
-    }
+    body: JSON.stringify( {
+      id: id,
+      brand: brandUpdated,
+      model: modelUpdated,
+      price: priceUpdated
+    })
   })
     .then(response => {
+      if(response.status == 200){
+        document.getElementById("addMessageUpdate").innerHTML = "Updated succesfully!"
+        document.getElementsByClassName('updateRow')[0].innerHTML = "";
+        
+
+      }
       console.log(response)
+      
     })
     .catch(err => {
       console.log(err)
     })
-
-
+    setTimeout(function(){
+      document.getElementById('divTableContent').innerHTML = "";
+      loadInventory();
+      document.getElementById("addMessageUpdate").innerHTML = ""
+      document.getElementsByClassName('updateRow')[0].innerHTML = "";
+ }, 1800); 
 }
+
+

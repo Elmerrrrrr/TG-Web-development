@@ -16,15 +16,17 @@ public class WeatherResponse {
         return weather;
     }
 
-    public void setWeather(List<Weather> weather) {
-        this.weather = weather;
-    }
+//    public void setWeather(List<Weather> weather) {
+//        this.weather = weather;
+//    }
 
     public String getBase() {
         return base;
     }
 
-    public void setBase(String base) {
-        this.base = base;
-    }
+//    public void setBase(String base) {
+//        this.base = base;
+//    }
+
+
 }

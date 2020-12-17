@@ -93,7 +93,7 @@ public class Current {
 
     @JsonProperty("temp")
     public Double getTemp() {
-        return temp;
+       return temp;
     }
 
     @JsonProperty("temp")

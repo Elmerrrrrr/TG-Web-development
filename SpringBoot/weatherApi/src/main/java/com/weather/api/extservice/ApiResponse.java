@@ -79,7 +79,7 @@ public class ApiResponse {
 
     @JsonProperty("current")
     public Current getCurrent() {
-        System.out.println(current);
+
         return current;
     }
 

@@ -43,7 +43,7 @@ function updateRow(indexNr){
           "</div>"+
           "</form>";
 
-       var tblbottom = "<div><button id='saveData' onclick='updateData("+ id +")'>Save</button><button id='cancel' onclick='cancel()'>Cancel</button></div><div id='addMessageUpdate'></div>";
+       var tblbottom = "<div><button id='saveData' onclick='updateData("+ id +")'>Save</button><button id='cancel' onclick='cancel()'>Cancel</button></div><div id='messageAdd'></div>";
       var tbl = tbltop + main + tblbottom;
       document.getElementsByClassName('updateRow')[0].innerHTML += tbl;
       return latestIndexNumber;
@@ -56,10 +56,24 @@ function updateRow(indexNr){
 
 function updateData(id){
 
+
 //Get updated values from form
 let brandUpdated = document.getElementById("brand").value;
 let modelUpdated = document.getElementById("model").value;
 let priceUpdated = document.getElementById("price").value;
+
+    
+    if(!brandUpdated || !modelUpdated || !priceUpdated){
+      document.getElementById("brand").style.backgroundColor = 'LightCoral'
+      document.getElementById("model").style.backgroundColor = 'LightCoral'
+      document.getElementById("price").style.backgroundColor = 'LightCoral'
+      document.getElementById("messageAdd").innerHTML = "Please fill in all fields!"
+      // alert('Please fill in all fields:')
+      
+    } else{
+
+
+
 
 
   fetch('http://localhost:8080/inventory/'+id, {
@@ -95,4 +109,4 @@ let priceUpdated = document.getElementById("price").value;
  }, 1800); 
 }
 
-
+}

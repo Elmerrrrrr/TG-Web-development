@@ -28,7 +28,7 @@ function addData(){
         "</form>";
   
         
-        var tblbottom = "<div><button id='saveData' onclick='sendNewData()'>Send</button><button id='cancel' onclick='cancel()'>Cancel</button></div>";
+        var tblbottom = "<div><button id='saveData' onclick='sendNewData()'>Send</button><button id='cancel' onclick='cancel()'>Cancel</button></div><div id='messageAdd'></div>";
         var tbl = tbltop + main + tblbottom;
         document.getElementsByClassName('updateRow')[0].innerHTML += tbl;
     
@@ -38,12 +38,23 @@ function addData(){
 
 
   function sendNewData(){
-    
+
   //Get new values from form
   let brandNew = document.getElementById("brandNew").value;
   let modelNew= document.getElementById("modelNew").value;
   let priceNew = document.getElementById("priceNew").value;
-  
+
+    
+    if(!brandNew || !modelNew || !priceNew){
+      document.getElementById("brandNew").style.backgroundColor = 'LightCoral'
+      document.getElementById("modelNew").style.backgroundColor = 'LightCoral'
+      document.getElementById("priceNew").style.backgroundColor = 'LightCoral'
+      document.getElementById("messageAdd").innerHTML = "Please fill in all fields!"
+      // alert('Please fill in all fields:')
+      
+  } else{
+
+     
   
     fetch('http://localhost:8080/inventory/', {
       method: 'POST',
@@ -78,6 +89,7 @@ function addData(){
    }, 1800); 
   
   }
+}
 
   function cancel(){
     

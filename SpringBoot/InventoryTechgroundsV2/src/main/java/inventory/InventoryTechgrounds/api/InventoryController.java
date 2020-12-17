@@ -20,7 +20,7 @@ public class InventoryController {
     //GET single inventory Item
     @RequestMapping("/inventory/{id}")
     public Inventory getAllInventory(@PathVariable String id){
-        System.out.println("GetInventory request itemnr: " + id);
+        System.out.println("GetInventory request itemNr: " + id);
         return InventoryService.getId(id);
     }
 
@@ -31,27 +31,27 @@ public class InventoryController {
         System.out.println("POST REQUEST..");
         InventoryService.addInventory(item);
 
-        String response = "{The inventory item has been added successfully.}";
+        String response = "{\"success\": true, \"message\": The inventory item has been added successfully.}";
         return response;
    }
 
     //UPDATE new inventory item
     @RequestMapping(method=RequestMethod.PUT, value="/inventory/{id}")
     public String updateInventory(@RequestBody Inventory item, @PathVariable String id ) {
-        System.out.println("UPDATE REQUEST for item nr: " + id );
+        System.out.println("UPDATE REQUEST for itemNr: " + id );
         InventoryService.updateInventory(id, item);
 
-        String response = "{The inventory item has been updated successfully.}";
+        String response = "{\"success\": true, \"message\": The inventory item has been updated successfully.}";
         return response;
     }
 
     //DELETE inventory item
     @RequestMapping(method=RequestMethod.DELETE, value="/inventory/{id}")
     public String updateInventory(@PathVariable String id ) {
-        System.out.println("DELETE REQUEST for item nr: " + id );
+        System.out.println("DELETE REQUEST for itemNr: " + id );
         InventoryService.deleteInventory(id);
 
-        String response = "{The inventory item has been deleted successfully.}";
+        String response = "{\"success\": true, \"message\": The inventory item has been deleted successfully.}";
         return response;
     }
 

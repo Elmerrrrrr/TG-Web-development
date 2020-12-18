@@ -1,0 +1,89 @@
+html, body {
+  font-family: 'JetBrains Mono', monospace;
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+main h1 {
+  text-align: center;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+main img {
+  margin-left: 5px;
+}
+
+main button {
+  margin-left: 5px;
+}
+
+main #results {
+  margin-top: 50px;
+  text-align: center;
+  color: goldenrod;
+  margin: 50px;
+  width: 100%;
+}
+
+footer {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  color: gray;
+}
+
+.divTable {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.divTableRow {
+  display: table-row;
+}
+
+.divTableRow:hover {
+  background-color: lightgray;
+  color: white;
+}
+
+.divTableHeading {
+  background-color: #333636;
+  color: white;
+  display: table-row-group;
+}
+
+.divTableCell, .divTableHead {
+  border: 1px solid #999999;
+  display: table-cell;
+  padding: 3px 10px;
+}
+
+.divTableCell .divTableCellActions, .divTableHead .divTableCellActions {
+  border: 1px solid #999999;
+  padding: 3px 10px;
+}
+
+.divTableFoot {
+  background-color: #EEE;
+  display: table-footer-group;
+  font-weight: bold;
+}
+
+.divTableBody, #divTableContent {
+  position: relative;
+  display: table-row-group;
+}
+/*# sourceMappingURL=index.css.map */

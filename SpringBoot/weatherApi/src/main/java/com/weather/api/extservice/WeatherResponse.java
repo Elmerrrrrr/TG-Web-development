@@ -12,7 +12,6 @@ public class WeatherResponse {
 
 
 
-
     public ApiResponse getSys() {
         return sys;
     }
@@ -24,9 +23,6 @@ public class WeatherResponse {
     public List<Weather> getWeather() {
            return weather;
     }
-
-
-
 
 
 

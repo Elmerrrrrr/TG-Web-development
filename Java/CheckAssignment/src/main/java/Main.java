@@ -50,7 +50,9 @@ public class Main {
             System.out.print("\n > ");
 
             String input = in.nextLine();
-//            System.out.println("Runways for airports in this country: " + input);
+
+
+            // Top 10 countries with highest number of airports
 
             if (input.equalsIgnoreCase("TOP10")){
 
@@ -59,33 +61,44 @@ public class Main {
                 for (int i = 0; i <countryList.size() ; i++) {
 
                     CountryAirports countryAirportsObj = new CountryAirports();
-                    countryAirportsObj.setCountryId(countryList.get(i).getCountryId());
-                    List<Airport> airportsPerCountry = new ArrayList<>();
+                    countryAirportsObj.setCountryCode(countryList.get(i).getCountryCode());
+                    countryAirportsObj.setCountryName(countryList.get(i).getName());
+
+                    List<Airport> airportsPerCountryList = new ArrayList<>();
+
 
                     for (int j = 0; j <airportsList.size() ; j++) {
 
-                        if (countryAirportsObj.getTopList().get(i).getId().equals(airportsList.get(j).getIso_country())){
+                        if (countryAirportsObj.getCountryCode().equals(airportsList.get(j).getIso_country())){
 
                             Airport airport = new Airport();
                             airport.setId(airportsList.get(j).getId());
                             airport.setName(airportsList.get(j).getName());
-                            airportsPerCountry.add(airport);
+                            airport.setIso_country(airportsList.get(j).getIso_country());
+                            airportsPerCountryList.add(airport);
 
                         }
 
-//                        airportsPerCountry.add(airportsList);
-                    }
-                }
-//                countryAirportsList.add();
+                        countryAirportsObj.setTopList(airportsPerCountryList);
 
+                    }
+                    countryAirportsObj.setAirportCount(airportsPerCountryList.size());
+                    countryAirportsList.add(countryAirportsObj);
+
+                }
+                countryAirportsList.sort(Collections.reverseOrder());
+                countryAirportsList.subList(0, 9).forEach(System.out::println);
             }
 
 
+            //Runways for each airport given a country code or country name
 
             for (int i = 0; i <countryList.size() ; i++) {
                 int countAirport = 0;
-                if (input.equalsIgnoreCase(countryList.get(i).getCountryCode()) || input.equalsIgnoreCase(countryList.get(i).getName())){
-//                    System.out.println("Country found " + " name= " + countryList.get(i).getName());
+                if (input.equalsIgnoreCase(countryList.get(i).getCountryCode())
+                        || input.equalsIgnoreCase(countryList.get(i).getName())
+                        || countryList.get(i).getName().toLowerCase().startsWith(input.toLowerCase())
+                ){
 
                     for (int j = 0; j <airportsList.size() ; j++) {
 
@@ -102,6 +115,7 @@ public class Main {
                             }
 
                         }
+
                     }
 
                 }

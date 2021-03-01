@@ -95,7 +95,7 @@ public class Airport {
 
     @Override
     public String toString() {
-        return "Airport{" +
+        return "dataObjects.Airport{" +
 //                "id='" + id + '\'' +
 //                ", ident='" + ident + '\'' +
                 ", name='" + name + '\'' +

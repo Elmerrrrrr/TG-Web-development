@@ -91,7 +91,7 @@ public class Runway {
 
     @Override
     public String toString() {
-        return "Runway{" +
+        return "dataObjects.Runway{" +
 //                "id='" + id + '\'' +
                 ", airport_ref='" + airport_ref + '\'' +
                 ", airport_ident='" + airport_ident + '\'' +

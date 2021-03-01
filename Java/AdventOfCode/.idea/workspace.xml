@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="232dae20-7bdc-41f7-8830-a6ac99100265" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30-1-2021_12_49__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BinaryBoarding/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BinaryBoarding/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BinaryBoarding/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BinaryBoarding/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BinaryBoarding/BinaryBoarding.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BinaryBoarding/src/BinaryBoarding.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BinaryBoarding/src/FileToArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BinaryBoarding/src/data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/AdventOfCode.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PassportProcessing/src/PassportExtraValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/PassportProcessing/src/PassportExtraValidation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CheckAssignment/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CheckAssignment/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CheckAssignment/src/main/java/dataObjects/Airport.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CheckAssignment/src/main/java/dataObjects/Airport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CheckAssignment/src/main/java/dataObjects/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CheckAssignment/src/main/java/dataObjects/Country.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CheckAssignment/src/main/java/dataObjects/CountryAirports.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CheckAssignment/src/main/java/dataObjects/CountryAirports.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CheckAssignment/src/main/java/dataObjects/Runway.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CheckAssignment/src/main/java/dataObjects/Runway.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CheckAssignment/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CheckAssignment/target/classes/Main.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1m16jcjid3dT4uQpZVig0sAjM4s" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="232dae20-7bdc-41f7-8830-a6ac99100265" name="Default Changelist" comment="" />
+      <created>1608648885456</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608648885456</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

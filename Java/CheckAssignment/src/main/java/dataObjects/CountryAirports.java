@@ -54,7 +54,7 @@ public class CountryAirports implements Comparable <CountryAirports>{
 
     @Override
     public String toString() {
-        return "CountryAirports{" +
+        return "dataObjects.CountryAirports{" +
                 "countryId='" + countryCode + '\'' +
                 ", countryName='" + countryName + '\'' +
                 ", airportCount='" + airportCount + '\'' +

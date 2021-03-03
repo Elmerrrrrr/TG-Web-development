@@ -2,26 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="232dae20-7bdc-41f7-8830-a6ac99100265" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30-1-2021_12_49__Default_Changelist_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BinaryBoarding/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BinaryBoarding/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BinaryBoarding/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BinaryBoarding/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BinaryBoarding/BinaryBoarding.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BinaryBoarding/src/BinaryBoarding.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BinaryBoarding/src/FileToArray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BinaryBoarding/src/data.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/AdventOfCode.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PassportProcessing/src/PassportExtraValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/PassportProcessing/src/PassportExtraValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CheckAssignment/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CheckAssignment/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CheckAssignment/src/main/java/dataObjects/Airport.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CheckAssignment/src/main/java/dataObjects/Airport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CheckAssignment/src/main/java/dataObjects/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CheckAssignment/src/main/java/dataObjects/Country.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CheckAssignment/src/main/java/dataObjects/CountryAirports.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CheckAssignment/src/main/java/dataObjects/CountryAirports.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CheckAssignment/src/main/java/dataObjects/Runway.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CheckAssignment/src/main/java/dataObjects/Runway.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CheckAssignment/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CheckAssignment/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +35,14 @@
       <option name="presentableId" value="Default" />
       <updated>1608648885456</updated>
     </task>
+    <task id="LOCAL-00001" summary="update">
+      <created>1614586840691</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1614586840691</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -67,5 +56,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>

@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class BinaryBoarding {
@@ -7,44 +8,47 @@ public class BinaryBoarding {
 
         List<String> dataInputList = FileToArray.fileToArrayList();
 
-//        dataInputList.forEach(System.out::println);
-//        System.out.println("Data amount: " + dataInputList.size());
 
-
-        int[] rowIdsFront = {64, 32, 16, 8, 4, 2};
-        int[] rowIds = {127, 63, 31, 15, 7, 3, 1, 0};
-        int[] rowIdsBack = {64, 32, 16, 8, 4, 2};
-
+        List<Integer> boardInputList = new ArrayList<>();
 
         int i =0;
-        for (String row: dataInputList ) {
+        for (String data: dataInputList ) {
 
             //Split every sequence into letters
-            String[] array = row.split("");
-            int rowID = 0;
-            int min = 1;
-            int max = 128;
+            String[] array = data.split("");
+            int minC = 0;
+            int maxC = 127;
+            int minR = 0;
+            int maxR = 7;
             i++;
             for (String character: array) {
 
 
                 // Upper half
-                if (character.matches("B")) {
-
-                    min = max - (max/2); //128-32
-                    max = max;  //128
+                if (character.matches("[B|R]")) {
+                    minC = (maxC - (maxC - minC)/2);
+                    maxC = maxC;
+//                    System.out.println("B- Min: " + minC + " max: " +maxC);
                 }
 
                 // Lower half
-                else if(character.matches("F")){
-                    min = min;
-                    max = max/2;
+                 if(character.matches("[F|L]")){
 
+                    minC = minC;
+                    maxC = (maxC - (maxC -minC)/2 -1);
+//                    System.out.println("F- Min: " + minC + " max: " +maxC);
                     }
 
-                }
-            System.out.println("Row#"+i+" min:" + min +" max:"+max);
+
+
             }
+            boardInputList.add(minC*8+minR);
+            System.out.println("BoardingPass#"+i+" Column: " + minC+" seatID: "+(minC*8+minR));
+
+            }
+
+        boardInputList.sort(Integer::compareTo);
+        boardInputList.forEach(System.out::println);
 
         }
 

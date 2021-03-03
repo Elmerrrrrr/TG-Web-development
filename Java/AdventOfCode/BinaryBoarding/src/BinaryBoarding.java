@@ -24,20 +24,37 @@ public class BinaryBoarding {
             for (String character: array) {
 
 
-                // Upper half
-                if (character.matches("[B|R]")) {
+                // Upper half column
+                if (character.matches("B")) {
                     minC = (maxC - (maxC - minC)/2);
                     maxC = maxC;
 //                    System.out.println("B- Min: " + minC + " max: " +maxC);
                 }
 
-                // Lower half
-                 if(character.matches("[F|L]")){
+                // Lower half column
+                 if(character.matches("F")){
 
                     minC = minC;
                     maxC = (maxC - (maxC -minC)/2 -1);
 //                    System.out.println("F- Min: " + minC + " max: " +maxC);
                     }
+
+
+
+                // Upper half row
+                if (character.matches("R")) {
+                    minR = (maxR - (maxR - minR)/2);
+                    maxR = maxR;
+//                    System.out.println("B- Min: " + minC + " max: " +maxC);
+                }
+
+                // Lower half row
+                if(character.matches("L")){
+
+                    minR = minR;
+                    maxR = (maxR - (maxR -minR)/2 -1);
+//                    System.out.println("F- Min: " + minC + " max: " +maxC);
+                }
 
 
 

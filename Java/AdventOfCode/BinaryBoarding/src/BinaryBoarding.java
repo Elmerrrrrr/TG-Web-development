@@ -45,7 +45,7 @@ public class BinaryBoarding {
                 if (character.matches("R")) {
                     minR = (maxR - (maxR - minR)/2);
                     maxR = maxR;
-//                    System.out.println("B- Min: " + minC + " max: " +maxC);
+//                    System.out.println("R- Min: " + minR + " max: " +maxR);
                 }
 
                 // Lower half row
@@ -53,7 +53,7 @@ public class BinaryBoarding {
 
                     minR = minR;
                     maxR = (maxR - (maxR -minR)/2 -1);
-//                    System.out.println("F- Min: " + minC + " max: " +maxC);
+//                    System.out.println("L- Min: " + minR + " max: " +maxR);
                 }
 
 

@@ -2,7 +2,7 @@
  
 # TG-Web-development
 
-Here are the links to the assignments that are hosted somewhere else:
+Here are some links to the assignments that are hosted somewhere else:
 
 ## JavaScript
 

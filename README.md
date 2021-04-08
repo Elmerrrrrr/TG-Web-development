@@ -2,7 +2,9 @@
  
 # TG-Web-development
 
-Here are some links to the assignments that are hosted somewhere else:
+HTML, CSS, SASS, Bootstrap, JavaScript, React, Java, Spring Boot, Maven, REST API, MVC, JUnit, Mockito etc.
+
+Some links to the assignments that are hosted somewhere else:
 
 ## JavaScript
 
